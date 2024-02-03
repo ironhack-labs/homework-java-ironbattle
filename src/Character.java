@@ -1,4 +1,4 @@
-public class Character {
+abstract class Character implements Attacker {
     private String id;
     private String name;
     private int hp;
@@ -40,6 +40,7 @@ public class Character {
     public void setAlive(boolean alive) {
         this.isAlive = alive;
     }
+
 }
 
 
