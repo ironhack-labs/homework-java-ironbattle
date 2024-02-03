@@ -123,3 +123,7 @@ For this project you must accomplish all of the following:
 - All squad members must participate in code review.
 - Every repository should have a README file with clear instructions, demo files or any documentation needed so other teams don't have problems with the review.
 - This is intended to be a challenging assignment. You will have to rely heavily on your teammates and independent research. Learning independently is a hallmark of a good developer and our job is to turn you into good developers. This process may be frustrating but you will learn a ton!
+
+## Resources
+
+https://app.diagrams.net/?src=about#Hsergi-svg%2Fhomework-java-ironbattle%2Ffeature_diagram%2Firon-battle.drawio
