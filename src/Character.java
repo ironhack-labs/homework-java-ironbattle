@@ -59,4 +59,7 @@ public abstract class Character {
         }
 
     }
+
+    protected void receiveDamage(int damage) {
+    }
 }
