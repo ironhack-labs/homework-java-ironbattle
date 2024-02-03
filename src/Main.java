@@ -4,9 +4,13 @@ public class Main {
         Character char1 = new Character("guerrero",12);
         Character char2 = new Character("wizard",12);
 
+
+
+
         //Call for the method that will do the combat
         combat(char1,char2);
     }
+
 
 
     public static void combat(Character char1, Character char2){
@@ -15,20 +19,20 @@ public class Main {
         int initialHpChar2 = char2.getHp();
 
         //Loop until one of the character wins
-        while(finished == false){
+        while(!finished){
 
             //Loop for the battle
-            while(char1.getHp()>0||char2.getHp()>0){
+            while(char1.isAlive()&&char2.isAlive()){
                 char1.attack(char2);
                 char2.attack(char1);
             }
 
             //Once the battle is finished, let's check who wins the battle
-            if (0>=char1.getHp()){
+            if (char2.isAlive()){
                 //Character 2 wins the battle
                 System.out.println("The player "+char2.getName()+" wins the battle!");
                 finished = true;
-            }else if(0>=char2.getHp()){
+            }else if(char1.isAlive()){
                 //Character 1 wins the battle
                 System.out.println("The player "+char1.getName()+" wins the battle!");
                 finished = true;
