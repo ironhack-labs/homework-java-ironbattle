@@ -37,4 +37,8 @@ public class Warrior {
     public int getStrength() {
         return strength;
     }
+
+    public void attack() {
+        System.out.println("Warrior attacking method");
+    }
 }
