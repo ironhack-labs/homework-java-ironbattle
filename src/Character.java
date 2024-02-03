@@ -1,3 +1,5 @@
+import java.util.UUID;
+
 abstract class Character implements Attacker {
     private String id;
     private String name;
@@ -15,7 +17,7 @@ abstract class Character implements Attacker {
     }
 
     public void setId() {
-        this.id = "1";  //TODO  add logic for autogeneration of the id
+        this.id = UUID.randomUUID().toString();
     }
 
     public String getName() {
@@ -40,7 +42,6 @@ abstract class Character implements Attacker {
     public void setAlive(boolean alive) {
         this.isAlive = alive;
     }
-
 }
 
 
