@@ -1,11 +1,12 @@
-//public class Warrior extends Character {
-public class Warrior {
+import java.util.Random;
+
+public class Warrior extends Character implements Attacker {
+
     private int stamina;
     private int strength;
 
-    //public Warrior(String name, int hp, int stamina, int strength) {
-    public Warrior(int stamina, int strength) {
-        //super(name, hp);
+    public Warrior(String name, int hp, int stamina, int strength) {
+        super(name,hp);
         setStamina(stamina);
         setStrength(strength);
     }
@@ -38,7 +39,50 @@ public class Warrior {
         return strength;
     }
 
-    public void attack() {
-        System.out.println("Warrior attacking method");
+/// Attack method. Weak and Heavy attacks separate. Attacks are random using Random Util
+    @Override
+    public void attack(Character character) {
+        Random random = new Random();
+        int attackType = random.nextInt(2);
+        if(attackType == 0 && canMakeHeavyAttack()){
+                    heavyAttack(character);
+                } else if (canMakeWeakAttack()) {
+                    weakAttack(character);
+                } else{
+                    regainStamina();
+                }
+        }
+    private boolean canMakeHeavyAttack(){
+        return stamina >= 5;
     }
+
+    private boolean canMakeWeakAttack(){
+        return stamina >=1;
+    }
+
+    private void heavyAttack(Character character){
+        int damage = strength;
+        character.receiveDamage(damage);
+        stamina -=5;
+    }
+    private void weakAttack(Character character){
+        int damage = strength / 2;
+        character.receiveDamage(damage);
+        stamina +=1;
+    }
+
+    private void regainStamina(){
+        stamina +=2;
+    }
+    /// this receiveDamage can be also in the Character class?
+    public void receiveDamage(int damage){
+        int newHP = getHp() - damage;
+        setHp(newHP);
+        if(newHP <= 0){
+            setAlive(false);
+        }
+    }
+
 }
+
+
