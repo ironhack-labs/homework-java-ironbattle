@@ -40,19 +40,19 @@ public class Wizard extends Character implements Attacker {
     }
 
     public void validateMana(int mana) {
-        if (mana < MIN_MANA_WIZARD && mana > MAX_MANA_WIZARD) {
+        if (mana < MIN_MANA_WIZARD || mana > MAX_MANA_WIZARD) {
             throw new IllegalArgumentException("El mana debe estar entre " + MIN_MANA_WIZARD + " y " + MAX_MANA_WIZARD);
         }
     }
 
     public void validateIntelligence(int intelligence) {
-        if (intelligence < MIN_INTELLIGENCE_WIZARD && intelligence > MAX_INTELLIGENCE_WIZARD) {
+        if (intelligence < MIN_INTELLIGENCE_WIZARD || intelligence > MAX_INTELLIGENCE_WIZARD) {
             throw new IllegalArgumentException("La inteligencia del Wizard debe estar entre " + MIN_INTELLIGENCE_WIZARD + " y " + MAX_INTELLIGENCE_WIZARD);
         }
     }
 
     public void validateHp(int hp) {
-        if (hp < MIN_HP_WIZARD && hp > MAX_HP_WIZARD) {
+        if (hp < MIN_HP_WIZARD || hp > MAX_HP_WIZARD) {
             throw new IllegalArgumentException("hp (health points) debe estar entre " + MIN_HP_WIZARD + " y " + MAX_HP_WIZARD);
         }
     }
