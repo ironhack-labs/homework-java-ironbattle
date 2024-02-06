@@ -1,11 +1,9 @@
+import java.io.IOException;
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args)throws IOException{
         //Temporary creation of characters, can be deleted
-        Character char1 = new Character("guerrero",12);
-        Character char2 = new Character("wizard",12);
-
-
-
+        Character char1 = new Warrior("guerrero",102,12,2);
+        Character char2  = new Warrior("wizard",120,12,2);
 
         //Call for the method that will do the combat
         combat(char1,char2);
@@ -15,8 +13,8 @@ public class Main {
 
     public static void combat(Character char1, Character char2){
         boolean finished = false;
-        int initialHpChar1 = char1.getHp();
-        int initialHpChar2 = char2.getHp();
+        Character initChar1  = char1;
+        Character initChar2  = char2;
 
         //Loop until one of the character wins
         while(!finished){
@@ -39,8 +37,8 @@ public class Main {
             }else{
                 //The battle result is a tie
                 System.out.println("The battle results in a tie! The battle will be repeated");
-                char1.setHp(initialHpChar1);
-                char2.setHp(initialHpChar2);
+                char1=initChar1;
+                char2=initChar2;
             }
         }
     }
