@@ -4,6 +4,8 @@ public class Wizard extends Character {
     private final int[] MANA_RANGE = {10, 50};
     private final int[] INTELLIGENCE_RANGE = {1, 50};
 
+    private final int FIREBALL_MANA = 5;
+
     public Wizard(String name, int hp, int mana, int intelligence) {
         super(name, hp); //TODO: check hp range (50-100)
         setMana(mana);
@@ -34,6 +36,31 @@ public class Wizard extends Character {
 
     @Override
     public void attack(Character character) {
+        if (getMana() == 0) {
+            setMana(getMana()+2);
+        } else if (getMana() < FIREBALL_MANA) {
+            staffHit(character);
+        } else {
+            int randomNum = rollDice();
 
+            if (randomNum < 4) {
+                staffHit(character);
+            } else {
+                fireball(character);
+            }
+        }
+    }
+
+    private void fireball(Character character) {
+        setMana(getMana()-FIREBALL_MANA);
+        character.setHp(character.getHp()-getIntelligence());
+    }
+
+    private void staffHit(Character character) {
+        final int MANA_RECOVER = 1;
+        final int HP_LOSS = 2;
+
+        setMana(getMana()+MANA_RECOVER);
+        character.setHp(character.getHp()-HP_LOSS);
     }
 }
