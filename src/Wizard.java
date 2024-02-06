@@ -52,17 +52,15 @@ public class Wizard extends Character {
     }
 
     private void fireball(Character character) {
-
-
         setMana(getMana()-FIREBALL_MANA);
         character.setHp(character.getHp()-getIntelligence());
     }
 
     private void staffHit(Character character) {
-        final int INCREASE_MANA = 1;
-        final int DECREASE_HP = 2;
+        final int MANA_RECOVER = 1;
+        final int HP_LOSS = 2;
 
-        setMana(getMana()+INCREASE_MANA);
-        character.setHp(character.getHp()-DECREASE_HP);
+        setMana(getMana()+MANA_RECOVER);
+        character.setHp(character.getHp()-HP_LOSS);
     }
 }

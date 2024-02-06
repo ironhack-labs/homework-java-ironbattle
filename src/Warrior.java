@@ -9,6 +9,7 @@ public class Warrior extends Character {
     private final int STRENGTH_MAX = 10;
     private final int HP_MIN = 100;
     private final int HP_MAX = 200;
+    private final int HEAVY_ATTACK_STAMINA = 5;
 
     public Warrior(String name, int hp, int stamina, int strength) {
         super(name, hp);
@@ -50,6 +51,31 @@ public class Warrior extends Character {
 
     @Override
     public void attack(Character character) {
-        // logic
+        if (getStamina() == 0) {
+            setStamina(getStamina()+2);
+        } else if (getStamina() < HEAVY_ATTACK_STAMINA) {
+            weakAttack(character);
+        } else {
+            int randomNum = rollDice();
+
+            if (randomNum < 4) {
+                weakAttack(character);
+            } else {
+                heavyAttack(character);
+            }
+        }
+    }
+
+    public void heavyAttack(Character character) {
+        setStamina(getStamina()-HEAVY_ATTACK_STAMINA);
+        character.setHp(character.getHp()-getStrength());
+    }
+
+    public void weakAttack(Character character) {
+        final int STAMINA_RECOVER = 1;
+        final int HP_LOSS = getStrength()/2;
+
+        setStamina(getStamina()+STAMINA_RECOVER);
+        character.setHp(character.getHp()-HP_LOSS);
     }
 }
