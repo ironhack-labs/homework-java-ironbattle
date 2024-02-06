@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.UUID;
 
 abstract class Character implements Attacker {
@@ -9,6 +10,11 @@ abstract class Character implements Attacker {
     public Character(String name, int hp){
         setName(name);
         setHp(hp);
+        setId();
+    }
+
+    public Character(String name){
+        setName(name);
         setId();
     }
 
@@ -42,6 +48,13 @@ abstract class Character implements Attacker {
     public void setAlive(boolean alive) {
         this.isAlive = alive;
     }
+
+    public int rollDice() {
+        Random random = new Random();
+        return random.nextInt(6) + 1;
+    }
+
+    public abstract Character clone();
 }
 
 

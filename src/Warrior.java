@@ -9,11 +9,26 @@ public class Warrior extends Character {
     private final int STRENGTH_MAX = 10;
     private final int HP_MIN = 100;
     private final int HP_MAX = 200;
+    private final int HEAVY_ATTACK_STAMINA = 5;
 
     public Warrior(String name, int hp, int stamina, int strength) {
-        super(name, hp);
-        setStamina(stamina);
-        setStrength(strength);
+        super(name);
+        if(hp < HP_MIN || hp > HP_MAX) {
+            throw new IllegalArgumentException("HP must be between " + HP_MIN + " and " + HP_MAX);
+        } else {
+            setHp(hp);
+        }
+        if(stamina < STAMINA_MIN || stamina > STAMINA_MAX) {
+            throw new IllegalArgumentException("Stamina must be between " + STAMINA_MIN + " and " + STAMINA_MAX);
+        } else {
+            setStamina(stamina);
+        }
+        if(strength < STRENGTH_MIN || strength > STRENGTH_MAX) {
+            throw new IllegalArgumentException("Strength must be between " + STRENGTH_MIN + " and " + STRENGTH_MAX);
+        } else {
+            setStrength(strength);
+        }
+
     }
 
     public int getStamina() {
@@ -21,11 +36,7 @@ public class Warrior extends Character {
     }
 
     public void setStamina(int stamina) {
-        if(stamina < STAMINA_MIN || stamina > STAMINA_MAX) {
-            throw new IllegalArgumentException("Stamina must be between " + STAMINA_MIN + " and " + STAMINA_MAX);
-        } else {
-            this.stamina = stamina;
-        }
+        this.stamina = stamina;
     }
 
     public int getStrength() {
@@ -33,26 +44,42 @@ public class Warrior extends Character {
     }
 
     public void setStrength(int strength) {
-        if(strength < STRENGTH_MIN || strength > STRENGTH_MAX) {
-            throw new IllegalArgumentException("Strength must be between " + STRENGTH_MIN + " and " + STRENGTH_MAX);
-        } else {
-            this.strength = strength;
-        }
+        this.strength = strength;
     }
 
     public void setHp(int hp) {
-        if(hp < HP_MIN || hp > HP_MAX) {
-            throw new IllegalArgumentException("HP must be between " + HP_MIN + " and " + HP_MAX);
-        } else {
-            super.setHp(hp);
-        }
+        super.setHp(hp);
     }
 
     @Override
     public void attack(Character character) {
-        // logic
-        System.out.println("Ataque");
-        setStamina(12);
-        System.out.println(this.stamina);
+        if (getStamina() == 0) {
+            setStamina(getStamina()+2);
+        } else if (getStamina() < HEAVY_ATTACK_STAMINA) {
+            weakAttack(character);
+        } else {
+            int randomNum = rollDice();
+
+            if (randomNum < 4) {
+                weakAttack(character);
+            } else {
+                heavyAttack(character);
+            }
+        }
+    }
+
+    public Character clone(){return new Warrior(getName(), getHp(), getStamina(),getStrength());}
+
+    public void heavyAttack(Character character) {
+        setStamina(getStamina()-HEAVY_ATTACK_STAMINA);
+        character.setHp(character.getHp()-getStrength());
+    }
+
+    public void weakAttack(Character character) {
+        final int STAMINA_RECOVER = 1;
+        final int HP_LOSS = getStrength()/2;
+
+        setStamina(getStamina()+STAMINA_RECOVER);
+        character.setHp(character.getHp()-HP_LOSS);
     }
 }
