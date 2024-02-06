@@ -1,5 +1,8 @@
 public class Wizard extends Character implements Attacker {
 
+    private int MIN_HP_WIZARD = 50;
+    private int MAX_HP_WIZARD = 100;
+
     private int stamina;
     private int strength;
 
@@ -28,6 +31,18 @@ public class Wizard extends Character implements Attacker {
     @Override
     public void attack(Character character) {
 
+    }
+
+    public void validateHp(int hp) {
+        if (hp < MIN_HP_WIZARD && hp > MAX_HP_WIZARD) {
+            throw new IllegalArgumentException("hp (health points) debe estar entre " + MIN_HP_WIZARD + " y " + MAX_HP_WIZARD);
+        }
+    }
+
+    @Override
+    public void setHp(int hp) {
+        validateHP(hp);
+        super.hp = hp;
     }
 
 }
