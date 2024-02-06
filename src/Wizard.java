@@ -45,16 +45,16 @@ public class Wizard extends Character implements Attacker {
     @Override
     public void attack(Character character) {
         int randomNumber = getRandomNumber(); // Abstract to an external method
-        int damage;
+
 
         if (randomNumber == 0 && hasEnoughMana()) {
-            damage = fireBallAttack();
+            fireBallAttack(character);
         } else if(randomNumber == 1 && hasAlmostOneMana()){
-            damage = staffHitAttack();
+            staffHitAttack(character);
         }else{
-            damage = recoverMana();
+            recoverMana();
         }
-        character.setHp(character.getHp() - damage);
+
     }
 
     private int getRandomNumber() {
@@ -66,19 +66,30 @@ public class Wizard extends Character implements Attacker {
     }
     private boolean hasAlmostOneMana() { return getMana() >= 1;}
 
-    private int fireBallAttack() {
+    private void fireBallAttack(Character character) {
+        System.out.println("Wizard fireBallAttack");
         setMana(getMana() - 5);
-        return getIntelligence();
+        character.receiveDamage(getIntelligence());
     }
 
-    private int staffHitAttack() {
+    private void staffHitAttack(Character character) {
+        System.out.println("Wizard staffHitAttack");
         setMana(getMana() + 1);
-        return 2;
+        character.receiveDamage(getIntelligence());
     }
 
     private int recoverMana(){
         setMana(getMana() + 2);
         return 0;
+    }
+
+    public void receiveDamage(int damage){
+        System.out.println("Damage received from warrior" + " " +  damage);
+        int newHP = getHp() - damage;
+        setHp(newHP);
+        if(newHP <= 0){
+            setAlive(false);
+        }
     }
 
 }

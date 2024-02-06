@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 public class Main {
     private static int variableGlobal;Scanner scanner = new Scanner(System.in);
@@ -115,3 +114,4 @@ public class Main {
     }
 
 }
+
