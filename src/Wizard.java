@@ -1,7 +1,7 @@
 public class Wizard extends Character implements Attacker {
 
-    private int MIN_HP_WIZARD = 50;
-    private int MAX_HP_WIZARD = 100;
+    private final int MIN_HP_WIZARD = 50;
+    private final int MAX_HP_WIZARD = 100;
 
     private int stamina;
     private int strength;
