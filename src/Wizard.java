@@ -1,4 +1,4 @@
-public class Wizard extends Character implements  Attacker {
+public class Wizard extends Character implements Attacker {
 
     private int stamina;
     private int strength;
@@ -8,8 +8,6 @@ public class Wizard extends Character implements  Attacker {
         setStamina(stamina);
         setStrength(strength);
     }
-
-
 
     public int getStamina() {
         return stamina;
@@ -31,6 +29,5 @@ public class Wizard extends Character implements  Attacker {
     public void attack(Character character) {
 
     }
-
 
 }
