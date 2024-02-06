@@ -7,33 +7,13 @@ public class Wizard extends Character implements Attacker {
     private final int MIN_INTELLIGENCE_WIZARD = 1;
     private final int MAX_INTELLIGENCE_WIZARD = 50;
 
-    private int stamina;
-    private int strength;
     private int mana;
     private int intelligence;
 
-    public Wizard(String name, int hp, int stamina, int strength, int mana) {
+    public Wizard(String name, int hp, int mana, int intelligence) {
         super(name, hp);
-        setStamina(stamina);
-        setStrength(strength);
         setMana((Math.random() * (MAX_MANA_WIZARD - MIN_MANA_WIZARD + 1)) + MIN_MANA_WIZARD);
         setIntelligence((Math.random() * (MAX_INTELLIGENCE_WIZARD - MIN_INTELLIGENCE_WIZARD + 1)) + MIN_INTELLIGENCE_WIZARD);
-    }
-
-    public int getStamina() {
-        return stamina;
-    }
-
-    public void setStamina(int stamina) {
-        this.stamina = stamina;
-    }
-
-    public int getStrength() {
-        return strength;
-    }
-
-    public void setStrength(int strength) {
-        this.strength = strength;
     }
 
     public int getMana() {
