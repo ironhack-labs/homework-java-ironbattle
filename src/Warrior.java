@@ -7,10 +7,14 @@ public class Warrior extends Character{
 
         Random rand = new Random();
         // Stamina initial value is a random int between 10 and 50
-        setStamina(rand.nextInt(50 - 10 + 1) + 10);
+        int staminaMin = 10;
+        int staminaMax = 50;
+        setStamina(rand.nextInt(staminaMax - staminaMin + 1) + staminaMin);
 
         // Strength initial value is a random int between 1 and 10
-        setStrength(rand.nextInt(10 - 1 + 1) + 1);
+        int strengthMin = 1;
+        int strengthMax = 10;
+        setStrength(rand.nextInt(strengthMax - strengthMin + 1) + strengthMin);
     }
 
     // Attributes
