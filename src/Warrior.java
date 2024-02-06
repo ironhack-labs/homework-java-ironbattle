@@ -22,7 +22,7 @@ public class Warrior extends Character implements Attacker {
     }
 
     public void setStrength(int strength) {
-        if (strength<1 || strength>10) {
+        if (strength < 1 || strength > 10) {
             this.strength = -1;
             System.out.println("Invalid value for strength");
         } else {
@@ -61,11 +61,13 @@ public class Warrior extends Character implements Attacker {
     }
 
     private void heavyAttack(Character character){
-        int damage = strength;
-        character.receiveDamage(damage);
+        System.out.println("Warrior HeavyAttack");
+        character.receiveDamage(strength);
         stamina -=5;
     }
     private void weakAttack(Character character){
+
+        System.out.println("Warrior weakAttack");
         int damage = strength / 2;
         character.receiveDamage(damage);
         stamina +=1;
@@ -76,6 +78,7 @@ public class Warrior extends Character implements Attacker {
     }
     /// this receiveDamage can be also in the Character class?
     public void receiveDamage(int damage){
+    System.out.println("Damage received from wizard" + " " +  damage);
         int newHP = getHp() - damage;
         setHp(newHP);
         if(newHP <= 0){

@@ -4,10 +4,9 @@ public abstract class Character {
     private String id;
     private String name;
     private int hp;
-
     private boolean isAlive;
 
-    protected Character(String name, int hp) {
+    protected Character(String name, int hp ) {
         this.id = generateId();
         this.name = name;
         this.hp = hp;
