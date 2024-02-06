@@ -5,53 +5,44 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Iron Battle!");
 
-        Wizard char1 = createCharacter(); //Character char1 = createCharacter();
+        Character char1 = createCharacter();
         System.out.println("Character 1 finished! Let's create the second character!");
 
-        Wizard char2 = createCharacter(); // Character char2 = createCharacter();
+        Character char2 = createCharacter();
         System.out.println("Character 2 finished!");
     }
 
 
-    public static Wizard createCharacter(){ //public static Character createCharacter(){
-
-        Wizard newCharacter = null; //Character newCharacter
+    public static Character createCharacter(){
         int charType = checkCharacterType();
 
         if (charType >= 0)
-            newCharacter = fillAtributes(charType); //newCharacter = createCharType(charType);
+            return(fillAtributes(charType)); //newCharacter = createCharType(charType);
         else
-            System.out.println("byebye"); //manage error
-
-        return (newCharacter);
+            return (null);
     }
 
     public static int checkCharacterType(){
-
         Scanner scanner = new Scanner(System.in);
         int attempts = 0;
-        int numType = -1;
 
         System.out.println("Choose the character: Wizard or Warrior?");
-        while (attempts++ < 5 && numType < 0){
+        while (attempts++ < 3){
             String charType = scanner.nextLine().toLowerCase();
             if (charType.equals("warrior")){
-                numType = 0;
-            }
-            else if (charType.equals("wizard")){
-                numType = 1;
+                return (0);
+            } else if (charType.equals("wizard")){
+                return (1);
             }
             else{
-                if (attempts == 5)
-                    System.out.println("Sorry, you have exhausted the maximum number of attempts."); //manage error
-                else
-                    System.out.println("You can only choose Wizard or Warrior.");
+                System.out.println("You can only choose Wizard or Warrior.");
             }
         }
-        return (numType);
+        System.out.println("Sorry, you have exhausted the maximum number of attempts.");
+        return (-1);
     }
 
-    public static Wizard fillAtributes(int charType){
+    public static Character fillAtributes(int charType){
 
         System.out.println("Let's get create a Wizard character.");
         String name = enterName();
@@ -65,12 +56,25 @@ public class Main {
                 break;
             }
         }
-        Wizard newCharacter = new Wizard(atr[1], atr[2]);
-        System.out.println("Great! New wizard has been created");
 
+        if (charType == 0)
+           return(wizardConstructor(name, atr[0], atr[1], atr[2]));
+        else
+            return(warriorConstructor(name, atr[0], atr[1], atr[2]));
+
+       // System.out.println("Great! New wizard has been created");
+
+    }
+
+    public static Character wizardConstructor(String name, int hp, int mana, int intelligence){
+        Wizard newCharacter = new Wizard(name, hp, mana, intelligence);
         return (newCharacter);
     }
 
+    public static Character warriorConstructor(String name, int hp, int stamina, int strength){
+        Character newCharacter = new Warrior(name, hp, stamina, strength);
+        return (newCharacter);
+    }
     public static String enterName() {
 
         Scanner scanner = new Scanner(System.in);
