@@ -1,12 +1,9 @@
-import java.util.concurrent.ThreadLocalRandom;
-
+import java.util.Random;
 public class Utils {
     // Generates a random integer within a specified range.
     public static int generateRandomInt(int min, int max) {
-        if (min >= max) {
-            throw new IllegalArgumentException("Max must be greater than min");
-        }
-        return ThreadLocalRandom.current().nextInt(min, max + 1);
+        Random random = new Random();
+        return random.nextInt(max - min + 1) + min;
     }
     // Other utility methods to be added here
 
