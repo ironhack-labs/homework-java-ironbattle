@@ -12,8 +12,8 @@ public class Wizard extends Character implements Attacker {
 
     public Wizard(String name, int hp, int mana, int intelligence) {
         super(name, hp);
-        setMana((Math.random() * (MAX_MANA_WIZARD - MIN_MANA_WIZARD + 1)) + MIN_MANA_WIZARD);
-        setIntelligence((Math.random() * (MAX_INTELLIGENCE_WIZARD - MIN_INTELLIGENCE_WIZARD + 1)) + MIN_INTELLIGENCE_WIZARD);
+        setMana(20);
+        setIntelligence(10);
     }
 
     public int getMana() {
@@ -59,8 +59,8 @@ public class Wizard extends Character implements Attacker {
 
     @Override
     public void setHp(int hp) {
-        validateHP(hp);
-        super.hp = hp;
+        validateHp(hp);
+        super.setHp(hp);
     }
 
 }
