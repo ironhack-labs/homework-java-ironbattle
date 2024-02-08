@@ -44,5 +44,5 @@ public abstract class Character implements Attacker {
     }
 
     @Override
-    public abstract void attack(Character enemy);
+    public abstract void attack();
 }
