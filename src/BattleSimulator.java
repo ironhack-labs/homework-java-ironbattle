@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Battle {
+public class BattleSimulator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to Battle!");
