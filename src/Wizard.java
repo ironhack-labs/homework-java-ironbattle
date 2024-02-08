@@ -6,14 +6,17 @@ public class Wizard extends Character implements Attacker {
     private final int MAX_MANA_WIZARD = 50;
     private final int MIN_INTELLIGENCE_WIZARD = 1;
     private final int MAX_INTELLIGENCE_WIZARD = 50;
+    private final int MANA_TO_DECREASE_WHEN_FIREBALL = 5;
+    private final int DAMAGE_INFLICTED_BY_STAFF_HIT = 2;
+    private final int MANA_TO_DECREASE_WHEN_STAFF_HIT = 1;
 
     private int mana;
     private int intelligence;
 
     public Wizard(String name, int hp, int mana, int intelligence) {
         super(name, hp);
-        setMana((Math.random() * (MAX_MANA_WIZARD - MIN_MANA_WIZARD + 1)) + MIN_MANA_WIZARD);
-        setIntelligence((Math.random() * (MAX_INTELLIGENCE_WIZARD - MIN_INTELLIGENCE_WIZARD + 1)) + MIN_INTELLIGENCE_WIZARD);
+        setMana(20);
+        setIntelligence(10);
     }
 
     public int getMana() {
@@ -36,7 +39,22 @@ public class Wizard extends Character implements Attacker {
 
     @Override
     public void attack(Character character) {
+        int randomCast = 1;
+        if (randomCast == 1) {
+            castFireball(character);
+        }  else {
+            castStaffHit(character);
+        }
+    }
 
+    private void castFireball(Character character) {
+        character.setHp(character.getHp() - this.intelligence);
+        this.setMana(this.getMana() - MANA_TO_DECREASE_WHEN_FIREBALL);
+    }
+
+    private void castStaffHit(Character character) {
+        character.setHp(character.getHp() - DAMAGE_INFLICTED_BY_STAFF_HIT);
+        this.setMana(this.getMana() - MANA_TO_DECREASE_WHEN_STAFF_HIT);
     }
 
     public void validateMana(int mana) {
@@ -59,8 +77,8 @@ public class Wizard extends Character implements Attacker {
 
     @Override
     public void setHp(int hp) {
-        validateHP(hp);
-        super.hp = hp;
+        validateHp(hp);
+        super.setHp(hp);
     }
 
 }
