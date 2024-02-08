@@ -10,6 +10,9 @@ public abstract class Character implements Attacker {
         setHp(hp);
         assignId();
     }
+    public Character(String name){
+        setName(name);
+    }
 
     private void assignId(){
         this.id = String.valueOf(idCounter++);
