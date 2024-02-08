@@ -1,25 +1,27 @@
-import java.util.Random;
+public class Warrior extends Character {
+    // Attributes
+    private int stamina;
+    private int strength;
 
-public class Warrior extends Character{
     // Constructors
     Warrior(String name) {
-        super(name);
+        super(name, 0);
 
-        Random rand = new Random();
+        // HP initial value is a random int between 100 and 200
+        int hpMin = 100;
+        int hpMax= 200;
+        setHp(Randomizer.getRandomInt(hpMin, hpMax));
+
         // Stamina initial value is a random int between 10 and 50
         int staminaMin = 10;
         int staminaMax = 50;
-        setStamina(rand.nextInt(staminaMax - staminaMin + 1) + staminaMin);
+        setStamina(Randomizer.getRandomInt(staminaMin, staminaMax));
 
         // Strength initial value is a random int between 1 and 10
         int strengthMin = 1;
         int strengthMax = 10;
-        setStrength(rand.nextInt(strengthMax - strengthMin + 1) + strengthMin);
+        setStrength(Randomizer.getRandomInt(strengthMin, strengthMax));
     }
-
-    // Attributes
-    private int stamina;
-    private int strength;
 
     // Getters and Setters
     public int getStamina() {
@@ -40,13 +42,13 @@ public class Warrior extends Character{
 
     // Methods
     public void attack(Character enemy) {
-        if (getStamina() < 2) {
+        /*if (getStamina() < 2) {
             recovery();
-        } else if (getStmina() < 5) {
+        } else */
+        if (getStamina() < 5) {
             weakAttack(enemy);
         } else {
-            Random rand = new Random();
-            if (rand.nextInt(2) == 0) {
+            if (Randomizer.getRandomInt(0, 1) == 0) {
                 heavyAttack(enemy);
             } else {
                 weakAttack(enemy);
@@ -57,7 +59,11 @@ public class Warrior extends Character{
     private void heavyAttack(Character enemy) {
         // Attack enemy
         int attackStrength = getStrength();
-        enemy.setHp(enemy.getHp() - attackStrength);
+        enemy.setHp(enemy.getHP() - attackStrength);
+
+        // Decrease stamina
+        int staminaDecreaseValue = 5;
+        this.setStamina(getStamina() - staminaDecreaseValue);
 
         // Log
         System.out.println(getName() + " heavy attacked " + enemy.getName() + " with " + attackStrength + " hp!");
@@ -66,7 +72,7 @@ public class Warrior extends Character{
     private void weakAttack(Character enemy) {
         // Attack enemy
         int attackStrength = getStrength() / 2;
-        enemy.setHp(enemy.getHp() - attackStrength);
+        enemy.setHp(enemy.getHP() - attackStrength);
 
         // Recover
         int recoverValue = 1;
