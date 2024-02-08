@@ -16,11 +16,11 @@ public class Main {
         CharacterInput characterInput = new CharacterInput();
         if (characterInput.getType() == 1){
             return( new Warrior(characterInput.getName(), characterInput.getHP(),
-                    characterInput.getAtribute1(), characterInput.getAtribute2()));
+                    characterInput.getAttribute1(), characterInput.getAttribute2()));
         }
         else{
             return(new Wizard(characterInput.getName(), characterInput.getHP(),
-                    characterInput.getAtribute1(), characterInput.getAtribute2()));
+                    characterInput.getAttribute1(), characterInput.getAttribute2()));
         }
     }
 }

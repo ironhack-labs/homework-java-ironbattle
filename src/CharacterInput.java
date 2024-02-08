@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class CharacterInput {
 
-    private String name;
-    private int hp;
-    private int atribute1;
-    private int atribute2;
-    private int type;
+    private String name = "";
+    private int hp = -1;
+    private int attribute1 = -1;
+    private int attribute2 = -1;
+    private int type = -1; //0-warrior 1-wizard
 
 
     public CharacterInput(){
@@ -15,8 +15,8 @@ public class CharacterInput {
         msgStartType();
         setNameInput();
         setHP(); // make random
-        setAtribute1(); //random;
-        setAtribute2();
+        setAttribute1(); //random;
+        setAttribute2();
     }
 
     //message functions
@@ -30,12 +30,15 @@ public class CharacterInput {
         else
             System.out.println("Let's create a new Wizard!");
     }
+    public void msgAssignRandomly(){
+        System.out.println("Sorry, you have exhausted the maximum number of attempts.");
+    }
+
 
     //setters inputs
     public void setTypeInput(){
         Scanner scanner = new Scanner(System.in);
         int attempts = 0;
-        this.type = -1;
 
         while (attempts++ < 4 && this.type < 0){
             String charType = scanner.nextLine().toLowerCase();
@@ -43,100 +46,77 @@ public class CharacterInput {
                 this.type = 0;
             } else if (charType.equals("wizard")){
                 this.type = 1;
+            } else if (attempts < 4){
+                System.out.println("You must choose Wizard or Warrior.");
             } else{
-                    System.out.println("You must choose Wizard or Warrior.");
+                msgAssignRandomly();
+                System.out.println("Your character will be assigned randomly");
+                this.type = 1; //pending to random
             }
-        }
-        if (this.type < 0){
-            System.out.println("Sorry, you have exhausted the maximum number of attempts.");
-            System.out.println("Your character will be assigned randomly");
-            this.type = 1; //pending to random
         }
     }
 
     public void setNameInput(){
         Scanner scanner = new Scanner(System.in);
         int attempts = 0;
-        this.name = "";
         System.out.println("Write the name of character");
 
         while (attempts++ < 4 && this.name.isEmpty()){
             this.name = scanner.nextLine();
-            if (this.name.isEmpty()){
+            if (!this.name.isEmpty()){
+                System.out.println("Let's define " + this.name + "'s attributes.");
+            } else if (attempts < 4){
                 System.out.println("It is not a correct name. Try again!");
             } else{
-                System.out.println("Let's define " + this.name + "'s attributes.");
+                msgAssignRandomly();
+                System.out.println("Your character will be named Fighter.");
+                this.name = "Fighter";
             }
         }
-        if (this.name.isEmpty()){
-            System.out.println("Sorry, you have exhausted the maximum number of attempts.");
-            System.out.println("Your character will be named Fighter.");
-            this.name = "Fighter";
-        }
-
     }
 
     public void setHP() {
-        this.hp = -1;
-        String atributeName = "hp";
+        String attributeName = "health points";
         if (this.type == 0)
-            enterAtribute(atributeName, 100, 200);
+            enterAttribute(attributeName, 100, 200);
         else
-            enterAtribute(atributeName, 50, 100);
+            enterAttribute(attributeName, 50, 100);
     }
 
-    public void setAtribute1() {
-        this.atribute1 = -1;
-        String atributeName;
+    public void setAttribute1() {
         if (this.type == 0){
-            atributeName = "stamina";
+            this.attribute1 = enterAttribute("stamina", 10, 50);
         } else{
-            atributeName = "mana";
+            this.attribute1 = enterAttribute("mana", 10, 50);
         }
-        if (this.type == 0)
-            this.atribute1 = enterAtribute(atributeName, 10, 50);
-        else
-            this.atribute1 = enterAtribute(atributeName, 10, 50);
-
     }
 
-    public void setAtribute2() {
-        this.atribute2 = -1;
-        String atributeName;
+    public void setAttribute2() {
         if (this.type == 0){
-            atributeName = "strength";
+            this.attribute2 = enterAttribute("strength", 1, 10);
         } else{
-            atributeName = "intelligence";
+            this.attribute2 = enterAttribute("intelligence", 1, 50);
         }
-        if (this.type == 0)
-            this.atribute2 = enterAtribute(atributeName, 1, 10);
-        else
-            this.atribute2 = enterAtribute(atributeName, 1, 50);
     }
 
-    public int enterAtribute(String atributeName, int min, int max) {
-
+    public int enterAttribute(String attributeName, int min, int max) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Write the value of " + atributeName);
         int value = -1;
         int attempts = 0;
-        while (attempts++ < 4 && value < 0){
+
+        System.out.println("Define " + attributeName + "(range: " + min + " to " + max + "):");
+        while (attempts++ < 4 && (value < min || value > max)){
             if (scanner.hasNextInt()) {
                 value = scanner.nextInt();
-                if (value < 0){ //out of range
-                    value  = -1;
-                    System.out.println("It is not a correct range for this atribute. Try again!");
-                }
-            } else {
-                System.out.println("It is not a correct range for this atribute. Try again!");
-                value = -1;
             }
-        }
-
-        if (value < 0){
-            System.out.println("Sorry, you have exhausted the maximum number of attempts.");
-            System.out.println("The atribute will be assigned randomly.");
-            value = 20; //randomly
+            if (attempts < 4 && (value < min || value > max)){
+                System.out.println("Value is out of range. Try again!");
+            }
+            else if (attempts == 4 && (value < min || value > max)){
+                msgAssignRandomly();
+                System.out.println("The attribute will be assigned randomly.");
+                value = min; //randomly
+            }
         }
         return (value);
     }
@@ -154,11 +134,11 @@ public class CharacterInput {
         return this.hp;
     }
 
-    public int getAtribute1() {
-        return this.atribute1;
+    public int getAttribute1() {
+        return this.attribute1;
     }
 
-    public int getAtribute2() {
-        return this.atribute2;
+    public int getAttribute2() {
+        return this.attribute2;
     }
 }
