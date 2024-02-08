@@ -79,8 +79,10 @@ public class CharacterInput {
     public void setHP() {
         this.hp = -1;
         String atributeName = "hp";
-        enterAtribute(atributeName, 1, 50);
-
+        if (this.type == 0)
+            enterAtribute(atributeName, 100, 200);
+        else
+            enterAtribute(atributeName, 50, 100);
     }
 
     public void setAtribute1() {
@@ -91,7 +93,11 @@ public class CharacterInput {
         } else{
             atributeName = "mana";
         }
-        this.atribute1 = enterAtribute(atributeName, 1, 50);
+        if (this.type == 0)
+            this.atribute1 = enterAtribute(atributeName, 10, 50);
+        else
+            this.atribute1 = enterAtribute(atributeName, 10, 50);
+
     }
 
     public void setAtribute2() {
@@ -102,7 +108,10 @@ public class CharacterInput {
         } else{
             atributeName = "intelligence";
         }
-        this.atribute2 = enterAtribute(atributeName, 1, 50);
+        if (this.type == 0)
+            this.atribute2 = enterAtribute(atributeName, 1, 10);
+        else
+            this.atribute2 = enterAtribute(atributeName, 1, 50);
     }
 
     public int enterAtribute(String atributeName, int min, int max) {
