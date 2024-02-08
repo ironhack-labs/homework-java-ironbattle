@@ -5,11 +5,22 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Iron Battle!");
 
-        CharacterInput firstCharacter = new CharacterInput();
-
+        System.out.println("Let's create first character!");
+        Character firstCharacter = charactersConstructor();
         System.out.println("Character 1 finished! Let's create the second character!");
-        CharacterInput secondCharacter = new CharacterInput();
-
+        Character secondCharacter = charactersConstructor();
         System.out.println("Character 2 finished!");
+    }
+
+    public static Character charactersConstructor(){
+        CharacterInput characterInput = new CharacterInput();
+        if (characterInput.getType() == 1){
+            return( new Warrior(characterInput.getName(), characterInput.getHP(),
+                    characterInput.getAtribute1(), characterInput.getAtribute2()));
+        }
+        else{
+            return(new Wizard(characterInput.getName(), characterInput.getHP(),
+                    characterInput.getAtribute1(), characterInput.getAtribute2()));
+        }
     }
 }

@@ -3,21 +3,20 @@ import java.util.Scanner;
 public class CharacterInput {
 
     private String name;
-    private int atributes[];
+    private int hp;
+    private int atribute1;
+    private int atribute2;
     private int type;
-    private Character character;
+
 
     public CharacterInput(){
         msgStartCreation();
         setTypeInput();
-        if (this.type < 0)
-            return;
         msgStartType();
         setNameInput();
-        if (this.name.isEmpty())
-            return;
-        setAtributesInput(); // protect atributes
-        setCharacter();
+        setHP(); // make random
+        setAtribute1(); //random;
+        setAtribute2();
     }
 
     //message functions
@@ -45,77 +44,112 @@ public class CharacterInput {
             } else if (charType.equals("wizard")){
                 this.type = 1;
             } else{
-                if (attempts < 4)
                     System.out.println("You must choose Wizard or Warrior.");
-                else
-                    System.out.println("Sorry, you have exhausted the maximum number of attempts.");
             }
+        }
+        if (this.type < 0){
+            System.out.println("Sorry, you have exhausted the maximum number of attempts.");
+            System.out.println("Your character will be assigned randomly");
+            this.type = 1; //pending to random
         }
     }
 
     public void setNameInput(){
         Scanner scanner = new Scanner(System.in);
-
+        int attempts = 0;
+        this.name = "";
         System.out.println("Write the name of character");
-        for (int i=0; i < 3; i++){
+
+        while (attempts++ < 4 && this.name.isEmpty()){
             this.name = scanner.nextLine();
             if (this.name.isEmpty()){
-                if (i < 2){
-                    System.out.println("It is not a correct name. Try again!");
-                } else{
-                    System.out.println("Sorry, you have exhausted the maximum number of attempts.");
-                }
-            }
-            else{
-                break;
+                System.out.println("It is not a correct name. Try again!");
+            } else{
+                System.out.println("Let's define " + this.name + "'s attributes.");
             }
         }
-    }
-
-
-    public void setAtributesInput() {
-        this.atributes = new int[3];
-
-        for (int i = 0; i < atributes.length; i++){
-            enterAtribute(i);
-            if (this.atributes[i] < 0){
-               System.out.println("byebye"); //manage error
-              break;
-            }
+        if (this.name.isEmpty()){
+            System.out.println("Sorry, you have exhausted the maximum number of attempts.");
+            System.out.println("Your character will be named Fighter.");
+            this.name = "Fighter";
         }
+
     }
 
-    public void enterAtribute(int numAtribute) {
+    public void setHP() {
+        this.hp = -1;
+        String atributeName = "hp";
+        enterAtribute(atributeName, 1, 50);
+
+    }
+
+    public void setAtribute1() {
+        this.atribute1 = -1;
+        String atributeName;
+        if (this.type == 0){
+            atributeName = "stamina";
+        } else{
+            atributeName = "mana";
+        }
+        this.atribute1 = enterAtribute(atributeName, 1, 50);
+    }
+
+    public void setAtribute2() {
+        this.atribute2 = -1;
+        String atributeName;
+        if (this.type == 0){
+            atributeName = "strength";
+        } else{
+            atributeName = "intelligence";
+        }
+        this.atribute2 = enterAtribute(atributeName, 1, 50);
+    }
+
+    public int enterAtribute(String atributeName, int min, int max) {
 
         Scanner scanner = new Scanner(System.in);
-        String[] atrWarrior = {"hp", "stamina", "strenght"};
-        String[] atrWizard= {"hp", "mana", "intelligence"};
-
-        if (this.type == 0)
-            System.out.println("Write the value of " + atrWarrior[numAtribute]);
-        else
-            System.out.println("Write the value of " + atrWizard[numAtribute]);
+        System.out.println("Write the value of " + atributeName);
+        int value = -1;
         int attempts = 0;
-        do{
+        while (attempts++ < 4 && value < 0){
             if (scanner.hasNextInt()) {
-                this.atributes[numAtribute] = scanner.nextInt();
-            } else if (attempts < 3){
+                value = scanner.nextInt();
+                if (value < 0){ //out of range
+                    value  = -1;
+                    System.out.println("It is not a correct range for this atribute. Try again!");
+                }
+            } else {
                 System.out.println("It is not a correct range for this atribute. Try again!");
-                this.atributes[numAtribute] = -1;
-            } else
-                System.out.println("Sorry, you have exhausted the maximum number of attempts.");
-            attempts++;
-        } while (attempts < 3 && this.atributes[numAtribute] < 0);
+                value = -1;
+            }
+        }
 
+        if (value < 0){
+            System.out.println("Sorry, you have exhausted the maximum number of attempts.");
+            System.out.println("The atribute will be assigned randomly.");
+            value = 20; //randomly
+        }
+        return (value);
     }
 
-    public void setCharacter(){
-        if (this.type == 0){
-            this.character = new Warrior(this.name, this.atributes[0], this.atributes[1], this.atributes[2]);
-        } else if (this.type == 1) {
-            this.character = new Wizard(this.name, this.atributes[0], this.atributes[1], this.atributes[2]);
-        } else
-            this.character = null;
+    //getters
+    public String getName() {
+        return this.name;
     }
 
+    public int getType() {
+        return this.type;
+    }
+
+    public int getHP() {
+        return this.hp;
+    }
+
+    public int getAtribute1() {
+        return this.atribute1;
+    }
+
+    public int getAtribute2() {
+        return this.atribute2;
+    }
 }
