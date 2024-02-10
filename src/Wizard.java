@@ -22,15 +22,16 @@ public class Wizard extends Character implements Attacker {
     }
 
     public Wizard(String name, int hp, int mana, int intelligence) {
-        super(name, hp);
+        super(name, Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, Stats.Health, Characters.Wizard));
         setMana(mana);
         setIntelligence(intelligence);
     }
 
     @Override
     public void attack(Character character) {
-        if (this.getMana() >= MANA_TO_DECREASE_WHEN_FIREBALL && Utils.generateRandomInt(
-          , CONST_FOR_STAFF_HIT) == CONST_FOR_FIREBALL) {
+        character.setHp(character.getHp() - Utils.generateRandomInt(1, 2));
+        if (this.getMana() >= MANA_TO_DECREASE_WHEN_FIREBALL
+                && Utils.generateRandomInt(1, 2) == CONST_FOR_FIREBALL) {
             castFireball(character);
         } else {
             castStaffHit(character);
@@ -67,16 +68,17 @@ public class Wizard extends Character implements Attacker {
 
     @Override
     public void setHp(int hp) {
-        Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, Stats.Health, Characters.Wizard);
         super.setHp(hp);
     }
 
     @Override
     public String toString() {
-        return "<< Wizard >>" + "\n" +
-                "Name: " + getName() + "\n" +
-                "Health: " + getHp() + "\n" +
-                "Mana: " + mana + "\n" +
-                "Intelligence: " + intelligence;
+        return String.format("<< Wizard >> %n " +
+                        "Name: %s; " +
+                        "Health: %d; " +
+                        "Mana: %d; " +
+                        "Intelligence: %d%n",
+                getName(), getHp(), mana, intelligence);
     }
+
 }

@@ -16,20 +16,19 @@ public class Warrior extends Character {
     }
 
     public Warrior(String name, int hp, int stamina, int strength) {
-        super(name, hp);
+        super(name, Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, Stats.Health, Characters.Warrior));
         setStamina(stamina);
         setStrength(strength);
     }
 
     @Override
     public void attack(Character character) {
-
+        character.setHp(character.getHp() - Utils.generateRandomInt(1, 2));
     }
 
 
     @Override
     public void setHp(int hp) {
-        Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, Stats.Health, Characters.Warrior);
         super.setHp(hp);
     }
 
@@ -54,9 +53,9 @@ public class Warrior extends Character {
     @Override
     public String toString() {
         return String.format("<< Warrior >> %n " +
-                        "Name: %s%n " +
-                        "Health: %d%n " +
-                        "Stamina: %d%n " +
+                        "Name: %s; " +
+                        "Health: %d; " +
+                        "Stamina: %d; " +
                         "Strength: %d%n",
                 getName(), getHp(), getStamina(), getStrength());
     }
