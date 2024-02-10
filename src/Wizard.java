@@ -1,46 +1,36 @@
 public class Wizard extends Character implements Attacker {
 
-    private final int MIN_HP_WIZARD = 50;
-    private final int MAX_HP_WIZARD = 100;
-    private final int MIN_MANA_WIZARD = 10;
-    private final int MAX_MANA_WIZARD = 50;
-    private final int MIN_INTELLIGENCE_WIZARD = 1;
-    private final int MAX_INTELLIGENCE_WIZARD = 50;
-    private final int MANA_TO_DECREASE_WHEN_FIREBALL = 5;
-    private final int DAMAGE_INFLICTED_BY_STAFF_HIT = 2;
-    private final int MANA_TO_DECREASE_WHEN_STAFF_HIT = 1;
-    private final int CONST_FOR_FIREBALL = 0;
-    private final int CONST_FOR_STAFF_HIT = 1;
+    private static final int MIN_HEALTH = 50;
+    private static final int MAX_HEALTH = 100;
+    private static final int MIN_MANA = 10;
+    private static final int MAX_MANA = 50;
+    private static final int MIN_INTELLIGENCE = 1;
+    private static final int MAX_INTELLIGENCE = 50;
+    private static final int MANA_TO_DECREASE_WHEN_FIREBALL = 5;
+    private static final int DAMAGE_INFLICTED_BY_STAFF_HIT = 2;
+    private static final int MANA_TO_DECREASE_WHEN_STAFF_HIT = 1;
+    private static final int CONST_FOR_FIREBALL = 0;
+    private static final int CONST_FOR_STAFF_HIT = 1;
+
     private int mana;
     private int intelligence;
 
+    public Wizard(String name) {
+        super(name, Utils.generateRandomInt(MIN_HEALTH, MAX_HEALTH));
+        setMana(Utils.generateRandomInt(MIN_MANA, MAX_MANA));
+        setIntelligence(Utils.generateRandomInt(MIN_INTELLIGENCE, MAX_INTELLIGENCE));
+    }
+
     public Wizard(String name, int hp, int mana, int intelligence) {
         super(name, hp);
-        setMana(20);
-        setIntelligence(10);
-    }
-
-    public int getMana() {
-        return mana;
-    }
-
-    public void setMana(int mana) {
-        validateMana(mana);
-        this.mana = mana;
-    }
-
-    public int getIntelligence() {
-        return intelligence;
-    }
-
-    public void setIntelligence(int intelligence) {
-        validateIntelligence(intelligence);
-        this.intelligence = intelligence;
+        setMana(mana);
+        setIntelligence(intelligence);
     }
 
     @Override
     public void attack(Character character) {
-        if (this.getMana() >= MANA_TO_DECREASE_WHEN_FIREBALL && Utils.generateRandomInt(CONST_FOR_FIREBALL, CONST_FOR_STAFF_HIT) == CONST_FOR_FIREBALL) {
+        if (this.getMana() >= MANA_TO_DECREASE_WHEN_FIREBALL && Utils.generateRandomInt(
+          , CONST_FOR_STAFF_HIT) == CONST_FOR_FIREBALL) {
             castFireball(character);
         } else {
             castStaffHit(character);
@@ -57,28 +47,36 @@ public class Wizard extends Character implements Attacker {
         this.setMana(this.getMana() + MANA_TO_DECREASE_WHEN_STAFF_HIT);
     }
 
-    public void validateMana(int mana) {
-        if (mana < MIN_MANA_WIZARD || mana > MAX_MANA_WIZARD) {
-            throw new IllegalArgumentException("El mana debe estar entre " + MIN_MANA_WIZARD + " y " + MAX_MANA_WIZARD);
-        }
+    public int getMana() {
+        return mana;
     }
 
-    public void validateIntelligence(int intelligence) {
-        if (intelligence < MIN_INTELLIGENCE_WIZARD || intelligence > MAX_INTELLIGENCE_WIZARD) {
-            throw new IllegalArgumentException("La inteligencia del Wizard debe estar entre " + MIN_INTELLIGENCE_WIZARD + " y " + MAX_INTELLIGENCE_WIZARD);
-        }
+    public void setMana(int mana) {
+        Utils.validate(mana, MIN_MANA, MAX_MANA, Stats.Mana, Characters.Wizard);
+        this.mana = mana;
     }
 
-    public void validateHp(int hp) {
-        if (hp < MIN_HP_WIZARD || hp > MAX_HP_WIZARD) {
-            throw new IllegalArgumentException("hp (health points) debe estar entre " + MIN_HP_WIZARD + " y " + MAX_HP_WIZARD);
-        }
+    public int getIntelligence() {
+        return intelligence;
+    }
+
+    public void setIntelligence(int intelligence) {
+        Utils.validate(intelligence, MIN_INTELLIGENCE, MAX_INTELLIGENCE, Stats.Intelligence, Characters.Wizard);
+        this.intelligence = intelligence;
     }
 
     @Override
     public void setHp(int hp) {
-        validateHp(hp);
+        Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, Stats.Health, Characters.Wizard);
         super.setHp(hp);
     }
 
+    @Override
+    public String toString() {
+        return "<< Wizard >>" + "\n" +
+                "Name: " + getName() + "\n" +
+                "Health: " + getHp() + "\n" +
+                "Mana: " + mana + "\n" +
+                "Intelligence: " + intelligence;
+    }
 }

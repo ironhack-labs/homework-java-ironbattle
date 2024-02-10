@@ -1,15 +1,13 @@
 public class Warrior extends Character {
 
-    private int stamina;
-    private int strength;
-
     private static final int MIN_HEALTH = 100;
     private static final int MAX_HEALTH = 200;
     private static final int MIN_STAMINA = 10;
     private static final int MAX_STAMINA = 50;
     private static final int MIN_STRENGTH = 1;
     private static final int MAX_STRENGTH = 10;
-
+    private int stamina;
+    private int strength;
 
     public Warrior(String name) {
         super(name, Utils.generateRandomInt(MIN_HEALTH, MAX_HEALTH));
@@ -17,31 +15,21 @@ public class Warrior extends Character {
         setStrength(Utils.generateRandomInt(MIN_STRENGTH, MAX_STRENGTH));
     }
 
+    public Warrior(String name, int hp, int stamina, int strength) {
+        super(name, hp);
+        setStamina(stamina);
+        setStrength(strength);
+    }
+
     @Override
     public void attack(Character character) {
 
     }
 
-    public void validateHealth(int health) {
-        if (health < MIN_HEALTH || health > MAX_HEALTH) {
-            throw new IllegalArgumentException("Warrior's health should be between " + MIN_HEALTH + " - " + MAX_HEALTH);
-        }
-    }
-
-    public void validateStamina(int stamina) {
-        if (stamina < MIN_STAMINA || stamina > MAX_STAMINA) {
-            throw new IllegalArgumentException("Warrior's stamina should be between " + MIN_STAMINA + " - " + MAX_STAMINA);
-        }
-    }
-
-    public void validateStrength(int strength) {
-        if (strength < MIN_STRENGTH || strength > MAX_STRENGTH) {
-            throw new IllegalArgumentException("Warrior's strength should be between " + MIN_STRENGTH + " - " + MAX_STRENGTH);
-        }
-    }
 
     @Override
     public void setHp(int hp) {
+        Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, Stats.Health, Characters.Warrior);
         super.setHp(hp);
     }
 
@@ -50,6 +38,7 @@ public class Warrior extends Character {
     }
 
     public void setStamina(int stamina) {
+        Utils.validate(stamina, MIN_STAMINA, MAX_STAMINA, Stats.Stamina, Characters.Warrior);
         this.stamina = stamina;
     }
 
@@ -58,15 +47,17 @@ public class Warrior extends Character {
     }
 
     public void setStrength(int strength) {
+        Utils.validate(strength, MIN_STRENGTH, MAX_STRENGTH, Stats.Strength, Characters.Warrior);
         this.strength = strength;
     }
 
     @Override
     public String toString() {
-        return "<< Warrior >>" + "\n" +
-                "Name: " + getName() + "\n" +
-                "Health: " + getHp() + "\n" +
-                "Stamina: " + stamina + "\n" +
-                "Strength: " + strength;
+        return String.format("<< Warrior >> %n " +
+                        "Name: %s%n " +
+                        "Health: %d%n " +
+                        "Stamina: %d%n " +
+                        "Strength: %d%n",
+                getName(), getHp(), getStamina(), getStrength());
     }
 }
