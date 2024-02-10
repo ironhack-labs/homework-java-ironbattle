@@ -179,7 +179,7 @@ public class Battle {
     private void battleRecorder(List<String> battleRecord ){
         this.battleRecord=battleRecord;
 
-        if(!isTieGame())
+        if(isTieGame())
             battleRecord.add("We have a tie match between the players. A new match start: ");
         else{
             if(getWinner()!=null){
