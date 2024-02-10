@@ -29,7 +29,7 @@ public class Warrior extends Character {
 
     @Override
     public void setHp(int hp) {
-        Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, "health", "Warrior");
+        Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, Stats.Health, Characters.Warrior);
         super.setHp(hp);
     }
 
@@ -38,7 +38,7 @@ public class Warrior extends Character {
     }
 
     public void setStamina(int stamina) {
-        Utils.validate(stamina, MIN_STAMINA, MAX_STAMINA, "stamina", "Warrior");
+        Utils.validate(stamina, MIN_STAMINA, MAX_STAMINA, Stats.Stamina, Characters.Warrior);
         this.stamina = stamina;
     }
 
@@ -47,7 +47,7 @@ public class Warrior extends Character {
     }
 
     public void setStrength(int strength) {
-        Utils.validate(strength, MIN_STRENGTH, MAX_STRENGTH, "strength", "Warrior");
+        Utils.validate(strength, MIN_STRENGTH, MAX_STRENGTH, Stats.Strength, Characters.Warrior);
         this.strength = strength;
     }
 

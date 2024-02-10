@@ -45,7 +45,7 @@ public class Wizard extends Character implements Attacker {
     }
 
     public void setMana(int mana) {
-        Utils.validate(mana, MIN_MANA, MAX_MANA, "mana", "Wizard");
+        Utils.validate(mana, MIN_MANA, MAX_MANA, Stats.Mana, Characters.Wizard);
         this.mana = mana;
     }
 
@@ -54,13 +54,13 @@ public class Wizard extends Character implements Attacker {
     }
 
     public void setIntelligence(int intelligence) {
-        Utils.validate(intelligence, MIN_INTELLIGENCE, MAX_INTELLIGENCE, "intelligence", "Wizard");
+        Utils.validate(intelligence, MIN_INTELLIGENCE, MAX_INTELLIGENCE, Stats.Intelligence, Characters.Wizard);
         this.intelligence = intelligence;
     }
 
     @Override
     public void setHp(int hp) {
-        Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, "health", "Wizard");
+        Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, Stats.Health, Characters.Wizard);
         super.setHp(hp);
     }
 
