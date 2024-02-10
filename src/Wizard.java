@@ -1,8 +1,5 @@
 public class Wizard extends Character implements Attacker {
 
-    private int mana;
-    private int intelligence;
-
     private static final int MIN_HEALTH = 50;
     private static final int MAX_HEALTH = 100;
     private static final int MIN_MANA = 10;
@@ -13,11 +10,19 @@ public class Wizard extends Character implements Attacker {
     private static final int DAMAGE_INFLICTED_BY_STAFF_HIT = 2;
     private static final int MANA_TO_DECREASE_WHEN_STAFF_HIT = 1;
 
+    private int mana;
+    private int intelligence;
+
+    public Wizard(String name) {
+        super(name, Utils.generateRandomInt(MIN_HEALTH, MAX_HEALTH));
+        setMana(Utils.generateRandomInt(MIN_MANA, MAX_MANA));
+        setIntelligence(Utils.generateRandomInt(MIN_INTELLIGENCE, MAX_INTELLIGENCE));
+    }
 
     public Wizard(String name, int hp, int mana, int intelligence) {
         super(name, hp);
-        setMana(Utils.generateRandomInt(MIN_MANA, MAX_MANA));
-        setIntelligence(Utils.generateRandomInt(MIN_INTELLIGENCE, MAX_INTELLIGENCE));
+        setMana(mana);
+        setIntelligence(intelligence);
     }
 
     @Override
@@ -35,30 +40,12 @@ public class Wizard extends Character implements Attacker {
         this.setMana(this.getMana() - MANA_TO_DECREASE_WHEN_STAFF_HIT);
     }
 
-    public void validateMana(int mana) {
-        if (mana < MIN_MANA || mana > MAX_MANA) {
-            throw new IllegalArgumentException("Wizard's nana should be between " + MIN_MANA + " - " + MAX_MANA);
-        }
-    }
-
-    public void validateIntelligence(int intelligence) {
-        if (intelligence < MIN_INTELLIGENCE || intelligence > MAX_INTELLIGENCE) {
-            throw new IllegalArgumentException("Wizard's intelligence should be between " + MIN_INTELLIGENCE + " - " + MAX_INTELLIGENCE);
-        }
-    }
-
-    public void validateHp(int hp) {
-        if (hp < MIN_HEALTH || hp > MAX_HEALTH) {
-            throw new IllegalArgumentException("hp (health points) debe estar entre " + MIN_HEALTH + " y " + MAX_HEALTH);
-        }
-    }
-
     public int getMana() {
         return mana;
     }
 
     public void setMana(int mana) {
-        validateMana(mana);
+        Utils.validate(mana, MIN_MANA, MAX_MANA, "mana", "Wizard");
         this.mana = mana;
     }
 
@@ -67,13 +54,13 @@ public class Wizard extends Character implements Attacker {
     }
 
     public void setIntelligence(int intelligence) {
-        validateIntelligence(intelligence);
+        Utils.validate(intelligence, MIN_INTELLIGENCE, MAX_INTELLIGENCE, "intelligence", "Wizard");
         this.intelligence = intelligence;
     }
 
     @Override
     public void setHp(int hp) {
-        validateHp(hp);
+        Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, "health", "Wizard");
         super.setHp(hp);
     }
 

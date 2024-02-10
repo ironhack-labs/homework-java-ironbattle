@@ -41,6 +41,12 @@ public class Utils {
         return characters;
     }
 
+    public static void validate(int value, int min, int max, String stat, String characterType) {
+        if (value < min || value > max) {
+            throw new IllegalArgumentException(characterType +"'s " + stat + " should be between " + min + " - " + max);
+        }
+    }
+
 }
 
 
