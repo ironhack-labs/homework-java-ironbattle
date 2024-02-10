@@ -13,7 +13,7 @@ public class Warrior extends Character implements Attacker {
 
     // Setters
     public void setStamina(int stamina) {
-        if (stamina<10 || stamina>50) {
+        if (stamina< 10 || stamina>50) {
             this.stamina = -1;
             System.out.println("Invalid value for stamina");
         } else {

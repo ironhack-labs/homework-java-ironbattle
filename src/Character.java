@@ -8,8 +8,8 @@ public abstract class Character implements Attacker{
 
     protected Character(String name, int hp ) {
         this.id = generateId();
-        this.name = name;
-        this.hp = hp;
+        setName(name);
+        setHp(hp);
         this.isAlive = true;
     }
 ///getters
