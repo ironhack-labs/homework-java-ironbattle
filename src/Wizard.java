@@ -74,12 +74,11 @@ public class Wizard extends Character implements Attacker {
     private void staffHitAttack(Character character) {
         System.out.println("Wizard staffHitAttack");
         setMana(getMana() + 1);
-        character.receiveDamage(getIntelligence());
+        character.receiveDamage(2);
     }
 
-    private int recoverMana(){
+    private void recoverMana(){
         setMana(getMana() + 2);
-        return 0;
     }
 
     public void receiveDamage(int damage){

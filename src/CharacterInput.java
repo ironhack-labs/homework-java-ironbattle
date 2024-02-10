@@ -76,11 +76,11 @@ public class CharacterInput {
     }
 
     public void setHP() {
-        String attributeName = "health points";
+        String attributeName = "Health Points";
         if (this.type == 0)
-            enterAttribute(attributeName, 100, 200);
+            this.hp =  enterAttribute(attributeName, 100, 200);
         else
-            enterAttribute(attributeName, 50, 100);
+           this.hp = enterAttribute(attributeName, 50, 100);
     }
 
     public void setAttribute1() {
@@ -108,6 +108,7 @@ public class CharacterInput {
         while (attempts++ < 4 && (value < min || value > max)){
             if (scanner.hasNextInt()) {
                 value = scanner.nextInt();
+                System.out.println("Value assigned" +  value);
             }
             if (attempts < 4 && (value < min || value > max)){
                 System.out.println("Value is out of range. Try again!");
