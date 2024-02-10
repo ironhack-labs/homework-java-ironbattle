@@ -46,7 +46,6 @@ public class Wizard extends Character implements Attacker {
     public void attack(Character character) {
         int randomNumber = getRandomNumber(); // Abstract to an external method
 
-
         if (randomNumber == 0 && hasEnoughMana()) {
             fireBallAttack(character);
         } else if(randomNumber == 1 && hasAlmostOneMana()){
