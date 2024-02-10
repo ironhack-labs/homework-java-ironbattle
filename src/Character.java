@@ -20,7 +20,11 @@ public abstract class Character implements Attacker {
     }
 
     public void setHp(int hp){
+        if(hp<0){
+            this.isAlive = false;
+        }
         this.hp = hp;
+
     }
 
     public void setIsAlive(boolean isAlive){
@@ -44,5 +48,5 @@ public abstract class Character implements Attacker {
     }
 
     @Override
-    public abstract void attack();
+    public abstract void attack(Character character);
 }
