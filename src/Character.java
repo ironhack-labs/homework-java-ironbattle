@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public abstract class Character {
+public abstract class Character implements Attacker{
     private String id;
     private String name;
     private int hp;
@@ -26,7 +26,8 @@ public abstract class Character {
     }
 
     public boolean isAlive() {
-        return isAlive;
+        return isAlive ;
+
     }
 ///setters
     public void setName(String name) {
@@ -50,6 +51,8 @@ public abstract class Character {
     private String generateId(){
         Random random = new Random();
         return Integer.toString(random.nextInt(1000));
+
+        // maybe we can use UUID identifier from java.util.UUID package ?
    }
    ///To generate a random HP for character type
    public static int randomHp(String characterType){

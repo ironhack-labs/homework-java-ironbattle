@@ -68,7 +68,8 @@ public class Warrior extends Character implements Attacker {
     private void weakAttack(Character character){
 
         System.out.println("Warrior weakAttack");
-        int damage = strength / 2;
+        int damage = strength / 2; // can be floated.
+        System.out.println("This is the damage " + " " + damage);
         character.receiveDamage(damage);
         stamina +=1;
     }
