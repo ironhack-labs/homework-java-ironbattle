@@ -10,21 +10,19 @@ public class Wizard extends Character implements Attacker {
     private static final int DAMAGE_INFLICTED_BY_STAFF_HIT = 2;
     private static final int MANA_TO_DECREASE_WHEN_STAFF_HIT = 1;
     private static final int CONST_FOR_FIREBALL = 0;
-    private static final int CONST_FOR_STAFF_HIT = 1;
-
     private int mana;
-    private int intelligence;
+    private final int intelligence;
 
     public Wizard(String name) {
         super(name, Utils.generateRandomInt(MIN_HEALTH, MAX_HEALTH));
-        setMana(Utils.generateRandomInt(MIN_MANA, MAX_MANA));
-        setIntelligence(Utils.generateRandomInt(MIN_INTELLIGENCE, MAX_INTELLIGENCE));
+        this.mana = Utils.generateRandomInt(MIN_MANA, MAX_MANA);
+        this.intelligence = Utils.generateRandomInt(MIN_INTELLIGENCE, MAX_INTELLIGENCE);
     }
 
     public Wizard(String name, int hp, int mana, int intelligence) {
         super(name, Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, Stats.Health, Characters.Wizard));
-        setMana(mana);
-        setIntelligence(intelligence);
+        this.mana = Utils.validate(mana, MIN_MANA, MAX_MANA, Stats.Mana, Characters.Wizard);
+        this.intelligence = Utils.validate(intelligence, MIN_INTELLIGENCE, MAX_INTELLIGENCE, Stats.Intelligence, Characters.Wizard);
     }
 
     @Override
@@ -53,22 +51,17 @@ public class Wizard extends Character implements Attacker {
     }
 
     public void setMana(int mana) {
-        Utils.validate(mana, MIN_MANA, MAX_MANA, Stats.Mana, Characters.Wizard);
-        this.mana = mana;
-    }
-
-    public int getIntelligence() {
-        return intelligence;
-    }
-
-    public void setIntelligence(int intelligence) {
-        Utils.validate(intelligence, MIN_INTELLIGENCE, MAX_INTELLIGENCE, Stats.Intelligence, Characters.Wizard);
-        this.intelligence = intelligence;
+        this.mana = Math.max(mana, 0);
     }
 
     @Override
     public void setHp(int hp) {
         super.setHp(hp);
+    }
+
+    public void printStats() {
+        System.out.printf("%s - health: %s %d %s mana: %s%d%s",
+                getName(), Colors.red.getCode(), getHp(), Colors.white.getCode(), Colors.green.getCode(), mana, Colors.white.getCode());
     }
 
     @Override
