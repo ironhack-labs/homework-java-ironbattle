@@ -15,8 +15,10 @@ public class Wizard extends Character implements Attacker {
     private static final int MAX_INTELLIGENCE = 50;
     private static final int MANA_TO_DECREASE_WHEN_FIREBALL = 5;
     private static final int DAMAGE_INFLICTED_BY_STAFF_HIT = 2;
-    private static final int MANA_TO_DECREASE_WHEN_STAFF_HIT = 1;
+    private static final int MANA_TO_RECOVER_WHEN_STAFF_HIT = 1;
     private static final int CONST_FOR_FIREBALL = 0;
+    private final int CONST_FOR_STAFF_HIT = 1;
+    private final int MANA_TO_INCREASE_WHEN_NOT_ENOUGH_MANA = 2;
     private int mana;
     private final int intelligence;
 
@@ -34,12 +36,15 @@ public class Wizard extends Character implements Attacker {
 
     @Override
     public void attack(Character character) {
-        character.setHp(character.getHp() - Utils.generateRandomInt(1, 2));
-        if (this.getMana() >= MANA_TO_DECREASE_WHEN_FIREBALL
-                && Utils.generateRandomInt(1, 2) == CONST_FOR_FIREBALL) {
-            castFireball(character);
+        if (this.mana == 0) {
+            this.mana =+ MANA_TO_INCREASE_WHEN_NOT_ENOUGH_MANA;
         } else {
-            castStaffHit(character);
+            if (this.mana >= MANA_TO_DECREASE_WHEN_FIREBALL) {
+                switch(Utils.generateRandomInt(CONST_FOR_FIREBALL, CONST_FOR_STAFF_HIT)) {
+                    case CONST_FOR_FIREBALL -> castFireball(character);
+                    case CONST_FOR_STAFF_HIT -> castStaffHit(character);
+                }
+            }
         }
     }
 
@@ -50,7 +55,7 @@ public class Wizard extends Character implements Attacker {
 
     private void castStaffHit(Character character) {
         character.setHp(character.getHp() - DAMAGE_INFLICTED_BY_STAFF_HIT);
-        this.setMana(this.getMana() + MANA_TO_DECREASE_WHEN_STAFF_HIT);
+        this.setMana(this.getMana() + MANA_TO_RECOVER_WHEN_STAFF_HIT);
     }
 
     public int getMana() {
