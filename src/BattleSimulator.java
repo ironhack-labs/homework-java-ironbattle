@@ -4,10 +4,9 @@ public class BattleSimulator {
 
     private static Character character1;
     private static Character character2;
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-
-        Scanner scanner;
         String optionMenu;
         System.out.println("******** Welcome to BattleSimulator ********");
 
@@ -15,22 +14,35 @@ public class BattleSimulator {
             System.out.println("Select type of battle:");
             System.out.println("1. Full random battle");
             System.out.println("2. Customize the characters name");
-            System.out.println("3. Customize all characters features");
+            System.out.println("3. Customize the characters name and type");
+            System.out.println("4. Customize all characters features");
             System.out.println("Press 'E' or 'e' for exit!");
-
-            scanner = new Scanner(System.in);
             optionMenu = scanner.next();
+            switch (optionMenu) {
+                case "1" -> fullRandomBattle();
+                case "2" -> customizeCharactersNameBattle();
+                case "3" -> customizeCharactersNameAndTypeBattle();
+                case "4" -> customizeCharactersFeaturesBattle();
+            }
+        } while (!optionMenu.equalsIgnoreCase("E"));
+    }
 
-            if (optionMenu.equalsIgnoreCase("E")) break;
-            if (optionMenu.equalsIgnoreCase("1")) fullRandomBattle();
+    private static void customizeCharactersNameBattle() {
+    }
 
-        } while (true);
+    private static void customizeCharactersNameAndTypeBattle() {
+    }
 
+    private static void customizeCharactersFeaturesBattle() {
     }
 
     private static void fullRandomBattle() {
         character1 = createRandomCharacter();
         character2 = createRandomCharacter();
+        battle();
+    }
+
+    private static void battle() {
         int round = 1;
         do {
             System.out.printf("%n%nROUND %d FIGHT! %n", round);
