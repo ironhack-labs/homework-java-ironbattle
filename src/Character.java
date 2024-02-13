@@ -1,14 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 abstract class Character {
+    // Generate id
     private String id;
     private String name;
     private int hp;
-    private boolean isAlive;
+    private final boolean isAlive = true;
 
-    public Character(String id, String name, int hp, boolean isAlive) {
+    public Character(String id, String name, int hp) {
         setId(id);
         setName(name);
         setHp(hp);
-        setIsAlive(isAlive);
     }
 
     //Getters
@@ -21,6 +25,10 @@ abstract class Character {
     public void setId(String id){this.id = id;}
     public void setName(String name){this.name = name;}
     public void setHp(int hp){this.hp = hp;}
-    public void setIsAlive(boolean isAlive){this.isAlive = isAlive;}
+    //public void setIsAlive(boolean isAlive){this.isAlive = isAlive;}
 }
+
+
+
+
 
