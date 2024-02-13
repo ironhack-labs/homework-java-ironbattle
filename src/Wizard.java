@@ -10,8 +10,8 @@ public class Wizard extends Character{
         int hpMax = 100;
         setHp(Randomizer.getRandomInt(hpMin, hpMax));
 
-        int manaMin = 50;
-        int manaMax = 100;
+        int manaMin = 10;
+        int manaMax = 50;
         setMana(Randomizer.getRandomInt(manaMin, manaMax));
 
         int intelligenceMin = 1;
