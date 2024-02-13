@@ -10,6 +10,10 @@ public abstract class Character implements Attacker {
         setHp(hp);
         assignId();
     }
+    //añadido constructor acorde con los Warrior y Wizar ya creados
+    public Character(String name){
+        setName(name);
+    }
 
     private void assignId(){
         this.id = String.valueOf(idCounter++);
@@ -20,7 +24,11 @@ public abstract class Character implements Attacker {
     }
 
     public void setHp(int hp){
+        if(hp<0){
+            this.isAlive = false;
+        }
         this.hp = hp;
+
     }
 
     public void setIsAlive(boolean isAlive){
@@ -44,5 +52,5 @@ public abstract class Character implements Attacker {
     }
 
     @Override
-    public abstract void attack();
+    public abstract void attack(Character character);
 }
