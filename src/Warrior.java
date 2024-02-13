@@ -57,6 +57,7 @@ public class Warrior extends Character {
     }
 
     public void weakAttack(Wizard wizard){
+
         int wizardHealth = wizard.getHp();
         int halfStrengthWarrior = Math.round(getStrength()/2);
         int staminaWarrior = getStamina();
