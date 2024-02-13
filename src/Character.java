@@ -1,18 +1,18 @@
 import java.util.Random;
 
-public abstract class Character {
+public abstract class Character implements Attacker{
     private String id;
     private String name;
     private int hp;
-    private boolean isAlive = true;
+    private boolean isAlive;
 
     protected Character(String name, int hp ) {
         this.id = generateId();
-        this.name = name;
-        this.hp = hp;
-//        this.isAlive = true;
+        setName(name);
+        setHp(hp);
+        this.isAlive = true;
     }
-///getters
+    ///getters
     public String getName() {
         return name;
     }
@@ -26,9 +26,10 @@ public abstract class Character {
     }
 
     public boolean isAlive() {
-        return isAlive;
+        return isAlive ;
+
     }
-///setters
+    ///setters
     public void setName(String name) {
         this.name = name;
     }
@@ -37,7 +38,7 @@ public abstract class Character {
         this.hp = hp;
     }
 
-    protected void setAlive(boolean alive)  {
+    public void setAlive(boolean alive) {
         isAlive = alive;
     }
 
@@ -50,9 +51,11 @@ public abstract class Character {
     private String generateId(){
         Random random = new Random();
         return Integer.toString(random.nextInt(1000));
-   }
-   ///To generate a random HP for character type
-   public static int randomHp(String characterType){
+
+        // maybe we can use UUID identifier from java.util.UUID package ?
+    }
+    ///To generate a random HP for character type
+    public static int randomHp(String characterType){
         Random random = new Random();
         if(characterType.equals("warrior")){
             return random.nextInt(101) + 100;
