@@ -1,3 +1,9 @@
+import model.Character;
+import model.Warrior;
+import model.Wizard;
+import utils.Characters;
+import utils.Utils;
+
 import java.util.Scanner;
 
 public class BattleSimulator {
@@ -13,21 +19,16 @@ public class BattleSimulator {
         do {
             System.out.println("Select type of battle:");
             System.out.println("1. Full random battle");
-            System.out.println("2. Customize the characters name");
-            System.out.println("3. Customize the characters name and type");
-            System.out.println("4. Customize all characters features");
+            System.out.println("2. Customize the characters name and type");
+            System.out.println("3. Customize all characters features");
             System.out.println("Press 'E' or 'e' for exit!");
             optionMenu = scanner.next();
             switch (optionMenu) {
                 case "1" -> fullRandomBattle();
-                case "2" -> customizeCharactersNameBattle();
                 case "3" -> customizeCharactersNameAndTypeBattle();
                 case "4" -> customizeCharactersFeaturesBattle();
             }
         } while (!optionMenu.equalsIgnoreCase("E"));
-    }
-
-    private static void customizeCharactersNameBattle() {
     }
 
     private static void customizeCharactersNameAndTypeBattle() {

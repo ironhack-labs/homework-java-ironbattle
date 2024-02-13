@@ -1,3 +1,10 @@
+package model;
+
+import utils.Characters;
+import utils.Colors;
+import utils.Stats;
+import utils.Utils;
+
 public class Warrior extends Character {
 
     private static final int MIN_HEALTH = 100;
