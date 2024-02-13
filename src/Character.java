@@ -4,7 +4,12 @@ public class Character {
     private int hp;
     private boolean isAlive;
 
-    public Character(){}
+    public Character(String id, String name, int hp, boolean isAlive) {
+        setId(id);
+        setName(name);
+        setHp(hp);
+        setIsAlive(isAlive);
+    }
 
     //Getters
     public String getId(){return id;}
@@ -18,3 +23,4 @@ public class Character {
     public void setHp(int hp){this.hp = hp;}
     public void setIsAlive(boolean isAlive){this.isAlive = isAlive;}
 }
+
