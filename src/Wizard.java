@@ -57,8 +57,8 @@ public class Wizard extends Character{
         int staffHitDamage = 2;
         enemy.setHp(enemy.getHP() - staffHitDamage);
 
-        int ManaDecrease = 2;
-        this.setMana(getMana() - ManaDecrease);
+        int ManaIncrease = 1;
+        this.setMana(getMana() + ManaIncrease);
         System.out.println(getName() + " attacked " + enemy.getName() + " with a staff for " + staffHitDamage + " damage!");
     }
 
