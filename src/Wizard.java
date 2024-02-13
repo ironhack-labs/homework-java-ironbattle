@@ -54,7 +54,6 @@ public class Wizard extends Character implements Attacker {
         }else{
             recoverMana();
         }
-
     }
 
     private int getRandomNumber() {
@@ -78,9 +77,8 @@ public class Wizard extends Character implements Attacker {
         character.receiveDamage(getIntelligence());
     }
 
-    private int recoverMana(){
+    private void recoverMana(){
         setMana(getMana() + 2);
-        return 0;
     }
 
     public void receiveDamage(int damage){

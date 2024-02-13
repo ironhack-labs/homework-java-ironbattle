@@ -4,13 +4,13 @@ public abstract class Character {
     private String id;
     private String name;
     private int hp;
-    private boolean isAlive;
+    private boolean isAlive = true;
 
     protected Character(String name, int hp ) {
         this.id = generateId();
         this.name = name;
         this.hp = hp;
-        this.isAlive = true;
+//        this.isAlive = true;
     }
 ///getters
     public String getName() {
@@ -37,7 +37,7 @@ public abstract class Character {
         this.hp = hp;
     }
 
-    public void setAlive(boolean alive) {
+    protected void setAlive(boolean alive)  {
         isAlive = alive;
     }
 

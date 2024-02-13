@@ -51,6 +51,7 @@ public class Warrior extends Character implements Attacker {
                 } else{
                     regainStamina();
                 }
+
         }
     private boolean canMakeHeavyAttack(){
         return stamina >= 5;
@@ -71,6 +72,12 @@ public class Warrior extends Character implements Attacker {
         int damage = strength / 2;
         character.receiveDamage(damage);
         stamina +=1;
+    }
+
+    private int weakAttack(){
+        int damage = strength / 2;
+        stamina +=1;
+        return damage;
     }
 
     private void regainStamina(){

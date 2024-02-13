@@ -1,6 +1,8 @@
 import java.util.Scanner;
 public class Main {
-    private static int variableGlobal;Scanner scanner = new Scanner(System.in);
+//    private static int variableGlobal;
+//    Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
         System.out.println("Welcome to Iron Battle!");
 
@@ -9,6 +11,7 @@ public class Main {
 
         Character char2 = createCharacter();
         System.out.println("Character 2 finished!");
+
     }
 
 
