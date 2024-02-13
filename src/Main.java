@@ -1,15 +1,61 @@
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Random;
+import java.util.Scanner;
 
 
 public class Main {
     public static void main(String[] args)throws IOException{
+        characterSelector();
         //Temporary creation of characters, can be deleted
         Character char1 = new Warrior("guerrero",180,12,2);
         Character char2  = new Wizard("wizard",100,12,2);
-
         //Call for the method that will do the combat
-        combat(char1,char2);
+        //combat(char1,char2);
+    }
+
+    public static void characterSelector(){
+        Scanner scanner = new Scanner(System.in);
+        boolean optionSelected = false;
+        System.out.println("Bienvenid@ al IronBattle! programado por el grupo CodeCrafters: Heroes of the Binary Realms. \n" +
+                "Estás apunto de embarcarte en un emocionante combate entre dos peleadores que darán su vida para declararse el vencedor.\n" +
+                "A continuación, seleccionar entre una de las siguientes opciones: ");
+
+        while(optionSelected==false){
+            System.out.println("1. Creador manual de personajes.\n2. Creador aleatorio de personajes \n3. Importación de personajes (formato CSV)");
+            int option = 0;
+            try{
+                option = scanner.nextInt();
+            }
+            catch(InputMismatchException ime){
+                option = 0;
+                scanner.nextLine();
+            }
+            switch (option) {
+                case 1:
+                    //TODO Llamada al creador manual de personajes
+                    manualCharacterCreator(scanner);
+                    System.out.print("mec");
+                    optionSelected = true;
+                    break;
+                case 2:
+                    //TODO Llamada al creador aleatorio de personajes
+                    System.out.print("moc");
+                    optionSelected = true;
+                    break;
+                case 3:
+                    //TODO Llamada al importador de CSV
+                    System.out.print("mic");
+                    optionSelected = true;
+                    break;
+                default:
+                    System.out.println("Vaya! parece que has seleccionado una opción que no está disponible. \nPor favor, vuelve a seleccionar una opción válida escribiendo el número que hay al princpio de la opción deseada:");
+            }
+        }
+    }
+
+
+    public static void manualCharacterCreator(Scanner scanner){
     }
 
 
