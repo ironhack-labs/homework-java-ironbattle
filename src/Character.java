@@ -1,4 +1,4 @@
-public class Character {
+abstract class Character {
     private String id;
     private String name;
     private int hp;
