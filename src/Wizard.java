@@ -24,9 +24,10 @@ public class Wizard extends Character{
     public int getMana() {
         return this.mana;
     }
-   public int setMana(int mana) {
+    public int setMana(int mana) {
         return this.mana = mana;
     }
+    public int setIntelligence(int intelligence) {return this.intelligence = intelligence;}
     public void attack(Character enemy) {
         if(getMana() < 2) {
             recovery();
