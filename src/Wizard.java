@@ -28,6 +28,7 @@ public class Wizard extends Character{
         return this.mana = mana;
     }
     public int setIntelligence(int intelligence) {return this.intelligence = intelligence;}
+
     public void attack(Character enemy) {
         if(getMana() < 2) {
             recovery();
@@ -48,7 +49,7 @@ public class Wizard extends Character{
         enemy.setHp(enemy.getHP() - fireballDamage);
 
         int ManaDecrease = 5;
-       this.setMana(getMana() - ManaDecrease);
+        this.setMana(getMana() - ManaDecrease);
         System.out.println(getName() + " attacked " + enemy.getName() + " with a fireball for " + fireballDamage + " damage!");
     }
 
