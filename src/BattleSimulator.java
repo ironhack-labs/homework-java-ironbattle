@@ -1,6 +1,7 @@
 import model.Character;
 import model.Warrior;
 import model.Wizard;
+import org.w3c.dom.ls.LSOutput;
 import utils.Characters;
 import utils.Utils;
 
@@ -25,17 +26,43 @@ public class BattleSimulator {
             optionMenu = scanner.next();
             switch (optionMenu) {
                 case "1" -> fullRandomBattle();
-                case "3" -> customizeCharactersNameAndTypeBattle();
-                case "4" -> customizeCharactersFeaturesBattle();
+                case "2" -> customizeCharactersNameAndTypeBattle();
+                case "3" -> customizeCharactersFeaturesBattle();
             }
         } while (!optionMenu.equalsIgnoreCase("E"));
     }
 
     private static void customizeCharactersNameAndTypeBattle() {
+        character1 = createCharactersByNameAndType();
+        System.out.println(character1);
+        character2 = createCharactersByNameAndType();
+        System.out.println(character2);
+        battle();
+    }
+    private static Character createCharactersByNameAndType() {
+        System.out.println("Write your character's name:");
+        String characterName = scanner.next();
+        String characterType;
+        Character character = null;
+
+        do {
+            System.out.println("Select your character's type:");
+            System.out.println("1. Warrior");
+            System.out.println("2. Wizard");
+            characterType = scanner.next();
+            switch (characterType) {
+                case "1" -> character = new Warrior(characterName);
+                case "2" -> character = new Wizard(characterName);
+            }
+        } while (characterType.equals("1") && characterType.equals("2"));
+
+        return character;
     }
 
     private static void customizeCharactersFeaturesBattle() {
     }
+
+
 
     private static void fullRandomBattle() {
         character1 = createRandomCharacter();
