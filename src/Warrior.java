@@ -1,3 +1,5 @@
+import java.util.Random;
+
 // A Warrior is a Character that fights by attacking. Attacks inflict damage and in order to do one,
 // stamina is required.
 public class Warrior extends Character {
@@ -10,6 +12,7 @@ public class Warrior extends Character {
     private final int HP_MIN = 100;
     private final int HP_MAX = 200;
     private final int HEAVY_ATTACK_STAMINA = 5;
+    private static final String[] warriorsNames = new String[]{"Aragorn", "Xena", "Conan", "Mulán", "Wonder Woman", "Samurai Jack", "Thor", "Brienne of Tarth", "Leonidas", "Boudica", "Legolas", "Joan of Arc", "Beowulf", "Attila the Hun", "Cleopatra", "Genghis Khan", "Hua Mulan", "William Wallace", "Ragnar Lothbrok", "Sun Tzu", "Zaraki Kenpachi", "Khal Drogo", "King Arthur", "Spartacus", "Achilles", "Okoye", "Captain America", "Black Panther"};
 
     public Warrior(String name, int hp, int stamina, int strength) {
         super(name);
@@ -28,7 +31,13 @@ public class Warrior extends Character {
         } else {
             setStrength(strength);
         }
+    }
 
+    public Warrior() {
+        super(randomName());
+        setHp(randomInt(HP_MIN, HP_MAX));
+        setStamina(randomInt(STAMINA_MIN, STAMINA_MAX));
+        setStrength(randomInt(STRENGTH_MIN, STRENGTH_MAX));
     }
 
     public int getStamina() {
@@ -81,5 +90,10 @@ public class Warrior extends Character {
 
         setStamina(getStamina()+STAMINA_RECOVER);
         character.setHp(character.getHp()-HP_LOSS);
+    }
+
+    public static String randomName() {
+        Random random = new Random();
+        return warriorsNames[random.nextInt(warriorsNames.length) + 1];
     }
 }
