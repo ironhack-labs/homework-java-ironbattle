@@ -5,6 +5,8 @@ public class Warrior extends Character implements Attacker {
     private int stamina;
     private int strength;
 
+    Utils utils = new Utils();
+
     public Warrior(String name, int hp, int stamina, int strength) {
         super(name,hp);
         setStamina(stamina);
@@ -42,8 +44,8 @@ public class Warrior extends Character implements Attacker {
 /// Attack method. Weak and Heavy attacks separate. Attacks are random using Random Util
     @Override
     public void attack(Character character) {
-        Random random = new Random();
-        int attackType = random.nextInt(2);
+
+        int attackType = utils.generateRandomNumber();
         if(attackType == 0 && canMakeHeavyAttack()){
                     heavyAttack(character);
                 } else if (canMakeWeakAttack()) {
