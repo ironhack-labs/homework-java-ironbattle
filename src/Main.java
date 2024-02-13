@@ -34,6 +34,8 @@ public class Main {
                         //print all char info
                         char1= RandomChar.createRandomChar();
                         char2= RandomChar.createRandomChar();
+                        System.out.println("Players Created");
+
                         break;
                     case 3:
                         //CSV Import
