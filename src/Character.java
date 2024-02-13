@@ -12,7 +12,7 @@ public abstract class Character implements Attacker{
         setHp(hp);
         this.isAlive = true;
     }
-///getters
+    ///getters
     public String getName() {
         return name;
     }
@@ -29,7 +29,7 @@ public abstract class Character implements Attacker{
         return isAlive ;
 
     }
-///setters
+    ///setters
     public void setName(String name) {
         this.name = name;
     }
@@ -53,9 +53,9 @@ public abstract class Character implements Attacker{
         return Integer.toString(random.nextInt(1000));
 
         // maybe we can use UUID identifier from java.util.UUID package ?
-   }
-   ///To generate a random HP for character type
-   public static int randomHp(String characterType){
+    }
+    ///To generate a random HP for character type
+    public static int randomHp(String characterType){
         Random random = new Random();
         if(characterType.equals("warrior")){
             return random.nextInt(101) + 100;

@@ -5,6 +5,8 @@ public class Wizard extends Character implements Attacker {
     private int mana; //random between 10-50
     private int intelligence; //random between 1-50
 
+    Utils utils = new Utils();
+
     //Constructor
     public Wizard (String name, int hp, int mana, int intelligence){
         super(name, hp);
@@ -44,7 +46,7 @@ public class Wizard extends Character implements Attacker {
     //Functions
     @Override
     public void attack(Character character) {
-        int randomNumber = getRandomNumber(); // Abstract to an external method
+        int randomNumber = utils.generateRandomNumber(); // Abstract to an external method
 
         if (randomNumber == 0 && hasEnoughMana()) {
             fireBallAttack(character);
@@ -53,7 +55,6 @@ public class Wizard extends Character implements Attacker {
         }else{
             recoverMana();
         }
-
     }
 
     private int getRandomNumber() {
