@@ -1,3 +1,10 @@
+package model;
+
+import utils.Characters;
+import utils.Colors;
+import utils.Stats;
+import utils.Utils;
+
 public class Wizard extends Character implements Attacker {
 
     private static final int MIN_HEALTH = 50;

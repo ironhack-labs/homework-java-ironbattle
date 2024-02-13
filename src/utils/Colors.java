@@ -1,3 +1,5 @@
+package utils;
+
 public enum Colors {
     red("\u001B[31m"),
     green("\u001B[32m"),
