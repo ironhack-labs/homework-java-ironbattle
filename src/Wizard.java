@@ -78,6 +78,6 @@ public class Wizard extends Character {
 
     public static String randomName() {
         Random random = new Random();
-        return wizardsNames[random.nextInt(wizardsNames.length) + 1];
+        return wizardsNames[random.nextInt(wizardsNames.length)];
     }
 }

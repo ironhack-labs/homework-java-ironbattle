@@ -94,6 +94,6 @@ public class Warrior extends Character {
 
     public static String randomName() {
         Random random = new Random();
-        return warriorsNames[random.nextInt(warriorsNames.length) + 1];
+        return warriorsNames[random.nextInt(warriorsNames.length)];
     }
 }
