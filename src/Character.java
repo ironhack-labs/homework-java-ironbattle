@@ -55,6 +55,11 @@ abstract class Character implements Attacker {
     }
 
     public abstract Character clone();
+
+    public static int randomInt (int min, int max) {
+        Random random = new Random();
+        return random.nextInt(max - min + 1) + min;
+    }
 }
 
 
