@@ -2,49 +2,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TextMenu {
-    public static void menu (){
-        Scanner scanner = new Scanner(System.in);
-        boolean is_finish=false;
-        int selection=0;
-        boolean not_selected = false;
-        //printBigText(2000,0);
-        //printBigText(2000,1);
-        //printBigText(1000,2);
-        //printBigText(1000,3);
-
-
-        while(!is_finish && !not_selected) {
-            getIntroMenu();
-            try{
-                selection=scanner.nextInt();
-                switch (selection) {
-                    case 1:
-                        not_selected=true;
-                        break;
-
-                    case 2:
-                        not_selected=true;
-                        break;
-                    case 3:
-                        not_selected=true;
-                        break;
-                    case 4:
-                        not_selected=true;
-                        is_finish=true;
-                        break;
-                    default:
-                        System.out.println("Wrong Selection, Please try again");
-                        not_selected=false;
-                }
-            }catch (InputMismatchException ie){
-                scanner.nextLine();
-            }
-
-        }
-        System.out.println(selection);
-        scanner.nextLine();
-
-    }
     private static String getIntroText (int selection){
         String output = "";
         switch (selection) {
@@ -86,6 +43,15 @@ public class TextMenu {
                         "B   B  A   A    T       T     L      E\n" +
                         "BBBB   A   A    T       T     LLLLL  EEEEE";
                 break;
+            case 4:
+                output=  "+-------+  \n" +
+                         "/       /| \n" +
+                         "+-------+ |\n" +
+                         "|       | +\n" +
+                         "|       |/ \n" +
+                         "+-------+  \n"+
+                         "Roll the dice  \n";
+                break;
         }
       return output;
     }
@@ -112,11 +78,5 @@ public class TextMenu {
         clearConsole();
     }
 
-    public static void getIntroMenu(){
-        System.out.println("1- Manual Players creation. \n");
-        System.out.println("2- Random Players creation. \n");
-        System.out.println("3- Import Players from csv. \n");
-        System.out.println("4- Start Battle             \n");
-        System.out.println("5- Exit: \n");
-    }
+
 }
