@@ -48,8 +48,8 @@ public class Wizard extends Character{
         int fireballDamage = getIntelligence();
         enemy.setHp(enemy.getHP() - fireballDamage);
 
-        int ManaDecrease = 5;
-        this.setMana(getMana() - ManaDecrease);
+        int manaDecrease = 5;
+        this.setMana(getMana() - manaDecrease);
         System.out.println(getName() + " attacked " + enemy.getName() + " with a fireball for " + fireballDamage + " damage!");
     }
 
@@ -57,8 +57,8 @@ public class Wizard extends Character{
         int staffHitDamage = 2;
         enemy.setHp(enemy.getHP() - staffHitDamage);
 
-        int ManaIncrease = 1;
-        this.setMana(getMana() + ManaIncrease);
+        int manaIncrease = 1;
+        this.setMana(getMana() + manaIncrease);
         System.out.println(getName() + " attacked " + enemy.getName() + " with a staff for " + staffHitDamage + " damage!");
     }
 
