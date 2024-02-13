@@ -1,7 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 abstract class Character {
     // Generate id
     private String id;
