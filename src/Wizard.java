@@ -54,7 +54,7 @@ public class Wizard extends Character{
     }
 
     private void staffHit(Character enemy){
-        int staffHitDamage = getIntelligence() / 2;
+        int staffHitDamage = 2;
         enemy.setHp(enemy.getHP() - staffHitDamage);
 
         int ManaDecrease = 2;
