@@ -5,20 +5,65 @@ public class Wizard extends Character{
 
     public Wizard(String name) {
         super(name, 0);
-        setMana();
-        setIntelligence();
+
+        int hpMin = 50;
+        int hpMax = 100;
+        setHp(Randomizer.getRandomInt(hpMin, hpMax));
+
+        int manaMin = 50;
+        int manaMax = 100;
+        setMana(Randomizer.getRandomInt(manaMin, manaMax));
+
+        int intelligenceMin = 1;
+        int intelligenceMax = 50;
+        setIntelligence(Randomizer.getRandomInt(intelligenceMin, intelligenceMax));
+    }
+    public int getIntelligence() {
+        return this.intelligence;
+    }
+    public int getMana() {
+        return this.mana;
+    }
+   public int setMana(int mana) {
+        return this.mana = mana;
+    }
+    public void attack(Character enemy) {
+        if(getMana() < 2) {
+            recovery();
+        } else if(getMana() < 5){
+            staffHit(enemy);
+        }else{
+            if (Randomizer.getRandomInt(0, 1) == 0){
+                fireball(enemy);
+            }else{
+                staffHit(enemy);
+            }
+        }
     }
 
-    public void setMana(){
-        this.mana = mana;
+    private void fireball(Character enemy){
+
+        int fireballDamage = getIntelligence();
+        enemy.setHp(enemy.getHP() - fireballDamage);
+
+        int ManaDecrease = 5;
+       this.setMana(getMana() - ManaDecrease);
+        System.out.println(getName() + " attacked " + enemy.getName() + " with a fireball for " + fireballDamage + " damage!");
     }
 
-    public void setIntelligence(){
-        this.intelligence = intelligence;
+    private void staffHit(Character enemy){
+        int staffHitDamage = getIntelligence() / 2;
+        enemy.setHp(enemy.getHP() - staffHitDamage);
+
+        int ManaDecrease = 2;
+        this.setMana(getMana() - ManaDecrease);
+        System.out.println(getName() + " attacked " + enemy.getName() + " with a staff for " + staffHitDamage + " damage!");
     }
 
-    public void attack(){
-        System.out.println("atacking");
+    private void recovery(){
+       int recoveryAmount = 2;
+       setMana(getMana() + recoveryAmount);
+         System.out.println(getName() + " recovered " + recoveryAmount + " mana!");
     }
 
 }
