@@ -6,30 +6,33 @@ import java.util.Scanner;
 public class Utils {
     static File file = new File("src/characters.csv");
 
-    public static int generateRandomInt(int min, int max) {
+    protected static int generateRandomInt(int min, int max) {
         Random random = new Random();
         return random.nextInt((max + 1) - min) + min;
     }
 
-    public static String getRandomCharacter() throws FileNotFoundException {
-        Scanner scanner = new Scanner(file);
-        int numberOfCharacters = numberOfCharacters();
-        int targetCharacter = Utils.generateRandomInt(1,numberOfCharacters);
-        int currentCharacter = 0;
-        while (scanner.hasNextLine()) {
-            currentCharacter++;
-            String lineContent = scanner.nextLine();
-
-            if (currentCharacter == targetCharacter) {
-                scanner.close();
-                return lineContent;
+    protected static String getRandomCharacter() {
+        try {
+            Scanner scanner = new Scanner(file);
+            int numberOfCharacters = numberOfCharacters();
+            int targetCharacter = Utils.generateRandomInt(1, numberOfCharacters);
+            int currentCharacter = 0;
+            while (scanner.hasNextLine()) {
+                currentCharacter++;
+                String lineContent = scanner.nextLine();
+                if (currentCharacter == targetCharacter) {
+                    scanner.close();
+                    return lineContent;
+                }
             }
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("File does not exist!");
         }
-        scanner.close();
         return null;
     }
 
-    public static int numberOfCharacters() throws FileNotFoundException {
+    protected static int numberOfCharacters() throws FileNotFoundException {
         int characters = 0;
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
@@ -41,10 +44,11 @@ public class Utils {
         return characters;
     }
 
-    public static void validate(int value, int min, int max, Stats statType, Characters characterType) {
+    protected static int validate(int value, int min, int max, Stats statType, Characters characterType) {
         if (value < min || value > max) {
-            throw new IllegalArgumentException(characterType +"'s " + statType + " should be between " + min + " - " + max);
+            throw new IllegalArgumentException(characterType + "'s " + statType + " should be between " + min + " - " + max);
         }
+        return value;
     }
 
 }

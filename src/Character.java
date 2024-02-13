@@ -6,15 +6,10 @@ public abstract class Character implements Attacker {
     private int hp;
     private boolean isAlive = true;
 
-
     public Character(String name, int hp) {
         this.id = UUID.randomUUID().toString();
         setName(name);
         setHp(hp);
-    }
-
-    public String getId() {
-        return id;
     }
 
     public String getName() {
@@ -30,16 +25,22 @@ public abstract class Character implements Attacker {
     }
 
     public void setHp(int hp) {
+        if (hp <= 0) {
+            hp = 0;
+            setAlive(false);
+        }
         this.hp = hp;
     }
 
     public boolean isAlive() {
-        return isAlive;
+        return this.isAlive;
     }
 
     public void setAlive(boolean alive) {
         isAlive = alive;
     }
+
+    abstract public void printStats();
 
 
 }
