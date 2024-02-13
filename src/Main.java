@@ -5,14 +5,12 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args)throws IOException{
         //Temporary creation of characters, can be deleted
-        Character char1 = new Warrior("guerrero",100,12,2);
+        Character char1 = new Warrior("guerrero",180,12,2);
         Character char2  = new Wizard("wizard",100,12,2);
 
         //Call for the method that will do the combat
         combat(char1,char2);
     }
-
-
 
 
     public static void combat(Character char1, Character char2){
