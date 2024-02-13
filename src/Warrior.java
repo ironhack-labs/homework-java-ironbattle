@@ -12,9 +12,23 @@ public class Warrior extends Character {
     private final int HEAVY_ATTACK_STAMINA = 5;
 
     public Warrior(String name, int hp, int stamina, int strength) {
-        super(name, hp);
-        setStamina(stamina);
-        setStrength(strength);
+        super(name);
+        if(hp < HP_MIN || hp > HP_MAX) {
+            throw new IllegalArgumentException("HP must be between " + HP_MIN + " and " + HP_MAX);
+        } else {
+            setHp(hp);
+        }
+        if(stamina < STAMINA_MIN || stamina > STAMINA_MAX) {
+            throw new IllegalArgumentException("Stamina must be between " + STAMINA_MIN + " and " + STAMINA_MAX);
+        } else {
+            setStamina(stamina);
+        }
+        if(strength < STRENGTH_MIN || strength > STRENGTH_MAX) {
+            throw new IllegalArgumentException("Strength must be between " + STRENGTH_MIN + " and " + STRENGTH_MAX);
+        } else {
+            setStrength(strength);
+        }
+
     }
 
     public int getStamina() {
@@ -22,11 +36,7 @@ public class Warrior extends Character {
     }
 
     public void setStamina(int stamina) {
-        if(stamina < STAMINA_MIN || stamina > STAMINA_MAX) {
-            throw new IllegalArgumentException("Stamina must be between " + STAMINA_MIN + " and " + STAMINA_MAX);
-        } else {
-            this.stamina = stamina;
-        }
+        this.stamina = stamina;
     }
 
     public int getStrength() {
@@ -34,19 +44,11 @@ public class Warrior extends Character {
     }
 
     public void setStrength(int strength) {
-        if(strength < STRENGTH_MIN || strength > STRENGTH_MAX) {
-            throw new IllegalArgumentException("Strength must be between " + STRENGTH_MIN + " and " + STRENGTH_MAX);
-        } else {
-            this.strength = strength;
-        }
+        this.strength = strength;
     }
 
     public void setHp(int hp) {
-        if(hp < HP_MIN || hp > HP_MAX) {
-            throw new IllegalArgumentException("HP must be between " + HP_MIN + " and " + HP_MAX);
-        } else {
-            super.setHp(hp);
-        }
+        super.setHp(hp);
     }
 
     @Override
@@ -65,6 +67,8 @@ public class Warrior extends Character {
             }
         }
     }
+
+    public Character clone(){return new Warrior(getName(), getHp(), getStamina(),getStrength());}
 
     public void heavyAttack(Character character) {
         setStamina(getStamina()-HEAVY_ATTACK_STAMINA);

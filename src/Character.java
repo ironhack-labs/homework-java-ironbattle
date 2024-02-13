@@ -13,6 +13,11 @@ abstract class Character implements Attacker {
         setId();
     }
 
+    public Character(String name){
+        setName(name);
+        setId();
+    }
+
     public String getId() {
         return this.id;
     }
@@ -48,6 +53,8 @@ abstract class Character implements Attacker {
         Random random = new Random();
         return random.nextInt(6) + 1;
     }
+
+    public abstract Character clone();
 }
 
 

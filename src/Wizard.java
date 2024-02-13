@@ -51,6 +51,8 @@ public class Wizard extends Character {
         }
     }
 
+    public Character clone(){return new Wizard(getName(), getHp(), getMana(),getIntelligence());}
+
     private void fireball(Character character) {
         setMana(getMana()-FIREBALL_MANA);
         character.setHp(character.getHp()-getIntelligence());
