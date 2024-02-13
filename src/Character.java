@@ -4,11 +4,10 @@ abstract class Character {
     private int hp;
     private boolean isAlive;
 
-    public Character(String id, String name, int hp, boolean isAlive) {
+    public Character(String id, String name, int hp) {
         setId(id);
         setName(name);
         setHp(hp);
-        setIsAlive(isAlive);
     }
 
     //Getters
