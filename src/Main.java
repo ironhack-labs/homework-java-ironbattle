@@ -33,19 +33,20 @@ public static void main(String[] args)throws IOException{
             }
 
             //Once the battle is finished, let's check who wins the battle
-            if (!char2.isAlive()&&!char1.isAlive()){
+            if (!char2.isAlive() && !char1.isAlive()) {
                 //The battle result is a tie
                 System.out.println("The battle results in a tie! The battle will be repeated");
-                char1=initChar1.clone();
-                char2=initChar2.clone();
+                char1 = initChar1.clone();
+                char2 = initChar2.clone();
 
-            }else if (!char2.isAlive()){
+            } else if (!char2.isAlive()) {
                 //Character 2 wins the battle
-                System.out.println("The player "+char1.getName()+" wins the battle!");
+                System.out.println("The player " + char1.getName() + " wins the battle!");
                 finished = true;
-            }else if(!char1.isAlive()){
+            } else if (!char1.isAlive()) {
                 //Character 1 wins the battle
-                System.out.println("The player "+char2.getName()+" wins the battle!");
+                System.out.println("The player " + char2.getName() + " wins the battle!");
                 finished = true;
             }
         }
+    }
