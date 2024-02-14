@@ -1,9 +1,8 @@
 import java.io.IOException;
 import java.util.Random;
 
-
-public class Main {
-    public static void main(String[] args)throws IOException{
+public static void main(String[] args)throws IOException{
+  ImportCharactersFromCSV.importCharactersFromCSV();
         //Temporary creation of characters, can be deleted
         Character char1 = new Warrior("guerrero",180,12,2);
         Character char2  = new Wizard("wizard",100,12,2);
@@ -50,5 +49,3 @@ public class Main {
                 finished = true;
             }
         }
-    }
-}
