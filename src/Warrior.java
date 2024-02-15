@@ -64,6 +64,7 @@ public class Warrior extends Character implements Attacker{
         setStamina(staminaWarrior - 5);}
 
 
+
     public void weakAttack(Character wizard){
 
         int wizardHealth = wizard.getHp();
