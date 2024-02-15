@@ -10,6 +10,7 @@ public class CharacterAttributesInput extends CharacterAttributes {
         setAttribute2();
     }
 
+
     //Setters inputs from console
     public void setTypeInput(){
         Scanner scanner = new Scanner(System.in);
