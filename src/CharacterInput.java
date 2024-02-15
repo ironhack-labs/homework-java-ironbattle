@@ -51,7 +51,7 @@ public class CharacterInput {
             } else{
                 msgAssignRandomly();
                 System.out.println("Your character will be assigned randomly");
-                this.type = 1; //pending to random
+                this.type = Utils.generateRandomNumber(-1,1);
             }
         }
     }
