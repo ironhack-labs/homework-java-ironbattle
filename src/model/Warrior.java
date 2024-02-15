@@ -17,7 +17,7 @@ public class Warrior extends Character {
     private static final int WEAK_ATTACK = 1;
     private static final int HEAVY_ATTACK = 2;
     private int stamina;
-    private final int strength;
+    private int strength;
 
     public Warrior(String name) {
         super(name, Utils.generateRandomInt(MIN_HEALTH, MAX_HEALTH));
@@ -63,6 +63,14 @@ public class Warrior extends Character {
 
     public void setStamina(int stamina) {
         this.stamina = Math.max(stamina, 0);
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = Math.max(strength, 0);
     }
 
     public void printStats() {
