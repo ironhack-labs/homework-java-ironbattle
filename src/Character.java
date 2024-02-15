@@ -31,6 +31,7 @@ abstract class Character {
         this.isAlive = isAlive;
     }
 
+
     public boolean checkIsAlive(){
         if (getHp() <= 0){
             setIsAlive(false);
