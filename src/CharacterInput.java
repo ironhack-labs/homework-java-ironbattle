@@ -108,7 +108,7 @@ public class CharacterInput {
         while (attempts++ < 4 && (value < min || value > max)){
             if (scanner.hasNextInt()) {
                 value = scanner.nextInt();
-                System.out.println("Value assigned" +  value);
+                System.out.println("Value assigned " +  value);
             }
             if (attempts < 4 && (value < min || value > max)){
                 System.out.println("Value is out of range. Try again!");
