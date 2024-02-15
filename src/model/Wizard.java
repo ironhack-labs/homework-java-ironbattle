@@ -19,8 +19,8 @@ public class Wizard extends Character implements Attacker {
     private static final int MANA_TO_INCREASE_WHEN_NOT_ENOUGH = 2;
     private static final int FIREBALL_ATTACK = 1;
     private static final int STAFF_HIT_ATTACK = 2;
-    private int mana;
     private int intelligence;
+    private int mana;
 
     public Wizard(String name) {
         super(name, Utils.generateRandomInt(MIN_HEALTH, MAX_HEALTH));

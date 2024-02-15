@@ -64,6 +64,10 @@ public class Warrior extends Character {
         super.setHp(hp);
     }
 
+    public int getStamina() {
+        return stamina;
+    }
+
     public void setStamina(int stamina) {
         this.stamina = Math.max(stamina, 0);
     }

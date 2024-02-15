@@ -1,7 +1,6 @@
 import model.Character;
 import model.Warrior;
 import model.Wizard;
-import org.w3c.dom.ls.LSOutput;
 import utils.Characters;
 import utils.Utils;
 
@@ -39,6 +38,7 @@ public class BattleSimulator {
         System.out.println(character2);
         battle();
     }
+
     private static Character createCharactersByNameAndType() {
         Character character = null;
 
@@ -60,55 +60,57 @@ public class BattleSimulator {
     }
 
     private static void customizeCharactersFeaturesBattle() {
-        character1 = createFullCharacter();
+        character1 = customizeCharactersFeatures();
+        character2 = customizeCharactersFeatures();
         System.out.println(character1);
-        character2 = createFullCharacter();
         System.out.println(character2);
         battle();
     }
 
-    private static Character createFullCharacter() {
-        System.out.println("Write your character's name:");
-        String characterName = scanner.next();
-        System.out.println("Write your character's hp:");
-        int characterHp = scanner.nextInt();
-        String characterType;
-        Character character = null;
+    private static Character customizeCharactersFeatures() {
+        Character character = createCharactersByNameAndType();
+        if (character instanceof Warrior) {
+            int characterStamina;
+            int characterStrength;
 
-        do {
-            System.out.println("Select your character's type:");
-            System.out.println("1. Warrior");
-            System.out.println("2. Wizard");
-            characterType = scanner.next();
-            switch (characterType) {
-                case "1" -> character = createWarrior(characterName, characterHp);
-                case "2" -> character = createWizard(characterName, characterHp);
-            }
-        } while (characterType.equals("1") && characterType.equals("2"));
+            do {
+                System.out.println("Select your warrior's stamina between 10 and 50: ");
+                characterStamina = scanner.nextInt();
+            } while (characterStamina < 10 || characterStamina > 50);
 
+            do {
+                System.out.println("Select your warrior's strength between 1 and 10: ");
+                characterStrength = scanner.nextInt();
+            } while (characterStrength < 1 || characterStrength > 10);
+
+            ((Warrior) character).setStamina(characterStamina);
+            ((Warrior) character).setStrength(characterStrength);
+
+        } else {
+            int characterIntelligence;
+            int characterMana;
+            do {
+                System.out.println("Select your wizard's mana between 10 and 50: ");
+                characterMana = scanner.nextInt();
+                System.out.println("characterMana: " + characterMana);
+            } while (characterMana < 10 || characterMana > 50);
+
+            do {
+                System.out.println("Select your wizard's intelligence between 1 and 50: ");
+                characterIntelligence = scanner.nextInt();
+            } while (characterIntelligence < 1 || characterIntelligence > 50);
+
+            ((Wizard) character).setIntelligence(characterIntelligence);
+            ((Wizard) character).setMana(characterMana);
+        }
         return character;
     }
 
-    private static Character createWizard(String characterName, int characterHp) {
-        Wizard wizard = new Wizard(characterName);
-        wizard.setHp(characterHp);
-        System.out.println("Write your character's mana:");
-        wizard.setMana(23);
-        System.out.println("Write your character's intelligence:");
-        wizard.setIntelligence(150);
-        return wizard;
+    private static void customizeWizard(String characterName, int characterHp) {
     }
 
-    private static Character createWarrior(String characterName, int characterHp) {
-        Warrior warrior = new Warrior(characterName);
-        warrior.setHp(characterHp);
-        System.out.println("Write your character's stamina:");
-        warrior.setStamina(45);
-        System.out.println("Write your character's strength:");
-        warrior.setStrength(78);
-        return warrior;
+    private static void customizeWarrior(String characterName, int characterHp) {
     }
-
 
     private static void fullRandomBattle() {
         character1 = createRandomCharacter();
@@ -128,12 +130,6 @@ public class BattleSimulator {
         System.out.println("\n\nGAME OVER!!!\n\n");
     }
 
-    private static void printStats() {
-        character1.printStats();
-        System.out.print(" << VS >> ");
-        character2.printStats();
-    }
-
     private static Character createRandomCharacter() {
         String characterInfo = Utils.getRandomCharacter();
         String characterName = characterInfo.split(",")[0];
@@ -147,4 +143,9 @@ public class BattleSimulator {
         return character;
     }
 
+    private static void printStats() {
+        character1.printStats();
+        System.out.print(" << VS >> ");
+        character2.printStats();
+    }
 }
