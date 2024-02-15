@@ -23,6 +23,9 @@ abstract class Character {
     public void setHp(int hp){this.hp = hp;}
 
 
+    public void receiveAttack(int attack){
+        this.hp -= attack;
+    }
 }
 
 

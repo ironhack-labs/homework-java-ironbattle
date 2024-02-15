@@ -24,6 +24,10 @@ public class Wizard extends Character implements Attacker{
         }
     }
 
+    public void setHpAttack(int hp, int attack){
+        hp -= attack;
+    }
+
     public void setMana(int mana) {
         if(mana <= 10 || mana >= 50){
             this.mana = mana;
@@ -66,7 +70,7 @@ public class Wizard extends Character implements Attacker{
 
         if (randomString.equals("Fireball")) {
             if (mana >= 5) {
-                x.setHp(x.getHp() - intelligence);
+                x.receiveAttack(getIntelligence());
                 setMana(getMana() - 5);
             } else {
                 throw new IllegalArgumentException("Not capable of casting Fireball, Staff Hit instead");
@@ -77,7 +81,7 @@ public class Wizard extends Character implements Attacker{
 
         if (randomString.equals("Staff Hit")) {
             if (mana >= 2) {
-                x.setHp(x.getHp() - 2);
+                x.receiveAttack(2);
                 setMana(getMana() + 1);
             } else {
                 throw new IllegalArgumentException("Not capable of casting Staff Hit, Mana increase +2");

@@ -3,8 +3,8 @@ public class Warrior extends Character {
     private int stamina;
     private int strength;
 
-    public Warrior(String name, int hp, int stamina, int strength){
-        super(name,hp);
+    public Warrior(String id, String name, int hp, int stamina, int strength){
+        super(id, name,hp);
         setStamina(stamina);
         setStrength(strength);
     }
@@ -52,7 +52,7 @@ public class Warrior extends Character {
         int strengthWarrior = getStrength();
         int staminaWarrior = getStamina();
 
-        wizard.setHp(wizardHealth - strengthWarrior);
+        wizard.receiveAttack(wizardHealth - strengthWarrior);
         setStamina(staminaWarrior - 5);}
 
     public void weakAttack(Wizard wizard){
@@ -61,7 +61,7 @@ public class Warrior extends Character {
         int halfStrengthWarrior = Math.round(getStrength()/2);
         int staminaWarrior = getStamina();
 
-        wizard.setHp(wizardHealth - halfStrengthWarrior);
+        wizard.receiveAttack(wizardHealth - halfStrengthWarrior);
         setStamina(staminaWarrior + 1);
 
     }
