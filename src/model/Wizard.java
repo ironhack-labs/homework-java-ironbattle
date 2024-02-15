@@ -16,9 +16,9 @@ public class Wizard extends Character implements Attacker {
     private static final int MANA_TO_DECREASE_WHEN_FIREBALL = 5;
     private static final int DAMAGE_INFLICTED_BY_STAFF_HIT = 2;
     private static final int MANA_TO_RECOVER_WHEN_STAFF_HIT = 1;
-    private static final int CONST_FOR_FIREBALL = 0;
-    private final int CONST_FOR_STAFF_HIT = 1;
-    private final int MANA_TO_INCREASE_WHEN_NOT_ENOUGH_MANA = 2;
+    private static final int MANA_TO_INCREASE_WHEN_NOT_ENOUGH = 2;
+    private static final int FIREBALL_ATTACK = 1;
+    private static final int STAFF_HIT_ATTACK = 2;
     private int mana;
     private final int intelligence;
 
@@ -29,33 +29,33 @@ public class Wizard extends Character implements Attacker {
     }
 
     public Wizard(String name, int hp, int mana, int intelligence) {
-        super(name, Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, Stats.Health, Characters.Wizard));
-        this.mana = Utils.validate(mana, MIN_MANA, MAX_MANA, Stats.Mana, Characters.Wizard);
-        this.intelligence = Utils.validate(intelligence, MIN_INTELLIGENCE, MAX_INTELLIGENCE, Stats.Intelligence, Characters.Wizard);
+        super(name, Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, Stats.HEALTH, Characters.WIZARD));
+        this.mana = Utils.validate(mana, MIN_MANA, MAX_MANA, Stats.MANA, Characters.WIZARD);
+        this.intelligence = Utils.validate(intelligence, MIN_INTELLIGENCE, MAX_INTELLIGENCE, Stats.INTELLIGENCE, Characters.WIZARD);
     }
 
     @Override
     public void attack(Character character) {
-        if (this.mana == 0) {
-            this.mana =+ MANA_TO_INCREASE_WHEN_NOT_ENOUGH_MANA;
-        } else {
-            if (this.mana >= MANA_TO_DECREASE_WHEN_FIREBALL) {
-                switch(Utils.generateRandomInt(CONST_FOR_FIREBALL, CONST_FOR_STAFF_HIT)) {
-                    case CONST_FOR_FIREBALL -> castFireball(character);
-                    case CONST_FOR_STAFF_HIT -> castStaffHit(character);
-                }
+        if (mana == 0) {
+            mana += MANA_TO_INCREASE_WHEN_NOT_ENOUGH;
+        } else if (mana >= MANA_TO_DECREASE_WHEN_FIREBALL) {
+            switch (Utils.generateRandomInt(FIREBALL_ATTACK, STAFF_HIT_ATTACK)) {
+                case FIREBALL_ATTACK -> castFireball(character);
+                case STAFF_HIT_ATTACK -> castStaffHit(character);
             }
+        } else {
+            castStaffHit(character);
         }
     }
 
     private void castFireball(Character character) {
-        character.setHp(character.getHp() - this.intelligence);
-        this.setMana(this.getMana() - MANA_TO_DECREASE_WHEN_FIREBALL);
+        setMana(mana - MANA_TO_DECREASE_WHEN_FIREBALL);
+        character.setHp(character.getHp() - intelligence);
     }
 
     private void castStaffHit(Character character) {
+        setMana(mana + MANA_TO_RECOVER_WHEN_STAFF_HIT);
         character.setHp(character.getHp() - DAMAGE_INFLICTED_BY_STAFF_HIT);
-        this.setMana(this.getMana() + MANA_TO_RECOVER_WHEN_STAFF_HIT);
     }
 
     public int getMana() {
@@ -73,7 +73,7 @@ public class Wizard extends Character implements Attacker {
 
     public void printStats() {
         System.out.printf("%s - health: %s %d %s mana: %s%d%s",
-                getName(), Colors.red.getCode(), getHp(), Colors.white.getCode(), Colors.green.getCode(), mana, Colors.white.getCode());
+                getName(), Colors.RED.getCode(), getHp(), Colors.WHITE.getCode(), Colors.GREEN.getCode(), mana, Colors.WHITE.getCode());
     }
 
     @Override
