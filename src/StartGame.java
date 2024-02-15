@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 public class StartGame {
-    public void setUp() {
+    public List<Character> setUp() {
         System.out.println("Welcome to the Ironbattle!");
 
         Scanner scanner = new Scanner(System.in);
@@ -14,6 +16,11 @@ public class StartGame {
 
         System.out.println("Player1: " + Player1.getName() + " has " + Player1.getHP() + " health points...");
         System.out.println("Player2: " + Player2.getName() + " has " + Player2.getHP() + " health points...");
+        List<Character> players = new ArrayList<>();
+        players.add(Player1);
+        players.add(Player2);
+        return players;
+
     }
 
     private Character createCharacter(Scanner scanner) {
