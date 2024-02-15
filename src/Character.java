@@ -22,6 +22,10 @@ abstract class Character {
     public void setName(String name){this.name = name;}
     public void setHp(int hp){this.hp = hp;}
     //public void setIsAlive(boolean isAlive){this.isAlive = isAlive;}
+
+    public void receiveAttack(int attack){
+        this.hp -= attack;
+    }
 }
 
 
