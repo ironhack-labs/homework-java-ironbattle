@@ -20,7 +20,7 @@ public class Wizard extends Character implements Attacker {
     private static final int FIREBALL_ATTACK = 1;
     private static final int STAFF_HIT_ATTACK = 2;
     private int mana;
-    private final int intelligence;
+    private int intelligence;
 
     public Wizard(String name) {
         super(name, Utils.generateRandomInt(MIN_HEALTH, MAX_HEALTH));
@@ -64,6 +64,14 @@ public class Wizard extends Character implements Attacker {
 
     public void setMana(int mana) {
         this.mana = Math.max(mana, 0);
+    }
+
+    public int getIntelligence() {
+        return intelligence;
+    }
+
+    public void setIntelligence(int intelligence) {
+        this.intelligence = intelligence;
     }
 
     @Override
