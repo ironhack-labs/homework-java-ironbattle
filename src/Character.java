@@ -3,7 +3,7 @@ abstract class Character {
     private String id;
     private String name;
     private int hp;
-    private final boolean isAlive = true;
+    private boolean isAlive = true;
 
     public Character(String id, String name, int hp) {
         setId(id);
@@ -25,6 +25,18 @@ abstract class Character {
 
     public void receiveAttack(int attack){
         this.hp -= attack;
+    }
+
+    public void setIsAlive(boolean isAlive){
+        this.isAlive = isAlive;
+    }
+
+    public boolean checkIsAlive(){
+        if (getHp() <= 0){
+            setIsAlive(false);
+            return false;
+        }
+        return true;
     }
 }
 
