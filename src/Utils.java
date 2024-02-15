@@ -1,0 +1,16 @@
+import java.util.Random;
+
+public class Utils {
+    Random random = new Random();
+
+    public int generateRandomNumber(){
+        return random.nextInt(2);
+    }
+
+    //Overload
+    public int generateRandomNumber(int min, int max){
+        if(max < min)
+            throw new IllegalArgumentException("The maximum value for this method cannot be smaller than the declared minimum.");
+        return random.nextInt(max - min + 1) + min;
+    }
+}
