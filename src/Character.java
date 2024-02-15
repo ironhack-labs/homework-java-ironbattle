@@ -9,7 +9,7 @@ abstract class Character {
     private int hp;
     private final boolean isAlive = true;
 
-    public Character(String id, String name, int hp) {
+    public Character(String name, int hp) {
         setId(id);
         setName(name);
         setHp(hp);
@@ -25,7 +25,8 @@ abstract class Character {
     public void setId(String id){this.id = id;}
     public void setName(String name){this.name = name;}
     public void setHp(int hp){this.hp = hp;}
-    //public void setIsAlive(boolean isAlive){this.isAlive = isAlive;}
+
+
 }
 
 

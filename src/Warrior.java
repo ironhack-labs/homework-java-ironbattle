@@ -15,7 +15,7 @@ public class Warrior extends Character {
         if(stamina <= 10 || stamina >= 50){
             throw new IllegalArgumentException("Stamina is not a number between 10 and 50.");
         }else{
-        this.stamina = stamina;}
+            this.stamina = stamina;}
     }
     public void setStrength(int strength) {
         if(strength <= 1 || strength >= 10) {
@@ -35,17 +35,17 @@ public class Warrior extends Character {
             if(staminaWarrior < 5){
                 weakAttack(wizard);
             }else{
-            heavyAttack(wizard);}
+                heavyAttack(wizard);}
         }else{
             //Weak attack
             if(staminaWarrior<1){
                 setStamina(staminaWarrior + 2);
             }else{
-            weakAttack(wizard);
+                weakAttack(wizard);
             }
         }
 
-        }
+    }
 
     public void heavyAttack(Wizard wizard){
         int wizardHealth = wizard.getHp();
@@ -54,7 +54,6 @@ public class Warrior extends Character {
 
         wizard.setHp(wizardHealth - strengthWarrior);
         setStamina(staminaWarrior - 5);}
-    }
 
     public void weakAttack(Wizard wizard){
 
@@ -66,5 +65,6 @@ public class Warrior extends Character {
         setStamina(staminaWarrior + 1);
 
     }
-
 }
+
+
