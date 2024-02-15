@@ -14,6 +14,9 @@ public class Warrior extends Character {
     private static final int MIN_STAMINA = 10;
     private static final int MAX_STAMINA = 50;
     private static final int MIN_STAMINA_FOR_A_HEAVY_ATTACK = 5;
+    private static final int STAMINA_TO_RECOVER_WHEN_NOT_ENOUGH = 2;
+    private static final int STAMINA_TO_DECREASE_WHEN_HEAVY_ATTACK = 5;
+    private static final int STAMINA_TO_RECOVER_WHEN_WEAK_ATTACK = 1;
     private static final int WEAK_ATTACK = 1;
     private static final int HEAVY_ATTACK = 2;
     private int stamina;
@@ -26,17 +29,17 @@ public class Warrior extends Character {
     }
 
     public Warrior(String name, int hp, int stamina, int strength) {
-        super(name, Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, Stats.Health, Characters.Warrior));
-        this.stamina = Utils.validate(stamina, MIN_STAMINA, MAX_STAMINA, Stats.Stamina, Characters.Warrior);
-        this.strength = Utils.validate(strength, MIN_STRENGTH, MAX_STRENGTH, Stats.Strength, Characters.Warrior);
+        super(name, Utils.validate(hp, MIN_HEALTH, MAX_HEALTH, Stats.HEALTH, Characters.WARRIOR));
+        this.stamina = Utils.validate(stamina, MIN_STAMINA, MAX_STAMINA, Stats.STAMINA, Characters.WARRIOR);
+        this.strength = Utils.validate(strength, MIN_STRENGTH, MAX_STRENGTH, Stats.STRENGTH, Characters.WARRIOR);
     }
 
     @Override
     public void attack(Character character) {
         if (stamina == 0) {
-            setStamina(stamina + 2);
+            stamina += STAMINA_TO_RECOVER_WHEN_NOT_ENOUGH;
         } else if (stamina >= MIN_STAMINA_FOR_A_HEAVY_ATTACK) {
-            switch (Utils.generateRandomInt(1, 2)) {
+            switch (Utils.generateRandomInt(WEAK_ATTACK, HEAVY_ATTACK)) {
                 case HEAVY_ATTACK -> heavyAttack(character);
                 case WEAK_ATTACK -> weakAttack(character);
             }
@@ -46,12 +49,12 @@ public class Warrior extends Character {
     }
 
     private void weakAttack(Character character) {
-        setStamina(stamina + 1);
-        character.setHp(character.getHp() - this.strength / 2);
+        stamina += STAMINA_TO_RECOVER_WHEN_WEAK_ATTACK;
+        character.setHp(character.getHp() - strength / 2);
     }
 
     private void heavyAttack(Character character) {
-        setStamina(stamina - 5);
+        setStamina(stamina - STAMINA_TO_DECREASE_WHEN_HEAVY_ATTACK);
         int updatedHp = character.getHp() - strength;
         character.setHp(Math.max(updatedHp, 0));
     }
@@ -59,6 +62,10 @@ public class Warrior extends Character {
     @Override
     public void setHp(int hp) {
         super.setHp(hp);
+    }
+
+    public int getStamina() {
+        return stamina;
     }
 
     public void setStamina(int stamina) {
@@ -75,7 +82,7 @@ public class Warrior extends Character {
 
     public void printStats() {
         System.out.printf("%s - health: %s %d %s stamina: %s%d%s",
-                getName(), Colors.red.getCode(), getHp(), Colors.white.getCode(), Colors.green.getCode(), stamina, Colors.white.getCode());
+                getName(), Colors.RED.getCode(), getHp(), Colors.WHITE.getCode(), Colors.GREEN.getCode(), stamina, Colors.WHITE.getCode());
     }
 
     @Override

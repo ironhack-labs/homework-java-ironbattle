@@ -1,6 +1,6 @@
 package utils;
 
 public enum Characters {
-    Wizard,
-    Warrior
+    WIZARD,
+    WARRIOR
 }
