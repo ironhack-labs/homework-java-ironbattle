@@ -1,8 +1,14 @@
 import java.util.Scanner;
 
-public class CharacterAttributesInput extends CharacterAttributes {
+public class CharacterInput {
 
-    public CharacterAttributesInput(){
+    private String name = "";
+    private int hp = -1;
+    private int attribute1 = -1;
+    private int attribute2 = -1;
+    private int type = -1; //0-warrior 1-wizard
+
+    public CharacterInput(){
         setTypeInput();
         setNameInput();
         setHP();
@@ -10,6 +16,23 @@ public class CharacterAttributesInput extends CharacterAttributes {
         setAttribute2();
     }
 
+    public CharacterInput(String random){
+        setAttributesRandom();
+    }
+
+    //Setters attributes Random
+    public void setAttributesRandom() {
+        this.type = Utils.generateRandomNumber();
+        this.name = "Fighter";
+        this.attribute1 = Utils.generateRandomNumber(10, 50);
+        if (this.type == 0){
+            this.hp = Utils.generateRandomNumber(100, 200);
+            this.attribute2 = Utils.generateRandomNumber(1, 10);
+        } else{
+            this.hp = Utils.generateRandomNumber(50, 100);
+            this.attribute2 = Utils.generateRandomNumber(1, 50);
+        }
+    }
 
     //Setters inputs from console
     public void setTypeInput(){
@@ -120,4 +143,26 @@ public class CharacterAttributesInput extends CharacterAttributes {
         System.out.println("Maximum attempts reached. Assigning random character.");
         return (Utils.generateRandomNumber());
     }
+
+    //getters
+    public String getName() {
+        return this.name;
+    }
+
+    public int getType() {
+        return this.type;
+    }
+
+    public int getHP() {
+        return this.hp;
+    }
+
+    public int getAttribute1() {
+        return this.attribute1;
+    }
+
+    public int getAttribute2() {
+        return this.attribute2;
+    }
+
 }
