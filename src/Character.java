@@ -3,17 +3,14 @@ public abstract class Character implements Attacker {
     private static int idCounter = 1;
     private String id;
     private int hp;
-    private boolean isAlive;
+    private boolean isAlive=true;
 
     public Character(String name, int hp) {
         setName(name);
         setHp(hp);
         assignId();
     }
-    //añadido constructor acorde con los Warrior y Wizar ya creados
-    public Character(String name){
-        setName(name);
-    }
+
 
     private void assignId(){
         this.id = String.valueOf(idCounter++);
