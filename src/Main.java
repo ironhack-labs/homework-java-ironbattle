@@ -1,14 +1,65 @@
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Random;
+import java.util.Scanner;
 
 public static void main(String[] args)throws IOException{
   ImportCharactersFromCSV.importCharactersFromCSV();
         //Temporary creation of characters, can be deleted
+
         Character char1 = new Warrior("guerrero",180,12,2);
         Character char2  = new Wizard("wizard",100,12,2);
 
-        //Call for the method that will do the combat
-        combat(char1,char2);
+        Scanner scanner = new Scanner(System.in);
+        boolean is_finish=false;
+        int selection=0;
+        boolean not_selected = false;
+        TextMenu.printBigText(3000,0);
+        TextMenu.printBigText(1000,1);
+        TextMenu.printBigText(1000,2);
+        TextMenu.printBigText(1000,3);
+
+        while(!is_finish ) {
+            getIntroMenu();
+            try{
+                selection=scanner.nextInt();
+                switch (selection) {
+                    case 1:
+                        break;
+
+                    case 2:
+                        //Random Player creation
+                        TextMenu.printBigText(2000,4);
+                        //print all char info
+                        char1= RandomChar.createRandomChar();
+                        char2= RandomChar.createRandomChar();
+                        System.out.println("Players Created");
+
+                        break;
+                    case 3:
+                        //CSV Import
+                        break;
+                    case 4:
+                        //Start the battle
+                        combat(char1,char2);
+                        is_finish=true;
+                        break;
+                    default:
+                        System.out.println("Wrong Selection, Please try again");
+                }
+            }catch (InputMismatchException ie){
+                scanner.nextLine();
+            }
+
+        }
+    }
+
+    public static void getIntroMenu(){
+        System.out.println("1- Manual Players creation. \n");
+        System.out.println("2- Random Players creation. \n");
+        System.out.println("3- Import Players from csv. \n");
+        System.out.println("4- Start Battle             \n");
+        System.out.println("5- Exit: \n");
     }
 
 
