@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -38,6 +39,10 @@ public static void main(String[] args)throws IOException{
                         break;
                     case 3:
                         //CSV Import
+                        ArrayList<Character> players= ImportCharactersFromCSV.importCharactersFromCSV();
+                        char1= players.get(0);
+                        char2= players.get(1);
+                        //check if char are get
                         break;
                     case 4:
                         //Start the battle
