@@ -46,11 +46,22 @@ public class Utils {
         return characters;
     }
 
-    public static int validate(int value, int min, int max, Stats statType, Characters characterType) {
+    public static int validate(int value, int min, int max, Stats statType, CharacterType characterType) {
         if (value < min || value > max) {
             throw new IllegalArgumentException(characterType + "'s " + statType + " should be between " + min + " - " + max);
         }
         return value;
+    }
+
+    public static boolean isValidNumberInRange(String str, int min, int max) {
+        System.out.println("Validating: " + str);
+        try {
+            int numericValue = Integer.parseInt(str);
+            if (numericValue >= min && numericValue <= max) return true;
+        } catch (Exception e) {
+            return false;
+        }
+        return false;
     }
 
 }
