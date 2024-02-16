@@ -1,17 +1,19 @@
+package utils;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Utils {
-    static File file = new File("src/characters.csv");
+    static File file = new File("resources/characters.csv");
 
-    protected static int generateRandomInt(int min, int max) {
+    public static int generateRandomInt(int min, int max) {
         Random random = new Random();
         return random.nextInt((max + 1) - min) + min;
     }
 
-    protected static String getRandomCharacter() {
+    public static String getRandomCharacter() {
         try {
             Scanner scanner = new Scanner(file);
             int numberOfCharacters = numberOfCharacters();
@@ -44,7 +46,7 @@ public class Utils {
         return characters;
     }
 
-    protected static int validate(int value, int min, int max, Stats statType, Characters characterType) {
+    public static int validate(int value, int min, int max, Stats statType, Characters characterType) {
         if (value < min || value > max) {
             throw new IllegalArgumentException(characterType + "'s " + statType + " should be between " + min + " - " + max);
         }

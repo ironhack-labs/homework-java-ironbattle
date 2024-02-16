@@ -1,3 +1,5 @@
+package model;
+
 import java.util.UUID;
 
 public abstract class Character implements Attacker {
@@ -41,6 +43,5 @@ public abstract class Character implements Attacker {
     }
 
     abstract public void printStats();
-
 
 }
