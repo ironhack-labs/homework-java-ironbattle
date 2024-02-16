@@ -1,62 +1,125 @@
 import java.io.IOException;
-import java.util.InputMismatchException;
-import java.util.Random;
-import java.util.Scanner;
+import java.lang.reflect.Array;
+import java.util.*;
 
 
 public class Main {
-    public static void main(String[] args)throws IOException{
-        characterSelector();
+    public static void main(String[] args) throws IOException {
+        //characterSelector();
+        Scanner scanner = new Scanner(System.in);
         //Temporary creation of characters, can be deleted
-        Character char1 = new Warrior("guerrero",180,12,2);
-        Character char2  = new Wizard("wizard",100,12,2);
+        Character char1 = manualCharacterCreator(scanner);
+        Character char2 = manualCharacterCreator(scanner);
         //Call for the method that will do the combat
-        //combat(char1,char2);
+        combat(char1, char2);
+        scanner.close();
     }
 
-    public static void characterSelector(){
-        Scanner scanner = new Scanner(System.in);
-        boolean optionSelected = false;
-        System.out.println("Bienvenid@ al IronBattle! programado por el grupo CodeCrafters: Heroes of the Binary Realms. \n" +
-                "Estás apunto de embarcarte en un emocionante combate entre dos peleadores que darán su vida para declararse el vencedor.\n" +
-                "A continuación, seleccionar entre una de las siguientes opciones: ");
+    public static Character manualCharacterCreator(Scanner scanner) {
+        System.out.println("First, select your character class:\n");
 
-        while(optionSelected==false){
-            System.out.println("1. Creador manual de personajes.\n2. Creador aleatorio de personajes \n3. Importación de personajes (formato CSV)");
-            int option = 0;
-            try{
-                option = scanner.nextInt();
-            }
-            catch(InputMismatchException ime){
-                option = 0;
+        String characterName = "Default";
+        int characterClass = 0;
+        int characterHp = 100;
+        int characterParameter1 = 20;
+        int characterParameter2 = 20;
+        Character character;
+
+        //Selector for class
+        boolean optionSelected = false;
+        while (optionSelected == false) {
+            System.out.println("1.Warrior\n2.Wizard\n");
+            try {
+                if(scanner.hasNextInt()) { // Verificar si hay un entero disponible para leer
+                    characterClass = scanner.nextInt();
+                    scanner.nextLine();
+                    optionSelected = true;
+                } else {
+                    // Manejar el caso en el que no haya un entero disponible
+                    System.out.println("Input error: No integer value entered.");
+                    scanner.nextLine();
+                }
+            } catch (InputMismatchException ime) {
                 scanner.nextLine();
-            }
-            switch (option) {
-                case 1:
-                    //TODO Llamada al creador manual de personajes
-                    manualCharacterCreator(scanner);
-                    System.out.print("mec");
-                    optionSelected = true;
-                    break;
-                case 2:
-                    //TODO Llamada al creador aleatorio de personajes
-                    System.out.print("moc");
-                    optionSelected = true;
-                    break;
-                case 3:
-                    //TODO Llamada al importador de CSV
-                    System.out.print("mic");
-                    optionSelected = true;
-                    break;
-                default:
-                    System.out.println("Vaya! parece que has seleccionado una opción que no está disponible. \nPor favor, vuelve a seleccionar una opción válida escribiendo el número que hay al princpio de la opción deseada:");
+                System.out.println("Wow! seems that the class1 you selected is not available.\n" +
+                        "Please, try it again:");
             }
         }
-    }
 
+        optionSelected = false;
+        //Selector for Name
+        while (optionSelected == false) {
+            System.out.println("Write a name for the character");
+            try {
+                characterName = scanner.next();
+                scanner.nextLine();
+                optionSelected = true;
+            } catch (InputMismatchException ime) {
+                scanner.nextLine();
+                System.out.println("Wow! seems that what you write is not possible.\n" +
+                        "Please, try it again:");
+            }
+        }
+        optionSelected = false;
+        //Selector for HP
+        while (optionSelected == false) {
+            System.out.println("Set an HP value for the character:");
+            try {
+                characterHp = scanner.nextInt();
+                scanner.nextLine();
+                optionSelected = true;
+            } catch (InputMismatchException ime) {
+                scanner.nextLine();
+                System.out.println("you select a value out of the range \n" +
+                        "Please, try it again:");
+            }
+        }
+        optionSelected = false;
+        //Selector for parameter 1
+        while (optionSelected == false) {
+            System.out.println("Now, select a value for ");
+            if (characterClass == 1) {
+                System.out.println(" stamina:");
+            } else {
+                System.out.println(" mana:");
+            }
+            try {
+                characterParameter1 = scanner.nextInt();
+                scanner.nextLine();
+                optionSelected = true;
+            } catch (InputMismatchException ime) {
+                scanner.nextLine();
+                System.out.println("you select a value out of the range \n" +
+                        "Please, try it again:");
+            }
+        }
+        optionSelected = false;
+        //Selector for parameter 2
+        while (optionSelected == false) {
+            System.out.println("And finally, set a value for ");
+            if (characterClass == 1) {
+                System.out.println(" strengh:");
+            } else {
+                System.out.println(" intelligence:");
+            }
+            try {
+                characterParameter2 = scanner.nextInt();
+                optionSelected = true;
+                scanner.nextLine();
+            } catch (InputMismatchException ime) {
+                System.out.println("you select a value out of the range \n" +
+                        "Please, try it again:");
+            }
+        }
 
-    public static void manualCharacterCreator(Scanner scanner){
-    }
+        //Creation of the character
+        if (characterClass == 1) {
+            character = new Warrior(characterName, characterHp, characterParameter1, characterParameter2);
+        } else {
+            character = new Wizard(characterName, characterHp, characterParameter1, characterParameter2);
+        }
+        return character;
+}
 
 
     public static void combat(Character char1, Character char2){
