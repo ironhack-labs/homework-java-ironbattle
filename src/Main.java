@@ -3,7 +3,7 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Iron Battle!");
-        System.out.println("Let's create first character!");
+        System.out.println("Let's create the first character!");
         //Upload by CSV method  BONUS 1
        /* List<Character> characters = CharacterImporter.importCharactersFromCSV("characters.csv"); // Path to the CSV file.
        // To check if characters.csv were uploaded successfully
