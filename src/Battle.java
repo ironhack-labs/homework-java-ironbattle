@@ -93,8 +93,8 @@ public class Battle {
     public void startBattle (Character player1, Character player2){
 
         int initialLife = 0;
-        Character p1=player1;
-        Character p2=player2;
+        Character p1 = clone(player1);
+        Character p2 = clone(player2);
 
         while(getWinner()==(null)){
 
@@ -129,6 +129,15 @@ public class Battle {
 
          */
 
+
+    }
+
+    private Character clone(Character character){
+        if(character instanceof Wizard){
+            return new Wizard((Wizard) character);
+        } else {
+            return new Warrior((Warrior) character);
+        }
 
     }
 

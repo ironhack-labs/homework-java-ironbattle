@@ -22,6 +22,19 @@ public class Warrior extends Character {
         int strengthMax = 10;
         setStrength(Randomizer.getRandomInt(strengthMin, strengthMax));
     }
+/*
+    public Warrior (String name, int stamina, int strength, int hp){
+        super(name, hp);
+        this.stamina = stamina;
+        this.strength = strength;
+
+    }*/
+    public Warrior (Warrior warrior){
+        super(warrior.getName(), warrior.getHP());
+        setStamina(warrior.getStamina());
+        setStrength(warrior.getStrength());
+
+    }
 
     // Getters and Setters
     public int getStamina() {
