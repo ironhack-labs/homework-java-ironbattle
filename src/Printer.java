@@ -195,7 +195,7 @@ public  class Printer{
                                                                    \s
                                 """;
 
-                System.out.println(threee);
+                System.out.println(three);
                 break;
             case 2:
                 String two =
