@@ -93,8 +93,8 @@ public class Wizard extends Character {
     }
 
     @Override
-    public String getCharacterClass() {
-        return "wizard";
+    public CharacterClass getCharacterClass() {
+        return CharacterClass.WIZARD;
     }
 
     private void fireball(Character character) {

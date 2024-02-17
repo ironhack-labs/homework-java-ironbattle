@@ -96,8 +96,8 @@ public class Warrior extends Character {
     }
 
     @Override
-    public String getCharacterClass() {
-        return "warrior";
+    public CharacterClass getCharacterClass() {
+        return CharacterClass.WARRIOR;
     }
 
     public void heavyAttack(Character character) {

@@ -1,17 +1,15 @@
-import java.util.Objects;
 import java.util.Random;
 
 public class RandomChar {
 
     public static Character createRandomChar() {
-        String charType = randomCharType();
-        return Objects.equals(charType, "Wizard") ? new Wizard() : new Warrior();
+        return CharacterClass.WIZARD == randomCharType() ? new Wizard() : new Warrior();
     }
 
-    public static String randomCharType() {
+    public static CharacterClass randomCharType() {
         Random random = new Random();
         int faceDice = random.nextInt(6) + 1;
 
-        return faceDice%2 == 0 ? "Wizard" : "Warrior";
+        return faceDice%2 == 0 ? CharacterClass.WIZARD : CharacterClass.WARRIOR;
     }
 }
