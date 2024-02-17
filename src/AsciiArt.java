@@ -390,12 +390,6 @@ public class AsciiArt {
                             "                                                                                                      ";
 
             System.out.println(warriorWeak);
-        }
+
     }
-
-
-
-
-
-
 }
