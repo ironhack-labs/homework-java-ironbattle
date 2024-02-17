@@ -62,7 +62,7 @@ public abstract class Character implements Attacker {
     }
 
     public abstract Character clone();
-    public abstract String getCharacterClass();
+    public abstract CharacterClass getCharacterClass();
 
     public abstract void attack(Character character);
 

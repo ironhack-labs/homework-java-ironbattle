@@ -16,10 +16,10 @@ public class Bard {
                 "Their resolve as unyielding as the ancient oaks that watch over their battle.\n");
     }
     public static void introducesFirstOpponent(Character character) {
-        System.out.printf("Amidst the swirling mists of fate %s emerges, a %s, a harbinger of challenge and strife.\n", getStyledNameForCharacter(character), character.getCharacterClass());
+        System.out.printf("Amidst the swirling mists of fate %s emerges, a %s, a harbinger of challenge and strife.\n", getStyledNameForCharacter(character), character.getCharacterClass().toString().toLowerCase());
     }
     public static void introducesSecondOpponent(Character character) {
-        System.out.printf("And so does %s, a %s, a shadow cast from the depths of adversity.\n",  getStyledNameForCharacter(character), character.getCharacterClass());
+        System.out.printf("And so does %s, a %s, a shadow cast from the depths of adversity.\n",  getStyledNameForCharacter(character), character.getCharacterClass().toString().toLowerCase());
     }
     public static void announcesRound(int roundNumber) {
         System.out.printf("=========== ROUND %d ===========\n", roundNumber);
