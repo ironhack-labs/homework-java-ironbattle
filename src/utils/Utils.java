@@ -2,6 +2,7 @@ package utils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -85,8 +86,20 @@ public class Utils {
 
     }
 
+    public static boolean isValidName(String name) {
+        if (name.length() < 3) {
+            System.out.println("Name should be at least 3 characters length");
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isValidType(String characterType) {
+        return Arrays.stream(CharacterType.values()).map(CharacterType::getDescription).anyMatch(type -> type.equals(characterType));
+    }
 
 }
+
 
 
 
