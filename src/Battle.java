@@ -132,8 +132,8 @@ public class Battle {
     private void performAttack(Character attacker, Character target) {
         int initialLife = target.getHP();
         attacker.attack(target);//Review with team
-        int damageDone = initialLife - target.getHP();
-        battleRecorder(battleRecord, attacker);
+        setDamageDone(initialLife - target.getHP());
+        battleRecorder(battleRecord, attacker, target);
 
         if(target.getHP() <=0)
             target.setIsAlive(false);
@@ -163,17 +163,35 @@ public class Battle {
     }
     //2. Record the battle log
 
-    private void battleRecorder(List<String> battleRecord, Character player ){
+    private void battleRecorder(List<String> battleRecord, Character playerOne, Character playerTwo ){
         this.battleRecord=battleRecord;
 
         // Need a character attribute like "attackName", "skillName" or make a new attribute on battle class?
 
-        String record = "Round " + getRound() + ": Player " + player.getName() + '\'' +
-                "Class: " + player.getClass() +  " - HP: " + player.getHP()+ '\'' +
-                "attack with: " + /* player.getAttackName + */ "and makes: " + getDamageDone() + " of damage";
+        if(playerOne instanceof Warrior){
+            Warrior warrior = (Warrior) playerOne;
+
+            String record = "Round " + getRound() + ": Player " + playerOne.getName() +
+                    " Class: " + playerOne.getClass().getSimpleName() +  " - HP: " + playerOne.getHP()+
+                    " - Stamina: " + warrior.getStamina() +
+                    /*  "attack with: " + player.getAttackName + */ " makes: " + getDamageDone() + " points of damage to "
+                    + playerTwo.getName();
 
 
-        battleRecord.add(record);
+            battleRecord.add(record);
+        }else if (playerOne instanceof Wizard){
+
+            Wizard wizard = (Wizard) playerOne;
+
+            String record = "Round " + getRound() + ": Player " + playerOne.getName() +
+                    " Class: " + playerOne.getClass().getSimpleName() +  " - HP: " + playerOne.getHP()+
+                    " - Mana: " + wizard.getMana() +
+                    /*  "attack with: " + player.getAttackName + */ " makes: " + getDamageDone() + " points of damage to "
+                    + playerTwo.getName();
+
+            battleRecord.add(record);
+        }
+
     }
 
     private void battleRecorder(List<String> battleRecord ){
@@ -183,8 +201,8 @@ public class Battle {
             battleRecord.add("We have a tie match between the players. A new match start: ");
         else{
             if(getWinner()!=null){
-                battleRecord.add("The winner is " + getWinner()
-                        + "!!!. Better luck next time: " + getLooser());
+                battleRecord.add("The winner is " + getWinner().getName()
+                        + "!!!. Better luck next time: " + getLooser().getName());
             }
         }
 
