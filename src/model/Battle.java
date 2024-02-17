@@ -20,7 +20,8 @@ public class Battle {
             printStats();
             round++;
         } while (character1.isAlive() && character2.isAlive());
-        System.out.println("\n\nGAME OVER!!!\n\n");
+
+        System.out.printf("\n\n WINNER is: %s!!!\n\n", character1.isAlive() ? character1.getName() : character2.getName());
     }
 
     private void printStats() {
