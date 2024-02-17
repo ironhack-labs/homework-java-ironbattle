@@ -4,9 +4,6 @@ import java.util.List;
 public class Battle {
 
     //other class defines players character
-
-    private Character playerOne;
-    private Character playerTwo;
     private Character winner;
     private Character looser;
     private boolean tieGame;
@@ -16,28 +13,8 @@ public class Battle {
     private int damageDone;
 
     public Battle(Character playerOne, Character playerTwo) {
-        this.playerOne = playerOne;
-        this.playerTwo = playerTwo;
         setTieGame(false);
         setRound(1);
-
-
-    }
-
-    public Character getPlayerOne() {
-        return playerOne;
-    }
-
-    public void setPlayerOne(Character playerOne) {
-        this.playerOne = playerOne;
-    }
-
-    public Character getPlayerTwo() {
-        return playerTwo;
-    }
-
-    public void setPlayerTwo(Character playerTwo) {
-        this.playerTwo = playerTwo;
     }
 
     private boolean isTieGame() {
