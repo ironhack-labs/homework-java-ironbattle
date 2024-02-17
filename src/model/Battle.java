@@ -1,5 +1,7 @@
 package model;
 
+import utils.Utils;
+
 public class Battle {
     private final Character character1;
     private final Character character2;
@@ -21,7 +23,8 @@ public class Battle {
             round++;
         } while (character1.isAlive() && character2.isAlive());
 
-        System.out.printf("\n\n WINNER is: %s!!!\n\n", character1.isAlive() ? character1.getName() : character2.getName());
+        String winnerDisplay =  "\n\nWINNER is: " + (character1.isAlive() ? character1.getName() : character2.getName()) + "!!!\n\n";
+        Utils.typewriterEffect(winnerDisplay, 100);
     }
 
     private void printStats() {
