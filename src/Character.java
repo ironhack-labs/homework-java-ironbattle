@@ -1,8 +1,6 @@
 import java.util.Random;
 import java.util.UUID;
 
-
-
 public abstract class Character implements Attacker {
     private String id;
     private String name;
@@ -38,6 +36,7 @@ public abstract class Character implements Attacker {
     public void setName(String name) {
         this.name = name;
     }
+
     public int getHp() {
         return this.hp;
     }
@@ -61,13 +60,17 @@ public abstract class Character implements Attacker {
 
     public abstract Character clone();
 
+    public abstract void attack(Character character);
+
     public static int randomInt (int min, int max) {
         Random random = new Random();
         return random.nextInt(max - min + 1) + min;
     }
+
     public void setCharacterClass(String characterClass) {
         this.characterClass = characterClass;
     }
+
     public String getCharacterClass() {
         return this.characterClass;
     }
