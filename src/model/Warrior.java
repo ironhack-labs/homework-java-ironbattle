@@ -6,10 +6,10 @@ public class Warrior extends Character {
 
     private static final int MIN_HEALTH = 100;
     private static final int MAX_HEALTH = 200;
-    private static final int MIN_STRENGTH = 1;
-    private static final int MAX_STRENGTH = 10;
-    private static final int MIN_STAMINA = 10;
-    private static final int MAX_STAMINA = 50;
+    public static final int MIN_STRENGTH = 1;
+    public static final int MAX_STRENGTH = 10;
+    public static final int MIN_STAMINA = 10;
+    public static final int MAX_STAMINA = 50;
     private static final int MIN_STAMINA_FOR_A_HEAVY_ATTACK = 5;
     private static final int STAMINA_TO_RECOVER_WHEN_NOT_ENOUGH = 2;
     private static final int STAMINA_TO_DECREASE_WHEN_HEAVY_ATTACK = 5;

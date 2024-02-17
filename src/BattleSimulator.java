@@ -46,11 +46,13 @@ public class BattleSimulator {
     }
 
     private static String createCharacterName(CharacterType characterType) {
+        scanner.nextLine();
         String characterName;
         do {
             System.out.printf("Write a %s's name: ", characterType.getDescription());
-            characterName = scanner.next();
-        } while (characterName.length() < 1);
+
+            characterName = scanner.nextLine();
+        } while (!Utils.isValidName(characterName));
 
         return characterName;
     }
@@ -92,12 +94,12 @@ public class BattleSimulator {
             System.out.println("Select your wizard's mana between 10 and 50: ");
             mana = scanner.next();
             System.out.println("mana: " + mana);
-        } while (!Utils.isValidNumberInRange(mana, 10 , 50));
+        } while (!Utils.isValidNumberInRange(mana, Wizard.MIN_MANA , Wizard.MAX_MANA));
 
         do {
             System.out.println("Select your wizard's intelligence between 1 and 50: ");
             intelligence = scanner.next();
-        } while (!Utils.isValidNumberInRange(intelligence, 1 , 50));
+        } while (!Utils.isValidNumberInRange(intelligence, Wizard.MIN_INTELLIGENCE , Wizard.MAX_INTELLIGENCE));
 
         wizard.setIntelligence(Integer.parseInt(intelligence));
         wizard.setMana(Integer.parseInt(mana));
@@ -111,12 +113,12 @@ public class BattleSimulator {
             System.out.println("Select your warrior's stamina between 10 and 50: ");
             stamina = scanner.next();
 
-        } while (!Utils.isValidNumberInRange(stamina, 10, 50));
+        } while (!Utils.isValidNumberInRange(stamina, Warrior.MIN_STAMINA, Warrior.MAX_STAMINA));
 
         do {
             System.out.println("Select your warrior's strength between 1 and 10: ");
             strength = scanner.next();
-        } while (!Utils.isValidNumberInRange(strength, 1, 10));
+        } while (!Utils.isValidNumberInRange(strength, Warrior.MIN_STRENGTH, Warrior.MAX_STRENGTH));
 
         warrior.setStamina(Integer.parseInt(stamina));
         warrior.setStrength(Integer.parseInt(strength));
@@ -126,6 +128,14 @@ public class BattleSimulator {
         String characterInfo = Utils.getRandomCharacter();
         String characterName = characterInfo.split(",")[0];
         String characterType = characterInfo.split(",")[1];
+
+        if (!Utils.isValidName(characterName)) {
+            throw new IllegalArgumentException("Error: character name " + characterName + " is not correct");
+        }
+
+        if (!Utils.isValidType(characterType)) {
+            throw new IllegalArgumentException("Error: character type " + characterType + " is not correct");
+        }
 
         return characterType.equalsIgnoreCase(CharacterType.WARRIOR.name()) ?
                 new Warrior(characterName) :

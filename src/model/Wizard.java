@@ -9,10 +9,10 @@ public class Wizard extends Character implements Attacker {
 
     private static final int MIN_HEALTH = 50;
     private static final int MAX_HEALTH = 100;
-    private static final int MIN_MANA = 10;
-    private static final int MAX_MANA = 50;
-    private static final int MIN_INTELLIGENCE = 1;
-    private static final int MAX_INTELLIGENCE = 50;
+    public static final int MIN_MANA = 10;
+    public static final int MAX_MANA = 50;
+    public static final int MIN_INTELLIGENCE = 1;
+    public static final int MAX_INTELLIGENCE = 50;
     private static final int MANA_TO_DECREASE_WHEN_FIREBALL = 5;
     private static final int DAMAGE_INFLICTED_BY_STAFF_HIT = 2;
     private static final int MANA_TO_RECOVER_WHEN_STAFF_HIT = 1;
