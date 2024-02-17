@@ -42,10 +42,9 @@ public class Warrior extends Character {
 
     // Methods
     public void attack(Character enemy) {
-        /*if (getStamina() < 2) {
+        if (getStamina() < 2) {
             recovery();
-        } else */
-        if (getStamina() < 5) {
+        } else if (getStamina() < 5) {
             weakAttack(enemy);
         } else {
             if (Randomizer.getRandomInt(0, 1) == 0) {
@@ -74,9 +73,9 @@ public class Warrior extends Character {
         int attackStrength = getStrength() / 2;
         enemy.setHp(enemy.getHP() - attackStrength);
 
-        // Recover
-        int recoverValue = 1;
-        setStamina(getStamina() + recoverValue);
+        // Decrease
+        int staminaDecreaseValue = 1;
+        setStamina(getStamina() - staminaDecreaseValue);
 
         // Log
         System.out.println(getName() + " weak attacked " + enemy.getName() + " with " + attackStrength + " hp!");
