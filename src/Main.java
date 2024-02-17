@@ -31,7 +31,7 @@ public class Main {
 
                     case 2:
                         //Random Player creation
-                        TextMenu.printBigText(2000, 4);
+                        TextMenu.printBigText(1000, 4);
                         //print all char info
                         char1 = RandomChar.createRandomChar();
                         char2 = RandomChar.createRandomChar();
@@ -70,6 +70,7 @@ public class Main {
         System.out.println("Player 2\n");
         char2.get_info();
         TextMenu.safeWait(2000);
+        System.out.println("______________________");
     }
     private static void getIntroMenu() {
         System.out.println("1- Manual Players creation. \n");
