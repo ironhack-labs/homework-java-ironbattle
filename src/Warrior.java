@@ -40,7 +40,7 @@ public class Warrior extends Character {
         setStamina(randomInt(STAMINA_MIN, STAMINA_MAX));
         setStrength(randomInt(STRENGTH_MIN, STRENGTH_MAX));
     }
-
+    
     public int getStamina() {
         return stamina;
     }

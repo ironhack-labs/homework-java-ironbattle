@@ -10,8 +10,8 @@ public class Main {
         ImportCharactersFromCSV.importCharactersFromCSV();
         //Temporary creation of characters, can be deleted
 
-        Character char1 = new Warrior("guerrero", 180, 12, 2);
-        Character char2 = new Wizard("wizard", 100, 12, 2);
+        Character char1 = null;
+        Character char2 = null;
 
         Scanner scanner = new Scanner(System.in);
         boolean is_finish = false;
@@ -28,8 +28,8 @@ public class Main {
                 selection = scanner.nextInt();
                 switch (selection) {
                     case 1:
-                        char1 = manualCharacterCreator(scanner);
-                        char2 = manualCharacterCreator(scanner);
+                        char1 = manualCharacterCreator(scanner,char1,char2);
+                        char2 = manualCharacterCreator(scanner,char1,char2);
                         break;
 
                     case 2:
@@ -71,9 +71,8 @@ public class Main {
         System.out.println("5- Exit: \n");
     }
 
-    public static Character manualCharacterCreator(Scanner scanner) {
+    public static Character manualCharacterCreator(Scanner scanner, Character char1, Character char2) {
         System.out.println("First, select your character class:\n");
-
         String characterName = "Default";
         int characterClass = 0;
         int characterHp = 100;
@@ -86,24 +85,24 @@ public class Main {
         while (optionSelected == false) {
             System.out.println("1.Warrior\n2.Wizard\n");
             try {
-                if(scanner.hasNextInt()) { // Verificar si hay un entero disponible para leer
-                    characterClass = scanner.nextInt();
-                    scanner.nextLine();
-                    optionSelected = true;
-                } else {
-                    // Manejar el caso en el que no haya un entero disponible
-                    System.out.println("Input error: No integer value entered.");
-                    scanner.nextLine();
-                }
+                characterClass = scanner.nextInt();
+                scanner.nextLine();
+                optionSelected = true;
             } catch (InputMismatchException ime) {
                 scanner.nextLine();
-                System.out.println("Wow! seems that the class1 you selected is not available.\n" +
+                System.out.println("Wow! seems that the class you selected is not available.\n" +
                         "Please, try it again:");
+            }
+            if(characterClass ==1 || characterClass == 2 ){
+                optionSelected = true;
+            }else{
+                System.out.println("Ops! You select an option not available. Please, try it again:");
             }
         }
 
-        optionSelected = false;
+
         //Selector for Name
+        optionSelected = false;
         while (optionSelected == false) {
             System.out.println("Write a name for the character");
             try {
@@ -116,10 +115,18 @@ public class Main {
                         "Please, try it again:");
             }
         }
-        optionSelected = false;
+
+
         //Selector for HP
+        optionSelected = false;
+        int [] hpMinMax = {0,0};
+        if(characterClass == 1){
+            //hpMinMax = Warrior.getHP_RANGE();
+        }else{
+            hpMinMax = Wizard.getHP_RANGE();
+        }
+        System.out.println("Set a value for HP between "+hpMinMax[0] +" and "+ hpMinMax[1]+" for the character:");
         while (optionSelected == false) {
-            System.out.println("Set an HP value for the character:");
             try {
                 characterHp = scanner.nextInt();
                 scanner.nextLine();
@@ -130,15 +137,21 @@ public class Main {
                         "Please, try it again:");
             }
         }
-        optionSelected = false;
+
+
         //Selector for parameter 1
+        optionSelected = false;
+        String parameter1;
+        int [] parameter1Range = {0,0};
+        if(characterClass == 1){
+            //parameter1Range = Warrior.getSTAMINA_RANGE();
+            parameter1 = "stamina";
+        }else{
+            parameter1Range = Wizard.getMANA_RANGE();
+            parameter1 =  "mana";
+        }
+        System.out.println("Set a value for "+parameter1+" between "+parameter1Range[0] +" and "+ parameter1Range[1]+" for the character:");
         while (optionSelected == false) {
-            System.out.println("Now, select a value for ");
-            if (characterClass == 1) {
-                System.out.println(" stamina:");
-            } else {
-                System.out.println(" mana:");
-            }
             try {
                 characterParameter1 = scanner.nextInt();
                 scanner.nextLine();
@@ -149,15 +162,21 @@ public class Main {
                         "Please, try it again:");
             }
         }
-        optionSelected = false;
+
+
         //Selector for parameter 2
+        optionSelected = false;
+        String parameter2;
+        int [] parameter2Range = {0,0};
+        if(characterClass == 1){
+            //parameter2Range = Warrior.getSTRENGH_RANGE();
+            parameter2 = "strengh";
+        }else{
+            parameter2Range = Wizard.getINTELLIGENCE_RANGE();
+            parameter2 =  "intelligence";
+        }
+        System.out.println("Set a value for "+parameter2+" between "+parameter2Range[0] +" and "+ parameter2Range[1]+" for the character:");
         while (optionSelected == false) {
-            System.out.println("And finally, set a value for ");
-            if (characterClass == 1) {
-                System.out.println(" strengh:");
-            } else {
-                System.out.println(" intelligence:");
-            }
             try {
                 characterParameter2 = scanner.nextInt();
                 optionSelected = true;
@@ -168,6 +187,7 @@ public class Main {
             }
         }
 
+
         //Creation of the character
         if (characterClass == 1) {
             character = new Warrior(characterName, characterHp, characterParameter1, characterParameter2);
@@ -176,7 +196,6 @@ public class Main {
         }
         return character;
 }
-
 
     public static void combat(Character char1, Character char2) {
         boolean finished = false;
