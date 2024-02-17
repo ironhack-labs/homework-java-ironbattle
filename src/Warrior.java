@@ -65,7 +65,7 @@ public class Warrior extends Character {
         this.setStamina(getStamina() - staminaDecreaseValue);
 
         // Log
-        System.out.println(getName() + " heavy attacked " + enemy.getName() + " with " + attackStrength + " hp!");
+        // System.out.println(getName() + " heavy attacked " + enemy.getName() + " with " + attackStrength + " hp!");
     }
 
     private void weakAttack(Character enemy) {
@@ -78,7 +78,7 @@ public class Warrior extends Character {
         setStamina(getStamina() - staminaDecreaseValue);
 
         // Log
-        System.out.println(getName() + " weak attacked " + enemy.getName() + " with " + attackStrength + " hp!");
+        // System.out.println(getName() + " weak attacked " + enemy.getName() + " with " + attackStrength + " hp!");
     }
 
     private void recovery() {
@@ -87,6 +87,6 @@ public class Warrior extends Character {
         setStamina(getStamina() + recoverValue);
 
         // Log
-        System.out.println(getName() + " didn't attack on this round!");
+        // System.out.println(getName() + " didn't attack on this round!");
     }
 }

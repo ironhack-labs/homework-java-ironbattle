@@ -1,5 +1,5 @@
 public class Wizard extends Character{
-    // Atrributes
+    // Attributes
     private int mana;
     private int intelligence;
 
@@ -17,7 +17,7 @@ public class Wizard extends Character{
         int manaMax = 50;
         setMana(Randomizer.getRandomInt(manaMin, manaMax));
 
-        // Ihtelligence initial value is a random int between 1 and 10
+        // Intelligence initial value is a random int between 1 and 10
         int intelligenceMin = 1;
         int intelligenceMax = 50;
         setIntelligence(Randomizer.getRandomInt(intelligenceMin, intelligenceMax));
@@ -65,7 +65,7 @@ public class Wizard extends Character{
         this.setMana(getMana() - manaDecrease);
 
         // Print message
-        System.out.println(getName() + " attacked " + enemy.getName() + " with a fireball for " + fireballDamage + " damage!");
+        // System.out.println(getName() + " attacked " + enemy.getName() + " with a fireball for " + fireballDamage + " damage!");
     }
 
     private void staffHit(Character enemy){
@@ -78,7 +78,7 @@ public class Wizard extends Character{
         this.setMana(getMana() - manaDecrease);
 
         // Print message
-        System.out.println(getName() + " attacked " + enemy.getName() + " with a staff for " + staffHitDamage + " damage!");
+        // System.out.println(getName() + " attacked " + enemy.getName() + " with a staff for " + staffHitDamage + " damage!");
     }
 
     private void recovery(){
@@ -86,8 +86,8 @@ public class Wizard extends Character{
        int recoveryAmount = 2;
        setMana(getMana() + recoveryAmount);
 
-         // Print message
-       System.out.println(getName() + " recovered " + recoveryAmount + " mana!");
+       // Print message
+       // System.out.println(getName() + " recovered " + recoveryAmount + " mana!");
     }
 
 }
