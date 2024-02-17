@@ -26,7 +26,14 @@ public class Wizard extends Character {
         } else {
             setIntelligence(intelligence);
         }
-        setCharacterClass("wizard");
+    }
+    public void get_info(){
+        System.out.println("***** Wizard Character *****"+"\n");
+        System.out.println("Name: "+ getName()+" ");
+        System.out.println("Mana: "+ getMana()+" ");
+        System.out.println("Hp: "+ getHp()+" ");
+        System.out.println("Intelligence: "+ intelligence+"\n");
+
     }
 
     public Wizard() {
@@ -83,6 +90,11 @@ public class Wizard extends Character {
     @Override
     public Character clone() {
         return new Wizard(getName(), getHp(), getMana(), getIntelligence());
+    }
+
+    @Override
+    public String getCharacterClass() {
+        return "wizard";
     }
 
     private void fireball(Character character) {

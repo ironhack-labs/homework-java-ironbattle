@@ -26,7 +26,6 @@ public class Warrior extends Character {
         } else {
             setStrength(strength);
         }
-        setCharacterClass("warrior");
     }
 
     public Warrior() {
@@ -47,6 +46,15 @@ public class Warrior extends Character {
     public static int[] getSTAMINA_RANGE(){
         return STAMINA_RANGE;
     }
+
+    public void get_info(){
+        System.out.println("***** Warrior Character ***** \n");
+        System.out.println("Name: "+ getName()+" ");
+        System.out.println("Stamina: "+ getStamina()+" ");
+        System.out.println("Hp: "+ getHp()+" ");
+        System.out.println("Strength: "+ getStrength()+"\n");
+    }
+
 
     public int getStamina() {
         return stamina;
@@ -85,6 +93,11 @@ public class Warrior extends Character {
     @Override
     public Character clone() {
         return new Warrior(getName(), getHp(), getStamina(), getStrength());
+    }
+
+    @Override
+    public String getCharacterClass() {
+        return "warrior";
     }
 
     public void heavyAttack(Character character) {

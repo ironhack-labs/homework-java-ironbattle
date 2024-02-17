@@ -5,7 +5,6 @@ public class RandomChar {
 
     public static Character createRandomChar() {
         String charType = randomCharType();
-        System.out.println(charType);
         return Objects.equals(charType, "Wizard") ? new Wizard() : new Warrior();
     }
 

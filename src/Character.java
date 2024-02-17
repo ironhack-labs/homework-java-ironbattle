@@ -6,7 +6,6 @@ public abstract class Character implements Attacker {
     private String name;
     private int hp;
     private boolean isAlive = true;
-    private String characterClass;
 
     private Team team;
 
@@ -20,6 +19,7 @@ public abstract class Character implements Attacker {
         setName(name);
         setId();
     }
+    public abstract void get_info();
 
     public String getId() {
         return this.id;
@@ -59,20 +59,13 @@ public abstract class Character implements Attacker {
     }
 
     public abstract Character clone();
+    public abstract String getCharacterClass();
 
     public abstract void attack(Character character);
 
     public static int randomInt (int min, int max) {
         Random random = new Random();
         return random.nextInt(max - min + 1) + min;
-    }
-
-    public void setCharacterClass(String characterClass) {
-        this.characterClass = characterClass;
-    }
-
-    public String getCharacterClass() {
-        return this.characterClass;
     }
 
     public Team getTeam() {
