@@ -16,8 +16,16 @@ public class Wizard extends Character {
         } else {
             setHp(hp);
         }
-        setMana(mana);
-        setIntelligence(intelligence);
+        if (mana < MANA_RANGE[0] || mana > MANA_RANGE[1]) {
+            throw new IllegalArgumentException("Mana must be between " + MANA_RANGE[0] + " and " + MANA_RANGE[1]);
+        } else {
+            setMana(mana);
+        }
+        if (intelligence < INTELLIGENCE_RANGE[0] || intelligence > INTELLIGENCE_RANGE[1]) {
+            throw new IllegalArgumentException("Intelligence must be between " + INTELLIGENCE_RANGE[0] + " and " + INTELLIGENCE_RANGE[1]);
+        } else {
+            setIntelligence(intelligence);
+        }
         setCharacterClass("wizard");
     }
 
@@ -48,19 +56,11 @@ public class Wizard extends Character {
     }
 
     public void setMana(int mana) {
-        if (mana < MANA_RANGE[0] || mana > MANA_RANGE[1]) {
-            throw new IllegalArgumentException("Mana must be between " + MANA_RANGE[0] + " and " + MANA_RANGE[1]);
-        } else {
-            this.mana = mana;
-        }
+        this.mana = mana;
     }
 
     public void setIntelligence(int intelligence) {
-        if (intelligence < INTELLIGENCE_RANGE[0] || intelligence > INTELLIGENCE_RANGE[1]) {
-            throw new IllegalArgumentException("Intelligence must be between " + INTELLIGENCE_RANGE[0] + " and " + INTELLIGENCE_RANGE[1]);
-        } else {
-            this.intelligence = intelligence;
-        }
+        this.intelligence = intelligence;
     }
 
     @Override
