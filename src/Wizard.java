@@ -5,7 +5,7 @@ public class Wizard extends Character{
 
     // Constructors
     public Wizard(String name) {
-        super(name, 0);
+        super(name, 1);
 
         // HP initial value is a random int between 50 and 100
         int hpMin = 50;

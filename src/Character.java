@@ -21,7 +21,7 @@ public abstract class Character implements Attacker {
     }
 
     public void setHp(int hp){
-        if(hp<0){
+        if(hp<=0){
             this.isAlive = false;
         }
         this.hp = hp;
