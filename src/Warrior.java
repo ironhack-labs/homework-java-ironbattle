@@ -22,6 +22,19 @@ public class Warrior extends Character {
         int strengthMax = 10;
         setStrength(Randomizer.getRandomInt(strengthMin, strengthMax));
     }
+/*
+    public Warrior (String name, int stamina, int strength, int hp){
+        super(name, hp);
+        this.stamina = stamina;
+        this.strength = strength;
+
+    }*/
+    public Warrior (Warrior warrior){
+        super(warrior.getName(), warrior.getHP());
+        setStamina(warrior.getStamina());
+        setStrength(warrior.getStrength());
+
+    }
 
     // Getters and Setters
     public int getStamina() {
@@ -65,7 +78,7 @@ public class Warrior extends Character {
         this.setStamina(getStamina() - staminaDecreaseValue);
 
         // Log
-        System.out.println(getName() + " heavy attacked " + enemy.getName() + " with " + attackStrength + " hp!");
+        // System.out.println(getName() + " heavy attacked " + enemy.getName() + " with " + attackStrength + " hp!");
     }
 
     private void weakAttack(Character enemy) {
@@ -78,7 +91,7 @@ public class Warrior extends Character {
         setStamina(getStamina() - staminaDecreaseValue);
 
         // Log
-        System.out.println(getName() + " weak attacked " + enemy.getName() + " with " + attackStrength + " hp!");
+        // System.out.println(getName() + " weak attacked " + enemy.getName() + " with " + attackStrength + " hp!");
     }
 
     private void recovery() {
@@ -87,6 +100,6 @@ public class Warrior extends Character {
         setStamina(getStamina() + recoverValue);
 
         // Log
-        System.out.println(getName() + " didn't attack on this round!");
+        // System.out.println(getName() + " didn't attack on this round!");
     }
 }
