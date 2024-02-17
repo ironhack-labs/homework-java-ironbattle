@@ -22,6 +22,7 @@ public abstract class Character implements Attacker {
         setName(name);
         setId();
     }
+    public abstract void get_info();
 
     public String getId() {
         return this.id;
