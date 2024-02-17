@@ -6,7 +6,7 @@ abstract class Character {
     private boolean isAlive = true;
 
     public Character(String name, int hp) {
-        setId(id);
+        //setId(id);
         setName(name);
         setHp(hp);
     }
