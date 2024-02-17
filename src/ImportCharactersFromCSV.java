@@ -55,7 +55,7 @@ public class ImportCharactersFromCSV {
         } catch (FileNotFoundException fnfe) {
             System.err.println("Hey that file doesn't exist!");
         } catch (NumberFormatException numberFormatException) {
-            System.err.println(numberFormatException);
+            System.err.println("Check CSV, contains Error or Format Values");
         }
         return null;
     }

@@ -7,7 +7,6 @@ import java.lang.reflect.Array;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        ImportCharactersFromCSV.importCharactersFromCSV();
         //Temporary creation of characters, can be deleted
 
         Character char1 = null;
@@ -69,9 +68,10 @@ public class Main {
                         is_finish = true;
                         break;
                     default:
-                        System.out.println("Wrong Selection, Please try again");
+                        System.err.println("Wrong Selection, Please try again");
                 }
             } catch (InputMismatchException ie) {
+                System.err.println("Wrong Selection, Please try again");
                 scanner.nextLine();
             }
         }
