@@ -22,6 +22,18 @@ public class Wizard extends Character{
         int intelligenceMax = 50;
         setIntelligence(Randomizer.getRandomInt(intelligenceMin, intelligenceMax));
     }
+/*
+    public Wizard(String name, int mana, int intelligence, int hp){
+        super(name,hp);
+        this.mana = mana;
+        this.intelligence = intelligence;
+    }*/
+
+    public Wizard(Wizard wizard){
+        super(wizard.getName(), wizard.getHP());
+        setMana(wizard.getMana());
+        setIntelligence(wizard.getIntelligence());
+    }
 
     // Getters and Setters
     public int getMana() {
