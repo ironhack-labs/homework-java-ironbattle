@@ -21,7 +21,7 @@ public class CharacterInput {
 
     //message functions
     public void msgStartCreation(){
-        System.out.println("Choose the character: Wizard or Warrior.");
+        System.out.println("Choose the character type: Wizard or Warrior.");
     }
 
     public void msgStartType(){
@@ -36,10 +36,9 @@ public class CharacterInput {
 
 
     //setters inputs
-    public void setTypeInput(){
+    public void setTypeInput() {
         Scanner scanner = new Scanner(System.in);
         int attempts = 0;
-
         while (attempts++ < 4 && this.type < 0){
             String charType = scanner.nextLine().toLowerCase();
             if (charType.equals("warrior")){
@@ -47,11 +46,11 @@ public class CharacterInput {
             } else if (charType.equals("wizard")){
                 this.type = 1;
             } else if (attempts < 4){
-                System.out.println("You must choose Wizard or Warrior.");
+                System.out.println("You must write either Wizard or Warrior.");
             } else{
                 msgAssignRandomly();
-                System.out.println("Your character will be assigned randomly");
-                this.type = 1; //pending to random
+                System.out.println("The type of character will be assigned randomly.");
+                this.type = Utils.generateRandomNumber(-1,1);
             }
         }
     }
@@ -59,18 +58,19 @@ public class CharacterInput {
     public void setNameInput(){
         Scanner scanner = new Scanner(System.in);
         int attempts = 0;
-        System.out.println("Write the name of character");
+        System.out.println("Write the name of the character.");
 
-        while (attempts++ < 4 && this.name.isEmpty()){
+        while (attempts++ < 4 && (this.name.isEmpty() || this.name.replaceAll(" ","").isEmpty())){
             this.name = scanner.nextLine();
-            if (!this.name.isEmpty()){
+            if (!this.name.isEmpty() && !this.name.replaceAll(" ","").isEmpty()){
                 System.out.println("Let's define " + this.name + "'s attributes.");
             } else if (attempts < 4){
-                System.out.println("It is not a correct name. Try again!");
+                System.out.println("Oops, you must introduce a valid name. Try again!");
             } else{
                 msgAssignRandomly();
-                System.out.println("Your character will be named Fighter.");
-                this.name = "Fighter";
+                this.name = "Fighter #" + Utils.generateRandomNumber(1,100);
+                System.out.println("Your character will be named " + this.name);
+
             }
         }
     }
@@ -99,24 +99,37 @@ public class CharacterInput {
         }
     }
 
+    //public int enterAttribute(String attributeName, int min, int max) throws IllegalArgumentException {
     public int enterAttribute(String attributeName, int min, int max) {
-        Scanner scanner = new Scanner(System.in);
         int value = -1;
         int attempts = 0;
 
-        System.out.println("Define " + attributeName + "(range: " + min + " to " + max + "):");
+        System.out.println("Define " + attributeName + " (range: " + min + " to " + max + "):");
+
         while (attempts++ < 4 && (value < min || value > max)){
+            Scanner scanner = new Scanner(System.in);
             if (scanner.hasNextInt()) {
                 value = scanner.nextInt();
-                System.out.println("Value assigned " +  value);
-            }
-            if (attempts < 4 && (value < min || value > max)){
-                System.out.println("Value is out of range. Try again!");
-            }
-            else if (attempts == 4 && (value < min || value > max)){
-                msgAssignRandomly();
-                System.out.println("The attribute will be assigned randomly.");
-                value = min; //randomly
+
+                if (attempts < 4 && (value < min || value > max)){
+                    System.out.println("Oops, value is out of range. Try again!");
+                }
+                else if (attempts == 4 && (value < min || value > max)){
+                    msgAssignRandomly();
+                    System.out.println("The attribute will be assigned randomly.");
+                    value = Utils.generateRandomNumber(min,max);
+                } else {
+                    System.out.println("Great! Value for " + attributeName + " assigned to " +  value);
+                }
+            } else {
+                if (attempts < 4) {
+                    System.out.println("Oops, you must introduce an integer number.");
+                } else {
+                    msgAssignRandomly();
+                    System.out.println("The attribute will be assigned randomly.");
+                    value = Utils.generateRandomNumber(min,max);
+                }
+                //throw new IllegalArgumentException("You should introduce an integer number.");
             }
         }
         return (value);
