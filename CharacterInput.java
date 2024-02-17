@@ -38,7 +38,7 @@ public class CharacterInput {
     public void setTypeInput(){
         Scanner scanner = new Scanner(System.in);
         int attempts = 0;
-        System.out.println("Choose the character type: Wizard or Warrior.");
+        System.out.println("Choose the character: Wizard or Warrior.");
 
         do{
             String charType = scanner.nextLine().toLowerCase();
@@ -47,7 +47,7 @@ public class CharacterInput {
             } else if (charType.equals("wizard")){
                 this.type = 1;
             } else if (attempts < 2){
-                System.out.println("Invalid input. Please enter a valid character type (wizard or warrior).");
+                System.out.println("Invalid input. Please enter a valid character(wizard or warrior).");
             }
         } while (attempts++ < 2 && this.type < 0);
 
@@ -63,21 +63,21 @@ public class CharacterInput {
             System.out.println("Let's create a new Warrior!");
         else
             System.out.println("Let's create a new Wizard!");
-        System.out.println("Write the name of character.");
+        System.out.println("Write the name of character");
 
         do {
             this.name = scanner.nextLine();
-            if (!this.name.isEmpty() && !this.name.replaceAll(" ","").isEmpty()){
+            if (!this.name.isEmpty()){
                 System.out.println("Let's define " + this.name + "'s attributes.");
                 break ;
             } else if (attempts < 2){
-                System.out.println("Oops, you must introduce a valid name. Try again!");
+                System.out.println("Invalid input. Please enter a valid name.");
             }
         } while (attempts++ < 2);
 
         if (attempts == 3){
-            this.name = "Fighter #" + Utils.generateRandomNumber(1,100);
-            System.out.println("Maximum attempts reached. Character will be named: " + this.name);
+            System.out.println("Maximum attempts reached. Character will be named: Fighter.");
+            this.name = "Fighter";
         }
     }
 
@@ -105,7 +105,7 @@ public class CharacterInput {
         }
     }
 
-    public int enterAttribute (String attributeName, int min, int max) {
+    public int enterAttribute(String attributeName, int min, int max) {
         Scanner scanner = new Scanner(System.in);
         int value = -1;
         int attempts = 0;
@@ -113,12 +113,11 @@ public class CharacterInput {
         System.out.println("Define " + attributeName + "(range: " + min + " to " + max + "):");
         do {
             if (attempts > 0)
-                System.out.println("Oops, value is out of range. Try again!");
+                System.out.println(" Please enter a valid value within the range.");
             String input = scanner.nextLine();
             try{
                 value = Integer.parseInt(input);
                 if (min <= value && value <= max) {
-                    System.out.println("Great! Value for " + attributeName + " assigned to " +  value);
                     break;
                 }
                 else{
@@ -127,7 +126,7 @@ public class CharacterInput {
             } catch (IndexOutOfBoundsException e){
                 System.out.print("Input out of range.");
             } catch (NumberFormatException e) {
-                System.out.print("Oops, you must introduce an integer number.");
+                System.out.print("Invalid input.");
             }
         } while (attempts++ < 2);
 
@@ -136,13 +135,12 @@ public class CharacterInput {
         }
         return (value);
     }
-
-    public int assignRandomInput(int min, int max){
-        System.out.println(" Sorry, you have exhausted the maximum number of attempts. Assigning random value.");
+    int assignRandomInput(int min, int max){
+        System.out.println(" Maximum attempts reached. Assigning random value.");
         return (Utils.generateRandomNumber(min, max));
     }
-    public int assignRandomInput(){
-        System.out.println("Sorry, you have exhausted the maximum number of attempts. Assigning random character.");
+    int assignRandomInput(){
+        System.out.println("Maximum attempts reached. Assigning random character.");
         return (Utils.generateRandomNumber());
     }
 
