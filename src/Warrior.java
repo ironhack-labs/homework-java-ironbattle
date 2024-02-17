@@ -24,20 +24,14 @@ public class Warrior extends Character {
     }
     public Warrior(String name, int hp, int stamina, int strength) {
         super(name);
-        if (hp < HP_RANGE[0] || hp > HP_RANGE[1]) {
-            throw new IllegalArgumentException("HP must be between " + HP_RANGE[0] + " and " + HP_RANGE[1]);
-        } else {
+        if (validateInput(hp,stamina,strength)){
             setHp(hp);
-        }
-        if (stamina < STAMINA_RANGE[0] || stamina > STAMINA_RANGE[1]) {
-            throw new IllegalArgumentException("Stamina must be between " + STAMINA_RANGE[0] + " and " + STAMINA_RANGE[1]);
-        } else {
             setStamina(stamina);
-        }
-        if (strength < STRENGTH_RANGE[0] || strength > STRENGTH_RANGE[1]) {
-            throw new IllegalArgumentException("Strength must be between " + STRENGTH_RANGE[0] + " and " + STRENGTH_RANGE[1]);
-        } else {
             setStrength(strength);
+
+        }
+        else{
+            throw new IllegalArgumentException("Invalid arguments Exception");
         }
     }
 
