@@ -60,6 +60,10 @@ public class Main {
                         Combat.startCombat(char1, char2);
                         is_finish = true;
                         break;
+                    case 5:
+                        //Exit menu
+                        is_finish = true;
+                        break;
                     default:
                         System.out.println("Wrong Selection, Please try again");
                 }
