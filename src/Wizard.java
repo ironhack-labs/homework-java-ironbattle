@@ -4,8 +4,8 @@ public class Wizard extends Character {
     private int mana;
     private int intelligence;
     private static final int[] HP_RANGE = {50, 100};
-    private final int[] MANA_RANGE = {10, 50};
-    private final int[] INTELLIGENCE_RANGE = {1, 50};
+    private static final int[] MANA_RANGE = {10, 50};
+    private static final int[] INTELLIGENCE_RANGE = {1, 50};
     private final int FIREBALL_MANA = 5;
     private static final String[] wizardsNames = new String[]{"Merlin", "Gandalf", "Severus", "Alatar", "Dumbledore", "Rincewind", "Voldemort", "Albus", "Asterope", "Astra", "Atlantes", "Beatrix", "Belinda", "Fawley", "Glinda", "Gwydion", "Jadis", "Jareth", "Morgan", "Potter", "Prospero", "Radagast", "Saruman", "Thoth-Amon"};
 
@@ -16,8 +16,16 @@ public class Wizard extends Character {
         } else {
             setHp(hp);
         }
-        setMana(mana);
-        setIntelligence(intelligence);
+        if (mana < MANA_RANGE[0] || mana > MANA_RANGE[1]) {
+            throw new IllegalArgumentException("Mana must be between " + MANA_RANGE[0] + " and " + MANA_RANGE[1]);
+        } else {
+            setMana(mana);
+        }
+        if (intelligence < INTELLIGENCE_RANGE[0] || intelligence > INTELLIGENCE_RANGE[1]) {
+            throw new IllegalArgumentException("Intelligence must be between " + INTELLIGENCE_RANGE[0] + " and " + INTELLIGENCE_RANGE[1]);
+        } else {
+            setIntelligence(intelligence);
+        }
     }
     public void get_info(){
         System.out.println("***** Wizard Character *****"+"\n");
@@ -25,12 +33,25 @@ public class Wizard extends Character {
         System.out.println("Mana: "+ getMana()+" ");
         System.out.println("Hp: "+ getHp()+" ");
         System.out.println("Intelligence: "+ intelligence+"\n");
+
     }
 
     public Wizard() {
         super(randomName(), randomInt(HP_RANGE[0], HP_RANGE[1]));
         setMana(randomInt(MANA_RANGE[0], MANA_RANGE[1]));
         setIntelligence(randomInt(INTELLIGENCE_RANGE[0], INTELLIGENCE_RANGE[1]));
+    }
+
+    public static int[] getHP_RANGE(){
+        return HP_RANGE;
+    }
+
+    public static int[] getMANA_RANGE(){
+        return MANA_RANGE;
+    }
+
+    public static int[] getINTELLIGENCE_RANGE(){
+        return INTELLIGENCE_RANGE;
     }
 
     public int getMana() {
@@ -42,19 +63,11 @@ public class Wizard extends Character {
     }
 
     public void setMana(int mana) {
-        if (mana < MANA_RANGE[0] || mana > MANA_RANGE[1]) {
-            throw new IllegalArgumentException("Mana must be between " + MANA_RANGE[0] + " and " + MANA_RANGE[1]);
-        } else {
-            this.mana = mana;
-        }
+        this.mana = mana;
     }
 
     public void setIntelligence(int intelligence) {
-        if (intelligence < INTELLIGENCE_RANGE[0] || intelligence > INTELLIGENCE_RANGE[1]) {
-            throw new IllegalArgumentException("Intelligence must be between " + INTELLIGENCE_RANGE[0] + " and " + INTELLIGENCE_RANGE[1]);
-        } else {
-            this.intelligence = intelligence;
-        }
+        this.intelligence = intelligence;
     }
 
     @Override

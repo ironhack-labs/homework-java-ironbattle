@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.lang.reflect.Array;
 
 public class Main {
 
@@ -9,9 +10,8 @@ public class Main {
         ImportCharactersFromCSV.importCharactersFromCSV();
         //Temporary creation of characters, can be deleted
 
-        Character char1 = new Warrior("guerrero", 180, 12, 2);
-        Character char2 = new Wizard("wizard", 100, 12, 2);
-
+        Character char1 = null;
+        Character char2 = null;
         Scanner scanner = new Scanner(System.in);
         boolean is_finish = false;
         int selection = 0;
@@ -27,8 +27,10 @@ public class Main {
                 selection = scanner.nextInt();
                 switch (selection) {
                     case 1:
+                        char1 = ManualCreator.startManualCreator(scanner,char1,char2);
+                        char2 = ManualCreator.startManualCreator(scanner,char1,char2);
+                        showCharInfo(char1, char2);
                         break;
-
                     case 2:
                         //Random Player creation
                         TextMenu.printBigText(1000, 4);
@@ -37,7 +39,6 @@ public class Main {
                         char2 = RandomChar.createRandomChar();
                         System.out.println("Players Created");
                         showCharInfo(char1, char2);
-
                         break;
                     case 3:
                         //CSV Import
@@ -56,7 +57,7 @@ public class Main {
                         break;
                     case 4:
                         //Start the battle
-                        combat(char1, char2);
+                        Combat.startCombat(char1, char2);
                         is_finish = true;
                         break;
                     default:
@@ -65,8 +66,8 @@ public class Main {
             } catch (InputMismatchException ie) {
                 scanner.nextLine();
             }
-
         }
+        scanner.close();
     }
 
     private static void showCharInfo(Character char1, Character char2){
@@ -86,61 +87,4 @@ public class Main {
         System.out.println("5- Exit: \n");
     }
 
-
-    public static void combat(Character char1, Character char2) {
-        boolean finished = false;
-        char1.setTeam(Team.A);
-        char2.setTeam(Team.B);
-
-        Bard.introducesStory();
-
-        Character initChar1 = char1.clone();
-
-        Bard.introducesFirstOpponent(char1);
-
-        Character initChar2 = char2.clone();
-
-        Bard.introducesSecondOpponent(char2);
-
-        int roundCounter = 1;
-        //Loop until one of the character wins
-        while (!finished) {
-
-            //Loop for the battle
-            while (char1.isAlive() && char2.isAlive()) {
-                Bard.announcesRound(roundCounter++);
-
-                char1.attack(char2);
-                Bard.narratesHp(char2);
-
-                char2.attack(char1);
-                Bard.narratesHp(char1);
-
-                if (char1.getHp() <= 0) {
-                    char1.setAlive(false);
-                    Bard.announcesOpponentDeath(char1);
-                }
-                if (char2.getHp() <= 0) {
-                    char2.setAlive(false);
-                    Bard.announcesOpponentDeath(char2);
-                }
-            }
-
-            //Once the battle is finished, let's check who wins the battle
-            if (!char2.isAlive() && !char1.isAlive()) {
-                //The battle result is a tie
-                Bard.announcesTie();
-                roundCounter = 0;
-                char1 = initChar1.clone();
-                char2 = initChar2.clone();
-
-            } else if (!char2.isAlive()) {
-                Bard.announcesOpponentVictory(char1);
-                finished = true;
-            } else if (!char1.isAlive()) {
-                Bard.announcesOpponentVictory(char2);
-                finished = true;
-            }
-        }
-    }
 }
