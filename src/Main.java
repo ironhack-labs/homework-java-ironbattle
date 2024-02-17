@@ -42,11 +42,17 @@ public class Main {
                     case 3:
                         //CSV Import
                         ArrayList<Character> players = ImportCharactersFromCSV.importCharactersFromCSV();
-                        char1 = players.get(0);
-                        char2 = players.get(1);
-                        System.out.println("Players Imported\n");
-                        showCharInfo(char1, char2);
-                        //check if char are get
+
+                        if (players != null) {
+                            if (players.size() <2){
+                                System.out.println("Check CSV, Less than 2 Players imported");
+                            }else {
+                                char1 = players.get(0);
+                                char2 = players.get(1);
+                                System.out.println("Players Imported\n");
+                                showCharInfo(char1, char2);
+                            }
+                        }                       //check if char are get
                         break;
                     case 4:
                         //Start the battle
