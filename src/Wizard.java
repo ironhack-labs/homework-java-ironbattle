@@ -24,20 +24,13 @@ public class Wizard extends Character {
     }
     public Wizard(String name, int hp, int mana, int intelligence) {
         super(name);
-        if (hp < HP_RANGE[0] || hp > HP_RANGE[1]) {
-            throw new IllegalArgumentException("HP must be between " + HP_RANGE[0] + " and " + HP_RANGE[1]);
-        } else {
+        if (validateInput(hp,mana,intelligence)){
             setHp(hp);
-        }
-        if (mana < MANA_RANGE[0] || mana > MANA_RANGE[1]) {
-            throw new IllegalArgumentException("Mana must be between " + MANA_RANGE[0] + " and " + MANA_RANGE[1]);
-        } else {
             setMana(mana);
-        }
-        if (intelligence < INTELLIGENCE_RANGE[0] || intelligence > INTELLIGENCE_RANGE[1]) {
-            throw new IllegalArgumentException("Intelligence must be between " + INTELLIGENCE_RANGE[0] + " and " + INTELLIGENCE_RANGE[1]);
-        } else {
             setIntelligence(intelligence);
+        }
+        else{
+            throw new IllegalArgumentException("Invalid arguments Exception");
         }
     }
     public void get_info(){
