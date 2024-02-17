@@ -15,7 +15,7 @@ public class BattleSimulator {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("******** Welcome to BattleSimulator ********");
+        Utils.printTittle();
         String optionChosen;
         do {
             optionChosen = selectBattleType();
