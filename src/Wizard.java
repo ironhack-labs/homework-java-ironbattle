@@ -10,10 +10,14 @@ public class Wizard extends Character {
     private static final String[] wizardsNames = new String[]{"Merlin", "Gandalf", "Severus", "Alatar", "Dumbledore", "Rincewind", "Voldemort", "Albus", "Asterope", "Astra", "Atlantes", "Beatrix", "Belinda", "Fawley", "Glinda", "Gwydion", "Jadis", "Jareth", "Morgan", "Potter", "Prospero", "Radagast", "Saruman", "Thoth-Amon"};
 
     public Wizard(String name, int hp, int mana, int intelligence) {
-        super(name, hp); //TODO: check hp range (50-100)
+        super(name);
+        if (hp < HP_RANGE[0] || hp > HP_RANGE[1]) {
+            throw new IllegalArgumentException("HP must be between " + HP_RANGE[0] + " and " + HP_RANGE[1]);
+        } else {
+            setHp(hp);
+        }
         setMana(mana);
         setIntelligence(intelligence);
-        setCharacterClass("wizard");
     }
     public void get_info(){
         System.out.println("***** Wizard Character *****"+"\n");
@@ -23,7 +27,7 @@ public class Wizard extends Character {
         System.out.println("Intelligence: "+ intelligence+"\n");
     }
 
-    public Wizard () {
+    public Wizard() {
         super(randomName(), randomInt(HP_RANGE[0], HP_RANGE[1]));
         setMana(randomInt(MANA_RANGE[0], MANA_RANGE[1]));
         setIntelligence(randomInt(INTELLIGENCE_RANGE[0], INTELLIGENCE_RANGE[1]));
@@ -38,23 +42,25 @@ public class Wizard extends Character {
     }
 
     public void setMana(int mana) {
-        if (mana >= MANA_RANGE[0] && mana <= MANA_RANGE[1]) {
+        if (mana < MANA_RANGE[0] || mana > MANA_RANGE[1]) {
+            throw new IllegalArgumentException("Mana must be between " + MANA_RANGE[0] + " and " + MANA_RANGE[1]);
+        } else {
             this.mana = mana;
         }
-        //TODO: if number is not in the range, call new random number
     }
 
     public void setIntelligence(int intelligence) {
-        if (intelligence >= INTELLIGENCE_RANGE[0] && mana <= INTELLIGENCE_RANGE[1]) {
+        if (intelligence < INTELLIGENCE_RANGE[0] || intelligence > INTELLIGENCE_RANGE[1]) {
+            throw new IllegalArgumentException("Intelligence must be between " + INTELLIGENCE_RANGE[0] + " and " + INTELLIGENCE_RANGE[1]);
+        } else {
             this.intelligence = intelligence;
         }
-        //TODO: if number is not in the range, call new random number
     }
 
     @Override
     public void attack(Character character) {
         if (getMana() == 0) {
-            setMana(getMana()+2);
+            setMana(getMana() + 2);
         } else if (getMana() < FIREBALL_MANA) {
             staffHit(character);
         } else {
@@ -68,11 +74,19 @@ public class Wizard extends Character {
         }
     }
 
-    public Character clone(){return new Wizard(getName(), getHp(), getMana(),getIntelligence());}
+    @Override
+    public Character clone() {
+        return new Wizard(getName(), getHp(), getMana(), getIntelligence());
+    }
+
+    @Override
+    public String getCharacterClass() {
+        return "wizard";
+    }
 
     private void fireball(Character character) {
         final int HP_LOSS = getIntelligence();
-        setMana(getMana()-FIREBALL_MANA);
+        setMana(getMana() - FIREBALL_MANA);
         character.setHp(character.getHp() - HP_LOSS);
         Bard.narratesAttack(this, "casts a fireball \uD83D\uDD25", HP_LOSS);
     }
@@ -81,8 +95,8 @@ public class Wizard extends Character {
         final int MANA_RECOVER = 1;
         final int HP_LOSS = 2;
 
-        setMana(getMana()+MANA_RECOVER);
-        character.setHp(character.getHp()-HP_LOSS);
+        setMana(getMana() + MANA_RECOVER);
+        character.setHp(character.getHp() - HP_LOSS);
         Bard.narratesAttack(this, "executes a staff hit \uD83E\uDDF9", HP_LOSS);
     }
 
