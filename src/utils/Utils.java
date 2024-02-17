@@ -2,6 +2,7 @@ package utils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -46,14 +47,59 @@ public class Utils {
         return characters;
     }
 
-    public static int validate(int value, int min, int max, Stats statType, Characters characterType) {
+    public static int validate(int value, int min, int max, Stats statType, CharacterType characterType) {
         if (value < min || value > max) {
             throw new IllegalArgumentException(characterType + "'s " + statType + " should be between " + min + " - " + max);
         }
         return value;
     }
 
+    public static boolean isValidNumberInRange(String str, int min, int max) {
+        System.out.println("Validating: " + str);
+        try {
+            int numericValue = Integer.parseInt(str);
+            if (numericValue >= min && numericValue <= max) return true;
+        } catch (Exception e) {
+            return false;
+        }
+        return false;
+    }
+
+    public static void typewriterEffect(String text, int delay) {
+        try {
+            for (char c : text.toCharArray()) {
+                System.out.print(c);
+                Thread.sleep(delay);
+            }
+        } catch (InterruptedException e) {
+            e.getMessage();
+        }
+    }
+
+    public static void printTittle() {
+        System.out.println("\n\n   ╔╗╔╗╔╗    ╔╗                      ╔╗         ╔══╗       ╔╗  ╔╗ ╔╗     ╔═══╗          ╔╗       ╔╗\n" +
+                "   ║║║║║║    ║║                     ╔╝╚╗        ║╔╗║      ╔╝╚╗╔╝╚╗║║     ║╔═╗║          ║║      ╔╝╚╗\n" +
+                "   ║║║║║║╔══╗║║ ╔══╗╔══╗╔╗╔╗╔══╗    ╚╗╔╝╔══╗    ║╚╝╚╗╔══╗ ╚╗╔╝╚╗╔╝║║ ╔══╗║╚══╗╔╗╔╗╔╗╔╗╔╗║║ ╔══╗ ╚╗╔╝╔══╗╔═╗\n" +
+                "   ║╚╝╚╝║║╔╗║║║ ║╔═╝║╔╗║║╚╝║║╔╗║     ║║ ║╔╗║    ║╔═╗║╚ ╗║  ║║  ║║ ║║ ║╔╗║╚══╗║╠╣║╚╝║║║║║║║ ╚ ╗║  ║║ ║╔╗║║╔╝\n" +
+                "   ╚╗╔╗╔╝║║═╣║╚╗║╚═╗║╚╝║║║║║║║═╣     ║╚╗║╚╝║    ║╚═╝║║╚╝╚╗ ║╚╗ ║╚╗║╚╗║║═╣║╚═╝║║║║║║║║╚╝║║╚╗║╚╝╚╗ ║╚╗║╚╝║║║\n" +
+                "    ╚╝╚╝ ╚══╝╚═╝╚══╝╚══╝╚╩╩╝╚══╝     ╚═╝╚══╝    ╚═══╝╚═══╝ ╚═╝ ╚═╝╚═╝╚══╝╚═══╝╚╝╚╩╩╝╚══╝╚═╝╚═══╝ ╚═╝╚══╝╚╝ \n\n");
+
+    }
+
+    public static boolean isValidName(String name) {
+        if (name.length() < 3) {
+            System.out.println("Name should be at least 3 characters length");
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isValidType(String characterType) {
+        return Arrays.stream(CharacterType.values()).map(CharacterType::getDescription).anyMatch(type -> type.equals(characterType));
+    }
+
 }
+
 
 
 
