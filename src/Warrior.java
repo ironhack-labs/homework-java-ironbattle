@@ -35,6 +35,15 @@ public class Warrior extends Character {
         setStrength(randomInt(STRENGTH_RANGE[0], STRENGTH_RANGE[1]));
     }
 
+    public void get_info(){
+        System.out.println("***** Warrior Character ***** \n");
+        System.out.println("Name: "+ getName()+" ");
+        System.out.println("Stamina: "+ getStamina()+" ");
+        System.out.println("Hp: "+ getHp()+" ");
+        System.out.println("Strength: "+ getStrength()+"\n");
+    }
+
+
     public int getStamina() {
         return stamina;
     }

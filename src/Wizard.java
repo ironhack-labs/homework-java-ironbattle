@@ -19,6 +19,13 @@ public class Wizard extends Character {
         setMana(mana);
         setIntelligence(intelligence);
     }
+    public void get_info(){
+        System.out.println("***** Wizard Character *****"+"\n");
+        System.out.println("Name: "+ getName()+" ");
+        System.out.println("Mana: "+ getMana()+" ");
+        System.out.println("Hp: "+ getHp()+" ");
+        System.out.println("Intelligence: "+ intelligence+"\n");
+    }
 
     public Wizard() {
         super(randomName(), randomInt(HP_RANGE[0], HP_RANGE[1]));

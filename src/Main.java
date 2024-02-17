@@ -31,19 +31,28 @@ public class Main {
 
                     case 2:
                         //Random Player creation
-                        TextMenu.printBigText(2000, 4);
+                        TextMenu.printBigText(1000, 4);
                         //print all char info
                         char1 = RandomChar.createRandomChar();
                         char2 = RandomChar.createRandomChar();
                         System.out.println("Players Created");
+                        showCharInfo(char1, char2);
 
                         break;
                     case 3:
                         //CSV Import
                         ArrayList<Character> players = ImportCharactersFromCSV.importCharactersFromCSV();
-                        char1 = players.get(0);
-                        char2 = players.get(1);
-                        //check if char are get
+
+                        if (players != null) {
+                            if (players.size() <2){
+                                System.out.println("Check CSV, Less than 2 Players imported");
+                            }else {
+                                char1 = players.get(0);
+                                char2 = players.get(1);
+                                System.out.println("Players Imported\n");
+                                showCharInfo(char1, char2);
+                            }
+                        }                       //check if char are get
                         break;
                     case 4:
                         //Start the battle
@@ -60,7 +69,16 @@ public class Main {
         }
     }
 
-    public static void getIntroMenu() {
+    private static void showCharInfo(Character char1, Character char2){
+
+        System.out.println("Player 1\n");
+        char1.get_info();
+        System.out.println("Player 2\n");
+        char2.get_info();
+        TextMenu.safeWait(2000);
+        System.out.println("______________________");
+    }
+    private static void getIntroMenu() {
         System.out.println("1- Manual Players creation. \n");
         System.out.println("2- Random Players creation. \n");
         System.out.println("3- Import Players from csv. \n");
