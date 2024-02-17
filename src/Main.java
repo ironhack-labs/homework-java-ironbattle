@@ -2,8 +2,13 @@
 //import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Welcome to Iron Battle!");
-        System.out.println("Let's create first character!");
+            int countdown = 3;
+            do{
+                Printer.countDown(countdown);
+                countdown--;
+            }while(countdown < 0);
+//        System.out.println("Welcome to Iron Battle!");
+//        System.out.println("Let's create first character!");
         //Upload by CSV method  BONUS 1
        /* List<Character> characters = CharacterImporter.importCharactersFromCSV("characters.csv"); // Path to the CSV file.
        // To check if characters.csv were uploaded successfully
