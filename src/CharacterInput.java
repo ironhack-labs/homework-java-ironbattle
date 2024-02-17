@@ -146,6 +146,19 @@ public class CharacterInput {
         return (Utils.generateRandomNumber());
     }
 
+    //Character creator method
+    public Character characterCreatorInput(){
+        Character character;
+        if (this.getType() == 0){
+            character = new Warrior(this.getName(), this.getHP(),
+                    this.getAttribute1(), this.getAttribute2());
+        } else {
+            character = new Wizard(this.getName(), this.getHP(),
+                    this.getAttribute1(), this.getAttribute2());
+        }
+        return character;
+    }
+
     //getters
     public String getName() {
         return this.name;
