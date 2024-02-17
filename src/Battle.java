@@ -100,10 +100,13 @@ public class Battle {
 
             if(isTieGame()){
                 setTieGame(false);
-                startBattle(player1, player2);
+                setRound(1);
+                startBattle(p1, p2);
             }else{
                 performAttack(player1, player2);
                 performAttack(player2, player1);
+                //player1.setHp(0);
+                //player2.setHp(0);
                 checkBattleResult(player1, player2);
                 round++;
             }
@@ -188,6 +191,19 @@ public class Battle {
                     " - Mana: " + wizard.getMana() +
                     /*  "attack with: " + player.getAttackName + */ " makes: " + getDamageDone() + " points of damage to "
                     + playerTwo.getName();
+
+                    //imprimir cada tres lineas:
+                /*
+                linea: "Round 1: "
+                Warrior:
+                Wizard:
+                esperar
+
+                -----
+                Round 2:
+
+
+                 */
 
             battleRecord.add(record);
         }

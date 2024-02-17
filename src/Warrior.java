@@ -5,7 +5,7 @@ public class Warrior extends Character {
 
     // Constructors
     Warrior(String name) {
-        super(name, 0);
+        super(name, 1);
 
         // HP initial value is a random int between 100 and 200
         int hpMin = 100;
