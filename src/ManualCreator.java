@@ -19,16 +19,14 @@ public class ManualCreator {
             try {
                 characterClass = scanner.nextInt();
                 scanner.nextLine();
-                optionSelected = true;
+                if(characterClass ==1 || characterClass == 2 ){
+                    optionSelected = true;
+                }else{
+                    System.err.println("Ops! You select an non available option. Please, try it again:");
+                }
             } catch (InputMismatchException ime) {
                 scanner.nextLine();
-                System.out.println("Wow! seems that the class you selected is not available.\n" +
-                        "Please, try it again:");
-            }
-            if(characterClass ==1 || characterClass == 2 ){
-                optionSelected = true;
-            }else{
-                System.out.println("Ops! You select an non available. Please, try it again:");
+                System.err.println("Ops! seems that you insert a non valid value. Please, try it again:");
             }
         }
 
@@ -43,8 +41,7 @@ public class ManualCreator {
                 optionSelected = true;
             } catch (InputMismatchException ime) {
                 scanner.nextLine();
-                System.out.println("Wow! seems that what you write is not possible.\n" +
-                        "Please, try it again:");
+                System.err.println("Ops! seems that you insert a non valid value. Please, try it again:");
             }
         }
 
@@ -65,8 +62,7 @@ public class ManualCreator {
                 optionSelected = true;
             } catch (InputMismatchException ime) {
                 scanner.nextLine();
-                System.out.println("you select a value out of the range \n" +
-                        "Please, try it again:");
+                System.err.println("Ops! seems that you insert a non valid value. Please, try it again:");
             }
         }
 
@@ -90,8 +86,7 @@ public class ManualCreator {
                 optionSelected = true;
             } catch (InputMismatchException ime) {
                 scanner.nextLine();
-                System.out.println("you select a value out of the range \n" +
-                        "Please, try it again:");
+                System.err.println("Ops! seems that you insert a non valid value. Please, try it again:");
             }
         }
 
@@ -114,8 +109,8 @@ public class ManualCreator {
                 optionSelected = true;
                 scanner.nextLine();
             } catch (InputMismatchException ime) {
-                System.out.println("you select a value out of the range \n" +
-                        "Please, try it again:");
+                scanner.nextLine();
+                System.err.println("Ops! seems that you insert a non valid value. Please, try it again:");
             }
         }
 

@@ -27,7 +27,9 @@ public class Main {
                 selection = scanner.nextInt();
                 switch (selection) {
                     case 1:
+                        System.out.println("Let's create the first character.");
                         char1 = ManualCreator.startManualCreator(scanner,char1,char2);
+                        System.out.println("Now, it's turn to create the second character.");
                         char2 = ManualCreator.startManualCreator(scanner,char1,char2);
                         showCharInfo(char1, char2);
                         break;
