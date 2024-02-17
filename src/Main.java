@@ -7,7 +7,6 @@ import java.lang.reflect.Array;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        ImportCharactersFromCSV.importCharactersFromCSV();
         //Temporary creation of characters, can be deleted
 
         Character char1 = null;
@@ -48,7 +47,7 @@ public class Main {
 
                         if (players != null) {
                             if (players.size() <2){
-                                System.out.println("Check CSV, Less than 2 Players imported");
+                                System.err.println("Check CSV, Less than 2 Players imported");
                             }else {
                                 char1 = players.get(0);
                                 char2 = players.get(1);
@@ -59,6 +58,10 @@ public class Main {
                         break;
                     case 4:
                         //Start the battle
+                        if (char1 == null || char2 == null) {
+                            System.err.println("You must create characters to start a combat");
+                            break;
+                        }
                         Combat.startCombat(char1, char2);
                         is_finish = true;
                         break;
@@ -67,9 +70,10 @@ public class Main {
                         is_finish = true;
                         break;
                     default:
-                        System.out.println("Wrong Selection, Please try again");
+                        System.err.println("Wrong Selection, Please try again");
                 }
             } catch (InputMismatchException ie) {
+                System.err.println("Wrong Selection, Please try again");
                 scanner.nextLine();
             }
         }
