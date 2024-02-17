@@ -121,7 +121,7 @@ public class Main {
         optionSelected = false;
         int [] hpMinMax = {0,0};
         if(characterClass == 1){
-            //hpMinMax = Warrior.getHP_RANGE();
+            hpMinMax = Warrior.getHP_RANGE();
         }else{
             hpMinMax = Wizard.getHP_RANGE();
         }
@@ -144,7 +144,7 @@ public class Main {
         String parameter1;
         int [] parameter1Range = {0,0};
         if(characterClass == 1){
-            //parameter1Range = Warrior.getSTAMINA_RANGE();
+            parameter1Range = Warrior.getSTAMINA_RANGE();
             parameter1 = "stamina";
         }else{
             parameter1Range = Wizard.getMANA_RANGE();
@@ -169,8 +169,8 @@ public class Main {
         String parameter2;
         int [] parameter2Range = {0,0};
         if(characterClass == 1){
-            //parameter2Range = Warrior.getSTRENGH_RANGE();
-            parameter2 = "strengh";
+            parameter2Range = Warrior.getSTRENGTH_RANGE();
+            parameter2 = "strength";
         }else{
             parameter2Range = Wizard.getINTELLIGENCE_RANGE();
             parameter2 =  "intelligence";

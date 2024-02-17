@@ -4,8 +4,8 @@ public class Warrior extends Character {
     private int stamina;
     private int strength;
     private static final int[] STAMINA_RANGE = {10, 50};
-    private final int[] STRENGTH_RANGE = {1, 10};
-    private final int[] HP_RANGE = {100, 200};
+    private static final int[] STRENGTH_RANGE = {1, 10};
+    private static final int[] HP_RANGE = {100, 200};
     private final int HEAVY_ATTACK_STAMINA = 5;
     private static final String[] warriorsNames = new String[]{"Aragorn", "Xena", "Conan", "Mulán", "Wonder Woman", "Samurai Jack", "Thor", "Brienne of Tarth", "Leonidas", "Boudica", "Legolas", "Joan of Arc", "Beowulf", "Attila the Hun", "Cleopatra", "Genghis Khan", "Hua Mulan", "William Wallace", "Ragnar Lothbrok", "Sun Tzu", "Zaraki Kenpachi", "Khal Drogo", "King Arthur", "Spartacus", "Achilles", "Okoye", "Captain America", "Black Panther"};
 
@@ -35,7 +35,19 @@ public class Warrior extends Character {
         setStamina(randomInt(STAMINA_RANGE[0], STAMINA_RANGE[1]));
         setStrength(randomInt(STRENGTH_RANGE[0], STRENGTH_RANGE[1]));
     }
-    
+
+    public static int[] getHP_RANGE(){
+        return HP_RANGE;
+    }
+
+    public static int[] getSTRENGTH_RANGE(){
+        return STRENGTH_RANGE;
+    }
+
+    public static int[] getSTAMINA_RANGE(){
+        return STAMINA_RANGE;
+    }
+
     public int getStamina() {
         return stamina;
     }
