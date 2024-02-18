@@ -23,7 +23,7 @@ public class CharacterInput {
     //Setters attributes Random
     public void setAttributesRandom() {
         this.type = Utils.generateRandomNumber();
-        this.name = "Fighter";
+        this.name = "Fighter #" + Utils.generateRandomNumber(1,100);
         this.attribute1 = Utils.generateRandomNumber(10, 50);
         if (this.type == 0){
             this.hp = Utils.generateRandomNumber(100, 200);
@@ -110,10 +110,10 @@ public class CharacterInput {
         int value = -1;
         int attempts = 0;
 
-        System.out.println("Define " + attributeName + "(range: " + min + " to " + max + "):");
+        System.out.println("Define " + attributeName + " (range: " + min + " to " + max + "):");
         do {
-            if (attempts > 0)
-                System.out.println("Oops, value is out of range. Try again!");
+//            if (attempts > 0)
+//                System.out.println("Oops, value is out of range. Try again!");
             String input = scanner.nextLine();
             try{
                 value = Integer.parseInt(input);
@@ -125,7 +125,7 @@ public class CharacterInput {
                     throw new IndexOutOfBoundsException();
                 }
             } catch (IndexOutOfBoundsException e){
-                System.out.print("Input out of range.");
+                System.out.println("Oops, value is out of range. Try again!");
             } catch (NumberFormatException e) {
                 System.out.print("Oops, you must introduce an integer number.");
             }
