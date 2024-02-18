@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 
 public  class Printer{
 
@@ -175,9 +174,19 @@ public  class Printer{
             }
 
 
-        public static void asciiWizardDead(){}
+        public static void asciiDead(){
+            System.out.println("   ▓█████▄ ▓█████ ▄▄▄      ▓█████▄ ");
+            System.out.println("   ▒██▀ ██▌▓█   ▀▒████▄    ▒██▀ ██▌");
+            System.out.println("   ░██   █▌▒███  ▒██  ▀█▄  ░██   █▌");
+            System.out.println("   ░▓█▄   ▌▒▓█  ▄░██▄▄▄▄██ ░▓█▄   ▌");
+            System.out.println("   ░▒████▓ ░▒████▒▓█   ▓██▒░▒████▓ ");
+            System.out.println("    ▒▒▓  ▒ ░░ ▒░ ░▒▒   ▓▒█░ ▒▒▓  ▒ ");
+            System.out.println("    ░ ▒  ▒  ░ ░  ░ ▒   ▒▒ ░ ░ ▒  ▒ ");
+            System.out.println("    ░ ░  ░    ░    ░   ▒    ░ ░  ░ ");
+            System.out.println("      ░       ░  ░     ░  ░   ░    ");
+            System.out.println("    ░                              ");
+        }
 
-        public static void asciiWarriorDead(){}
 
 
 
@@ -240,10 +249,15 @@ public  class Printer{
         }
     }
 
-
-        public static void asciiWinner(){
-
-        }
+    public static void asciiWinner() {
+        System.out.println(" ▄▀▀▄    ▄▀▀▄  ▄▀▀█▀▄    ▄▀▀▄ ▀▄  ▄▀▀▄ ▀▄  ▄▀▀█▄▄▄▄  ▄▀▀▄▀▀▀▄ ");
+        System.out.println("█   █    ▐  █ █   █  █  █  █ █ █ █  █ █ █ ▐  ▄▀   ▐ █   █   █ ");
+        System.out.println("▐  █        █ ▐   █  ▐  ▐  █  ▀█ ▐  █  ▀█   █▄▄▄▄▄  ▐  █▀▀█▀  ");
+        System.out.println("  █   ▄    █      █       █   █    █   █    █    ▌   ▄▀    █  ");
+        System.out.println("   ▀▄▀ ▀▄ ▄▀   ▄▀▀▀▀▀▄  ▄▀   █   ▄▀   █    ▄▀▄▄▄▄   █     █   ");
+        System.out.println("         ▀    █       █ █    ▐   █    ▐    █    ▐   ▐     ▐   ");
+        System.out.println("              ▐       ▐ ▐        ▐         ▐                ");
+    }
 
 }
 
