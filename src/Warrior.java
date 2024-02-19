@@ -34,6 +34,38 @@ public class Warrior extends Character implements Attacker {
     // Attack
     @Override
     public void attack(Character character) {
+        Random random = new Random();
+        String attackType;
 
+        attackType = random.nextBoolean()? "heavyAttack" : "weakAttack";
+        int damage = 0;
+
+        switch (attackType) {
+            case "heavyAttack":
+                if (this.stamina >= 5) {
+                    damage = this.strength;
+                    this.stamina -= 5;
+                } else if (this.stamina <= 0) {
+                    this.stamina = 0; // No stamina for heavy attack
+                } else {
+                    // No stamina for a Heavy attack, do a Weak attack instead
+                    damage = this.strength / 2;
+                    this.stamina += 1;
+                }
+                break;
+
+            case "weakAttack":
+                if (this.stamina >= 1) {
+                    damage = this.strength / 2;
+                    this.stamina += 1;
+                } else {
+                    this.stamina += 2; // Recover stamina by 2 if not enough stamina for weak attack
+                }
+                break;
+
+            default:
+                // If the action is neither "heavyAttack" nor "weakAttack" -> just for convention
+                break;
+        }
     }
 }
