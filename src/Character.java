@@ -5,7 +5,7 @@ abstract class Character {
     private int hp;
     private boolean isAlive = true;
 
-    public Character(String name, int hp) {
+    public Character(String id, String name, int hp) {
         setId(id);
         setName(name);
         setHp(hp);
