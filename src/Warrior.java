@@ -2,6 +2,7 @@ public class Warrior extends Character {
     // Attributes
     private int stamina;
     private int strength;
+    private int recoveryAmount;
 
     // Constructors
     Warrior(String name) {
@@ -21,6 +22,8 @@ public class Warrior extends Character {
         int strengthMin = 1;
         int strengthMax = 10;
         setStrength(Randomizer.getRandomInt(strengthMin, strengthMax));
+
+        this.recoveryAmount = 2;
     }
 /*
     public Warrior (String name, int stamina, int strength, int hp){
@@ -33,7 +36,7 @@ public class Warrior extends Character {
         super(warrior.getName(), warrior.getHP());
         setStamina(warrior.getStamina());
         setStrength(warrior.getStrength());
-
+        this.recoveryAmount = warrior.getRecoveryAmount();
     }
 
     // Getters and Setters
@@ -52,6 +55,9 @@ public class Warrior extends Character {
     public void setStrength(int strength) {
         this.strength = strength;
     }
+    public int getRecoveryAmount() {
+        return recoveryAmount;
+    }
 
     // Methods
     public void attack(Character enemy) {
@@ -68,6 +74,11 @@ public class Warrior extends Character {
         }
     }
 
+    @Override
+    public void useAbility() {
+
+    }
+
     private void heavyAttack(Character enemy) {
         // Attack enemy
         int attackStrength = getStrength();
@@ -76,6 +87,9 @@ public class Warrior extends Character {
         // Decrease stamina
         int staminaDecreaseValue = 5;
         this.setStamina(getStamina() - staminaDecreaseValue);
+
+        //set the atack for record
+        setCurrentAttack("Heavy Attack");
 
         // Log
         // System.out.println(getName() + " heavy attacked " + enemy.getName() + " with " + attackStrength + " hp!");
@@ -90,14 +104,19 @@ public class Warrior extends Character {
         int staminaDecreaseValue = 1;
         setStamina(getStamina() - staminaDecreaseValue);
 
+        //set the atack for record
+        setCurrentAttack("Weak Attack");
+
         // Log
         // System.out.println(getName() + " weak attacked " + enemy.getName() + " with " + attackStrength + " hp!");
     }
 
     private void recovery() {
         // Recover
-        int recoverValue = 2;
-        setStamina(getStamina() + recoverValue);
+        setStamina(getStamina() + recoveryAmount);
+
+        // set hability for record
+        setCurrentAbility("Recovery");
 
         // Log
         // System.out.println(getName() + " didn't attack on this round!");
