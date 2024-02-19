@@ -1,13 +1,15 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Battle {
 
-    //other class defines players character
+
     private Character winner;
     private Character looser;
     private boolean tieGame;
-    private List<String> battleRecord = new ArrayList<>();
+    private List<String> battleRecord=new ArrayList<>();
     private int round;
 
     private int damageDone;
@@ -46,7 +48,7 @@ public class Battle {
     }
 
     public void setBattleRecord(List<String> battleRecord) {
-        this.battleRecord = battleRecord;
+        this.battleRecord =  battleRecord;
     }
 
     public int getRound() {
@@ -69,43 +71,32 @@ public class Battle {
 
     public void startBattle (Character player1, Character player2){
 
-        int initialLife = 0;
+
         Character p1 = clone(player1);
         Character p2 = clone(player2);
 
-        while(getWinner()==(null)){
+        do{
+            performAttack(p1, p2);
+            performAttack(p2, p1);
+            checkBattleResult(p1, p2);
+            round++;
 
             if(isTieGame()){
                 setTieGame(false);
                 setRound(1);
-                startBattle(p1, p2);
-            }else{
-                performAttack(player1, player2);
-                performAttack(player2, player1);
-                //player1.setHp(0);
-                //player2.setHp(0);
-                checkBattleResult(player1, player2);
-                round++;
-            }
-        }
-
-        /*
-
-        while(!checkBattleResult(player1, player2)){
-
-            if(isTieGame()){
-                setTieGame(false);
-                startBattle(player1, player2);
-            }else{
-                performAttack(player1, player2);
-                performAttack(player2, player1);
-                round++;
+                p1 = clone(player1);
+                p2 = clone(player2);
             }
 
+        }while(getWinner()==(null));
+
+    }
+    private Character clone(Character character){
+        if(character instanceof Wizard){
+            return new Wizard((Wizard) character);
+        } else {
+            return new Warrior((Warrior) character);
         }
-
-         */
-
 
     }
 
@@ -178,18 +169,6 @@ public class Battle {
                     /*  "attack with: " + player.getAttackName + */ " makes: " + getDamageDone() + " points of damage to "
                     + playerTwo.getName();
 
-                    //imprimir cada tres lineas:
-                /*
-                linea: "Round 1: "
-                Warrior:
-                Wizard:
-                esperar
-
-                -----
-                Round 2:
-
-
-                 */
 
             battleRecord.add(record);
         }
@@ -207,12 +186,52 @@ public class Battle {
                         + "!!!. Better luck next time: " + getLooser().getName());
             }
         }
-
     }
 
+    public void battlePrinter(List<String> battleRecord, int timeSleepMilliSeconds) {
+        int roundNumber = 1;
 
+        System.out.println("***************************** ROUND " + roundNumber + " FIGHT *****************************");
 
+        for (String battleIndex : battleRecord) {
+            if (battleIndex.startsWith("We have a tie match between the players.")) {
+                System.out.println(battleIndex);
+                roundNumber = 1;
+                System.out.println("***************************** ROUND " + roundNumber + " FIGHT *****************************");
+            } else if (battleIndex.startsWith("Round")) {
+                int currentRound = roundNumberExtract(battleIndex);
+                if (currentRound == roundNumber) {
+                    System.out.println(battleIndex);
+                } else {
+                    roundNumber = currentRound;
+                    System.out.println("***************************** ROUND " + roundNumber + " FIGHT *****************************");
+                    System.out.println(battleIndex);
+                }
+            } else {
+                System.out.println(battleIndex);
+            }
 
+            try {
+                Thread.sleep(timeSleepMilliSeconds);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
+    private int roundNumberExtract(String text) {
+
+        String patron = "Round (\\d+)";
+        Pattern pattern = Pattern.compile(patron);
+        Matcher matcher = pattern.matcher(text);
+
+        if (matcher.find()) {
+            String numeroStr = matcher.group(1);
+            return Integer.parseInt(numeroStr);
+        }
+        else
+            return -1;
+
+    }
 
 }
