@@ -18,7 +18,10 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    createCharacters(scanner);
+                    Character player1 = createCharacter(scanner, "1");
+                    Character player2 = createCharacter(scanner, "2");
+                    BattleSimulator simulator = new BattleSimulator();
+                    simulator.battle(player1, player2);
                     break;
                 case 2:
                     createRandomCharacters();
@@ -34,40 +37,56 @@ public class Menu {
         }
     }
 
-    private static void createCharacters(Scanner scanner) {
-        System.out.println("Enter warrior's name: ");
-        String warriorName = scanner.nextLine();
-        System.out.println("Enter warrior's health points (between 100-200): ");
-        int warriorHealth = Integer.parseInt(scanner.nextLine());
-        int warriorStamina = 0;
-        int warriorStrength = 0;
+    private static Character createCharacter(Scanner scanner, String playerType) {
+        System.out.println("Choose character type for Player " + playerType + ":");
+        System.out.println("1) Warrior");
+        System.out.println("2) Wizard");
+        System.out.print("Enter your choice: ");
+        int choice = scanner.nextInt();
+        scanner.nextLine();
 
-        System.out.println("Enter wizard's name: ");
-        String wizardName = scanner.nextLine();
-        System.out.println("Enter wizard's health points (between 100-200): ");
-        int wizardHealth = Integer.parseInt(scanner.nextLine());
-        int wizardMana = 0;
-        int wizardIntelligence = 0;
+        // Check if choice is correct
+        if (choice != 1 && choice != 2) {
+            System.out.println("Invalid choice. Please try again.");
+            return null;
+        }
 
-        Warrior warrior = new Warrior(warriorName, warriorHealth, warriorStamina, warriorStrength);
-        Wizard wizard = new Wizard(wizardName, wizardHealth, wizardMana, wizardIntelligence);
+        // Name displays type
+        String choiceString;
+        if (choice == 1) {
+            choiceString = "Warrior";
+        } else {
+            choiceString = "Wizard";
+        }
 
-        BattleSimulator simulator = new BattleSimulator();
-        simulator.battle(warrior, wizard);
+        System.out.println("Enter player's name: ");
+        String playerName = scanner.nextLine();
+        playerName += " - " + choiceString;
+
+        System.out.println("Enter player's health points (between 100-200): ");
+        int playerHealth = Integer.parseInt(scanner.nextLine());
+
+        int playerStaminaOrMana = 0;
+        int playerStrengthOrIntelligence = 0;
+
+        // Return warrior or wizard depending on choice
+        return (choice == 1) ?
+                new Warrior(playerName + " (p." + playerType + ")", playerHealth, playerStaminaOrMana, playerStrengthOrIntelligence) :
+                new Wizard(playerName + " (p." + playerType + ")", playerHealth, playerStaminaOrMana, playerStrengthOrIntelligence);
     }
 
     private static void createRandomCharacters() {
         // Generate random values for the first character
         String name1 = (Math.random() < 0.5 ? "Wizard" : "Warrior") + " (p. 1)";
         int health1 = (int) (Math.random() * 101) + 100; // between 100-200
-        int manaOrStamina1 = (int) (Math.random() * 51) + 50; // between 50-100
-        int strengthOrIntelligence1 = (int) (Math.random() * 11) + 5; // between 5-15
+        int manaOrStamina1 = 0;
+        int strengthOrIntelligence1 = 0;
 
         // Generate random values for the second character
         String name2 = (Math.random() < 0.5 ? "Wizard" : "Warrior") + " (p. 2)";
         int health2 = (int) (Math.random() * 101) + 100; // between 100-200
-        int manaOrStamina2 = (int) (Math.random() * 51) + 50; // between 50-100
-        int strengthOrIntelligence2 = (int) (Math.random() * 11) + 5; // between 5-15
+        int manaOrStamina2 = 0;
+        int strengthOrIntelligence2 = 0;
 
         // Create the characters
         Character character1;
@@ -87,7 +106,6 @@ public class Menu {
             character2 = new Warrior(name2, health2, manaOrStamina2, strengthOrIntelligence2);
         }
 
-        // Start the battle
         BattleSimulator simulator = new BattleSimulator();
         simulator.battle(character1, character2);
     }
