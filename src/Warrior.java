@@ -48,8 +48,10 @@ public class Warrior extends Character implements Attacker {
         int attackType = utils.generateRandomNumber();
         if(attackType == 0 && canMakeHeavyAttack()){
                     heavyAttack(character);
+                    Printer.asciiWarriorAttack("heavyAttack");
                 } else if (canMakeWeakAttack()) {
                     weakAttack(character);
+                    Printer.asciiWarriorAttack("weakAttack");
                 } else{
                     regainStamina();
                 }
@@ -64,13 +66,12 @@ public class Warrior extends Character implements Attacker {
     }
 
     private void heavyAttack(Character character){
-        System.out.println("Warrior HeavyAttack");
+//        System.out.println("Warrior HeavyAttack");
         character.receiveDamage(strength);
         stamina -=5;
     }
     private void weakAttack(Character character){
-
-        System.out.println("Warrior weakAttack");
+//        System.out.println("Warrior weakAttack");
         int damage = strength / 2; // can be floated.
         System.out.println("This is the damage " + " " + damage);
         character.receiveDamage(damage);

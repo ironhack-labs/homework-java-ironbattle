@@ -50,8 +50,10 @@ public class Wizard extends Character implements Attacker {
 
         if (randomNumber == 0 && hasEnoughMana()) {
             fireBallAttack(character);
+            Printer.asciiWizardAttack("fireBall");
         } else if(randomNumber == 1 && hasAlmostOneMana()){
             staffHitAttack(character);
+            Printer.asciiWizardAttack("staffHit");
         }else{
             recoverMana();
         }
@@ -67,13 +69,13 @@ public class Wizard extends Character implements Attacker {
     private boolean hasAlmostOneMana() { return getMana() >= 1;}
 
     private void fireBallAttack(Character character) {
-        System.out.println("Wizard fireBallAttack");
+//        System.out.println("Wizard fireBallAttack");
         setMana(getMana() - 5);
         character.receiveDamage(getIntelligence());
     }
 
     private void staffHitAttack(Character character) {
-        System.out.println("Wizard staffHitAttack");
+//        System.out.println("Wizard staffHitAttack");
         setMana(getMana() + 1);
         character.receiveDamage(2);
     }
