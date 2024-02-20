@@ -2,11 +2,10 @@
 //import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-            int countdown = 3;
-            do{
-                Printer.countDown(countdown);
-                countdown--;
-            }while(countdown < 0);
+
+        Character char1 = new Wizard("dumbledore", 100, 25, 25);
+        Character char2 =  new Wizard("dumbledore", 50, 25, 25);
+        Printer.asciiRoundStats(char1, char2);
 //        System.out.println("Welcome to Iron Battle!");
 //        System.out.println("Let's create first character!");
         //Upload by CSV method  BONUS 1
