@@ -66,29 +66,31 @@ public  class Printer{
 
 
 
-    public static void asciiRoundStats(Character char1, Character char2) {
-
+    public static void asciiRoundStats(Character char1, Character char2, int Round) {
         //Validate type and Casting.
+
         String name1 = char1.getName();
         String name2 = char2.getName();
         int hp1 = char1.getHp();
         int hp2 = char2.getHp();
-        boolean att1 = char1.isAlive();
-        boolean att2 = char2.isAlive();
-        int round = 2;
+        boolean  char1IsAlive = char1.isAlive();
+        boolean char2IsAlive = char2.isAlive();
+        int att1 = char1 instanceof Warrior ? ((Warrior) char1).getStamina() : char1 instanceof Wizard ? (((Wizard) char1).getMana()): 0;
+        int att2 = char2 instanceof Warrior ? ((Warrior) char2).getStamina() : char2 instanceof Wizard ? (((Wizard) char2).getMana()): 0;
+        int att3 = char1 instanceof Warrior ? ((Warrior) char1).getStrength() : char1 instanceof Wizard ? (((Wizard) char1).getIntelligence()) : 0;
+        int att4 = char2 instanceof Warrior ? ((Warrior) char2).getStrength() : char2 instanceof Wizard ? (((Wizard) char2).getIntelligence()) : 0;
 
-        // Ajustar la longitud máxima de los nombres y HP para mantener la alineación
         String roundStats = """
     ===========================================
-    ==                Round%-4d              ==
-    ==       %-12s        %-11s ==
-    ==  HP:  %-11d    HP:  %-11d ==
-    ==  at1: %-11s    at1: %-11s ==                        \s
-    ==                                       ==
-    ==                                       ==
-    ==                                       ==
+    ||               Round %-4d              ||
+    ||  %-12s         %-12s    ||
+    ||  HP:    %-11d  HP:    %-10d||
+    ||  atr1:  %-11d  atr1:  %-10d||                      \s
+    ||  atr2:  %-11d  atr2:  %-10d||       \s
+    ||  alive: %-10b   alive: %-10b||                                    \s
+    ||                                       ||
     ===========================================
-    """.formatted( round, name1, name2, hp1, hp2, String.valueOf(att1), String.valueOf(att2) );
+    """.formatted( Round, name1, name2, hp1, hp2, att1, att2, att3, att4, char1IsAlive, char2IsAlive);
 
         System.out.println(roundStats);
     }
