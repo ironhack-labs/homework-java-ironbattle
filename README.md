@@ -45,7 +45,6 @@
 
 - Weak Attack:
     - Damage: Half of Strength
-    - Stamina cost: None
     - Stamina cost: 1
 
 - No stamina for attacks:
@@ -60,7 +59,6 @@
 
 - Staff Hit:
     - Damage: 2
-    - Mana cost: None
     - Mana cost: 1
 
 - Recovery:

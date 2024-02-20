@@ -26,12 +26,6 @@ public class Wizard extends Character{
 
         this.recoveryAmount = 2;
     }
-/*
-    public Wizard(String name, int mana, int intelligence, int hp){
-        super(name,hp);
-        this.mana = mana;
-        this.intelligence = intelligence;
-    }*/
 
     public Wizard(Wizard wizard){
         super(wizard.getName(), wizard.getHP());
@@ -76,11 +70,6 @@ public class Wizard extends Character{
         }
     }
 
-   /* @Override
-    public void useAbility() {
-
-    }*/
-
     private void fireball(Character enemy){
         // Attack enemy
         int fireballDamage = getIntelligence();
@@ -90,11 +79,8 @@ public class Wizard extends Character{
         int manaDecrease = 5;
         this.setMana(getMana() - manaDecrease);
 
-        //set the atack for record
-        setCurrentAttack("Fireball");
-
-        // Print message
-        // System.out.println(getName() + " attacked " + enemy.getName() + " with a fireball for " + fireballDamage + " damage!");
+        //set the attack for record
+        setCurrentAttack("\033[93mFireball\u001B[0m");
     }
 
     private void staffHit(Character enemy){
@@ -106,22 +92,16 @@ public class Wizard extends Character{
         int manaDecrease = 1;
         this.setMana(getMana() - manaDecrease);
 
-        //set the atack for record
-        setCurrentAttack("Staff Hit");
-
-        // Print message
-        // System.out.println(getName() + " attacked " + enemy.getName() + " with a staff for " + staffHitDamage + " damage!");
+        //set the attack for record
+        setCurrentAttack("\033[35mStaff Hit\u001B[0m");
     }
 
     private void recovery(){
         // Recover mana
        setMana(getMana() + recoveryAmount);
 
-         //set the hability for record
-        setCurrentAbility("Recovery");
-
-       // Print message
-       // System.out.println(getName() + " recovered " + recoveryAmount + " mana!");
+         //set the ability for record
+        setCurrentAbility("\033[92mRecovery\u001B[0m");
     }
 
 }

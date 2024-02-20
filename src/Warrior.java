@@ -2,7 +2,7 @@ public class Warrior extends Character {
     // Attributes
     private int stamina;
     private int strength;
-    private int recoveryAmount;
+    private final int RECOVERY_AMOUNT;
 
     // Constructors
     Warrior(String name) {
@@ -23,20 +23,14 @@ public class Warrior extends Character {
         int strengthMax = 10;
         setStrength(Randomizer.getRandomInt(strengthMin, strengthMax));
 
-        this.recoveryAmount = 2;
+        this.RECOVERY_AMOUNT = 2;
     }
-/*
-    public Warrior (String name, int stamina, int strength, int hp){
-        super(name, hp);
-        this.stamina = stamina;
-        this.strength = strength;
 
-    }*/
     public Warrior (Warrior warrior){
         super(warrior.getName(), warrior.getHP());
         setStamina(warrior.getStamina());
         setStrength(warrior.getStrength());
-        this.recoveryAmount = warrior.getRecoveryAmount();
+        this.RECOVERY_AMOUNT = warrior.getRecoveryAmount();
     }
 
     // Getters and Setters
@@ -56,7 +50,7 @@ public class Warrior extends Character {
         this.strength = strength;
     }
     public int getRecoveryAmount() {
-        return recoveryAmount;
+        return RECOVERY_AMOUNT;
     }
 
     // Methods
@@ -74,11 +68,6 @@ public class Warrior extends Character {
         }
     }
 
-    /*@Override
-    public void useAbility() {
-
-    }
-*/
     private void heavyAttack(Character enemy) {
         // Attack enemy
         int attackStrength = getStrength();
@@ -88,11 +77,8 @@ public class Warrior extends Character {
         int staminaDecreaseValue = 5;
         this.setStamina(getStamina() - staminaDecreaseValue);
 
-        //set the atack for record
-        setCurrentAttack("Heavy Attack");
-
-        // Log
-        // System.out.println(getName() + " heavy attacked " + enemy.getName() + " with " + attackStrength + " hp!");
+        //set the attack for record
+        setCurrentAttack("\033[31mHeavy Attack\u001B[0m");
     }
 
     private void weakAttack(Character enemy) {
@@ -104,21 +90,16 @@ public class Warrior extends Character {
         int staminaDecreaseValue = 1;
         setStamina(getStamina() - staminaDecreaseValue);
 
-        //set the atack for record
-        setCurrentAttack("Weak Attack");
+        //set the attack for record
+        setCurrentAttack("\033[36mWeak Attack\u001B[0m");
 
-        // Log
-        // System.out.println(getName() + " weak attacked " + enemy.getName() + " with " + attackStrength + " hp!");
     }
 
     private void recovery() {
         // Recover
-        setStamina(getStamina() + recoveryAmount);
+        setStamina(getStamina() + RECOVERY_AMOUNT);
 
-        // set hability for record
-        setCurrentAbility("Recovery");
-
-        // Log
-        // System.out.println(getName() + " didn't attack on this round!");
+        // set ability for record
+        setCurrentAbility("\033[92mRecovery\u001B[0m");
     }
 }
