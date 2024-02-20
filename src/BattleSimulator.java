@@ -32,11 +32,11 @@ public class BattleSimulator {
                 battleOver = true;
             } else if (character1.getHp() <= 0) {
                 System.out.println("--------------------");
-                System.out.println("Warrior has died. WIZARD WINS!");
+                System.out.println("Player 2 has died. PLAYER 1 WINS!");
                 battleOver = true;
             } else if (character2.getHp() <= 0) {
                 System.out.println("--------------------");
-                System.out.println("Wizard has died. WARRIOR WINS!");
+                System.out.println("Player 1 has died. PLAYER 2 WINS!");
                 battleOver = true;
             }
 
