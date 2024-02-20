@@ -9,19 +9,6 @@ public class Main {
         Warrior newWarrior;
         Wizard newWizard;
 
-        Generator generator = new Generator();
-
-        //Random class selection
-        List<String> person = new ArrayList<>();
-        person.add("Warrior");
-        person.add("Wizard");
-
-        //Random index generator
-
-
-        //Tests
-        System.out.println(character1);
-        System.out.println(character2);
         
         //Aqui comienza el programa batalla
         Scanner scanner = new Scanner(System.in);
@@ -41,6 +28,13 @@ public class Main {
                     //batalla
                 case 4:
                     //batalla randomizada
+                    Generator generator = new Generator();
+
+                    //Random class selection
+                    List<String> person = new ArrayList<>();
+                    person.add("Warrior");
+                    person.add("Wizard");
+
                     int randomIndex1= random.nextInt(person.size());
                     int randomIndex2= random.nextInt(person.size());
 
