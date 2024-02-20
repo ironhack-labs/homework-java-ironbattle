@@ -1,12 +1,9 @@
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Battle {
-
-
     private Character winner;
     private Character looser;
     private boolean tieGame;
@@ -15,7 +12,7 @@ public class Battle {
 
     private int damageDone;
 
-    public Battle(Character playerOne, Character playerTwo) {
+    public Battle() {
         setTieGame(false);
         setRound(1);
     }
@@ -46,10 +43,6 @@ public class Battle {
 
     public List<String> getBattleRecord() {
         return battleRecord;
-    }
-
-    public void setBattleRecord(List<String> battleRecord) {
-        this.battleRecord =  battleRecord;
     }
 
     public int getRound() {
@@ -112,25 +105,20 @@ public class Battle {
 
     }
 
-    private boolean checkBattleResult(Character player1, Character player2) {
+    private void checkBattleResult(Character player1, Character player2) {
 
         if (!player1.getIsAlive() && !player2.getIsAlive()) {
             setTieGame(true);
             battleRecorder(battleRecord);
-            return true;
         } else if (!player1.getIsAlive()) {
             setWinner(player2);
             setLooser(player1);
             battleRecorder(battleRecord);
-            return true;
         } else if (!player2.getIsAlive()) {
             setWinner(player1);
             setLooser(player2);
             battleRecorder(battleRecord);
-            return true;
         }
-
-        return false;
 
     }
     //2. Record the battle log
@@ -141,9 +129,7 @@ public class Battle {
         String abilityType = playerOne.getCurrentAbility();
         // Need a character attribute like "attackName", "skillName" or make a new attribute on battle class?
 
-        if(playerOne instanceof Warrior){
-            Warrior warrior = (Warrior) playerOne;
-
+        if(playerOne instanceof Warrior warrior){
             if(abilityType.equals("Recovery")){
                 String record = "Round " + getRound() + ": Player " + playerOne.getName() +
                         " Class: " + playerOne.getClass().getSimpleName() +  " - HP: " + playerOne.getHP()+
@@ -160,9 +146,7 @@ public class Battle {
                 battleRecord.add(record);
             }
 
-        }else if (playerOne instanceof Wizard){
-            Wizard wizard = (Wizard) playerOne;
-
+        }else if (playerOne instanceof Wizard wizard){
             if (abilityType.equals("Recovery")) {
                 String record = "Round " + getRound() + ": Player " + playerOne.getName() +
                         " Class: " + playerOne.getClass().getSimpleName() + " - HP: " + playerOne.getHP() +
@@ -238,8 +222,8 @@ public class Battle {
         Matcher matcher = pattern.matcher(text);
 
         if (matcher.find()) {
-            String numeroStr = matcher.group(1);
-            return Integer.parseInt(numeroStr);
+            String numberStr = matcher.group(1);
+            return Integer.parseInt(numberStr);
         }
         else
             return -1;

@@ -1,5 +1,4 @@
 import java.util.List;
-import java.util.Scanner;
 
 public class Main {
 
@@ -10,7 +9,7 @@ public class Main {
         Character Player1 = players.get(0);
         Character Player2 = players.get(1);
 
-        Battle battle = new Battle(Player1, Player2);
+        Battle battle = new Battle();
         battle.startBattle(Player1, Player2);
 
         battle.battlePrinter(battle.getBattleRecord(), 333);

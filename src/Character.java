@@ -14,8 +14,8 @@ public abstract class Character implements Attacker {
         assignId();
         setCurrentAttack("None");
         setCurrentAbility("None");
+        setIsAlive(true);
     }
-
 
     private void assignId(){
         this.id = String.valueOf(idCounter++);
@@ -49,10 +49,6 @@ public abstract class Character implements Attacker {
         return this.isAlive;
     }
 
-    public String getId(){
-        return this.id;
-    }
-
     public String getCurrentAttack() {
         return currentAttack;
     }
@@ -60,6 +56,7 @@ public abstract class Character implements Attacker {
     public void setCurrentAttack(String currentAttack) {
         this.currentAttack = currentAttack;
     }
+
     public String getCurrentAbility() {
         return currentAbility;
     }
@@ -67,8 +64,7 @@ public abstract class Character implements Attacker {
     public void setCurrentAbility(String currentAbility) {
         this.currentAbility = currentAbility;
     }
+
     @Override
     public abstract void attack(Character character);
-    //public abstract void useAbility();
-
 }
