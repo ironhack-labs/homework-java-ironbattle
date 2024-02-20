@@ -5,7 +5,6 @@ public class Wizard extends Character implements Attacker {
     private int mana; //random between 10-50
     private int intelligence; //random between 1-50
 
-    Utils utils = new Utils();
 
     //Constructor
     public Wizard (String name, int hp, int mana, int intelligence){
@@ -16,12 +15,13 @@ public class Wizard extends Character implements Attacker {
 
     //Setters
     private void setMana(int mana) {
-        if (mana < 10 || mana > 50) {
-            this.mana = -1;
-            System.out.println("Invalid value for mana");
-        } else {
-            this.mana = mana;
-        }
+//        if (mana < 10 || mana > 50) {
+//            this.mana = -1;
+//            System.out.println("Invalid value for mana");
+//        } else {
+//            this.mana = mana;
+//        }
+        this.mana = mana;
     }
 
     private void setIntelligence(int intelligence) {
@@ -46,7 +46,7 @@ public class Wizard extends Character implements Attacker {
     //Functions
     @Override
     public void attack(Character character) {
-        int randomNumber = utils.generateRandomNumber(); // Abstract to an external method
+        int randomNumber = Utils.generateRandomNumber(); // Abstract to an external method
 
         if (randomNumber == 0 && hasEnoughMana()) {
             fireBallAttack(character);
@@ -81,6 +81,7 @@ public class Wizard extends Character implements Attacker {
     }
 
     private void recoverMana(){
+        System.out.println("EeeeeeeeeeeeeeeeEeeeeeeeeeeeeeeeEeeeeeeeeeeeeeeeEeeeeeeeeeeeeeeeEeeeeeeeeeeeeeeeEeeeeeeeeeeeeeeeEeeeeeeeeeeeeeeeEeeeeeeeeeeeeeee");
         setMana(getMana() + 2);
     }
 

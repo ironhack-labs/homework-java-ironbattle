@@ -1,3 +1,7 @@
 CharacterType,Name,HP,Attribute1,Attribute2
-Wizard,Gandalfo,120,45,25
+Wizard,Gandalfo,100,45,25
 Warrior,Rambo,150,35,8
+Warrior, GROG, 140,40,10
+Wizard,Bilbo,120,45,25
+Wizard,Bronson, 250,45,25
+Wizard, Arian el Mago, 100,50,50
