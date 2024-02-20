@@ -1,12 +1,12 @@
 abstract class Character {
-    // Generate id
+    
     private String id;
     private String name;
     private int hp;
     private boolean isAlive = true;
 
+
     public Character(String name, int hp) {
-        //setId(id);
         setName(name);
         setHp(hp);
     }
@@ -30,8 +30,7 @@ abstract class Character {
     public void setIsAlive(boolean isAlive){
         this.isAlive = isAlive;
     }
-
-
+  
     public boolean checkIsAlive(){
         if (getHp() <= 0){
             setIsAlive(false);
@@ -39,6 +38,8 @@ abstract class Character {
         }
         return true;
     }
+  
+   //Migrar el codigo del randomID
 }
 
 
