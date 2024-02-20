@@ -9,21 +9,17 @@ public class Menu {
 
         System.out.println("Enter warrior's name: ");
         String warriorName = scanner.nextLine();
-        System.out.println("Enter warrior's health points: ");
+        System.out.println("Enter warrior's health points (between 100-200): ");
         int warriorHealth = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter warrior's stamina points: ");
-        int warriorStamina = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter warrior's strength points: ");
-        int warriorStrength = Integer.parseInt(scanner.nextLine());
+        int warriorStamina = 0;
+        int warriorStrength = 0;
 
         System.out.println("Enter wizard's name: ");
         String wizardName = scanner.nextLine();
-        System.out.println("Enter wizard's health points: ");
+        System.out.println("Enter wizard's health points (between 100-200): ");
         int wizardHealth = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter wizard's mana points: ");
-        int wizardMana = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter wizard's intelligence points: ");
-        int wizardIntelligence = Integer.parseInt(scanner.nextLine());
+        int wizardMana = 0;
+        int wizardIntelligence = 0;
 
         Warrior warrior = new Warrior(warriorName, warriorHealth, warriorStamina, warriorStrength);
         Wizard wizard = new Wizard(wizardName, wizardHealth, wizardMana, wizardIntelligence);

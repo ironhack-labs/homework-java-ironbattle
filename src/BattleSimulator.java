@@ -14,21 +14,33 @@ public class BattleSimulator {
             int damage1 = prevHealth2 - character2.getHp();
             int damage2 = prevHealth1 - character1.getHp();
 
-            System.out.println("Warrior attacks Wizard. Damage dealt: " + damage1 + ". Remaining HP: " + character2.getHp());
-            System.out.println("Wizard attacks Warrior. Damage dealt: " + damage2 + ". Remaining HP: " + character1.getHp());
+            if (character1 instanceof Warrior) {
+                System.out.println(((Warrior) character1).getName() + " - Remaining HP: " + character1.getHp() + ". Remaining Stamina: " + ((Warrior) character1).getStamina()+ ".");
+            } else if (character1 instanceof Wizard) {
+                System.out.println(((Wizard) character1).getName() + " - Remaining HP: " + character1.getHp() + ". Remaining Mana: " + ((Wizard) character1).getMana()+ ".");
+            }
+
+            if (character2 instanceof Warrior) {
+                System.out.println(((Warrior) character2).getName() + " - Remaining HP: " + character2.getHp() + ". Remaining Stamina: " + ((Warrior) character2).getStamina()+ ".");
+            } else if (character2 instanceof Wizard) {
+                System.out.println(((Wizard) character2).getName() + " - Remaining HP: " + character2.getHp() + ". Remaining Mana: " + ((Wizard) character2).getMana() + ".");
+            }
 
             if (character1.getHp() <= 0 && character2.getHp() <= 0) {
+                System.out.println("--------------------");
                 System.out.println("Both characters died. IT'S A DRAW.");
                 battleOver = true;
             } else if (character1.getHp() <= 0) {
+                System.out.println("--------------------");
                 System.out.println("Warrior has died. WIZARD WINS!");
                 battleOver = true;
             } else if (character2.getHp() <= 0) {
+                System.out.println("--------------------");
                 System.out.println("Wizard has died. WARRIOR WINS!");
                 battleOver = true;
             }
 
-            System.out.println("Game over.");
+            System.out.println("--------------------");
         }
     }
 }

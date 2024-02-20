@@ -5,6 +5,7 @@ public abstract class Character implements Attacker{
     private String name;
     private int hp;
     private boolean isAlive;
+    private int originalHp;
 
     // Constructor
     public Character(String name, int hp) {
@@ -12,6 +13,7 @@ public abstract class Character implements Attacker{
         setName(name);
         setHp(hp);
         this.isAlive = true;
+        this.originalHp = hp;
     }
 
     // Getters
@@ -31,12 +33,17 @@ public abstract class Character implements Attacker{
         return isAlive;
     }
 
+    public int getOriginalHp() { return originalHp; }
+
     // Setters
     public void setName(String name) {
         this.name = name;
     }
 
     public void setHp(int hp) {
+        if(originalHp == 0){
+            this.originalHp = hp;
+        }
         this.hp = hp;
     }
 
