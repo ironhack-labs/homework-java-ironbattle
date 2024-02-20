@@ -57,11 +57,7 @@ public class Main {
     public static void printInfoCharacters(List<Character> characters){
         Scanner scanner = new Scanner(System.in);
 
-        String RESET = "\u001B[0m";
-        String RED = "\u001B[31m";
-        String GREEN = "\u001B[32m";
-
-        System.out.println(GREEN + "Our characters are ready: " + RESET);
+        System.out.println("Our characters are ready: ");
         for (Character character : characters) {
 
             if (character instanceof Warrior) {
@@ -76,7 +72,7 @@ public class Main {
                 System.out.println("\tIntelligence: " + ((Wizard) character).getIntelligence() + "\n");
             }
         }
-        System.out.println(GREEN + "Press Enter to start the battle." + RESET);
+        System.out.println("Press Enter to start the battle.");
         scanner.nextLine();
     }
 
