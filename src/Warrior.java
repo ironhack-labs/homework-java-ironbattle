@@ -1,10 +1,13 @@
+import java.util.Random;
+
 public class Warrior extends Character implements Attacker{
 
     private int stamina;
     private int strength;
 
-    public Warrior(String id, String name, int hp, int stamina, int strength){
-        super(id, name, hp);
+
+    public Warrior(String name, int hp, int stamina, int strength){
+        super(name,hp);
         setStamina(stamina);
         setStrength(strength);
     }
@@ -26,7 +29,6 @@ public class Warrior extends Character implements Attacker{
     }
     @Override
     public void setHp(int hp){
-        //Esto traera problemas durante la batalla. Hay que reverlo
       if(hp >200 || hp < 100){
           throw new IllegalArgumentException("Warrior's hp isn't a number between 100 and 200.");
       }else{
@@ -34,8 +36,7 @@ public class Warrior extends Character implements Attacker{
       }
     }
     public void Attack(Character x){
-        int randomNumber = Math.toIntExact(Math.round(Math.random()));
-        System.out.println(randomNumber);
+        int randomNumber = new Random().nextInt(2);
         int staminaWarrior = getStamina();
 
         if(randomNumber == 0){
@@ -55,23 +56,28 @@ public class Warrior extends Character implements Attacker{
 
         }
 
-    public void heavyAttack(Character wizard){
-        int wizardHealth = wizard.getHp();
+    public void heavyAttack(Character opponent){
+        if(opponent == null){
+            throw new IllegalArgumentException("Target character cannot be null.");
+        }
+
+        int opponentHealth = opponent.getHp();
         int strengthWarrior = getStrength();
         int staminaWarrior = getStamina();
 
-        wizard.receiveAttack(wizardHealth - strengthWarrior);
+        opponent.receiveAttack(opponentHealth - strengthWarrior);
         setStamina(staminaWarrior - 5);}
 
 
-
-    public void weakAttack(Character wizard){
-
-        int wizardHealth = wizard.getHp();
+    public void weakAttack(Character opponent){
+        if(opponent == null){
+            throw new IllegalArgumentException("Target character cannot be null.");
+        }
+        int opponentHealth = opponent.getHp();
         int halfStrengthWarrior = Math.round(getStrength()/2);
         int staminaWarrior = getStamina();
 
-        wizard.receiveAttack(wizardHealth - halfStrengthWarrior);
+        opponent.receiveAttack(opponentHealth - halfStrengthWarrior);
         setStamina(staminaWarrior + 1);
 
     }
