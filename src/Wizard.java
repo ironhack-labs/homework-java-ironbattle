@@ -9,6 +9,35 @@ public class Wizard extends Character {
     private final int FIREBALL_MANA = 5;
     private static final String[] wizardsNames = new String[]{"Merlin", "Gandalf", "Severus", "Alatar", "Dumbledore", "Rincewind", "Voldemort", "Albus", "Asterope", "Astra", "Atlantes", "Beatrix", "Belinda", "Fawley", "Glinda", "Gwydion", "Jadis", "Jareth", "Morgan", "Potter", "Prospero", "Radagast", "Saruman", "Thoth-Amon"};
 
+    public enum PropertyWizard{
+        HP, MANA, INTELLIGENCE
+    }
+
+    public static boolean validateInputByType(PropertyWizard property_wizard, int property_value) {
+        switch (property_wizard) {
+            case PropertyWizard.HP:
+                if (property_value < HP_RANGE[0] || property_value > HP_RANGE[1]) {
+                    System.err.println("HP must be between " + HP_RANGE[0] + " and " + HP_RANGE[1]);
+                    return false;
+                }
+                break;
+            case PropertyWizard.MANA:
+                if (property_value < MANA_RANGE[0] || property_value > MANA_RANGE[1]) {
+                    System.err.println("Mana must be between " + MANA_RANGE[0] + " and " + MANA_RANGE[1]);
+                    return false;
+                }
+                break;
+            case PropertyWizard.INTELLIGENCE:
+                if (property_value < INTELLIGENCE_RANGE[0] || property_value > INTELLIGENCE_RANGE[1]) {
+                    System.err.println("Intelligence must be between " + INTELLIGENCE_RANGE[0] + " and " + INTELLIGENCE_RANGE[1]);
+                    return false;
+                }
+                break;
+            default:
+                return false;
+        }
+        return true;
+    }
     public static boolean validateInput(int hp, int mana, int intelligence){
         if (hp < HP_RANGE[0] || hp > HP_RANGE[1]) {
             System.err.println("HP must be between " + HP_RANGE[0] + " and " + HP_RANGE[1]);
