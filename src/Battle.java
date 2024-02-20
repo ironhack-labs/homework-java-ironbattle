@@ -169,10 +169,10 @@ public class Battle {
         this.battleRecord=battleRecord;
 
         if(isTieGame())
-            battleRecord.add("We have a tie match between the players. A new match start: ");
+            battleRecord.add("\nWe have a tie match between the players. A new match start:\n \n***************************** ROUND 1 FIGHT *****************************");
         else{
             if(getWinner()!=null){
-                battleRecord.add("The winner is " + getWinner().getName()
+                battleRecord.add("\nThe winner is " + getWinner().getName()
                         + "!!!. Better luck next time: " + getLooser().getName());
                 if(getWinner() instanceof Wizard){
                     battleRecord.add(AsciiArt.WizardASCII());
@@ -183,33 +183,46 @@ public class Battle {
         }
     }
 
-    public void battlePrinter(List<String> battleRecord, int timeSleepMilliSeconds) {
+    public void battlePrinter(List<String> battleRecord, int timeSleepMilliSeconds){
+
+        List<String> newBattleRecordList = new ArrayList<>();
         int roundNumber = 1;
 
-        System.out.println("***************************** ROUND " + roundNumber + " FIGHT *****************************");
+        newBattleRecordList.add("*****************************" + " ROUND " + roundNumber + " FIGHT " + " *****************************");
 
         for (String battleIndex : battleRecord) {
-            if (battleIndex.startsWith("We have a tie match between the players.")) {
-                System.out.println(battleIndex);
-                roundNumber = 1;
-                System.out.println("***************************** ROUND " + roundNumber + " FIGHT *****************************");
-            } else if (battleIndex.startsWith("Round")) {
-                int currentRound = roundNumberExtract(battleIndex);
-                if (currentRound == roundNumber) {
-                    System.out.println(battleIndex);
-                } else {
-                    roundNumber = currentRound;
-                    System.out.println("***************************** ROUND " + roundNumber + " FIGHT *****************************");
-                    System.out.println(battleIndex);
+            if(battleIndex.startsWith("Round")){
+                String roundSplitChain = battleIndex.substring(battleIndex.indexOf('R'), battleIndex.indexOf(':'));
+
+                if(roundNumberExtract(roundSplitChain)==roundNumber){
+                    newBattleRecordList.add(battleIndex);
+                }else{
+
+                    newBattleRecordList.add("\n*****************************" + " ROUND " + roundNumberExtract(roundSplitChain) + " FIGHT " + "*****************************");
+                    newBattleRecordList.add(battleIndex);
+                    roundNumber++;
                 }
-            } else {
-                System.out.println(battleIndex);
+            }else{
+                newBattleRecordList.add(battleIndex);
+                roundNumber=1;
+                //newBattleRecordList.add("\n*****************************" + " ROUND " + roundNumber + " FIGHT " + "*****************************");
             }
 
-            try {
-                Thread.sleep(timeSleepMilliSeconds);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        }
+
+        for (int i = 0; i < newBattleRecordList.size(); i++) {
+            if(newBattleRecordList.get(i).startsWith("We have a tie match between the players.")){
+                System.out.println(newBattleRecordList.get(i));
+            }else{
+                System.out.println(newBattleRecordList.get(i));
+
+                if ((i + 1) % 3 == 0 && (i + 1) < newBattleRecordList.size()) {
+                    try {
+                        Thread.sleep(timeSleepMilliSeconds);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }
     }
