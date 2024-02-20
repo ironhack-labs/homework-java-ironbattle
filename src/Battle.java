@@ -101,15 +101,6 @@ public class Battle {
 
     }
 
-/*    private Character clone(Character character){
-        if(character instanceof Wizard){
-            return new Wizard((Wizard) character);
-        } else {
-            return new Warrior((Warrior) character);
-        }
-
-    }*/
-
     private void performAttack(Character attacker, Character target) {
         int initialLife = target.getHP();
         attacker.attack(target);//Review with team

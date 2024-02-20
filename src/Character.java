@@ -69,6 +69,6 @@ public abstract class Character implements Attacker {
     }
     @Override
     public abstract void attack(Character character);
-    public abstract void useAbility();
+    //public abstract void useAbility();
 
 }

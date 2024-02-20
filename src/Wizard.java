@@ -76,10 +76,10 @@ public class Wizard extends Character{
         }
     }
 
-    @Override
+   /* @Override
     public void useAbility() {
 
-    }
+    }*/
 
     private void fireball(Character enemy){
         // Attack enemy

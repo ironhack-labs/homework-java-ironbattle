@@ -74,11 +74,11 @@ public class Warrior extends Character {
         }
     }
 
-    @Override
+    /*@Override
     public void useAbility() {
 
     }
-
+*/
     private void heavyAttack(Character enemy) {
         // Attack enemy
         int attackStrength = getStrength();
