@@ -6,25 +6,15 @@ public class Main {
 
     public static void main(String[] args) {
         List<Character> characters = getCharacters();
-        printInfoCharacters(characters);
+        PrintMenus.printInfoCharacters(characters);
         runBattle(characters);
     }
 
-    public static void charactersCreatorMenu(){
-        System.out.println("Welcome to Iron Battle!");
-        System.out.println("Get ready to forge your fighters!");
-        System.out.println("Choose your character creation mode:");
-        System.out.println("\t1. Console input");
-        System.out.println("\t2. File input");
-        System.out.println("\t3. Random generation");
-        System.out.print("Enter your choice: ");
-    }
-
     public static List<Character> getCharacters(){
-        charactersCreatorMenu();
+        PrintMenus.charactersCreatorMenu();
         Scanner scanner = new Scanner(System.in);
         do {
-            String option = scanner.nextLine();
+            String option = scanner.nextLine().trim();
             if (option.equals("1") || option.equals("2") || option.equals("3")){
                 return characterCreator(option);
             } else {
@@ -34,11 +24,12 @@ public class Main {
     }
 
     public static List<Character> characterCreator(String option){
-        CharacterInput characterInput;
+
         List<Character> characters = new ArrayList<>();
         if (option.equals("2")){
             characters = CharacterImporter.importCharactersFromCSV("./src/characters.csv");
         } else {
+            CharacterInput characterInput;
             for (int i=0; i<2; i++){
                 if (option.equals("1")){
                     characterInput = new CharacterInput();
@@ -49,34 +40,6 @@ public class Main {
             }
         }
         return characters;
-    }
-
-    public static void printInfoCharacters(List<Character> characters){
-        Scanner scanner = new Scanner(System.in);
-
-        String RESET = "\u001B[0m";
-        String RED = "\u001B[31m";
-        String GREEN = "\u001B[32m";
-
-        System.out.println(GREEN + "Our characters are ready: " + RESET);
-        for (Character character : characters) {
-
-            if (character instanceof Warrior) {
-                Printer.asciiWarriorChar();
-                System.out.println("Warrior " + character.getName());
-                System.out.println("\tHealth points: " + character.getHp());
-                System.out.println("\tStamina: " + ((Warrior) character).getStamina());
-                System.out.println("\tStrength: " + ((Warrior) character).getStrength() + "\n");
-            } else {
-                Printer.asciiWizardChar();
-                System.out.println("Wizard " + character.getName());
-                System.out.println("\tHealth points: " + character.getHp());
-                System.out.println("\tMana: " + ((Wizard) character).getMana());
-                System.out.println("\tIntelligence: " + ((Wizard) character).getIntelligence() + "\n");
-            }
-        }
-        System.out.println(GREEN + "Press Enter to start the battle." + RESET);
-        scanner.nextLine();
     }
 
     static void runBattle(List<Character> characters){

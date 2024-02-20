@@ -5,23 +5,18 @@ public class Warrior extends Character implements Attacker {
     private int stamina;
     private int strength;
 
-//    Utils utils = new Utils();
-
     public Warrior(String name, int hp, int stamina, int strength) {
         super(name,hp);
         setStamina(stamina);
         setStrength(strength);
     }
 
-    // Setters
     public void setStamina(int stamina) {
-//        if (stamina< 10 || stamina>50) {
-//            this.stamina = -1;
-//            System.out.println("Invalid value for stamina");
-//        } else {
-//            this.stamina = stamina;
-//        }
-        this.stamina = stamina;
+        if (stamina< 10 || stamina>50) {
+            this.stamina = -1;
+        } else {
+            this.stamina = stamina;
+        }
     }
 
     public void setStrength(int strength) {
@@ -48,16 +43,15 @@ public class Warrior extends Character implements Attacker {
 
         int attackType = Utils.generateRandomNumber();
         if(attackType == 0 && canMakeHeavyAttack()){
-                    heavyAttack(character);
-                    Printer.asciiWarriorAttack("heavyAttack");
-                } else if (canMakeWeakAttack()) {
-                    weakAttack(character);
-                    Printer.asciiWarriorAttack("weakAttack");
-                } else{
-                    regainStamina();
-                }
-
+            heavyAttack(character);
+            Printer.asciiWarriorAttack("heavyAttack");
+        } else if (canMakeWeakAttack()) {
+            weakAttack(character);
+            Printer.asciiWarriorAttack("weakAttack");
+        } else{
+            regainStamina();
         }
+    }
     private boolean canMakeHeavyAttack(){
         return stamina >= 5;
     }
@@ -90,14 +84,17 @@ public class Warrior extends Character implements Attacker {
     }
     /// this receiveDamage can be also in the Character class?
     public void receiveDamage(int damage){
-    System.out.println("Damage received from wizard" + " " +  damage);
-        int newHP = getHp() - damage;
-        setHp(newHP);
-        if(newHP <= 0){
+        System.out.println("Damage received from wizard" + " " +  damage);
+        int newHP;
+        if (getHp() - damage < 0){
+            setHp(0);
+        } else {
+            setHp(getHp() - damage);
+        }
+        if(getHp() <= 0){
             setAlive(false);
         }
     }
-
 }
 
 

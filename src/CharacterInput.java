@@ -59,10 +59,11 @@ public class CharacterInput {
     public void setNameInput(){
         Scanner scanner = new Scanner(System.in);
         int attempts = 0;
-        if (this.type == 0)
+        if (this.type == 0){
             System.out.println("Let's create a new Warrior!");
-        else
+        } else{
             System.out.println("Let's create a new Wizard!");
+        }
         System.out.println("Write the name of character.");
 
         do {
@@ -83,10 +84,11 @@ public class CharacterInput {
 
     public void setHP() {
         String attributeName = "Health Points";
-        if (this.type == 0)
+        if (this.type == 0){
             this.hp =  enterAttribute(attributeName, 100, 200);
-        else
+        } else{
             this.hp = enterAttribute(attributeName, 50, 100);
+        }
     }
 
     public void setAttribute1() {
@@ -120,8 +122,7 @@ public class CharacterInput {
                 if (min <= value && value <= max) {
                     System.out.println("Great! Value for " + attributeName + " assigned to " +  value);
                     break;
-                }
-                else{
+                } else{
                     throw new IndexOutOfBoundsException();
                 }
             } catch (IndexOutOfBoundsException e){
