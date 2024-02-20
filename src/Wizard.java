@@ -43,12 +43,11 @@ public class Wizard extends Character implements Attacker {
     //Functions
     @Override
     public void attack(Character character) {
-        int randomNumber = Utils.generateRandomNumber(); // Abstract to an external method
-
-        if (randomNumber == 0 && hasEnoughMana()) {
+        int randomNumber = Utils.generateRandomNumber(1,2); // Abstract to an external method
+        if (randomNumber == 1 && hasEnoughMana()) {
             fireBallAttack(character);
             Printer.asciiWizardAttack("fireBall");
-        } else if(randomNumber == 1 && hasAlmostOneMana()){
+        } else if(randomNumber == 2 && hasAlmostOneMana()){
             staffHitAttack(character);
             Printer.asciiWizardAttack("staffHit");
         }else{

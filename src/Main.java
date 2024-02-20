@@ -65,23 +65,14 @@ public class Main {
 
         System.out.println("Let the battle begin between " + firstCharacter.getName() + " and " + secondCharacter.getName() + "!");
         int round = 1;
-//        while(firstCharacter.isAlive() && secondCharacter.isAlive()){
-//            firstCharacter.attack(secondCharacter);
-//            System.out.println(secondCharacter.getHp());
-//            secondCharacter.attack(firstCharacter);
-//            System.out.println(firstCharacter.getHp());
-//            Printer.asciiRoundStats(firstCharacter,secondCharacter,round);
-//            round++;
-//        }
-
-        do {
+        while(firstCharacter.isAlive() && secondCharacter.isAlive()){
             firstCharacter.attack(secondCharacter);
             System.out.println(secondCharacter.getHp());
             secondCharacter.attack(firstCharacter);
             System.out.println(firstCharacter.getHp());
             Printer.asciiRoundStats(firstCharacter,secondCharacter,round);
-           round++;
-        }while(firstCharacter.isAlive() && secondCharacter.isAlive());
+            round++;
+        }
         // Determine and print the winner. This can be added at the end of this code to announce the winner.
         Character winner = firstCharacter.isAlive() ? firstCharacter : secondCharacter;
         System.out.println("The winner is: " + winner.getName());

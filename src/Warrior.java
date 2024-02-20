@@ -41,16 +41,19 @@ public class Warrior extends Character implements Attacker {
     @Override
     public void attack(Character character) {
 
-        int attackType = Utils.generateRandomNumber();
-        if(attackType == 0 && canMakeHeavyAttack()){
+
+        int attackType = Utils.generateRandomNumber(1, 2);
+        if (attackType == 1 && canMakeHeavyAttack()) {
             heavyAttack(character);
             Printer.asciiWarriorAttack("heavyAttack");
         } else if (canMakeWeakAttack()) {
+
             weakAttack(character);
             Printer.asciiWarriorAttack("weakAttack");
-        } else{
+        } else {
             regainStamina();
         }
+
     }
     private boolean canMakeHeavyAttack(){
         return stamina >= 5;

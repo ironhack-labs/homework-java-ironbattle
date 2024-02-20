@@ -116,6 +116,7 @@ public  class Printer{
                                      ▀                  ▀               \s""";
 
                     System.out.println(heavyAttack);
+                    break;
                 case ("weakAttack"):
                     String weakAttack =
                             """
@@ -135,6 +136,7 @@ public  class Printer{
                                      ▀                  ▀               \s""";
 
                     System.out.println(weakAttack);
+                    break;
             }
         }
 
@@ -160,6 +162,7 @@ public  class Printer{
                                          ▀                  ▀                        \s""";
 
                         System.out.println(asciiFireBall);
+                        break;
                     case ("staffHit"):
                         String asciiStaffHit =
                                 """
@@ -179,6 +182,7 @@ public  class Printer{
                                          ▀                  ▀                                  \s""";
 
                         System.out.println(asciiStaffHit);
+                        break;
                 }
             }
 
