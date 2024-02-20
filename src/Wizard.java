@@ -80,7 +80,7 @@ public class Wizard extends Character{
         this.setMana(getMana() - manaDecrease);
 
         //set the attack for record
-        setCurrentAttack("Fireball");
+        setCurrentAttack("\033[93mFireball\u001B[0m");
     }
 
     private void staffHit(Character enemy){
@@ -93,7 +93,7 @@ public class Wizard extends Character{
         this.setMana(getMana() - manaDecrease);
 
         //set the attack for record
-        setCurrentAttack("Staff Hit");
+        setCurrentAttack("\033[35mStaff Hit\u001B[0m");
     }
 
     private void recovery(){
@@ -101,7 +101,7 @@ public class Wizard extends Character{
        setMana(getMana() + recoveryAmount);
 
          //set the ability for record
-        setCurrentAbility("Recovery");
+        setCurrentAbility("\033[92mRecovery\u001B[0m");
     }
 
 }

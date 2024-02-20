@@ -121,16 +121,15 @@ public class Battle {
         }
 
     }
-    //2. Record the battle log
 
+    //2. Record the battle log
     private void battleRecorder(List<String> battleRecord, Character playerOne, Character playerTwo ){
         this.battleRecord=battleRecord;
         String attackType = playerOne.getCurrentAttack();
         String abilityType = playerOne.getCurrentAbility();
-        // Need a character attribute like "attackName", "skillName" or make a new attribute on battle class?
 
         if(playerOne instanceof Warrior warrior){
-            if(abilityType.equals("Recovery")){
+            if(!abilityType.equals("None")){
                 String record = "Round " + getRound() + ": Player " + playerOne.getName() +
                         " Class: " + playerOne.getClass().getSimpleName() +  " - HP: " + playerOne.getHP()+
                         " - Stamina: " + warrior.getStamina() +
