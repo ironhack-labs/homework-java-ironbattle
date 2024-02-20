@@ -18,7 +18,6 @@ public class Wizard extends Character implements Attacker {
     private void setMana(int mana) {
         if (mana < 10 || mana > 50) {
             this.mana = -1;
-            System.out.println("Invalid value for mana");
         } else {
             this.mana = mana;
         }
@@ -28,7 +27,6 @@ public class Wizard extends Character implements Attacker {
         if (intelligence < 1 || intelligence > 50) {
             this.intelligence = -1;
             // Maybe we can throw IllegalArgumentException({Message}).
-            System.out.println("Invalid value for intelligence");
         } else {
             this.intelligence = intelligence;
         }
