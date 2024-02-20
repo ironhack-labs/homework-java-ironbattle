@@ -2,6 +2,8 @@ public class Wizard extends Character{
     // Attributes
     private int mana;
     private int intelligence;
+    private final int recoveryAmount;
+
 
     // Constructors
     public Wizard(String name) {
@@ -21,6 +23,8 @@ public class Wizard extends Character{
         int intelligenceMin = 1;
         int intelligenceMax = 50;
         setIntelligence(Randomizer.getRandomInt(intelligenceMin, intelligenceMax));
+
+        this.recoveryAmount = 2;
     }
 /*
     public Wizard(String name, int mana, int intelligence, int hp){
@@ -33,6 +37,7 @@ public class Wizard extends Character{
         super(wizard.getName(), wizard.getHP());
         setMana(wizard.getMana());
         setIntelligence(wizard.getIntelligence());
+        this.recoveryAmount = wizard.getRecoveryAmount();
     }
 
     // Getters and Setters
@@ -52,6 +57,10 @@ public class Wizard extends Character{
         this.intelligence = intelligence;
     }
 
+    public int getRecoveryAmount() {
+        return recoveryAmount;
+    }
+
     // Methods
     public void attack(Character enemy) {
         if(getMana() < 2) {
@@ -67,6 +76,11 @@ public class Wizard extends Character{
         }
     }
 
+   /* @Override
+    public void useAbility() {
+
+    }*/
+
     private void fireball(Character enemy){
         // Attack enemy
         int fireballDamage = getIntelligence();
@@ -75,6 +89,9 @@ public class Wizard extends Character{
         // Decrease mana
         int manaDecrease = 5;
         this.setMana(getMana() - manaDecrease);
+
+        //set the atack for record
+        setCurrentAttack("Fireball");
 
         // Print message
         // System.out.println(getName() + " attacked " + enemy.getName() + " with a fireball for " + fireballDamage + " damage!");
@@ -89,14 +106,19 @@ public class Wizard extends Character{
         int manaDecrease = 1;
         this.setMana(getMana() - manaDecrease);
 
+        //set the atack for record
+        setCurrentAttack("Staff Hit");
+
         // Print message
         // System.out.println(getName() + " attacked " + enemy.getName() + " with a staff for " + staffHitDamage + " damage!");
     }
 
     private void recovery(){
         // Recover mana
-       int recoveryAmount = 2;
        setMana(getMana() + recoveryAmount);
+
+         //set the hability for record
+        setCurrentAbility("Recovery");
 
        // Print message
        // System.out.println(getName() + " recovered " + recoveryAmount + " mana!");

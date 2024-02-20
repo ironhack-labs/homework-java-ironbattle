@@ -4,11 +4,16 @@ public abstract class Character implements Attacker {
     private String id;
     private int hp;
     private boolean isAlive=true;
+    private String currentAttack;
+    private String currentAbility;
+
 
     public Character(String name, int hp) {
         setName(name);
         setHp(hp);
         assignId();
+        setCurrentAttack("None");
+        setCurrentAbility("None");
     }
 
 
@@ -48,6 +53,22 @@ public abstract class Character implements Attacker {
         return this.id;
     }
 
+    public String getCurrentAttack() {
+        return currentAttack;
+    }
+
+    public void setCurrentAttack(String currentAttack) {
+        this.currentAttack = currentAttack;
+    }
+    public String getCurrentAbility() {
+        return currentAbility;
+    }
+
+    public void setCurrentAbility(String currentAbility) {
+        this.currentAbility = currentAbility;
+    }
     @Override
     public abstract void attack(Character character);
+    //public abstract void useAbility();
+
 }
