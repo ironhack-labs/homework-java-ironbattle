@@ -9,6 +9,7 @@ public class CharacterImporter {
     public static List<Character> importCharactersFromCSV(String filename) { //Imports the file called in the main class
         List<Character> characters = new ArrayList<>(); /// Initializes the List
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) { ///This reads the file
+            String header = br.readLine();
             String line;
             while ((line = br.readLine()) != null) {
                 String[] data = line.split(",");
@@ -18,19 +19,30 @@ public class CharacterImporter {
                 String characterType = data[0].trim();
                 String name = data[1].trim();
                 int hp = Integer.parseInt(data[2].trim());
-                if (characterType.equalsIgnoreCase("Warrior")) {
-                    int stamina = Integer.parseInt(data[3].trim());
-                    int strength = Integer.parseInt(data[4].trim());
-                    characters.add(new Warrior(name, hp, stamina, strength));
-                } else if (characterType.equalsIgnoreCase("Wizard")) {
-                    int mana = Integer.parseInt(data[3].trim());
-                    int intelligence = Integer.parseInt(data[4].trim());
-                    characters.add(new Wizard(name, hp, mana, intelligence));
+                int attribute1 = Integer.parseInt(data[3].trim());
+                int attribute2 = Integer.parseInt(data[4].trim());
+
+                if ((characterType.equalsIgnoreCase("Warrior") && isValidWarrior(attribute1, attribute2, hp))
+                        || (characterType.equalsIgnoreCase("Wizard") && isValidWizard(attribute1, attribute2, hp))) {
+                    if (characterType.equalsIgnoreCase("Warrior")) {
+                        characters.add(new Warrior(name, hp, attribute1, attribute2));
+                    } else if (characterType.equalsIgnoreCase("Wizard")) {
+                        characters.add(new Wizard(name, hp, attribute1, attribute2));
+                    }
+                } else {
+                    System.out.println("Skipping character: " + name + " - Attribute values are not valid.");
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
         return characters;
+    }
+    private static boolean isValidWarrior(int stamina, int strength, int hp) {
+        return stamina >= 10 && stamina <= 50 && strength >= 1 && strength <= 10 && hp >= 100 && hp <= 200;
+    }
+
+    private static boolean isValidWizard(int mana, int intelligence, int hp) {
+        return mana >= 10 && mana <= 50 && intelligence >= 1 && intelligence <= 50 && hp >= 50 && hp <= 100;
     }
 }

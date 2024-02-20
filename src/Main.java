@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.List;
-import java.util.Scanner;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -40,7 +37,7 @@ public class Main {
         CharacterInput characterInput;
         List<Character> characters = new ArrayList<>();
         if (option.equals("2")){
-            characters = CharacterImporter.importCharactersFromCSV("characters.csv");
+            characters = CharacterImporter.importCharactersFromCSV("./src/characters.csv");
         } else {
             for (int i=0; i<2; i++){
                 if (option.equals("1")){
@@ -81,6 +78,23 @@ public class Main {
     }
 
     static void runBattle(List<Character> characters){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Choose two characters for battle:");
+        for (int i = 0; i < characters.size(); i++) {
+            System.out.println((i + 1) + ". " + characters.get(i).getName());
+        }
+        int firstCharacterIndex;
+        do {
+            System.out.print("Choose the first character (Enter corresponding number): ");
+            firstCharacterIndex = scanner.nextInt() - 1;
+        } while (firstCharacterIndex < 0 || firstCharacterIndex >= characters.size());
+        int secondCharacterIndex;
+        do {
+            System.out.print("Choose the second character (Enter corresponding number): ");
+            secondCharacterIndex = scanner.nextInt() - 1;
+        } while (secondCharacterIndex < 0 || secondCharacterIndex >= characters.size() || secondCharacterIndex == firstCharacterIndex);
+
         Character firstCharacter = characters.get(0);
         Character secondCharacter = characters.get(1);
 
@@ -99,39 +113,3 @@ public class Main {
 
 
 }
-//System.out.println("Let's create first character!");
-//Upload by CSV method  BONUS 1
-       /* List<Character> characters = CharacterImporter.importCharactersFromCSV("characters.csv"); // Path to the CSV file.
-       // To check if characters.csv were uploaded successfully
-        if (characters.isEmpty()) {
-            System.out.println("No characters loaded from CSV. Adeuuu...");
-            return;
-        }
-        /// To print all characters
-        System.out.println("Characters loaded from CSV:");
-        for (Character character : characters) {
-            System.out.println(character.getName() + " (" + character.getClass().getSimpleName() + ")");
-        }
-
-        //// To choose the characters to fight
-        Scanner scanner = new Scanner(System.in);
-        int firstCharacterIndex, secondCharacterIndex;
-        do {
-            System.out.println("Choose the first character for battle (Enter corresponding number):");
-            firstCharacterIndex = scanner.nextInt() - 1;
-        } while (firstCharacterIndex < 0 || firstCharacterIndex >= characters.size());
-
-        do {
-            System.out.println("Choose the second character for battle (Enter corresponding number):");
-            secondCharacterIndex = scanner.nextInt() - 1;
-        } while (secondCharacterIndex < 0 || secondCharacterIndex >= characters.size() || secondCharacterIndex == firstCharacterIndex);
-
-       */
-
-  /* public static void printInfoCharacter(CharacterInput character){
-        System.out.println("Fighter 1: " + character.getName());
-        System.out.println("Health points: " + character.getHP());
-        System.out.println("Attribute1: " + character.getAttribute1());
-        System.out.println("Attribute2: " + character.getAttribute2());
-
-    }*/
