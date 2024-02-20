@@ -4,20 +4,37 @@ public class BattleSimulator {
     public void battle(Character character1, Character character2) {
         boolean battleOver = false;
 
+        // Starting information
+        System.out.println("--------------------");
+        System.out.println("Contenders:");
+        if (character1 instanceof Warrior) {
+            System.out.println(character1.getName() + " - Starting HP: " + character1.getHp() + ". Starting Stamina: " + ((Warrior) character1).getStamina() + ".");
+        } else if (character1 instanceof Wizard) {
+            System.out.println(character2.getName() + " - Starting HP: " + character1.getHp() + ". Starting Mana: " + ((Wizard) character1).getMana() + ".");
+        }
+        if (character2 instanceof Warrior) {
+            System.out.println(character1.getName() + " - Starting HP: " + character2.getHp() + ". Starting Stamina: " + ((Warrior) character2).getStamina() + ".");
+        } else if (character2 instanceof Wizard) {
+            System.out.println(character2.getName() + " - Starting HP: " + character2.getHp() + ". Starting Mana: " + ((Wizard) character2).getMana() + ".");
+        }
+        System.out.println("--------------------");
+
+        int roundNumber = 1;
+
+        // Battle rounds
         while (!battleOver) {
-            int prevHealth1 = character1.getHp();
-            int prevHealth2 = character2.getHp();
+            System.out.println("**Round #" + roundNumber + "**");
 
             character1.attack(character2);
             character2.attack(character1);
 
-            int damage1 = prevHealth2 - character2.getHp();
-            int damage2 = prevHealth1 - character1.getHp();
+            character1.setHp(Math.max(character1.getHp(), 0));
+            character2.setHp(Math.max(character2.getHp(), 0));
 
             if (character1 instanceof Warrior) {
-                System.out.println(((Warrior) character1).getName() + " - Remaining HP: " + character1.getHp() + ". Remaining Stamina: " + ((Warrior) character1).getStamina()+ ".");
+                System.out.println(((Warrior) character1).getName() + " - Remaining HP: " + character1.getHp() + ". Remaining Stamina: " + ((Warrior) character1).getStamina() + ".");
             } else if (character1 instanceof Wizard) {
-                System.out.println(((Wizard) character1).getName() + " - Remaining HP: " + character1.getHp() + ". Remaining Mana: " + ((Wizard) character1).getMana()+ ".");
+                System.out.println(((Wizard) character1).getName() + " - Remaining HP: " + character1.getHp() + ". Remaining Mana: " + ((Wizard) character1).getMana() + ".");
             }
 
             if (character2 instanceof Warrior) {
@@ -41,6 +58,7 @@ public class BattleSimulator {
             }
 
             System.out.println("--------------------");
+            roundNumber++;
         }
     }
 }

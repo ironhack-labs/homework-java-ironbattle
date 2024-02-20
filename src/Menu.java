@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -5,16 +9,18 @@ public class Menu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("WELCOME TO THE IRONBATTLE!");
+        System.out.println("WELCOME TO THE IRONBATTLE! (by Anna de Pablo Puig)");
 
         while (true) {
             System.out.println("Select game mode:");
             System.out.println("1) Create characters");
             System.out.println("2) Create random characters");
-            System.out.println("3) Exit");
+            System.out.println("3) Import characters from CSV file");
+            System.out.println("4) Exit");
             System.out.println("Write the number which matches your option: ");
 
             int choice = scanner.nextInt();
+            scanner.nextLine(); // limpiar el buffer
 
             switch (choice) {
                 case 1:
@@ -27,6 +33,9 @@ public class Menu {
                     createRandomCharacters();
                     break;
                 case 3:
+                    importCharacters(scanner);
+                    break;
+                case 4:
                     System.out.println("You chose to leave the game. Goodbye.");
                     System.exit(0);
                     break;
@@ -108,5 +117,57 @@ public class Menu {
 
         BattleSimulator simulator = new BattleSimulator();
         simulator.battle(character1, character2);
+    }
+
+    private static void importCharacters(Scanner scanner) {
+        System.out.println("Enter the complete route of the CSV file to import characters from:");
+        System.out.println("(Remember that the format of the information passed must be 'name,health,type')");
+        String fileName = scanner.nextLine();
+
+        // Read characters from the CSV file
+        Character[] characters = readCharactersFromCSV(fileName);
+
+        // Ensure correct number of characters in file
+        if (characters.length != 2) {
+            System.out.println("Invalid number of characters imported. Please ensure the CSV file contains exactly 2 characters.");
+            return;
+        }
+
+        BattleSimulator simulator = new BattleSimulator();
+        simulator.battle(characters[0], characters[1]);
+    }
+
+    private static Character[] readCharactersFromCSV(String fileName) {
+        List<Character> characters = new ArrayList<>();
+
+        int staminaOrMana = 0;
+        int strengthOrIntelligence = 0;
+
+        // Read CSV file
+        try (Scanner scanner = new Scanner(new File(fileName))) {
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                String[] info = line.split(",");
+
+                // Extract name,health,type
+                String name = info[0];
+                int health = Integer.parseInt(info[1]);
+                String type = info[2];
+
+                // Pass info to characters list
+                if (health >= 100 && health <= 200 && (type.equals("Warrior") || type.equals("Wizard"))) {
+                    characters.add(type.equals("Warrior") ?
+                            new Warrior(name, health, staminaOrMana, strengthOrIntelligence) :
+                            new Wizard(name, health, staminaOrMana, strengthOrIntelligence));
+                } else {
+                    System.out.println("Invalid character information: " + line);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error while reading file: " + e.getMessage());
+        }
+
+        // Convert to array so it can be used in battle()
+        return characters.toArray(new Character[0]);
     }
 }
