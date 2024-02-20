@@ -81,9 +81,6 @@ public class Wizard extends Character{
 
         //set the attack for record
         setCurrentAttack("Fireball");
-
-        // Print message
-        // System.out.println(getName() + " attacked " + enemy.getName() + " with a fireball for " + fireballDamage + " damage!");
     }
 
     private void staffHit(Character enemy){
@@ -97,9 +94,6 @@ public class Wizard extends Character{
 
         //set the attack for record
         setCurrentAttack("Staff Hit");
-
-        // Print message
-        // System.out.println(getName() + " attacked " + enemy.getName() + " with a staff for " + staffHitDamage + " damage!");
     }
 
     private void recovery(){
@@ -108,9 +102,6 @@ public class Wizard extends Character{
 
          //set the ability for record
         setCurrentAbility("Recovery");
-
-       // Print message
-       // System.out.println(getName() + " recovered " + recoveryAmount + " mana!");
     }
 
 }
