@@ -57,22 +57,38 @@ public class Menu {
     }
 
     private static void createRandomCharacters() {
-        // Generate random values for warrior
-        String warriorName = "Warrior";
-        int warriorHealth = (int) (Math.random() * 101) + 100; // between 100-200
-        int warriorStamina = (int) (Math.random() * 51) + 50; // between 50-100
-        int warriorStrength = (int) (Math.random() * 11) + 5; // between 5-15
+        // Generate random values for the first character
+        String name1 = (Math.random() < 0.5 ? "Wizard" : "Warrior") + " (p. 1)";
+        int health1 = (int) (Math.random() * 101) + 100; // between 100-200
+        int manaOrStamina1 = (int) (Math.random() * 51) + 50; // between 50-100
+        int strengthOrIntelligence1 = (int) (Math.random() * 11) + 5; // between 5-15
 
-        // Generate random values for wizard
-        String wizardName = "Wizard";
-        int wizardHealth = (int) (Math.random() * 101) + 100; // between 100-200
-        int wizardMana = (int) (Math.random() * 51) + 50; // between 50-100
-        int wizardIntelligence = (int) (Math.random() * 11) + 5; // between 5-15
+        // Generate random values for the second character
+        String name2 = (Math.random() < 0.5 ? "Wizard" : "Warrior") + " (p. 2)";
+        int health2 = (int) (Math.random() * 101) + 100; // between 100-200
+        int manaOrStamina2 = (int) (Math.random() * 51) + 50; // between 50-100
+        int strengthOrIntelligence2 = (int) (Math.random() * 11) + 5; // between 5-15
 
-        Warrior warrior = new Warrior(warriorName, warriorHealth, warriorStamina, warriorStrength);
-        Wizard wizard = new Wizard(wizardName, wizardHealth, wizardMana, wizardIntelligence);
+        // Create the characters
+        Character character1;
+        Character character2;
 
+        // Create the first character
+        if (name1.startsWith("Wizard")) {
+            character1 = new Wizard(name1, health1, manaOrStamina1, strengthOrIntelligence1);
+        } else {
+            character1 = new Warrior(name1, health1, manaOrStamina1, strengthOrIntelligence1);
+        }
+
+        // Create the second character
+        if (name2.startsWith("Wizard")) {
+            character2 = new Wizard(name2, health2, manaOrStamina2, strengthOrIntelligence2);
+        } else {
+            character2 = new Warrior(name2, health2, manaOrStamina2, strengthOrIntelligence2);
+        }
+
+        // Start the battle
         BattleSimulator simulator = new BattleSimulator();
-        simulator.battle(warrior, wizard);
+        simulator.battle(character1, character2);
     }
 }
