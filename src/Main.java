@@ -27,7 +27,7 @@ public class Main {
 
         List<Character> characters = new ArrayList<>();
         if (option.equals("2")){
-            characters = CharacterImporter.importCharactersFromCSV("characters.csv");
+            characters = CharacterImporter.importCharactersFromCSV("./src/characters.csv");
         } else {
             CharacterInput characterInput;
             for (int i=0; i<2; i++){
@@ -42,58 +42,74 @@ public class Main {
         return characters;
     }
 
+    public static void printInfoCharacters(List<Character> characters){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Our characters are ready:");
+        for (Character character : characters) {
+
+            if (character instanceof Warrior) {
+                Printer.asciiWarriorChar();
+                System.out.println("Warrior " + character.getName());
+                System.out.println("\tHealth points: " + character.getHp());
+                System.out.println("\tStamina: " + ((Warrior) character).getStamina());
+                System.out.println("\tStrength: " + ((Warrior) character).getStrength() + "\n");
+            } else {
+                Printer.asciiWizardChar();
+                System.out.println("Wizard " + character.getName());
+                System.out.println("\tHealth points: " + character.getHp());
+                System.out.println("\tMana: " + ((Wizard) character).getMana());
+                System.out.println("\tIntelligence: " + ((Wizard) character).getIntelligence() + "\n");
+            }
+        }
+        System.out.println("Press Enter to start the battle.");
+        scanner.nextLine();
+    }
+
+
     static void runBattle(List<Character> characters){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Choose two characters for battle:");
+        for (int i = 0; i < characters.size(); i++) {
+            System.out.println((i + 1) + ". " + characters.get(i).getName());
+        }
+        int firstCharacterIndex;
+        do {
+            System.out.print("Choose the first character (Enter corresponding number): ");
+            firstCharacterIndex = scanner.nextInt() - 1;
+        } while (firstCharacterIndex < 0 || firstCharacterIndex >= characters.size());
+        int secondCharacterIndex;
+        do {
+            System.out.print("Choose the second character (Enter corresponding number): ");
+            secondCharacterIndex = scanner.nextInt() - 1;
+        } while (secondCharacterIndex < 0 || secondCharacterIndex >= characters.size() || secondCharacterIndex == firstCharacterIndex);
+
         Character firstCharacter = characters.get(0);
         Character secondCharacter = characters.get(1);
 
         System.out.println("Let the battle begin between " + firstCharacter.getName() + " and " + secondCharacter.getName() + "!");
-        while(firstCharacter.isAlive() && secondCharacter.isAlive()){
+        int round = 1;
+//        while(firstCharacter.isAlive() && secondCharacter.isAlive()){
+//            firstCharacter.attack(secondCharacter);
+//            System.out.println(secondCharacter.getHp());
+//            secondCharacter.attack(firstCharacter);
+//            System.out.println(firstCharacter.getHp());
+//            Printer.asciiRoundStats(firstCharacter,secondCharacter,round);
+//            round++;
+//        }
+
+        do {
             firstCharacter.attack(secondCharacter);
             System.out.println(secondCharacter.getHp());
             secondCharacter.attack(firstCharacter);
             System.out.println(firstCharacter.getHp());
-
-        }
+            Printer.asciiRoundStats(firstCharacter,secondCharacter,round);
+           round++;
+        }while(firstCharacter.isAlive() && secondCharacter.isAlive());
         // Determine and print the winner. This can be added at the end of this code to announce the winner.
         Character winner = firstCharacter.isAlive() ? firstCharacter : secondCharacter;
         System.out.println("The winner is: " + winner.getName());
+        Printer.asciiWinner();
     }
-
-
 }
-//System.out.println("Let's create first character!");
-//Upload by CSV method  BONUS 1
-       /* List<Character> characters = CharacterImporter.importCharactersFromCSV("characters.csv"); // Path to the CSV file.
-       // To check if characters.csv were uploaded successfully
-        if (characters.isEmpty()) {
-            System.out.println("No characters loaded from CSV. Adeuuu...");
-            return;
-        }
-        /// To print all characters
-        System.out.println("Characters loaded from CSV:");
-        for (Character character : characters) {
-            System.out.println(character.getName() + " (" + character.getClass().getSimpleName() + ")");
-        }
-
-        //// To choose the characters to fight
-        Scanner scanner = new Scanner(System.in);
-        int firstCharacterIndex, secondCharacterIndex;
-        do {
-            System.out.println("Choose the first character for battle (Enter corresponding number):");
-            firstCharacterIndex = scanner.nextInt() - 1;
-        } while (firstCharacterIndex < 0 || firstCharacterIndex >= characters.size());
-
-        do {
-            System.out.println("Choose the second character for battle (Enter corresponding number):");
-            secondCharacterIndex = scanner.nextInt() - 1;
-        } while (secondCharacterIndex < 0 || secondCharacterIndex >= characters.size() || secondCharacterIndex == firstCharacterIndex);
-
-       */
-
-  /* public static void printInfoCharacter(CharacterInput character){
-        System.out.println("Fighter 1: " + character.getName());
-        System.out.println("Health points: " + character.getHP());
-        System.out.println("Attribute1: " + character.getAttribute1());
-        System.out.println("Attribute2: " + character.getAttribute2());
-
-    }*/
