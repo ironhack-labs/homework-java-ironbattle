@@ -42,31 +42,6 @@ public class Main {
         return characters;
     }
 
-    public static void printInfoCharacters(List<Character> characters){
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Our characters are ready:");
-        for (Character character : characters) {
-
-            if (character instanceof Warrior) {
-                Printer.asciiWarriorChar();
-                System.out.println("Warrior " + character.getName());
-                System.out.println("\tHealth points: " + character.getHp());
-                System.out.println("\tStamina: " + ((Warrior) character).getStamina());
-                System.out.println("\tStrength: " + ((Warrior) character).getStrength() + "\n");
-            } else {
-                Printer.asciiWizardChar();
-                System.out.println("Wizard " + character.getName());
-                System.out.println("\tHealth points: " + character.getHp());
-                System.out.println("\tMana: " + ((Wizard) character).getMana());
-                System.out.println("\tIntelligence: " + ((Wizard) character).getIntelligence() + "\n");
-            }
-        }
-        System.out.println("Press Enter to start the battle.");
-        scanner.nextLine();
-    }
-
-
     static void runBattle(List<Character> characters){
         Scanner scanner = new Scanner(System.in);
 
