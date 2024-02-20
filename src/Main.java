@@ -14,7 +14,7 @@ public class Main {
         PrintMenus.charactersCreatorMenu();
         Scanner scanner = new Scanner(System.in);
         do {
-            String option = scanner.nextLine();
+            String option = scanner.nextLine().trim();
             if (option.equals("1") || option.equals("2") || option.equals("3")){
                 return characterCreator(option);
             } else {
@@ -24,11 +24,12 @@ public class Main {
     }
 
     public static List<Character> characterCreator(String option){
-        CharacterInput characterInput;
+
         List<Character> characters = new ArrayList<>();
         if (option.equals("2")){
             characters = CharacterImporter.importCharactersFromCSV("characters.csv");
         } else {
+            CharacterInput characterInput;
             for (int i=0; i<2; i++){
                 if (option.equals("1")){
                     characterInput = new CharacterInput();
