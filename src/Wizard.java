@@ -15,19 +15,19 @@ public class Wizard extends Character {
 
     public static boolean validateInputByType(PropertyWizard property_wizard, int property_value) {
         switch (property_wizard) {
-            case PropertyWizard.HP:
+            case HP:
                 if (property_value < HP_RANGE[0] || property_value > HP_RANGE[1]) {
                     System.err.println("HP must be between " + HP_RANGE[0] + " and " + HP_RANGE[1]);
                     return false;
                 }
                 break;
-            case PropertyWizard.MANA:
+            case MANA:
                 if (property_value < MANA_RANGE[0] || property_value > MANA_RANGE[1]) {
                     System.err.println("Mana must be between " + MANA_RANGE[0] + " and " + MANA_RANGE[1]);
                     return false;
                 }
                 break;
-            case PropertyWizard.INTELLIGENCE:
+            case INTELLIGENCE:
                 if (property_value < INTELLIGENCE_RANGE[0] || property_value > INTELLIGENCE_RANGE[1]) {
                     System.err.println("Intelligence must be between " + INTELLIGENCE_RANGE[0] + " and " + INTELLIGENCE_RANGE[1]);
                     return false;

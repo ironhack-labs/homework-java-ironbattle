@@ -47,89 +47,111 @@ public class ManualCreator {
 
         boolean statsOk = false;
 
-        while(statsOk == false){
-            //Selector for HP
-            optionSelected = false;
-            int [] hpMinMax = {0,0};
-            if(characterClass == 1){
-                hpMinMax = Warrior.getHP_RANGE();
-            }else{
-                hpMinMax = Wizard.getHP_RANGE();
-            }
-            System.out.println("Set a value for HP between "+hpMinMax[0] +" and "+ hpMinMax[1]+" for the character:");
-            while (optionSelected == false) {
-                try {
-                    characterHp = scanner.nextInt();
-                    scanner.nextLine();
-                    optionSelected = true;
-                } catch (InputMismatchException ime) {
-                    scanner.nextLine();
-                    System.err.println("Ops! seems that you insert a non valid value. Please, try it again:");
-                }
-            }
 
-
-            //Selector for parameter 1
-            optionSelected = false;
-            String parameter1;
-            int [] parameter1Range = {0,0};
-            if(characterClass == 1){
-                parameter1Range = Warrior.getSTAMINA_RANGE();
-                parameter1 = "stamina";
-            }else{
-                parameter1Range = Wizard.getMANA_RANGE();
-                parameter1 =  "mana";
-            }
-            System.out.println("Set a value for "+parameter1+" between "+parameter1Range[0] +" and "+ parameter1Range[1]+" for the character:");
-            while (optionSelected == false) {
-                try {
-                    characterParameter1 = scanner.nextInt();
-                    scanner.nextLine();
-                    optionSelected = true;
-                } catch (InputMismatchException ime) {
-                    scanner.nextLine();
-                    System.err.println("Ops! seems that you insert a non valid value. Please, try it again:");
-                }
-            }
-
-
-            //Selector for parameter 2
-            optionSelected = false;
-            String parameter2;
-            int [] parameter2Range = {0,0};
-            if(characterClass == 1){
-                parameter2Range = Warrior.getSTRENGTH_RANGE();
-                parameter2 = "strength";
-            }else{
-                parameter2Range = Wizard.getINTELLIGENCE_RANGE();
-                parameter2 =  "intelligence";
-            }
-            System.out.println("Set a value for "+parameter2+" between "+parameter2Range[0] +" and "+ parameter2Range[1]+" for the character:");
-            while (optionSelected == false) {
-                try {
-                    characterParameter2 = scanner.nextInt();
-                    optionSelected = true;
-                    scanner.nextLine();
-                } catch (InputMismatchException ime) {
-                    scanner.nextLine();
-                    System.err.println("Ops! seems that you insert a non valid value. Please, try it again:");
-                }
-            }
-
-            if(characterClass == 1){
-                if(Warrior.validateInput(characterHp,characterParameter1,characterParameter2)){
-                    statsOk = true;
+        //Selector for HP
+        optionSelected = false;
+        int [] hpMinMax = {0,0};
+        if(characterClass == 1){
+            hpMinMax = Warrior.getHP_RANGE();
+        }else{
+            hpMinMax = Wizard.getHP_RANGE();
+        }
+        System.out.println("Set a value for HP between "+hpMinMax[0] +" and "+ hpMinMax[1]+" for the character:");
+        while (optionSelected == false) {
+            try {
+                characterHp = scanner.nextInt();
+                if(characterClass == 1){
+                    if(Warrior.validateInputByType(Warrior.PropertyWarrior.HP,characterHp)==true){
+                        optionSelected = true;
+                    }else{
+                        System.err.println("The value is out of range, please try it again:");
+                    }
                 }else{
-                    System.err.println("Please, try it again");
+                    if(Wizard.validateInputByType(Wizard.PropertyWizard.HP,characterHp)){
+                        optionSelected = true;
+                    }else{
+                        System.err.println("The value is out of range, please try it again:");
+                    }
                 }
-            }else{
-                if(Wizard.validateInput(characterHp,characterParameter1,characterParameter2)){
-                    statsOk = true;
-                }else{
-                    System.err.println("Please, try it again");
-                }
+                scanner.nextLine();
+            } catch (InputMismatchException ime) {
+                scanner.nextLine();
+                System.err.println("Ops! seems that you insert a non valid value. Please, try it again:");
             }
         }
+
+
+        //Selector for parameter 1
+        optionSelected = false;
+        String parameter1;
+        int [] parameter1Range = {0,0};
+        if(characterClass == 1){
+            parameter1Range = Warrior.getSTAMINA_RANGE();
+            parameter1 = "stamina";
+        }else{
+            parameter1Range = Wizard.getMANA_RANGE();
+            parameter1 =  "mana";
+        }
+        System.out.println("Set a value for "+parameter1+" between "+parameter1Range[0] +" and "+ parameter1Range[1]+" for the character:");
+        while (optionSelected == false) {
+            try {
+                characterParameter1 = scanner.nextInt();
+                if(characterClass == 1){
+                    if(Warrior.validateInputByType(Warrior.PropertyWarrior.STAMINA,characterParameter1)==true){
+                        optionSelected = true;
+                    }else{
+                        System.err.println("The value is out of range, please try it again:");
+                    }
+                }else{
+                    if(Wizard.validateInputByType(Wizard.PropertyWizard.MANA,characterParameter1)){
+                        optionSelected = true;
+                    }else{
+                        System.err.println("The value is out of range, please try it again:");
+                    }
+                }
+                scanner.nextLine();
+            } catch (InputMismatchException ime) {
+                scanner.nextLine();
+                System.err.println("Ops! seems that you insert a non valid value. Please, try it again:");
+            }
+        }
+
+
+        //Selector for parameter 2
+        optionSelected = false;
+        String parameter2;
+        int [] parameter2Range = {0,0};
+        if(characterClass == 1){
+            parameter2Range = Warrior.getSTRENGTH_RANGE();
+            parameter2 = "strength";
+        }else{
+            parameter2Range = Wizard.getINTELLIGENCE_RANGE();
+            parameter2 =  "intelligence";
+        }
+        System.out.println("Set a value for "+parameter2+" between "+parameter2Range[0] +" and "+ parameter2Range[1]+" for the character:");
+        while (optionSelected == false) {
+            try {
+                characterParameter2 = scanner.nextInt();
+                if(characterClass == 1){
+                    if(Warrior.validateInputByType(Warrior.PropertyWarrior.STRENGTH,characterParameter2)==true){
+                        optionSelected = true;
+                    }else{
+                        System.err.println("The value is out of range, please try it again:");
+                    }
+                }else{
+                    if(Wizard.validateInputByType(Wizard.PropertyWizard.INTELLIGENCE,characterParameter2)){
+                        optionSelected = true;
+                    }else{
+                        System.err.println("The value is out of range, please try it again:");
+                    }
+                }
+                scanner.nextLine();
+            } catch (InputMismatchException ime) {
+                scanner.nextLine();
+                System.err.println("Ops! seems that you insert a non valid value. Please, try it again:");
+            }
+        }
+
 
         //Creation of the character
         if (characterClass == 1) {

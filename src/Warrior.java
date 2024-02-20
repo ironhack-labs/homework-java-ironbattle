@@ -14,19 +14,19 @@ public class Warrior extends Character {
     }
     public static boolean validateInputByType(PropertyWarrior property_warrior, int property_value) {
         switch (property_warrior) {
-            case PropertyWarrior.HP:
+            case HP:
                 if (property_value < HP_RANGE[0] || property_value > HP_RANGE[1]) {
                     System.err.println("HP must be between " + HP_RANGE[0] + " and " + HP_RANGE[1]);
                     return false;
                 }
                 break;
-            case PropertyWarrior.STAMINA:
+            case STAMINA:
                 if (property_value < STAMINA_RANGE[0] || property_value > STAMINA_RANGE[1]) {
                     System.err.println("Stamina must be between " + STAMINA_RANGE[0] + " and " + STAMINA_RANGE[1]);
                     return false;
                 }
                 break;
-            case PropertyWarrior.STRENGTH:
+            case STRENGTH:
                 if (property_value < STRENGTH_RANGE[0] || property_value > STRENGTH_RANGE[1]) {
                     System.err.println("Strength must be between " + STRENGTH_RANGE[0] + " and " + STRENGTH_RANGE[1]);
                     return false;

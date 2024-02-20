@@ -96,5 +96,4 @@ public class Main {
         System.out.println("4- Start Battle             \n");
         System.out.println("5- Exit: \n");
     }
-
 }
