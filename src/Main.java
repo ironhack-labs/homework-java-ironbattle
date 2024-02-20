@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.List;
-import java.util.Scanner;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -134,4 +131,5 @@ public class Main {
         System.out.println("Attribute1: " + character.getAttribute1());
         System.out.println("Attribute2: " + character.getAttribute2());
 
-    }*/
+
+}
