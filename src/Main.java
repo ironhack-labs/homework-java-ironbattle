@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
         List<Character> characters = getCharacters();
         printInfoCharacters(characters);
         runBattle(characters);
@@ -63,11 +62,13 @@ public class Main {
         for (Character character : characters) {
 
             if (character instanceof Warrior) {
+                Printer.asciiWarriorChar();
                 System.out.println("Warrior " + character.getName());
                 System.out.println("\tHealth points: " + character.getHp());
                 System.out.println("\tStamina: " + ((Warrior) character).getStamina());
                 System.out.println("\tStrength: " + ((Warrior) character).getStrength() + "\n");
             } else {
+                Printer.asciiWizardChar();
                 System.out.println("Wizard " + character.getName());
                 System.out.println("\tHealth points: " + character.getHp());
                 System.out.println("\tMana: " + ((Wizard) character).getMana());
@@ -83,19 +84,29 @@ public class Main {
         Character secondCharacter = characters.get(1);
 
         System.out.println("Let the battle begin between " + firstCharacter.getName() + " and " + secondCharacter.getName() + "!");
-        while(firstCharacter.isAlive() && secondCharacter.isAlive()){
+        int round = 1;
+//        while(firstCharacter.isAlive() && secondCharacter.isAlive()){
+//            firstCharacter.attack(secondCharacter);
+//            System.out.println(secondCharacter.getHp());
+//            secondCharacter.attack(firstCharacter);
+//            System.out.println(firstCharacter.getHp());
+//            Printer.asciiRoundStats(firstCharacter,secondCharacter,round);
+//            round++;
+//        }
+
+        do {
             firstCharacter.attack(secondCharacter);
             System.out.println(secondCharacter.getHp());
             secondCharacter.attack(firstCharacter);
             System.out.println(firstCharacter.getHp());
-
-        }
+            Printer.asciiRoundStats(firstCharacter,secondCharacter,round);
+           round++;
+        }while(firstCharacter.isAlive() && secondCharacter.isAlive());
         // Determine and print the winner. This can be added at the end of this code to announce the winner.
         Character winner = firstCharacter.isAlive() ? firstCharacter : secondCharacter;
         System.out.println("The winner is: " + winner.getName());
+        Printer.asciiWinner();
     }
-
-
 }
 //System.out.println("Let's create first character!");
 //Upload by CSV method  BONUS 1

@@ -5,7 +5,7 @@ public class Warrior extends Character implements Attacker {
     private int stamina;
     private int strength;
 
-    Utils utils = new Utils();
+//    Utils utils = new Utils();
 
     public Warrior(String name, int hp, int stamina, int strength) {
         super(name,hp);
@@ -15,12 +15,13 @@ public class Warrior extends Character implements Attacker {
 
     // Setters
     public void setStamina(int stamina) {
-        if (stamina< 10 || stamina>50) {
-            this.stamina = -1;
-            System.out.println("Invalid value for stamina");
-        } else {
-            this.stamina = stamina;
-        }
+//        if (stamina< 10 || stamina>50) {
+//            this.stamina = -1;
+//            System.out.println("Invalid value for stamina");
+//        } else {
+//            this.stamina = stamina;
+//        }
+        this.stamina = stamina;
     }
 
     public void setStrength(int strength) {
@@ -45,7 +46,7 @@ public class Warrior extends Character implements Attacker {
     @Override
     public void attack(Character character) {
 
-        int attackType = utils.generateRandomNumber();
+        int attackType = Utils.generateRandomNumber();
         if(attackType == 0 && canMakeHeavyAttack()){
                     heavyAttack(character);
                     Printer.asciiWarriorAttack("heavyAttack");
