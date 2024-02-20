@@ -191,6 +191,11 @@ public class Battle {
             if(getWinner()!=null){
                 battleRecord.add("The winner is " + getWinner().getName()
                         + "!!!. Better luck next time: " + getLooser().getName());
+                if(getWinner() instanceof Wizard){
+                    battleRecord.add(AsciiArt.WizardASCII());
+                } else {
+                    battleRecord.add(AsciiArt.WarriorASCII());
+                }
             }
         }
     }

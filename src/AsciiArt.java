@@ -1,5 +1,5 @@
 public class AsciiArt {
-    private void WizardASCII (){
+    static String WizardASCII(){
         String magoASCII =
                 "                       ,---.\n" +
                         "                       /    |\n" +
@@ -28,11 +28,11 @@ public class AsciiArt {
                         "        || |    (        ,' /   /   |\n" +
                         "        ||                ,'   /    |";
 
-        System.out.println(magoASCII);
+        return(magoASCII);
 
     }
 
-    private void WarriorASCII (){
+    static String WarriorASCII(){
         String warriorASCII=
                 "      _,.\n" +
                         "    ,` -.)\n" +
@@ -55,10 +55,10 @@ public class AsciiArt {
                         "    |     {__) \n" +
                         "          ()";
 
-        System.out.println(warriorASCII);
+        return warriorASCII;
     }
 
-    private void WizardStart() {
+    static void WizardStart() {
             String wizardStart =
                     "                                                                                                    \n" +
                             "                                                                                                    \n" +
@@ -198,7 +198,7 @@ public class AsciiArt {
             System.out.println(wizardFireball);
     }
 
-    private void WarriorStart(){
+    static void WarriorStart(){
             String warriorStart =
                     "                                                                                                                \n" +
                             "                                                                                                                \n" +

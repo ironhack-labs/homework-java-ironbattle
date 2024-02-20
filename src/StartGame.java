@@ -35,11 +35,13 @@ public class StartGame {
             }
 
             if (playerChoice.equals("1")) {
+                System.out.println(AsciiArt.WarriorASCII());
                 System.out.println("Choose a name for your Warrior");
                 String name = scanner.nextLine();
                 player = new Warrior(name);
                 break;
             } else if (playerChoice.equals("2")) {
+                System.out.println(AsciiArt.WizardASCII());
                 System.out.println("Choose a name for your Wizard");
                 String name = scanner.nextLine();
                 player = new Wizard(name);
