@@ -1,5 +1,6 @@
 abstract class Character {
-    
+    // ID
+    private static long idCounter = 0;
     private String id;
     private String name;
     private int hp;
@@ -18,7 +19,7 @@ abstract class Character {
     public boolean getIsAlive(){return isAlive;}
 
     //Setters
-    public void setId(String id){this.id = id;}
+    public void setId(String id){this.id = createID();}
     public void setName(String name){this.name = name;}
     public void setHp(int hp){this.hp = hp;}
 
@@ -39,7 +40,10 @@ abstract class Character {
         return true;
     }
   
-   //Migrar el codigo del randomID
+   public static synchronized String createID()
+    {
+        return String.valueOf(idCounter++);
+    }
 }
 
 
