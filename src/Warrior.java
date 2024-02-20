@@ -9,6 +9,34 @@ public class Warrior extends Character {
     private final int HEAVY_ATTACK_STAMINA = 5;
     private static final String[] warriorsNames = new String[]{"Aragorn", "Xena", "Conan", "Mulán", "Wonder Woman", "Samurai Jack", "Thor", "Brienne of Tarth", "Leonidas", "Boudica", "Legolas", "Joan of Arc", "Beowulf", "Attila the Hun", "Cleopatra", "Genghis Khan", "Hua Mulan", "William Wallace", "Ragnar Lothbrok", "Sun Tzu", "Zaraki Kenpachi", "Khal Drogo", "King Arthur", "Spartacus", "Achilles", "Okoye", "Captain America", "Black Panther"};
 
+    public enum PropertyWarrior{
+        HP, STAMINA, STRENGTH
+    }
+    public static boolean validateInputByType(PropertyWarrior property_warrior, int property_value) {
+        switch (property_warrior) {
+            case HP:
+                if (property_value < HP_RANGE[0] || property_value > HP_RANGE[1]) {
+                    System.err.println("HP must be between " + HP_RANGE[0] + " and " + HP_RANGE[1]);
+                    return false;
+                }
+                break;
+            case STAMINA:
+                if (property_value < STAMINA_RANGE[0] || property_value > STAMINA_RANGE[1]) {
+                    System.err.println("Stamina must be between " + STAMINA_RANGE[0] + " and " + STAMINA_RANGE[1]);
+                    return false;
+                }
+                break;
+            case STRENGTH:
+                if (property_value < STRENGTH_RANGE[0] || property_value > STRENGTH_RANGE[1]) {
+                    System.err.println("Strength must be between " + STRENGTH_RANGE[0] + " and " + STRENGTH_RANGE[1]);
+                    return false;
+                }
+                break;
+            default:
+                return false;
+        }
+        return true;
+    }
     public static boolean validateInput(int hp, int stamina, int strength){
         if (hp < HP_RANGE[0] || hp > HP_RANGE[1]) {
             System.err.println("HP must be between " + HP_RANGE[0] + " and " + HP_RANGE[1]);
