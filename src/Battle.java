@@ -169,10 +169,10 @@ public class Battle {
         this.battleRecord=battleRecord;
 
         if(isTieGame())
-            battleRecord.add("We have a tie match between the players. A new match start: ");
+            battleRecord.add("\nWe have a tie match between the players. A new match start:\n \n***************************** ROUND 1 FIGHT *****************************");
         else{
             if(getWinner()!=null){
-                battleRecord.add("The winner is " + getWinner().getName()
+                battleRecord.add("\nThe winner is " + getWinner().getName()
                         + "!!!. Better luck next time: " + getLooser().getName());
                 if(getWinner() instanceof Wizard){
                     battleRecord.add(AsciiArt.WizardASCII());
@@ -197,13 +197,15 @@ public class Battle {
                 if(roundNumberExtract(roundSplitChain)==roundNumber){
                     newBattleRecordList.add(battleIndex);
                 }else{
-                    newBattleRecordList.add("*****************************" + " ROUND " + roundNumberExtract(roundSplitChain) + " FIGHT " + "*****************************");
+
+                    newBattleRecordList.add("\n*****************************" + " ROUND " + roundNumberExtract(roundSplitChain) + " FIGHT " + "*****************************");
                     newBattleRecordList.add(battleIndex);
                     roundNumber++;
                 }
             }else{
                 newBattleRecordList.add(battleIndex);
                 roundNumber=1;
+                //newBattleRecordList.add("\n*****************************" + " ROUND " + roundNumber + " FIGHT " + "*****************************");
             }
 
         }
