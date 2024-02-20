@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Utils {
+public  class Utils {
     static Random random = new Random();
 
     public static int generateRandomNumber(){
