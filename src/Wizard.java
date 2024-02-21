@@ -46,13 +46,13 @@ public class Wizard extends Character implements Attacker {
                     damage = this.intelligence;
                     character.setHp(character.getHp() - damage);
                     this.mana -= 5;
-                    System.out.println(this.getName() + " executed a Fireball for " + damage + " points of damage!");
+                    System.out.println("🥊️\uD83E\uDDD9\u200D\uFE0F" + this.getName() + " executed a Fireball for " + damage + " points of damage!");
                 } else {
                     // No mana for a Fireball, do a Staff hit instead
                     damage = 2;
                     character.setHp(character.getHp() - damage);
                     this.mana += 1;
-                    System.out.println(this.getName() + " didn't have enough mana to execute a Fireball and executed a Staff Hit for " + damage + " points of damage instead. Also, mana has increased 1 point.");
+                    System.out.println("\uD83D\uDEAB\uD83E\uDDD9\u200D\uFE0F" + this.getName() + " didn't have enough mana to execute a Fireball and executed a Staff Hit for " + damage + " points of damage instead. Also, mana has increased 1 point.");
                 }
                 break;
 
@@ -61,10 +61,10 @@ public class Wizard extends Character implements Attacker {
                     damage = 2;
                     character.setHp(character.getHp() - damage);
                     this.mana += 1;
-                    System.out.println(this.getName() + " executed a Staff Hit for " + damage + " points of damage! Mana increases 1 point.");
+                    System.out.println("🥊️\uD83E\uDDD9\u200D\uFE0F" + this.getName() + " executed a Staff Hit for " + damage + " points of damage! Mana increases 1 point.");
                 } else {
                     this.mana +=2;
-                    System.out.println(this.getName() + " didn't have enough mana to execute a Staff Hit. However, mana has increased 2 points.");
+                    System.out.println("\uD83D\uDEAB\uD83E\uDDD9\u200D\uFE0F" + this.getName() + " didn't have enough mana to execute a Staff Hit. However, mana has increased 2 points.");
                 }
                 break;
 
