@@ -6,16 +6,16 @@ public class BattleSimulator {
 
         // Starting information
         System.out.println("--------------------");
-        System.out.println("Contenders:");
+        System.out.println("⚔️Contenders:");
         if (character1 instanceof Warrior) {
-            System.out.println(character1.getName() + " - Starting HP: " + character1.getHp() + ". Starting Stamina: " + ((Warrior) character1).getStamina() + ".");
+            System.out.println("\uD83D\uDDE1\uFE0F" + character1.getName() + " - Starting HP: " + character1.getHp() + ". Starting Stamina: " + ((Warrior) character1).getStamina() + ".");
         } else if (character1 instanceof Wizard) {
-            System.out.println(character2.getName() + " - Starting HP: " + character1.getHp() + ". Starting Mana: " + ((Wizard) character1).getMana() + ".");
+            System.out.println("\uD83E\uDDD9\u200D\uFE0F" + character2.getName() + " - Starting HP: " + character1.getHp() + ". Starting Mana: " + ((Wizard) character1).getMana() + ".");
         }
         if (character2 instanceof Warrior) {
-            System.out.println(character1.getName() + " - Starting HP: " + character2.getHp() + ". Starting Stamina: " + ((Warrior) character2).getStamina() + ".");
+            System.out.println("\uD83D\uDDE1\uFE0F" + character1.getName() + " - Starting HP: " + character2.getHp() + ". Starting Stamina: " + ((Warrior) character2).getStamina() + ".");
         } else if (character2 instanceof Wizard) {
-            System.out.println(character2.getName() + " - Starting HP: " + character2.getHp() + ". Starting Mana: " + ((Wizard) character2).getMana() + ".");
+            System.out.println("\uD83E\uDDD9\u200D\uFE0F" + character2.getName() + " - Starting HP: " + character2.getHp() + ". Starting Mana: " + ((Wizard) character2).getMana() + ".");
         }
         System.out.println("--------------------");
 
@@ -23,7 +23,7 @@ public class BattleSimulator {
 
         // Battle rounds
         while (!battleOver) {
-            System.out.println("**Round #" + roundNumber + "**");
+            System.out.println("** Round #" + roundNumber + " **");
 
             character1.attack(character2);
             character2.attack(character1);
@@ -32,28 +32,31 @@ public class BattleSimulator {
             character2.setHp(Math.max(character2.getHp(), 0));
 
             if (character1 instanceof Warrior) {
-                System.out.println(((Warrior) character1).getName() + " - Remaining HP: " + character1.getHp() + ". Remaining Stamina: " + ((Warrior) character1).getStamina() + ".");
+                System.out.println("~~~");
+                System.out.println("\uD83D\uDDE1\uFE0F" + ((Warrior) character1).getName() + " - ❤️Remaining HP: " + character1.getHp() + ". \uD83D\uDCAARemaining Stamina: " + ((Warrior) character1).getStamina() + ".");
             } else if (character1 instanceof Wizard) {
-                System.out.println(((Wizard) character1).getName() + " - Remaining HP: " + character1.getHp() + ". Remaining Mana: " + ((Wizard) character1).getMana() + ".");
+                System.out.println("~~~");
+                System.out.println("\uD83E\uDDD9\u200D\uFE0F" + ((Wizard) character1).getName() + " - ❤️Remaining HP: " + character1.getHp() + ". \uD83D\uDD2ERemaining Mana: " + ((Wizard) character1).getMana() + ".");
             }
 
             if (character2 instanceof Warrior) {
-                System.out.println(((Warrior) character2).getName() + " - Remaining HP: " + character2.getHp() + ". Remaining Stamina: " + ((Warrior) character2).getStamina()+ ".");
+                System.out.println("\uD83D\uDDE1\uFE0F" + ((Warrior) character2).getName() + " - ❤️Remaining HP: " + character2.getHp() + ". \uD83D\uDCAARemaining Stamina: " + ((Warrior) character2).getStamina()+ ".");
+
             } else if (character2 instanceof Wizard) {
-                System.out.println(((Wizard) character2).getName() + " - Remaining HP: " + character2.getHp() + ". Remaining Mana: " + ((Wizard) character2).getMana() + ".");
+                System.out.println("\uD83E\uDDD9\u200D\uFE0F" + ((Wizard) character2).getName() + " - ❤️Remaining HP: " + character2.getHp() + ". \uD83D\uDD2ERemaining Mana: " + ((Wizard) character2).getMana() + ".");
             }
 
             if (character1.getHp() <= 0 && character2.getHp() <= 0) {
                 System.out.println("--------------------");
-                System.out.println("Both characters died. IT'S A DRAW.");
+                System.out.println("💀Both characters died. IT'S A DRAW.");
                 battleOver = true;
             } else if (character1.getHp() <= 0) {
                 System.out.println("--------------------");
-                System.out.println("Player 2 has died. PLAYER 1 WINS!");
+                System.out.println("💀Player 1 has died. \uD83D\uDC51PLAYER 2 WINS!");
                 battleOver = true;
             } else if (character2.getHp() <= 0) {
                 System.out.println("--------------------");
-                System.out.println("Player 1 has died. PLAYER 2 WINS!");
+                System.out.println("💀Player 2 has died. \uD83D\uDC51PLAYER 1 WINS!");
                 battleOver = true;
             }
 

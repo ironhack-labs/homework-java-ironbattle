@@ -46,16 +46,16 @@ public class Warrior extends Character implements Attacker {
                     damage = this.strength;
                     character.setHp(character.getHp() - damage);
                     this.stamina -= 5;
-                    System.out.println(this.getName() + " executed a Heavy Attack for " + damage + " points of damage!");
+                    System.out.println("🥊️\uD83D\uDDE1\uFE0F" + this.getName() + " executed a Heavy Attack for " + damage + " points of damage!");
                 } else if (this.stamina <= 0) {
                     this.stamina += 2;
-                    System.out.println(this.getName() + " didn't have stamina! Stamina increased by 2 and is now " + this.getStamina()+ "!");
+                    System.out.println("\uD83D\uDEAB\uD83D\uDDE1\uFE0F" + this.getName() + " didn't have stamina! Stamina increased by 2 and is now " + this.getStamina()+ "!");
                 } else {
                     // No stamina for a Heavy attack, do a Weak attack instead
                     damage = this.strength / 2;
                     character.setHp(character.getHp() - damage);
                     this.stamina += 1;
-                    System.out.println(this.getName() + " executed a Weak Attack for " + damage + " points of damage! Stamina increases 1 point.");
+                    System.out.println("🥊️\uD83D\uDDE1\uFE0F" + this.getName() + " executed a Weak Attack for " + damage + " points of damage! Stamina increases 1 point.");
                 }
                 break;
 
@@ -63,12 +63,13 @@ public class Warrior extends Character implements Attacker {
                     damage = this.strength / 2;
                     character.setHp(character.getHp() - damage);
                     this.stamina += 1;
-                    System.out.println(this.getName() + " executed a Weak Attack for " + damage + " points of damage! Stamina increases 1 point.");
+                    System.out.println("🥊️\uD83D\uDDE1\uFE0F" + this.getName() + " executed a Weak Attack for " + damage + " points of damage! Stamina increases 1 point.");
                 break;
 
             default:
                 // If the action is neither "heavyAttack" nor "weakAttack" -> just for convention
                 break;
         }
+
     }
 }

@@ -9,7 +9,7 @@ public class Menu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("WELCOME TO THE IRONBATTLE! (by Anna de Pablo Puig)");
+        System.out.println("⚔️ WELCOME TO THE IRONBATTLE! ⚔️ (by Anna de Pablo Puig)");
 
         while (true) {
             System.out.println("Select game mode:");
@@ -18,7 +18,7 @@ public class Menu {
             System.out.println("3) Import characters from CSV file");
             System.out.println("4) Exit");
             System.out.println("Write the number which matches your option: ");
-
+                            
             int choice = scanner.nextInt();
             scanner.nextLine(); // limpiar el buffer
 
@@ -48,8 +48,8 @@ public class Menu {
 
     private static Character createCharacter(Scanner scanner, String playerType) {
         System.out.println("Choose character type for Player " + playerType + ":");
-        System.out.println("1) Warrior");
-        System.out.println("2) Wizard");
+        System.out.println("1) \uD83D\uDDE1\uFE0FWarrior");
+        System.out.println("2) \uD83E\uDDD9\u200D\uFE0FWizard");
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
         scanner.nextLine();
@@ -63,16 +63,16 @@ public class Menu {
         // Name displays type
         String choiceString;
         if (choice == 1) {
-            choiceString = "Warrior";
+            choiceString = "\uD83D\uDDE1\uFE0FWarrior";
         } else {
-            choiceString = "Wizard";
+            choiceString = "\uD83E\uDDD9\u200D\uFE0FWizard";
         }
 
-        System.out.println("Enter player's name: ");
+        System.out.println("✒\uFE0FEnter player's name: ");
         String playerName = scanner.nextLine();
         playerName += " - " + choiceString;
 
-        System.out.println("Enter player's health points (between 100-200): ");
+        System.out.println("✒\uFE0FEnter player's health points (between 100-200): ");
         int playerHealth = Integer.parseInt(scanner.nextLine());
 
         int playerStaminaOrMana = 0;
@@ -120,7 +120,7 @@ public class Menu {
     }
 
     private static void importCharacters(Scanner scanner) {
-        System.out.println("Enter the complete route of the CSV file to import characters from:");
+        System.out.println("✒\uFE0FEnter the complete route of the CSV file to import characters from:");
         System.out.println("(Remember that the format of the information passed must be 'name,health,type')");
         String fileName = scanner.nextLine();
 
