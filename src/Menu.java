@@ -36,11 +36,11 @@ public class Menu {
                     importCharacters(scanner);
                     break;
                 case 4:
-                    System.out.println("You chose to leave the game. Goodbye.");
+                    System.out.println("\uD83D\uDC4BYou chose to leave the game. Goodbye.");
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("\uD83D\uDEABInvalid choice. Please try again.");
                     break;
             }
         }
@@ -51,14 +51,18 @@ public class Menu {
         System.out.println("1) \uD83D\uDDE1\uFE0FWarrior");
         System.out.println("2) \uD83E\uDDD9\u200D\uFE0FWizard");
         System.out.print("Enter your choice: ");
-        int choice = scanner.nextInt();
-        scanner.nextLine();
+        int choice;
 
         // Check if choice is correct
-        if (choice != 1 && choice != 2) {
-            System.out.println("Invalid choice. Please try again.");
-            return null;
-        }
+        do {
+            choice = scanner.nextInt();
+            scanner.nextLine();
+
+            if (choice != 1 && choice != 2) {
+                System.out.println("\uD83D\uDEABInvalid choice. Please try again.");
+                System.out.print("✒\uFE0FEnter your choice: ");
+            }
+        } while (choice != 1 && choice != 2);
 
         // Name displays type
         String choiceString;
@@ -72,8 +76,16 @@ public class Menu {
         String playerName = scanner.nextLine();
         playerName += " - " + choiceString;
 
-        System.out.println("✒\uFE0FEnter player's health points (between 100-200): ");
-        int playerHealth = Integer.parseInt(scanner.nextLine());
+        int playerHealth;
+
+        do {
+            System.out.println("✒\uFE0FEnter player's health points (between 100-200): ");
+            playerHealth = Integer.parseInt(scanner.nextLine());
+
+            if (playerHealth < 100 || playerHealth > 200) {
+                System.out.println("\uD83D\uDEABInvalid input. Health points should be between 100 and 200.");
+            }
+        } while (playerHealth < 100 || playerHealth > 200);
 
         int playerStaminaOrMana = 0;
         int playerStrengthOrIntelligence = 0;
@@ -160,11 +172,11 @@ public class Menu {
                             new Warrior(name, health, staminaOrMana, strengthOrIntelligence) :
                             new Wizard(name, health, staminaOrMana, strengthOrIntelligence));
                 } else {
-                    System.out.println("Invalid character information: " + line);
+                    System.out.println("\uD83D\uDEABInvalid character information: " + line);
                 }
             }
         } catch (IOException e) {
-            System.err.println("Error while reading file: " + e.getMessage());
+            System.err.println("\uD83D\uDEABError while reading file: " + e.getMessage());
         }
 
         // Convert to array so it can be used in battle()
