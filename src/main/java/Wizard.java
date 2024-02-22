@@ -8,19 +8,14 @@ public class Wizard extends Character implements Attacker{
 
     public Wizard(String name, int hp, int mana, int intelligence) {
         super(name, hp);
+        //todo agregar verificacion aca
         setMana(mana);
         setIntelligence(intelligence);
     }
 
     @Override
     public void setHp(int hp) {
-        if(hp <= 50 || hp >= 100){
-            hp = hp;
-        } else if (hp < 50) {
-            hp = 50;
-        } else {
-            hp = 100;
-        }
+        super.setHp(hp);
     }
 
     public void setHpAttack(int hp, int attack){
@@ -28,13 +23,7 @@ public class Wizard extends Character implements Attacker{
     }
 
     public void setMana(int mana) {
-        if(mana <= 10 || mana >= 50){
-            this.mana = mana;
-        } else if (mana < 10) {
-            this.mana = 10;
-        } else {
-            this.mana = 50;
-        }
+        this.mana = mana;
     }
 
     public int getMana() {
@@ -42,13 +31,7 @@ public class Wizard extends Character implements Attacker{
     }
 
     public void setIntelligence(int intelligence) {
-        if(intelligence <= 1 || intelligence >= 50){
-            this.intelligence = intelligence;
-        } else if (intelligence < 1) {
-            this.intelligence =  1;
-        } else {
-            this.intelligence = 50;
-        };
+        this.intelligence = intelligence;
     }
 
     public int getIntelligence() {

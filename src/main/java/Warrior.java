@@ -8,26 +8,21 @@ public class Warrior extends Character implements Attacker{
 
     public Warrior(String name, int hp, int stamina, int strength){
         super(name,hp);
+        //todo agregar verificacion de stamina y strength
         setStamina(stamina);
         setStrength(strength);
     }
 
     public int getStamina(){return stamina;}
     public int getStrength(){return strength;}
-    public void setStamina(int stamina){
-        this.stamina = stamina;
-    }
-    public void setStrength(int strength) {
-        this.strength = strength;
-    }
+    public void setStamina(int stamina){this.stamina = stamina;}
+    public void setStrength(int strength) {this.strength = strength;}
     @Override
-    public void setHp(int hp){
-        super.setHp(hp);
-    }
+    public void setHp(int hp){super.setHp(hp);}
     public void Attack(Character x){
         int randomNumber = new Random().nextInt(2);
         int staminaWarrior = getStamina();
-
+//todo agregar try catch
         if(randomNumber == 0){
             //Heavy attack
             if(staminaWarrior < 5){
@@ -42,33 +37,29 @@ public class Warrior extends Character implements Attacker{
                 weakAttack(x);
             }
         }
-
     }
 
-    public void heavyAttack(Character opponent){
+    public void heavyAttack(Character opponent) throws IllegalArgumentException{
         if(opponent == null){
             throw new IllegalArgumentException("Target character cannot be null.");
         }
 
-        int opponentHealth = opponent.getHp();
         int strengthWarrior = getStrength();
         int staminaWarrior = getStamina();
 
-        opponent.receiveAttack(opponentHealth - strengthWarrior);
+        opponent.receiveAttack(strengthWarrior);
         setStamina(staminaWarrior - 5);}
 
 
-    public void weakAttack(Character opponent){
+    public void weakAttack(Character opponent) throws IllegalArgumentException{
         if(opponent == null){
             throw new IllegalArgumentException("Target character cannot be null.");
         }
-        int opponentHealth = opponent.getHp();
+
         int halfStrengthWarrior = Math.round(getStrength()/2);
         int staminaWarrior = getStamina();
 
-        opponent.receiveAttack(opponentHealth - halfStrengthWarrior);
+        opponent.receiveAttack(halfStrengthWarrior);
         setStamina(staminaWarrior + 1);
-
     }
-
 }

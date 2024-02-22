@@ -27,19 +27,25 @@ public class Main {
                     wizards.add(newWizard);
                     break;
                 case 3:
-                    if(warriors.size() == 1 && wizards.size() == 1){
-                        //Opuestos
-                        battleOpposite(warriors.get(0),wizards.get(0));
-                    }else if(warriors.size() == 2){
-                        //Caso ambos warriors
-                        battleWarriors(warriors.get(0), warriors.get(1));
-                    }else if(wizards.size() == 2) {
-                        //Caso ambos wizards
-                        battleWizards(wizards.get(0), wizards.get(1));
-                    }else{
-                        throw new IllegalArgumentException("Please create two characters to start a battle.");
+                    try {
+                        //todo Simplificar esto cuando refactorice battle
+                        if (warriors.size() == 1 && wizards.size() == 1) {
+                            battleOpposite(warriors.get(0), wizards.get(0));
+                        } else if (warriors.size() == 2) {
+                            battleWarriors(warriors.get(0), warriors.get(1));
+                        } else if (wizards.size() == 2) {
+                            battleWizards(wizards.get(0), wizards.get(1));
+                        } else {
+                            throw new IllegalArgumentException("Please create two characters to start a battle.");
+                        }
+                    }catch(IllegalArgumentException e){
+                        System.out.println("Error: " + e.getMessage());
                     }
 
+                    warriors.clear();
+                    wizards.clear();
+
+                    break;
                 case 4:
 
                     Generator generator = new Generator();
@@ -69,18 +75,37 @@ public class Main {
                         warriors.add(new Warrior( "Character2", generator.generatorWarrior(), generator.generatorMana(), generator.generatorStrength()));
                     }
 
+                    try {
+                        //todo Simplificar esto cuando refactorice battle
+                        if (warriors.size() == 1 && wizards.size() == 1) {
+                            battleOpposite(warriors.get(0), wizards.get(0));
+                        } else if (warriors.size() == 2) {
+                            battleWarriors(warriors.get(0), warriors.get(1));
+                        } else if (wizards.size() == 2) {
+                            battleWizards(wizards.get(0), wizards.get(1));
+                        } else {
+                            throw new IllegalArgumentException("Please create two characters to start a battle.");
+                        }
+                    }catch(IllegalArgumentException e){
+                        System.out.println("Error: " + e.getMessage());
+                    }
+
+                    warriors.clear();
+                    wizards.clear();
+                    break;
                 case 5:
                     warriors.clear();
                     wizards.clear();
                     System.out.println("Closing program.");
                     scanner.close();
+                    break;
             }
         }while(choiceMenu != 5);
 
     }
 
     private static void displayMenu() {
-        System.out.println("Welcome to Battlefield. \nBefore starting a battle please create two characters.");
+        System.out.println("\nWelcome to Battlefield. \nBefore starting a battle please create two characters.");
         System.out.println("\nMenu:");
         System.out.println("1. Create Warrior");
         System.out.println("2. Create Wizard");
@@ -165,6 +190,7 @@ public class Main {
         return wizard;
     }
 
+   //todo Cambiar el metodo para unificar las 3. Hacer que le pasen character y las cosas como nombre stamina etc pasarlo como string.
     private static void battleOpposite(Warrior warrior, Wizard wizard){
         String wizardName = wizard.getName();
         String warriorName = warrior.getName();
@@ -175,10 +201,10 @@ public class Main {
         int damageWarrior;
         String winner;
 
-        System.out.println(wizardName+" and "+warriorName+" get ready, the battle is going to start.");
+        System.out.println("\n"+wizardName+" and "+warriorName+" get ready, the battle is going to start.");
 
         do{
-            System.out.println("Round "+i);
+            System.out.println("\nRound "+i);
             wizardHp = wizard.getHp();
             warriorHp = warrior.getHp();
             wizard.Attack(warrior);
@@ -187,20 +213,25 @@ public class Main {
             damageWizard = wizardHp - wizard.getHp();
             damageWarrior = warriorHp - warrior.getHp();
 
-            System.out.println(wizard+" attacks and receives "+damageWizard+" damage.");
-            System.out.println(warrior+" attacks and receives "+damageWarrior+" damage.");
+            System.out.println(wizardName+" attacks and receives "+damageWizard+" damage.");
+            System.out.println(warriorName+" attacks and receives "+damageWarrior+" damage.");
+            System.out.println(wizardName+" has "+wizard.getHp()+" point of hp.");
+            System.out.println(warriorName+" has "+warrior.getHp()+" point of hp.");
+            wizard.checkIsAlive();
+            warrior.checkIsAlive();
 
-            i++;}while(wizard.checkIsAlive() && warrior.checkIsAlive());
+            i++;
+        }while(wizard.getIsAlive() && warrior.getIsAlive());
 
         if(!wizard.getIsAlive() && !wizard.getIsAlive()){
-            System.out.println("Oh no! Is a tie. Try a new battle and see who wins it all!");
+            System.out.println("\nOh no! Is a tie. Try a new battle and see who wins it all!");
         }else{
             if(wizard.getIsAlive()){
                 winner = wizardName;
             }else{
                 winner = warriorName;
             }
-            System.out.println("Congratulations, "+winner+" You won!");
+            System.out.println("\nCongratulations, "+winner+" You won!");
         }
 
     }
@@ -215,10 +246,10 @@ public class Main {
         int damageWarriorTwo;
         String winner;
 
-        System.out.println(warriorOneName+" and "+warriorTwoName+" get ready, the battle is going to start.");
+        System.out.println("\n"+warriorOneName+" and "+warriorTwoName+" get ready, the battle is going to start.");
 
         do{
-            System.out.println("Round "+i);
+            System.out.println("\nRound "+i);
             warriorOneHp = warriorOne.getHp();
             warriorTwoHp = warriorTwo.getHp();
             warriorOne.Attack(warriorTwo);
@@ -229,12 +260,14 @@ public class Main {
 
             System.out.println(warriorOneName+" attacks and receives "+damageWarriorOne+" damage.");
             System.out.println(warriorTwoName+" attacks and receives "+damageWarriorTwo+" damage.");
+            System.out.println(warriorOneName+" has "+warriorOne.getHp()+" point of hp.");
+            System.out.println(warriorTwoName+" has "+warriorTwo.getHp()+" point of hp.");
             warriorOne.checkIsAlive();
             warriorTwo.checkIsAlive();
             i++;
         }while(warriorOne.getIsAlive() && warriorTwo.getIsAlive());
 
-        if(!warriorOne.getIsAlive() && !warriorOne.getIsAlive()){
+        if(!warriorOne.getIsAlive() && !warriorTwo.getIsAlive()){
             System.out.println("Oh no! Is a tie. Try a new battle and see who wins it all!");
         }else{
             if(warriorOne.getIsAlive()){
@@ -269,10 +302,14 @@ public class Main {
             damageWizardOne = wizardOneHp - wizardOne.getHp();
             damageWizardTwo = wizardTwoHp - wizardTwo.getHp();
 
-            System.out.println(wizardOne+" attacks and receives "+damageWizardOne+" damage.");
-            System.out.println(wizardTwo+" attacks and receives "+damageWizardTwo+" damage.");
-
-            i++;}while(wizardOne.checkIsAlive() && wizardTwo.checkIsAlive());
+            System.out.println(wizardOneName+" attacks and receives "+damageWizardOne+" damage.");
+            System.out.println(wizardTwoName+" attacks and receives "+damageWizardTwo+" damage.");
+            System.out.println("\n"+wizardOneName+" has "+wizardOne.getHp()+" point of hp.");
+            System.out.println("\n"+wizardTwoName+" has "+wizardTwo.getHp()+" point of hp.");
+            wizardOne.checkIsAlive();
+            wizardTwo.checkIsAlive();
+            i++;
+        }while(wizardOne.getIsAlive() && wizardTwo.getIsAlive());
 
         if(!wizardOne.getIsAlive() && !wizardOne.getIsAlive()){
             System.out.println("Oh no! Is a tie. Try a new battle and see who wins it all!");

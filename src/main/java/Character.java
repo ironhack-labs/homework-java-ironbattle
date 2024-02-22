@@ -1,7 +1,7 @@
 abstract class Character {
-    // ID
     private static long idCounter = 0;
-    private String id;
+    //ver si funciona llamando asi
+    private String id = createID();
     private String name;
     private int hp;
     private boolean isAlive = true;
@@ -22,16 +22,15 @@ abstract class Character {
     public void setId(String id){this.id = createID();}
     public void setName(String name){this.name = name;}
     public void setHp(int hp){this.hp = hp;}
+    public void setIsAlive(boolean isAlive){
+        this.isAlive = isAlive;
+    }
 
 
     public void receiveAttack(int attack){
         this.hp -= attack;
     }
 
-    public void setIsAlive(boolean isAlive){
-        this.isAlive = isAlive;
-    }
-  
     public boolean checkIsAlive(){
         if (getHp() <= 0){
             setIsAlive(false);
@@ -39,9 +38,9 @@ abstract class Character {
         }
         return true;
     }
-  
-   public static synchronized String createID()
-    {
+
+  //todo Esto no funciona
+   public static synchronized String createID() {
         return String.valueOf(idCounter++);
     }
 }
