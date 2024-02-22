@@ -50,7 +50,6 @@ public class Generator {
         return hp;
     }
 
-    //Si es para ambos encontrar otra palabra que mana para que no sea confuso y renombrar todo wizard a character
     public static int generatorMana(){
         Random random = new Random();
 
