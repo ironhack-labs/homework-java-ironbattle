@@ -8,7 +8,6 @@ public class Warrior extends Character implements Attacker{
 
     public Warrior(String name, int hp, int stamina, int strength){
         super(name,hp);
-        //todo agregar verificacion de stamina y strength
         setStamina(stamina);
         setStrength(strength);
     }
@@ -22,20 +21,24 @@ public class Warrior extends Character implements Attacker{
     public void Attack(Character x){
         int randomNumber = new Random().nextInt(2);
         int staminaWarrior = getStamina();
-//todo agregar try catch
-        if(randomNumber == 0){
-            //Heavy attack
-            if(staminaWarrior < 5){
-                weakAttack(x);
+
+        try{
+            if(randomNumber == 0){
+                //Heavy attack
+                if(staminaWarrior < 5){
+                    weakAttack(x);
+                }else{
+                    heavyAttack(x);}
             }else{
-                heavyAttack(x);}
-        }else{
-            //Weak attack
-            if(staminaWarrior<1){
-                setStamina(staminaWarrior + 2);
-            }else{
-                weakAttack(x);
+                //Weak attack
+                if(staminaWarrior<1){
+                    setStamina(staminaWarrior + 2);
+                }else{
+                    weakAttack(x);
+                }
             }
+        }catch(IllegalArgumentException e){
+            System.out.println("Error: " + e.getMessage());
         }
     }
 

@@ -12,96 +12,97 @@ public class Main {
         List<Wizard> wizards = new ArrayList<>();
 
         Scanner scanner = new Scanner(System.in);
+        try {
+            do {
+                displayMenu();
+                choiceMenu = scanner.nextInt();
 
-        do {
-            displayMenu();
-            choiceMenu = scanner.nextInt();
-
-            switch (choiceMenu) {
-                case 1:
-                    newWarrior = createWarrior(scanner);
-                    warriors.add(newWarrior);
-                    break;
-                case 2:
-                    newWizard = createWizard(scanner);
-                    wizards.add(newWizard);
-                    break;
-                case 3:
-                    try {
-                        //todo Simplificar esto cuando refactorice battle
-                        if (warriors.size() == 1 && wizards.size() == 1) {
-                            battleOpposite(warriors.get(0), wizards.get(0));
-                        } else if (warriors.size() == 2) {
-                            battleWarriors(warriors.get(0), warriors.get(1));
-                        } else if (wizards.size() == 2) {
-                            battleWizards(wizards.get(0), wizards.get(1));
-                        } else {
-                            throw new IllegalArgumentException("Please create two characters to start a battle.");
+                switch (choiceMenu) {
+                    case 1:
+                        newWarrior = createWarrior(scanner);
+                        warriors.add(newWarrior);
+                        break;
+                    case 2:
+                        newWizard = createWizard(scanner);
+                        wizards.add(newWizard);
+                        break;
+                    case 3:
+                        try {
+                            //todo Simplificar esto cuando refactorice battle
+                            if (warriors.size() == 1 && wizards.size() == 1) {
+                                battleOpposite(warriors.get(0), wizards.get(0));
+                            } else if (warriors.size() == 2) {
+                                battleWarriors(warriors.get(0), warriors.get(1));
+                            } else if (wizards.size() == 2) {
+                                battleWizards(wizards.get(0), wizards.get(1));
+                            } else {
+                                throw new IllegalArgumentException("Please create two characters to start a battle.");
+                            }
+                        } catch (IllegalArgumentException e) {
+                            System.out.println("Error: " + e.getMessage());
                         }
-                    }catch(IllegalArgumentException e){
-                        System.out.println("Error: " + e.getMessage());
-                    }
 
-                    warriors.clear();
-                    wizards.clear();
+                        warriors.clear();
+                        wizards.clear();
 
-                    break;
-                case 4:
+                        break;
+                    case 4:
 
-                    Generator generator = new Generator();
+                        Generator generator = new Generator();
 
-                    //Random class selection
-                    List<String> person = new ArrayList<>();
-                    person.add("Warrior");
-                    person.add("Wizard");
+                        //Random class selection
+                        List<String> person = new ArrayList<>();
+                        person.add("Warrior");
+                        person.add("Wizard");
 
-                    int randomIndex1= random.nextInt(person.size());
-                    int randomIndex2= random.nextInt(person.size());
+                        int randomIndex1 = random.nextInt(person.size());
+                        int randomIndex2 = random.nextInt(person.size());
 
-                    //Characters
-                    String character1 = person.get(randomIndex1);
-                    String character2 = person.get(randomIndex2);
+                        //Characters
+                        String character1 = person.get(randomIndex1);
+                        String character2 = person.get(randomIndex2);
 
-                    //Class declaration
-                    if (character1.equals("Wizard")){
-                        wizards.add(new Wizard( "Character1", generator.generatorWizard(), generator.generatorMana(), generator.generatorIntelligence() ));
-                    } else {
-                        warriors.add( new Warrior( "Character2", generator.generatorWarrior(), generator.generatorMana(), generator.generatorStrength()));
-                    }
-
-                    if (character2.equals("Wizard")){
-                        wizards.add(new Wizard( "Character1", generator.generatorWizard(), generator.generatorMana(), generator.generatorIntelligence() ));
-                    } else {
-                        warriors.add(new Warrior( "Character2", generator.generatorWarrior(), generator.generatorMana(), generator.generatorStrength()));
-                    }
-
-                    try {
-                        //todo Simplificar esto cuando refactorice battle
-                        if (warriors.size() == 1 && wizards.size() == 1) {
-                            battleOpposite(warriors.get(0), wizards.get(0));
-                        } else if (warriors.size() == 2) {
-                            battleWarriors(warriors.get(0), warriors.get(1));
-                        } else if (wizards.size() == 2) {
-                            battleWizards(wizards.get(0), wizards.get(1));
+                        //Class declaration
+                        if (character1.equals("Wizard")) {
+                            wizards.add(new Wizard("Character1", generator.generatorWizard(), generator.generatorMana(), generator.generatorIntelligence()));
                         } else {
-                            throw new IllegalArgumentException("Please create two characters to start a battle.");
+                            warriors.add(new Warrior("Character2", generator.generatorWarrior(), generator.generatorMana(), generator.generatorStrength()));
                         }
-                    }catch(IllegalArgumentException e){
-                        System.out.println("Error: " + e.getMessage());
-                    }
 
-                    warriors.clear();
-                    wizards.clear();
-                    break;
-                case 5:
-                    warriors.clear();
-                    wizards.clear();
-                    System.out.println("Closing program.");
-                    scanner.close();
-                    break;
-            }
-        }while(choiceMenu != 5);
+                        if (character2.equals("Wizard")) {
+                            wizards.add(new Wizard("Character1", generator.generatorWizard(), generator.generatorMana(), generator.generatorIntelligence()));
+                        } else {
+                            warriors.add(new Warrior("Character2", generator.generatorWarrior(), generator.generatorMana(), generator.generatorStrength()));
+                        }
 
+                        try {
+                            if (warriors.size() == 1 && wizards.size() == 1) {
+                                battleOpposite(warriors.get(0), wizards.get(0));
+                            } else if (warriors.size() == 2) {
+                                battleWarriors(warriors.get(0), warriors.get(1));
+                            } else if (wizards.size() == 2) {
+                                battleWizards(wizards.get(0), wizards.get(1));
+                            } else {
+                                throw new IllegalArgumentException("Please create two characters to start a battle.");
+                            }
+                        } catch (IllegalArgumentException e) {
+                            System.out.println("Error: " + e.getMessage());
+                        }
+
+                        warriors.clear();
+                        wizards.clear();
+                        break;
+                    case 5:
+                        warriors.clear();
+                        wizards.clear();
+                        System.out.println("Closing program.");
+                        scanner.close();
+                        break;
+                }
+            } while (choiceMenu != 5);
+        }catch(Error e){
+            System.out.println("Error: " + e.getMessage() );
+        }
     }
 
     private static void displayMenu() {
@@ -223,7 +224,7 @@ public class Main {
             i++;
         }while(wizard.getIsAlive() && warrior.getIsAlive());
 
-        if(!wizard.getIsAlive() && !wizard.getIsAlive()){
+        if(!wizard.getIsAlive() && !warrior.getIsAlive()){
             System.out.println("\nOh no! Is a tie. Try a new battle and see who wins it all!");
         }else{
             if(wizard.getIsAlive()){

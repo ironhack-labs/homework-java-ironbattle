@@ -1,13 +1,13 @@
 abstract class Character {
     private static long idCounter = 0;
-    //ver si funciona llamando asi
-    private String id = createID();
+    private String id;
     private String name;
     private int hp;
     private boolean isAlive = true;
 
 
     public Character(String name, int hp) {
+        this.id = createID();
         setName(name);
         setHp(hp);
     }
@@ -39,7 +39,6 @@ abstract class Character {
         return true;
     }
 
-  //todo Esto no funciona
    public static synchronized String createID() {
         return String.valueOf(idCounter++);
     }
