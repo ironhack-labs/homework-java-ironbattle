@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public interface Attacker {
+
+public interface Attacker {
+    void attack();
 }
