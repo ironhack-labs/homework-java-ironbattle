@@ -1,0 +1,31 @@
+1.- menú que crear
+
+*Menú:
+	Crear personajes
+	Batalla simulada
+		Seguimiento de la batalla
+	?  batalla simulada aleatoria 	(Opcional-01)
+	?? Nuevo personaje		(Opcional-02)
+	
+
+2.- clase padre que crear
+
+*SuperClase
+	Variables
+	Constructor
+	Gettet/Setter
+*Interfaz
+	Atack()
+
+3.- clases hijo que crear
+
+*SubClase01
+	Variables
+	Constructor
+	Getter/Setter
+	atack()
+*atack()
+	ataqueDebil
+	ataqueFuerte
+*SubClase02	(repetir con sus cambios)
+*atack()	(repetir con sus cambios)
