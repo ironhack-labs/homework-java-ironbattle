@@ -1,16 +1,19 @@
+import java.util.Random;
+
 public class Warrior extends Character implements Attacker {
     private int stamina;
     private int strength;
 
-    public Warrior(String name, int hp, int stamina, int strength) {
-        super(name, hp);
-        this.stamina = stamina;
-        this.strength = strength;
+    public Warrior(String name) {
+        super(name, new Random().nextInt(101) + 100);
+        Random random = new Random();
+        this.stamina = random.nextInt(41) + 10;
+        this.strength = random.nextInt(10) + 1;
     }
 
     @Override
     public void attack(Character character) {
-        character.setHp(this.hp - strength);
+        character.setHp(character.getHp() - strength);
     }
 
     public int getStamina() {

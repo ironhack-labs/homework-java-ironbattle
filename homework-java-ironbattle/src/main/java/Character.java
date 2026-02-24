@@ -1,12 +1,13 @@
-import java.util.Random;
+import java.util.UUID;
 
 public abstract class Character {
-    protected String id;
-    protected String name;
-    protected int hp;
-    protected boolean isAlive = true;
+    private String id;
+    private String name;
+    private int hp;
+    private boolean isAlive = true;
 
     public Character(String name, int hp){
+        this.id = UUID.randomUUID().toString();
         this.hp = hp;
         this.name = name;
     }
