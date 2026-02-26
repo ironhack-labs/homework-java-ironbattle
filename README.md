@@ -122,4 +122,31 @@ For this project you must accomplish all of the following:
 - All code must be reviewed before it is merged into the `master` branch.
 - All squad members must participate in code review.
 - Every repository should have a README file with clear instructions, demo files or any documentation needed so other teams don't have problems with the review.
-- This is intended to be a challenging assignment. You will have to rely heavily on your teammates and independent research. Learning independently is a hallmark of a good developer and our job is to turn you into good developers. This process may be frustrating but you will learn a ton!
+- This is intended to be a challenging assignment. You will have to rely heavily on your teammates and independent research. Learning independently is a hallmark of a good developer and our job is to turn you into good developers. This process may be frustrating but you will learn a ton!# RPG Battle Simulator
+
+## About This Project
+This is my RPG Battle Simulator project. The idea is simple: two characters fight 1v1 until one winner remains. You can have a Warrior or a Wizard, each with their own stats and fighting style. Battles happen in rounds, and both characters attack at the same time in each round. If both die in the same round, the battle is considered a draw and can be restarted.
+
+## Classes and Interface
+- **Character (abstract)**: This is the base class. It has common things like id, 
+ame, hp, and isAlive. You cannot create a Character directly.  
+- **Warrior**: Inherits from Character. Has stamina and strength. Can do Heavy or Weak attacks. Heavy costs stamina, Weak can recover stamina.  
+- **Wizard**: Inherits from Character. Has mana and intelligence. Can do Fireball or Staff hits. Fireball costs mana, Staff can recover mana.  
+- **Attacker (interface)**: Both Warriors and Wizards implement this interface to define the ttack(Character opponent) method.  
+
+The battle will start automatically between a Warrior and a Wizard. Each attack and change in HP, stamina, or mana is shown in the console.  
+
+## Features
+- Characters have random stats (HP, stamina, mana, strength, intelligence) when they are created.  
+- Battle is 1v1, simultaneous attacks each round.  
+- If both characters die in the same round, it is a draw.  
+- Logs are printed to the console showing every attack and status change.  
+
+## Optional / Bonus
+- Import characters from a CSV file.  
+- Create random characters and simulate battles automatically.  
+
+## Notes
+- The project uses object-oriented concepts like inheritance, encapsulation, and polymorphism.  
+- Everything is logged so you can see the battle step by step.  
+- Warrior and Wizard attacks follow the rules for stamina/mana consumption and recovery.  
