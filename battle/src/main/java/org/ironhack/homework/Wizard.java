@@ -21,7 +21,7 @@ public class Wizard extends Character implements Attacker {
     @Override
     public void attack(Character target) {
         int damage = 0;
-        boolean fireball = rand.nextBoolean(); // Random Fireball or Staff
+        boolean fireball = rand.nextBoolean();
 
         if (fireball && mana >= 5) {
             damage = intelligence;

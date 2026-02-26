@@ -21,7 +21,7 @@ public class Warrior extends Character implements Attacker {
     @Override
     public void attack(Character target) {
         int damage = 0;
-        boolean heavy = rand.nextBoolean(); // Random Heavy or Weak
+        boolean heavy = rand.nextBoolean();
 
         if (heavy && stamina >= 5) {
             damage = strength;
@@ -32,7 +32,7 @@ public class Warrior extends Character implements Attacker {
             stamina += 1;
             System.out.println(getName() + " performs a Weak Attack causing " + damage + " damage!");
         } else if (stamina > 0) {
-            // Not enough stamina for heavy, do weak
+
             damage = strength / 2;
             stamina += 1;
             System.out.println(getName() + " performs a Weak Attack causing " + damage + " damage!");
