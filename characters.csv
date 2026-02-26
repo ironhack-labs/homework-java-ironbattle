@@ -1,0 +1,7 @@
+Type,Name,HP,Resource,Power
+Warrior,Gimli,160,40,9
+Wizard,Saruman,90,45,40
+Warrior,Aragorn,190,50,10
+Wizard,Radagast,80,50,30
+Warrior,Legolas,140,45,8
+Wizard,Elrond,95,50,45
