@@ -1,31 +1,51 @@
 import java.util.Random;
 
-public class Wizard extends Character implements Attacker{
+public class Wizard extends Character {
+
     private int mana;
+    private final int maxMana;
     private int intelligence;
+    private Random random = new Random();
 
     public Wizard(String name, int hp, int mana, int intelligence) {
-        super(name, new Random().nextInt(51) + 50);
-        Random random = new Random();
-        this.intelligence = random.nextInt(41) + 10;
-        this.mana = random.nextInt(50) + 1;
+        super(name, hp);
+        this.mana = mana;
+        this.maxMana = mana;
+        this.intelligence = intelligence;
+    }
+
+
+    public int getMana() { return mana; }
+
+    public void setMana(int mana) { this.mana = mana; }
+
+    public int getIntelligence() { return intelligence; }
+
+    public void setIntelligence(int intelligence) { this.intelligence = intelligence; }
+
+    @Override
+    public void attack(Character target) {
+        boolean castFireball = random.nextBoolean();
+
+        if (castFireball && mana >= 5) {
+            int damage = intelligence;
+            target.setHp(target.getHp() - damage);
+            mana -= 5;
+            System.out.println(getName() + " cast Fireball! Damage: " + damage + " | Mana left: " + mana);
+        } else if (mana >= 1) {
+            int damage = 2;
+            target.setHp(target.getHp() - damage);
+            mana += 1;
+            System.out.println(getName() + " used Staff Hit! Damage: " + damage + " | Mana: " + mana);
+        } else {
+            mana += 2;
+            System.out.println(getName() + " had no mana and recovered! Mana: " + mana);
+        }
     }
 
     @Override
-    public void attack(Character character) {
-        character.setHp(character.getHp() - intelligence);
-    }
-
-    public void setIntelligence(int intelligence) {
-        this.intelligence = intelligence;
-    }
-    public int getIntelligence() {
-        return intelligence;
-    }
-    public void setMana(int mana) {
-        this.mana = mana;
-    }
-    public int getMana() {
-        return mana;
+    public void reset() {
+        super.reset();
+        this.mana = maxMana;
     }
 }
