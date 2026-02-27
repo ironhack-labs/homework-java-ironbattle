@@ -1,0 +1,5 @@
+type,name,hp,mana,intelligence,stamina,strength
+WIZARD,Gandalf,120,150,95,0,0
+WIZARD,Merlin,100,130,90,0,0
+WARRIOR,Aragorn,180,0,0,120,85
+WARRIOR,Leonidas,200,0,0,140,95
