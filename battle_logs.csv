@@ -1,0 +1,1282 @@
+matchId,round,timestamp,attacker,action,damage,target,hp_left
+M0001,1,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,4,Warrior2,96
+M0001,1,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,6,Warrior1,94
+M0001,2,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,8,Warrior2,88
+M0001,2,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,3,Warrior1,91
+M0001,3,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,4,Warrior2,84
+M0001,3,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,6,Warrior1,85
+M0001,4,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,4,Warrior2,80
+M0001,4,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,6,Warrior1,79
+M0001,5,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,4,Warrior2,76
+M0001,5,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,6,Warrior1,73
+M0001,6,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,8,Warrior2,68
+M0001,6,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,3,Warrior1,70
+M0001,7,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,8,Warrior2,60
+M0001,7,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,6,Warrior1,64
+M0001,8,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,4,Warrior2,56
+M0001,8,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,3,Warrior1,61
+M0001,9,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,4,Warrior2,52
+M0001,9,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,3,Warrior1,58
+M0001,10,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,4,Warrior2,48
+M0001,10,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,3,Warrior1,55
+M0001,11,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,8,Warrior2,40
+M0001,11,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,3,Warrior1,52
+M0001,12,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,8,Warrior2,32
+M0001,12,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,6,Warrior1,46
+M0001,13,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,4,Warrior2,28
+M0001,13,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,3,Warrior1,43
+M0001,14,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,8,Warrior2,20
+M0001,14,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,6,Warrior1,37
+M0001,15,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,8,Warrior2,12
+M0001,15,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,3,Warrior1,34
+M0001,16,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,8,Warrior2,4
+M0001,16,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior2,attack,3,Warrior1,31
+M0001,17,Fri Feb 27 14:58:57 GMT+04:00 2026,Warrior1,attack,4,Warrior2,0
+M0001,1,Fri Feb 27 15:04:35 GMT+04:00 2026,Kenan,9,Revan,91,Kenan VS Revan
+M0001,1,Fri Feb 27 15:04:35 GMT+04:00 2026,Revan,6,Kenan,94,Kenan VS Revan
+M0001,2,Fri Feb 27 15:04:35 GMT+04:00 2026,Kenan,9,Revan,82,Kenan VS Revan
+M0001,2,Fri Feb 27 15:04:35 GMT+04:00 2026,Revan,35,Kenan,59,Kenan VS Revan
+M0001,3,Fri Feb 27 15:04:35 GMT+04:00 2026,Kenan,6,Revan,76,Kenan VS Revan
+M0001,3,Fri Feb 27 15:04:35 GMT+04:00 2026,Revan,32,Kenan,27,Kenan VS Revan
+M0001,4,Fri Feb 27 15:04:35 GMT+04:00 2026,Kenan,9,Revan,67,Kenan VS Revan
+M0001,4,Fri Feb 27 15:04:35 GMT+04:00 2026,Revan,27,Kenan,0,Kenan VS Revan
+M0002,1,Fri Feb 27 15:04:48 GMT+04:00 2026,Player1 Warrior,7,Player2 Warrior,93,Player1 Warrior VS Player2 Warrior
+M0002,1,Fri Feb 27 15:04:48 GMT+04:00 2026,Player2 Warrior,11,Player1 Warrior,89,Player1 Warrior VS Player2 Warrior
+M0002,2,Fri Feb 27 15:04:48 GMT+04:00 2026,Player1 Warrior,7,Player2 Warrior,86,Player1 Warrior VS Player2 Warrior
+M0002,2,Fri Feb 27 15:04:48 GMT+04:00 2026,Player2 Warrior,7,Player1 Warrior,82,Player1 Warrior VS Player2 Warrior
+M0002,3,Fri Feb 27 15:04:48 GMT+04:00 2026,Player1 Warrior,7,Player2 Warrior,79,Player1 Warrior VS Player2 Warrior
+M0002,3,Fri Feb 27 15:04:48 GMT+04:00 2026,Player2 Warrior,11,Player1 Warrior,71,Player1 Warrior VS Player2 Warrior
+M0002,4,Fri Feb 27 15:04:48 GMT+04:00 2026,Player1 Warrior,7,Player2 Warrior,72,Player1 Warrior VS Player2 Warrior
+M0002,4,Fri Feb 27 15:04:48 GMT+04:00 2026,Player2 Warrior,6,Player1 Warrior,65,Player1 Warrior VS Player2 Warrior
+M0002,5,Fri Feb 27 15:04:48 GMT+04:00 2026,Player1 Warrior,5,Player2 Warrior,67,Player1 Warrior VS Player2 Warrior
+M0002,5,Fri Feb 27 15:04:48 GMT+04:00 2026,Player2 Warrior,11,Player1 Warrior,54,Player1 Warrior VS Player2 Warrior
+M0002,6,Fri Feb 27 15:04:48 GMT+04:00 2026,Player1 Warrior,5,Player2 Warrior,62,Player1 Warrior VS Player2 Warrior
+M0002,6,Fri Feb 27 15:04:48 GMT+04:00 2026,Player2 Warrior,5,Player1 Warrior,49,Player1 Warrior VS Player2 Warrior
+M0002,7,Fri Feb 27 15:04:48 GMT+04:00 2026,Player1 Warrior,7,Player2 Warrior,55,Player1 Warrior VS Player2 Warrior
+M0002,7,Fri Feb 27 15:04:48 GMT+04:00 2026,Player2 Warrior,11,Player1 Warrior,38,Player1 Warrior VS Player2 Warrior
+M0002,8,Fri Feb 27 15:04:48 GMT+04:00 2026,Player1 Warrior,5,Player2 Warrior,50,Player1 Warrior VS Player2 Warrior
+M0002,8,Fri Feb 27 15:04:48 GMT+04:00 2026,Player2 Warrior,11,Player1 Warrior,27,Player1 Warrior VS Player2 Warrior
+M0002,9,Fri Feb 27 15:04:48 GMT+04:00 2026,Player1 Warrior,3,Player2 Warrior,47,Player1 Warrior VS Player2 Warrior
+M0002,9,Fri Feb 27 15:04:48 GMT+04:00 2026,Player2 Warrior,6,Player1 Warrior,21,Player1 Warrior VS Player2 Warrior
+M0002,10,Fri Feb 27 15:04:48 GMT+04:00 2026,Player1 Warrior,5,Player2 Warrior,42,Player1 Warrior VS Player2 Warrior
+M0002,10,Fri Feb 27 15:04:48 GMT+04:00 2026,Player2 Warrior,11,Player1 Warrior,10,Player1 Warrior VS Player2 Warrior
+M0002,11,Fri Feb 27 15:04:48 GMT+04:00 2026,Player1 Warrior,7,Player2 Warrior,35,Player1 Warrior VS Player2 Warrior
+M0002,11,Fri Feb 27 15:04:48 GMT+04:00 2026,Player2 Warrior,5,Player1 Warrior,5,Player1 Warrior VS Player2 Warrior
+M0002,12,Fri Feb 27 15:04:48 GMT+04:00 2026,Player1 Warrior,5,Player2 Warrior,30,Player1 Warrior VS Player2 Warrior
+M0002,12,Fri Feb 27 15:04:48 GMT+04:00 2026,Player2 Warrior,5,Player1 Warrior,0,Player1 Warrior VS Player2 Warrior
+M0003,1,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Warrior,10,Player2 Warrior,90,Player1 Warrior VS Player2 Warrior
+M0003,1,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,5,Player1 Warrior,95,Player1 Warrior VS Player2 Warrior
+M0003,2,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Warrior,10,Player2 Warrior,80,Player1 Warrior VS Player2 Warrior
+M0003,2,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,6,Player1 Warrior,89,Player1 Warrior VS Player2 Warrior
+M0003,3,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Warrior,10,Player2 Warrior,70,Player1 Warrior VS Player2 Warrior
+M0003,3,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,3,Player1 Warrior,86,Player1 Warrior VS Player2 Warrior
+M0003,4,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Warrior,5,Player2 Warrior,65,Player1 Warrior VS Player2 Warrior
+M0003,4,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,6,Player1 Warrior,80,Player1 Warrior VS Player2 Warrior
+M0003,5,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Warrior,10,Player2 Warrior,55,Player1 Warrior VS Player2 Warrior
+M0003,5,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,6,Player1 Warrior,74,Player1 Warrior VS Player2 Warrior
+M0003,6,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Warrior,7,Player2 Warrior,48,Player1 Warrior VS Player2 Warrior
+M0003,6,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,6,Player1 Warrior,68,Player1 Warrior VS Player2 Warrior
+M0003,7,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Warrior,10,Player2 Warrior,38,Player1 Warrior VS Player2 Warrior
+M0003,7,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,4,Player1 Warrior,64,Player1 Warrior VS Player2 Warrior
+M0003,8,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Warrior,7,Player2 Warrior,31,Player1 Warrior VS Player2 Warrior
+M0003,8,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,3,Player1 Warrior,61,Player1 Warrior VS Player2 Warrior
+M0003,9,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Warrior,6,Player2 Warrior,25,Player1 Warrior VS Player2 Warrior
+M0003,9,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,6,Player1 Warrior,55,Player1 Warrior VS Player2 Warrior
+M0003,10,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Warrior,10,Player2 Warrior,15,Player1 Warrior VS Player2 Warrior
+M0003,10,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,0,Player1 Warrior,55,Player1 Warrior VS Player2 Warrior
+M0003,11,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Warrior,7,Player2 Warrior,8,Player1 Warrior VS Player2 Warrior
+M0003,11,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,4,Player1 Warrior,51,Player1 Warrior VS Player2 Warrior
+M0003,12,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Warrior,8,Player2 Warrior,0,Player1 Warrior VS Player2 Warrior
+M0004,1,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Wizard,32,Player2 Warrior,68,Player1 Wizard VS Player2 Warrior
+M0004,1,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,6,Player1 Wizard,94,Player1 Wizard VS Player2 Warrior
+M0004,2,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Wizard,31,Player2 Warrior,37,Player1 Wizard VS Player2 Warrior
+M0004,2,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,12,Player1 Wizard,82,Player1 Wizard VS Player2 Warrior
+M0004,3,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Wizard,4,Player2 Warrior,33,Player1 Wizard VS Player2 Warrior
+M0004,3,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,12,Player1 Wizard,70,Player1 Wizard VS Player2 Warrior
+M0004,4,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Wizard,32,Player2 Warrior,1,Player1 Wizard VS Player2 Warrior
+M0004,4,Fri Feb 27 15:04:50 GMT+04:00 2026,Player2 Warrior,12,Player1 Wizard,58,Player1 Wizard VS Player2 Warrior
+M0004,5,Fri Feb 27 15:04:50 GMT+04:00 2026,Player1 Wizard,1,Player2 Warrior,0,Player1 Wizard VS Player2 Warrior
+M0005,1,Fri Feb 27 15:04:51 GMT+04:00 2026,Player1 Wizard,5,Player2 Warrior,95,Player1 Wizard VS Player2 Warrior
+M0005,1,Fri Feb 27 15:04:51 GMT+04:00 2026,Player2 Warrior,5,Player1 Wizard,95,Player1 Wizard VS Player2 Warrior
+M0005,2,Fri Feb 27 15:04:51 GMT+04:00 2026,Player1 Wizard,20,Player2 Warrior,75,Player1 Wizard VS Player2 Warrior
+M0005,2,Fri Feb 27 15:04:51 GMT+04:00 2026,Player2 Warrior,10,Player1 Wizard,85,Player1 Wizard VS Player2 Warrior
+M0005,3,Fri Feb 27 15:04:51 GMT+04:00 2026,Player1 Wizard,19,Player2 Warrior,56,Player1 Wizard VS Player2 Warrior
+M0005,3,Fri Feb 27 15:04:51 GMT+04:00 2026,Player2 Warrior,10,Player1 Wizard,75,Player1 Wizard VS Player2 Warrior
+M0005,4,Fri Feb 27 15:04:51 GMT+04:00 2026,Player1 Wizard,22,Player2 Warrior,34,Player1 Wizard VS Player2 Warrior
+M0005,4,Fri Feb 27 15:04:51 GMT+04:00 2026,Player2 Warrior,10,Player1 Wizard,65,Player1 Wizard VS Player2 Warrior
+M0005,5,Fri Feb 27 15:04:51 GMT+04:00 2026,Player1 Wizard,6,Player2 Warrior,28,Player1 Wizard VS Player2 Warrior
+M0005,5,Fri Feb 27 15:04:51 GMT+04:00 2026,Player2 Warrior,5,Player1 Wizard,60,Player1 Wizard VS Player2 Warrior
+M0005,6,Fri Feb 27 15:04:51 GMT+04:00 2026,Player1 Wizard,4,Player2 Warrior,24,Player1 Wizard VS Player2 Warrior
+M0005,6,Fri Feb 27 15:04:51 GMT+04:00 2026,Player2 Warrior,10,Player1 Wizard,50,Player1 Wizard VS Player2 Warrior
+M0005,7,Fri Feb 27 15:04:51 GMT+04:00 2026,Player1 Wizard,5,Player2 Warrior,19,Player1 Wizard VS Player2 Warrior
+M0005,7,Fri Feb 27 15:04:51 GMT+04:00 2026,Player2 Warrior,10,Player1 Wizard,40,Player1 Wizard VS Player2 Warrior
+M0005,8,Fri Feb 27 15:04:51 GMT+04:00 2026,Player1 Wizard,19,Player2 Warrior,0,Player1 Wizard VS Player2 Warrior
+M0006,1,Fri Feb 27 15:05:26 GMT+04:00 2026,Kenan,9,Revan,91,Kenan VS Revan
+M0006,1,Fri Feb 27 15:05:26 GMT+04:00 2026,Revan,4,Kenan,96,Kenan VS Revan
+M0006,2,Fri Feb 27 15:05:26 GMT+04:00 2026,Kenan,9,Revan,82,Kenan VS Revan
+M0006,2,Fri Feb 27 15:05:26 GMT+04:00 2026,Revan,5,Kenan,91,Kenan VS Revan
+M0006,3,Fri Feb 27 15:05:26 GMT+04:00 2026,Kenan,9,Revan,73,Kenan VS Revan
+M0006,3,Fri Feb 27 15:05:26 GMT+04:00 2026,Revan,6,Kenan,85,Kenan VS Revan
+M0006,4,Fri Feb 27 15:05:26 GMT+04:00 2026,Kenan,9,Revan,64,Kenan VS Revan
+M0006,4,Fri Feb 27 15:05:26 GMT+04:00 2026,Revan,3,Kenan,82,Kenan VS Revan
+M0006,5,Fri Feb 27 15:05:26 GMT+04:00 2026,Kenan,9,Revan,55,Kenan VS Revan
+M0006,5,Fri Feb 27 15:05:26 GMT+04:00 2026,Revan,34,Kenan,48,Kenan VS Revan
+M0006,6,Fri Feb 27 15:05:26 GMT+04:00 2026,Kenan,6,Revan,49,Kenan VS Revan
+M0006,6,Fri Feb 27 15:05:26 GMT+04:00 2026,Revan,34,Kenan,14,Kenan VS Revan
+M0006,7,Fri Feb 27 15:05:26 GMT+04:00 2026,Kenan,6,Revan,43,Kenan VS Revan
+M0006,7,Fri Feb 27 15:05:26 GMT+04:00 2026,Revan,3,Kenan,11,Kenan VS Revan
+M0006,8,Fri Feb 27 15:05:26 GMT+04:00 2026,Kenan,5,Revan,38,Kenan VS Revan
+M0006,8,Fri Feb 27 15:05:26 GMT+04:00 2026,Revan,6,Kenan,5,Kenan VS Revan
+M0006,9,Fri Feb 27 15:05:26 GMT+04:00 2026,Kenan,5,Revan,33,Kenan VS Revan
+M0006,9,Fri Feb 27 15:05:26 GMT+04:00 2026,Revan,5,Kenan,0,Kenan VS Revan
+M0001,1,Fri Feb 27 15:17:45 GMT+04:00 2026,Kenan,30,Revan,100,Kenan vs Revan
+
+M0001,1,Fri Feb 27 15:17:45 GMT+04:00 2026,Revan,33,Kenan,95,Kenan vs Revan
+
+M0001,2,Fri Feb 27 15:17:45 GMT+04:00 2026,Kenan,30,Revan,70,Kenan vs Revan
+
+M0001,2,Fri Feb 27 15:17:46 GMT+04:00 2026,Revan,9,Kenan,86,Kenan vs Revan
+
+M0001,3,Fri Feb 27 15:17:46 GMT+04:00 2026,Kenan,30,Revan,40,Kenan vs Revan
+
+M0001,3,Fri Feb 27 15:17:46 GMT+04:00 2026,Revan,33,Kenan,53,Kenan vs Revan
+
+M0001,4,Fri Feb 27 15:17:46 GMT+04:00 2026,Kenan,15,Revan,25,Kenan vs Revan
+
+M0001,4,Fri Feb 27 15:17:46 GMT+04:00 2026,Revan,9,Kenan,44,Kenan vs Revan
+
+M0001,5,Fri Feb 27 15:17:46 GMT+04:00 2026,Kenan,15,Revan,10,Kenan vs Revan
+
+M0001,5,Fri Feb 27 15:17:46 GMT+04:00 2026,Revan,33,Kenan,11,Kenan vs Revan
+
+M0001,6,Fri Feb 27 15:17:46 GMT+04:00 2026,Kenan,10,Revan,0,Kenan vs Revan
+
+M0001,1,Fri Feb 27 15:23:36 GMT+04:00 2026,Kenan,10,Revan,46,Kenan vs Revan
+
+M0001,1,Fri Feb 27 15:23:36 GMT+04:00 2026,Revan,2,Kenan,193,Kenan vs Revan
+
+M0001,2,Fri Feb 27 15:23:37 GMT+04:00 2026,Kenan,10,Revan,36,Kenan vs Revan
+
+M0001,2,Fri Feb 27 15:23:37 GMT+04:00 2026,Revan,50,Kenan,143,Kenan vs Revan
+
+M0001,3,Fri Feb 27 15:23:37 GMT+04:00 2026,Kenan,10,Revan,26,Kenan vs Revan
+
+M0001,3,Fri Feb 27 15:23:37 GMT+04:00 2026,Revan,50,Kenan,93,Kenan vs Revan
+
+M0001,4,Fri Feb 27 15:23:37 GMT+04:00 2026,Kenan,10,Revan,16,Kenan vs Revan
+
+M0001,4,Fri Feb 27 15:23:37 GMT+04:00 2026,Revan,50,Kenan,43,Kenan vs Revan
+
+M0001,5,Fri Feb 27 15:23:37 GMT+04:00 2026,Kenan,10,Revan,6,Kenan vs Revan
+
+M0001,5,Fri Feb 27 15:23:37 GMT+04:00 2026,Revan,43,Kenan,0,Kenan vs Revan
+
+M0002,1,Fri Feb 27 15:25:02 GMT+04:00 2026,Hero Mage,9,Enemy Warrior,139,Hero Mage vs Enemy Warrior
+
+M0002,1,Fri Feb 27 15:25:02 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,90,Hero Mage vs Enemy Warrior
+
+M0002,2,Fri Feb 27 15:25:02 GMT+04:00 2026,Hero Mage,9,Enemy Warrior,130,Hero Mage vs Enemy Warrior
+
+M0002,2,Fri Feb 27 15:25:02 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,86,Hero Mage vs Enemy Warrior
+
+M0002,3,Fri Feb 27 15:25:02 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,128,Hero Mage vs Enemy Warrior
+
+M0002,3,Fri Feb 27 15:25:02 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,82,Hero Mage vs Enemy Warrior
+
+M0002,4,Fri Feb 27 15:25:02 GMT+04:00 2026,Hero Mage,9,Enemy Warrior,119,Hero Mage vs Enemy Warrior
+
+M0002,4,Fri Feb 27 15:25:02 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,78,Hero Mage vs Enemy Warrior
+
+M0002,5,Fri Feb 27 15:25:02 GMT+04:00 2026,Hero Mage,0,Enemy Warrior,119,Hero Mage vs Enemy Warrior
+
+M0002,5,Fri Feb 27 15:25:02 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,76,Hero Mage vs Enemy Warrior
+
+M0002,6,Fri Feb 27 15:25:02 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,117,Hero Mage vs Enemy Warrior
+
+M0002,6,Fri Feb 27 15:25:02 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,74,Hero Mage vs Enemy Warrior
+
+M0002,7,Fri Feb 27 15:25:02 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,115,Hero Mage vs Enemy Warrior
+
+M0002,7,Fri Feb 27 15:25:02 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,72,Hero Mage vs Enemy Warrior
+
+M0002,8,Fri Feb 27 15:25:02 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,113,Hero Mage vs Enemy Warrior
+
+M0002,8,Fri Feb 27 15:25:02 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,70,Hero Mage vs Enemy Warrior
+
+M0002,9,Fri Feb 27 15:25:02 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,111,Hero Mage vs Enemy Warrior
+
+M0002,9,Fri Feb 27 15:25:02 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,68,Hero Mage vs Enemy Warrior
+
+M0002,10,Fri Feb 27 15:25:02 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,109,Hero Mage vs Enemy Warrior
+
+M0002,10,Fri Feb 27 15:25:02 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,66,Hero Mage vs Enemy Warrior
+
+M0002,11,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,107,Hero Mage vs Enemy Warrior
+
+M0002,11,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,62,Hero Mage vs Enemy Warrior
+
+M0002,12,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,105,Hero Mage vs Enemy Warrior
+
+M0002,12,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,58,Hero Mage vs Enemy Warrior
+
+M0002,13,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,9,Enemy Warrior,96,Hero Mage vs Enemy Warrior
+
+M0002,13,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,54,Hero Mage vs Enemy Warrior
+
+M0002,14,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,94,Hero Mage vs Enemy Warrior
+
+M0002,14,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,50,Hero Mage vs Enemy Warrior
+
+M0002,15,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,92,Hero Mage vs Enemy Warrior
+
+M0002,15,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,48,Hero Mage vs Enemy Warrior
+
+M0002,16,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,9,Enemy Warrior,83,Hero Mage vs Enemy Warrior
+
+M0002,16,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,46,Hero Mage vs Enemy Warrior
+
+M0002,17,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,81,Hero Mage vs Enemy Warrior
+
+M0002,17,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,42,Hero Mage vs Enemy Warrior
+
+M0002,18,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,79,Hero Mage vs Enemy Warrior
+
+M0002,18,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,38,Hero Mage vs Enemy Warrior
+
+M0002,19,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,77,Hero Mage vs Enemy Warrior
+
+M0002,19,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,34,Hero Mage vs Enemy Warrior
+
+M0002,20,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,75,Hero Mage vs Enemy Warrior
+
+M0002,20,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,32,Hero Mage vs Enemy Warrior
+
+M0002,21,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,9,Enemy Warrior,66,Hero Mage vs Enemy Warrior
+
+M0002,21,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,30,Hero Mage vs Enemy Warrior
+
+M0002,22,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,0,Enemy Warrior,66,Hero Mage vs Enemy Warrior
+
+M0002,22,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,28,Hero Mage vs Enemy Warrior
+
+M0002,23,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,64,Hero Mage vs Enemy Warrior
+
+M0002,23,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,24,Hero Mage vs Enemy Warrior
+
+M0002,24,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,62,Hero Mage vs Enemy Warrior
+
+M0002,24,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,22,Hero Mage vs Enemy Warrior
+
+M0002,25,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,60,Hero Mage vs Enemy Warrior
+
+M0002,25,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,20,Hero Mage vs Enemy Warrior
+
+M0002,26,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,58,Hero Mage vs Enemy Warrior
+
+M0002,26,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,18,Hero Mage vs Enemy Warrior
+
+M0002,27,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,9,Enemy Warrior,49,Hero Mage vs Enemy Warrior
+
+M0002,27,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,16,Hero Mage vs Enemy Warrior
+
+M0002,28,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,47,Hero Mage vs Enemy Warrior
+
+M0002,28,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,14,Hero Mage vs Enemy Warrior
+
+M0002,29,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,45,Hero Mage vs Enemy Warrior
+
+M0002,29,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,12,Hero Mage vs Enemy Warrior
+
+M0002,30,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,43,Hero Mage vs Enemy Warrior
+
+M0002,30,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,10,Hero Mage vs Enemy Warrior
+
+M0002,31,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,41,Hero Mage vs Enemy Warrior
+
+M0002,31,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,6,Hero Mage vs Enemy Warrior
+
+M0002,32,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,39,Hero Mage vs Enemy Warrior
+
+M0002,32,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,4,Hero Mage vs Enemy Warrior
+
+M0002,33,Fri Feb 27 15:25:03 GMT+04:00 2026,Hero Mage,9,Enemy Warrior,30,Hero Mage vs Enemy Warrior
+
+M0002,33,Fri Feb 27 15:25:03 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,0,Hero Mage vs Enemy Warrior
+
+M0003,1,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,131,Hero Mage vs Enemy Warrior
+
+M0003,1,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,8,Hero Mage,46,Hero Mage vs Enemy Warrior
+
+M0003,2,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,129,Hero Mage vs Enemy Warrior
+
+M0003,2,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,8,Hero Mage,38,Hero Mage vs Enemy Warrior
+
+M0003,3,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Mage,13,Enemy Warrior,116,Hero Mage vs Enemy Warrior
+
+M0003,3,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,34,Hero Mage vs Enemy Warrior
+
+M0003,4,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Mage,13,Enemy Warrior,103,Hero Mage vs Enemy Warrior
+
+M0003,4,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,30,Hero Mage vs Enemy Warrior
+
+M0003,5,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,101,Hero Mage vs Enemy Warrior
+
+M0003,5,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,8,Hero Mage,22,Hero Mage vs Enemy Warrior
+
+M0003,6,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,99,Hero Mage vs Enemy Warrior
+
+M0003,6,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,18,Hero Mage vs Enemy Warrior
+
+M0003,7,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,97,Hero Mage vs Enemy Warrior
+
+M0003,7,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,14,Hero Mage vs Enemy Warrior
+
+M0003,8,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,95,Hero Mage vs Enemy Warrior
+
+M0003,8,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,4,Hero Mage,10,Hero Mage vs Enemy Warrior
+
+M0003,9,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Mage,13,Enemy Warrior,82,Hero Mage vs Enemy Warrior
+
+M0003,9,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,8,Hero Mage,2,Hero Mage vs Enemy Warrior
+
+M0003,10,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Mage,2,Enemy Warrior,80,Hero Mage vs Enemy Warrior
+
+M0003,10,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,2,Hero Mage,0,Hero Mage vs Enemy Warrior
+
+M0004,1,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,8,Enemy Warrior,143,Hero Warrior vs Enemy Warrior
+
+M0004,1,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,182,Hero Warrior vs Enemy Warrior
+
+M0004,2,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,8,Enemy Warrior,135,Hero Warrior vs Enemy Warrior
+
+M0004,2,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,7,Hero Warrior,175,Hero Warrior vs Enemy Warrior
+
+M0004,3,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,8,Enemy Warrior,127,Hero Warrior vs Enemy Warrior
+
+M0004,3,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,7,Hero Warrior,168,Hero Warrior vs Enemy Warrior
+
+M0004,4,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,123,Hero Warrior vs Enemy Warrior
+
+M0004,4,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,165,Hero Warrior vs Enemy Warrior
+
+M0004,5,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,119,Hero Warrior vs Enemy Warrior
+
+M0004,5,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,162,Hero Warrior vs Enemy Warrior
+
+M0004,6,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,115,Hero Warrior vs Enemy Warrior
+
+M0004,6,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,159,Hero Warrior vs Enemy Warrior
+
+M0004,7,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,111,Hero Warrior vs Enemy Warrior
+
+M0004,7,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,7,Hero Warrior,152,Hero Warrior vs Enemy Warrior
+
+M0004,8,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,107,Hero Warrior vs Enemy Warrior
+
+M0004,8,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,149,Hero Warrior vs Enemy Warrior
+
+M0004,9,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,8,Enemy Warrior,99,Hero Warrior vs Enemy Warrior
+
+M0004,9,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,146,Hero Warrior vs Enemy Warrior
+
+M0004,10,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,95,Hero Warrior vs Enemy Warrior
+
+M0004,10,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,7,Hero Warrior,139,Hero Warrior vs Enemy Warrior
+
+M0004,11,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,91,Hero Warrior vs Enemy Warrior
+
+M0004,11,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,7,Hero Warrior,132,Hero Warrior vs Enemy Warrior
+
+M0004,12,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,87,Hero Warrior vs Enemy Warrior
+
+M0004,12,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,129,Hero Warrior vs Enemy Warrior
+
+M0004,13,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,83,Hero Warrior vs Enemy Warrior
+
+M0004,13,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,7,Hero Warrior,122,Hero Warrior vs Enemy Warrior
+
+M0004,14,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,79,Hero Warrior vs Enemy Warrior
+
+M0004,14,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,119,Hero Warrior vs Enemy Warrior
+
+M0004,15,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,8,Enemy Warrior,71,Hero Warrior vs Enemy Warrior
+
+M0004,15,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,116,Hero Warrior vs Enemy Warrior
+
+M0004,16,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,67,Hero Warrior vs Enemy Warrior
+
+M0004,16,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,113,Hero Warrior vs Enemy Warrior
+
+M0004,17,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,63,Hero Warrior vs Enemy Warrior
+
+M0004,17,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,110,Hero Warrior vs Enemy Warrior
+
+M0004,18,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,59,Hero Warrior vs Enemy Warrior
+
+M0004,18,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,7,Hero Warrior,103,Hero Warrior vs Enemy Warrior
+
+M0004,19,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,55,Hero Warrior vs Enemy Warrior
+
+M0004,19,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,100,Hero Warrior vs Enemy Warrior
+
+M0004,20,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,51,Hero Warrior vs Enemy Warrior
+
+M0004,20,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,97,Hero Warrior vs Enemy Warrior
+
+M0004,21,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,47,Hero Warrior vs Enemy Warrior
+
+M0004,21,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,94,Hero Warrior vs Enemy Warrior
+
+M0004,22,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,43,Hero Warrior vs Enemy Warrior
+
+M0004,22,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,91,Hero Warrior vs Enemy Warrior
+
+M0004,23,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,8,Enemy Warrior,35,Hero Warrior vs Enemy Warrior
+
+M0004,23,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,7,Hero Warrior,84,Hero Warrior vs Enemy Warrior
+
+M0004,24,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,31,Hero Warrior vs Enemy Warrior
+
+M0004,24,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,0,Hero Warrior,84,Hero Warrior vs Enemy Warrior
+
+M0004,25,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,27,Hero Warrior vs Enemy Warrior
+
+M0004,25,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,81,Hero Warrior vs Enemy Warrior
+
+M0004,26,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,23,Hero Warrior vs Enemy Warrior
+
+M0004,26,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,78,Hero Warrior vs Enemy Warrior
+
+M0004,27,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,8,Enemy Warrior,15,Hero Warrior vs Enemy Warrior
+
+M0004,27,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,75,Hero Warrior vs Enemy Warrior
+
+M0004,28,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,11,Hero Warrior vs Enemy Warrior
+
+M0004,28,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,7,Hero Warrior,68,Hero Warrior vs Enemy Warrior
+
+M0004,29,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,7,Hero Warrior vs Enemy Warrior
+
+M0004,29,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,0,Hero Warrior,68,Hero Warrior vs Enemy Warrior
+
+M0004,30,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,4,Enemy Warrior,3,Hero Warrior vs Enemy Warrior
+
+M0004,30,Fri Feb 27 15:25:14 GMT+04:00 2026,Enemy Warrior,3,Hero Warrior,65,Hero Warrior vs Enemy Warrior
+
+M0004,31,Fri Feb 27 15:25:14 GMT+04:00 2026,Hero Warrior,3,Enemy Warrior,0,Hero Warrior vs Enemy Warrior
+
+M0005,1,Fri Feb 27 15:25:15 GMT+04:00 2026,Hero Mage,36,Enemy Mage,19,Hero Mage vs Enemy Mage
+
+M0005,1,Fri Feb 27 15:25:15 GMT+04:00 2026,Enemy Mage,12,Hero Mage,79,Hero Mage vs Enemy Mage
+
+M0005,2,Fri Feb 27 15:25:15 GMT+04:00 2026,Hero Mage,19,Enemy Mage,0,Hero Mage vs Enemy Mage
+
+M0001,1,2026-02-27 15:27:49,Hero Mage,43,Enemy Warrior,130,"damage dealt","Hero Mage vs Enemy Warrior"
+M0001,1,2026-02-27 15:27:49,Enemy Warrior,3,Hero Mage,88,"damage dealt","Hero Mage vs Enemy Warrior"
+M0001,2,2026-02-27 15:27:49,Hero Mage,2,Enemy Warrior,128,"damage dealt","Hero Mage vs Enemy Warrior"
+M0001,2,2026-02-27 15:27:49,Enemy Warrior,1,Hero Mage,87,"damage dealt","Hero Mage vs Enemy Warrior"
+M0001,3,2026-02-27 15:27:49,Hero Mage,43,Enemy Warrior,85,"damage dealt","Hero Mage vs Enemy Warrior"
+M0001,3,2026-02-27 15:27:49,Enemy Warrior,1,Hero Mage,86,"damage dealt","Hero Mage vs Enemy Warrior"
+M0001,4,2026-02-27 15:27:49,Hero Mage,43,Enemy Warrior,42,"damage dealt","Hero Mage vs Enemy Warrior"
+M0001,4,2026-02-27 15:27:49,Enemy Warrior,1,Hero Mage,85,"damage dealt","Hero Mage vs Enemy Warrior"
+M0001,5,2026-02-27 15:27:49,Hero Mage,2,Enemy Warrior,40,"damage dealt","Hero Mage vs Enemy Warrior"
+M0001,5,2026-02-27 15:27:49,Enemy Warrior,1,Hero Mage,84,"damage dealt","Hero Mage vs Enemy Warrior"
+M0001,6,2026-02-27 15:27:49,Hero Mage,40,Enemy Warrior,0,"damage dealt","Hero Mage vs Enemy Warrior"
+M0001,1,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",70,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,1,2026-02-27 15:34:03,"Enemy Mage",14,"Hero Warrior",168,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,2,2026-02-27 15:34:03,"Hero Warrior",5,"Enemy Mage",65,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,2,2026-02-27 15:34:03,"Enemy Mage",14,"Hero Warrior",154,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,3,2026-02-27 15:34:03,"Hero Warrior",5,"Enemy Mage",60,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,3,2026-02-27 15:34:03,"Enemy Mage",14,"Hero Warrior",140,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,4,2026-02-27 15:34:03,"Hero Warrior",5,"Enemy Mage",55,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,4,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",138,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,5,2026-02-27 15:34:03,"Hero Warrior",5,"Enemy Mage",50,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,5,2026-02-27 15:34:03,"Enemy Mage",14,"Hero Warrior",124,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,6,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",48,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,6,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",122,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,7,2026-02-27 15:34:03,"Hero Warrior",5,"Enemy Mage",43,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,7,2026-02-27 15:34:03,"Enemy Mage",14,"Hero Warrior",108,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,8,2026-02-27 15:34:03,"Hero Warrior",0,"Enemy Mage",43,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,8,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",106,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,9,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",41,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,9,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",104,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,10,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",39,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,10,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",102,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,11,2026-02-27 15:34:03,"Hero Warrior",0,"Enemy Mage",39,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,11,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",100,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,12,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",37,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,12,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",98,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,13,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",35,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,13,2026-02-27 15:34:03,"Enemy Mage",14,"Hero Warrior",84,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,14,2026-02-27 15:34:03,"Hero Warrior",0,"Enemy Mage",35,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,14,2026-02-27 15:34:03,"Enemy Mage",0,"Hero Warrior",84,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,15,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",33,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,15,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",82,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,16,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",31,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,16,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",80,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,17,2026-02-27 15:34:03,"Hero Warrior",0,"Enemy Mage",31,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,17,2026-02-27 15:34:03,"Enemy Mage",0,"Hero Warrior",80,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,18,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",29,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,18,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",78,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,19,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",27,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,19,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",76,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,20,2026-02-27 15:34:03,"Hero Warrior",0,"Enemy Mage",27,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,20,2026-02-27 15:34:03,"Enemy Mage",0,"Hero Warrior",76,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,21,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",25,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,21,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",74,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,22,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",23,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,22,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",72,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,23,2026-02-27 15:34:03,"Hero Warrior",0,"Enemy Mage",23,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,23,2026-02-27 15:34:03,"Enemy Mage",0,"Hero Warrior",72,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,24,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",21,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,24,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",70,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,25,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",19,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,25,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",68,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,26,2026-02-27 15:34:03,"Hero Warrior",0,"Enemy Mage",19,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,26,2026-02-27 15:34:03,"Enemy Mage",0,"Hero Warrior",68,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,27,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",17,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,27,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",66,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,28,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",15,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,28,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",64,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,29,2026-02-27 15:34:03,"Hero Warrior",0,"Enemy Mage",15,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,29,2026-02-27 15:34:03,"Enemy Mage",0,"Hero Warrior",64,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,30,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",13,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,30,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",62,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,31,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",11,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,31,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",60,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,32,2026-02-27 15:34:03,"Hero Warrior",0,"Enemy Mage",11,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,32,2026-02-27 15:34:03,"Enemy Mage",0,"Hero Warrior",60,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,33,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",9,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,33,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",58,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,34,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",7,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,34,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",56,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,35,2026-02-27 15:34:03,"Hero Warrior",0,"Enemy Mage",7,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,35,2026-02-27 15:34:03,"Enemy Mage",0,"Hero Warrior",56,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,36,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",5,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,36,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",54,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,37,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",3,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,37,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",52,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,38,2026-02-27 15:34:03,"Hero Warrior",0,"Enemy Mage",3,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,38,2026-02-27 15:34:03,"Enemy Mage",0,"Hero Warrior",52,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0001,39,2026-02-27 15:34:03,"Hero Warrior",2,"Enemy Mage",1,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,39,2026-02-27 15:34:03,"Enemy Mage",2,"Hero Warrior",50,"damage dealt","Hero Warrior vs Enemy Mage"
+M0001,40,2026-02-27 15:34:03,"Hero Warrior",1,"Enemy Mage",0,"damage dealt","Hero Warrior vs Enemy Mage"
+M0002,1,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",140,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,1,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",137,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,2,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",136,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,2,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",137,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,3,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",132,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,3,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",137,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,4,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",128,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,4,2026-02-27 15:34:15,"Enemy Warrior",1,"Hero Warrior",136,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,5,2026-02-27 15:34:15,"Hero Warrior",8,"Enemy Warrior",120,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,5,2026-02-27 15:34:15,"Enemy Warrior",1,"Hero Warrior",135,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,6,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",116,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,6,2026-02-27 15:34:15,"Enemy Warrior",1,"Hero Warrior",134,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,7,2026-02-27 15:34:15,"Hero Warrior",8,"Enemy Warrior",108,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,7,2026-02-27 15:34:15,"Enemy Warrior",1,"Hero Warrior",133,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,8,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",104,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,8,2026-02-27 15:34:15,"Enemy Warrior",1,"Hero Warrior",132,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,9,2026-02-27 15:34:15,"Hero Warrior",8,"Enemy Warrior",96,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,9,2026-02-27 15:34:15,"Enemy Warrior",1,"Hero Warrior",131,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,10,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",92,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,10,2026-02-27 15:34:15,"Enemy Warrior",1,"Hero Warrior",130,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,11,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",88,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,11,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",130,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,12,2026-02-27 15:34:15,"Hero Warrior",8,"Enemy Warrior",80,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,12,2026-02-27 15:34:15,"Enemy Warrior",1,"Hero Warrior",129,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,13,2026-02-27 15:34:15,"Hero Warrior",8,"Enemy Warrior",72,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,13,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,14,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",68,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,14,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,15,2026-02-27 15:34:15,"Hero Warrior",8,"Enemy Warrior",60,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,15,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,16,2026-02-27 15:34:15,"Hero Warrior",0,"Enemy Warrior",60,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,16,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,17,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",56,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,17,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,18,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",52,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,18,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,19,2026-02-27 15:34:15,"Hero Warrior",0,"Enemy Warrior",52,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,19,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,20,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",48,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,20,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,21,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",44,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,21,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,22,2026-02-27 15:34:15,"Hero Warrior",0,"Enemy Warrior",44,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,22,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,23,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",40,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,23,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,24,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",36,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,24,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,25,2026-02-27 15:34:15,"Hero Warrior",0,"Enemy Warrior",36,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,25,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,26,2026-02-27 15:34:15,"Hero Warrior",4,"Enemy Warrior",32,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,26,2026-02-27 15:34:15,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,27,2026-02-27 15:34:16,"Hero Warrior",4,"Enemy Warrior",28,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,27,2026-02-27 15:34:16,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,28,2026-02-27 15:34:16,"Hero Warrior",0,"Enemy Warrior",28,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,28,2026-02-27 15:34:16,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,29,2026-02-27 15:34:16,"Hero Warrior",4,"Enemy Warrior",24,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,29,2026-02-27 15:34:16,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,30,2026-02-27 15:34:16,"Hero Warrior",4,"Enemy Warrior",20,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,30,2026-02-27 15:34:16,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,31,2026-02-27 15:34:16,"Hero Warrior",0,"Enemy Warrior",20,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,31,2026-02-27 15:34:16,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,32,2026-02-27 15:34:16,"Hero Warrior",4,"Enemy Warrior",16,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,32,2026-02-27 15:34:16,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,33,2026-02-27 15:34:16,"Hero Warrior",4,"Enemy Warrior",12,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,33,2026-02-27 15:34:16,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,34,2026-02-27 15:34:16,"Hero Warrior",0,"Enemy Warrior",12,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,34,2026-02-27 15:34:16,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,35,2026-02-27 15:34:16,"Hero Warrior",4,"Enemy Warrior",8,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,35,2026-02-27 15:34:16,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,36,2026-02-27 15:34:16,"Hero Warrior",4,"Enemy Warrior",4,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0002,36,2026-02-27 15:34:16,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,37,2026-02-27 15:34:16,"Hero Warrior",0,"Enemy Warrior",4,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,37,2026-02-27 15:34:16,"Enemy Warrior",0,"Hero Warrior",129,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0002,38,2026-02-27 15:34:16,"Hero Warrior",4,"Enemy Warrior",0,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0003,1,2026-02-27 15:34:16,"Hero Mage",2,"Enemy Mage",52,"damage dealt","Hero Mage vs Enemy Mage"
+M0003,1,2026-02-27 15:34:16,"Enemy Mage",2,"Hero Mage",83,"damage dealt","Hero Mage vs Enemy Mage"
+M0003,2,2026-02-27 15:34:16,"Hero Mage",23,"Enemy Mage",29,"damage dealt","Hero Mage vs Enemy Mage"
+M0003,2,2026-02-27 15:34:16,"Enemy Mage",2,"Hero Mage",81,"damage dealt","Hero Mage vs Enemy Mage"
+M0003,3,2026-02-27 15:34:16,"Hero Mage",23,"Enemy Mage",6,"damage dealt","Hero Mage vs Enemy Mage"
+M0003,3,2026-02-27 15:34:16,"Enemy Mage",7,"Hero Mage",74,"damage dealt","Hero Mage vs Enemy Mage"
+M0003,4,2026-02-27 15:34:16,"Hero Mage",2,"Enemy Mage",4,"damage dealt","Hero Mage vs Enemy Mage"
+M0003,4,2026-02-27 15:34:16,"Enemy Mage",2,"Hero Mage",72,"damage dealt","Hero Mage vs Enemy Mage"
+M0003,5,2026-02-27 15:34:16,"Hero Mage",4,"Enemy Mage",0,"damage dealt","Hero Mage vs Enemy Mage"
+M0004,1,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",113,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,1,2026-02-27 15:34:17,"Enemy Warrior",8,"Hero Warrior",192,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,2,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",113,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,2,2026-02-27 15:34:17,"Enemy Warrior",8,"Hero Warrior",184,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,3,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",113,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,3,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",180,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,4,2026-02-27 15:34:17,"Hero Warrior",1,"Enemy Warrior",112,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,4,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",176,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,5,2026-02-27 15:34:17,"Hero Warrior",1,"Enemy Warrior",111,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,5,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",176,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,6,2026-02-27 15:34:17,"Hero Warrior",1,"Enemy Warrior",110,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,6,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",172,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,7,2026-02-27 15:34:17,"Hero Warrior",1,"Enemy Warrior",109,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,7,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",168,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,8,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,8,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",168,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,9,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,9,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",164,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,10,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,10,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",160,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,11,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,11,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",160,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,12,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,12,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",156,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,13,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,13,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",152,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,14,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,14,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",152,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,15,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,15,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",148,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,16,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,16,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",144,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,17,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,17,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",144,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,18,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,18,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",140,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,19,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,19,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",136,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,20,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,20,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",136,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,21,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,21,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",132,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,22,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,22,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",128,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,23,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,23,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",128,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,24,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,24,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",124,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,25,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,25,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",120,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,26,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,26,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",120,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,27,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,27,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",116,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,28,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,28,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",112,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,29,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,29,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",112,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,30,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,30,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",108,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,31,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,31,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",104,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,32,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,32,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",104,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,33,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,33,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",100,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,34,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,34,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",96,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,35,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,35,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",96,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,36,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,36,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",92,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,37,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,37,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",88,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,38,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,38,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",88,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,39,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,39,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",84,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,40,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,40,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",80,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,41,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,41,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",80,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,42,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,42,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",76,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,43,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,43,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",72,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,44,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,44,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",72,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,45,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,45,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",68,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,46,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,46,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",64,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,47,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,47,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",64,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,48,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,48,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",60,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,49,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,49,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",56,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,50,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,50,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",56,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,51,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,51,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",52,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,52,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,52,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",48,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,53,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,53,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",48,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,54,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,54,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",44,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,55,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,55,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",40,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,56,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,56,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",40,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,57,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,57,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",36,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,58,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,58,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",32,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,59,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,59,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",32,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,60,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,60,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",28,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,61,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,61,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",24,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,62,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,62,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",24,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,63,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,63,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",20,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,64,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,64,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",16,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,65,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,65,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",16,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,66,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,66,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",12,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,67,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,67,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",8,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,68,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,68,2026-02-27 15:34:17,"Enemy Warrior",0,"Hero Warrior",8,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,69,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,69,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",4,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0004,70,2026-02-27 15:34:17,"Hero Warrior",0,"Enemy Warrior",109,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0004,70,2026-02-27 15:34:17,"Enemy Warrior",4,"Hero Warrior",0,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0005,1,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Mage",78,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,1,2026-02-27 15:34:18,"Enemy Mage",2,"Hero Warrior",164,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,2,2026-02-27 15:34:18,"Hero Warrior",10,"Enemy Mage",68,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,2,2026-02-27 15:34:18,"Enemy Mage",2,"Hero Warrior",162,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,3,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Mage",63,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,3,2026-02-27 15:34:18,"Enemy Mage",44,"Hero Warrior",118,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,4,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Mage",58,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,4,2026-02-27 15:34:18,"Enemy Mage",44,"Hero Warrior",74,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,5,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Mage",53,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,5,2026-02-27 15:34:18,"Enemy Mage",2,"Hero Warrior",72,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,6,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Mage",48,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,6,2026-02-27 15:34:18,"Enemy Mage",0,"Hero Warrior",72,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0005,7,2026-02-27 15:34:18,"Hero Warrior",10,"Enemy Mage",38,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,7,2026-02-27 15:34:18,"Enemy Mage",2,"Hero Warrior",70,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,8,2026-02-27 15:34:18,"Hero Warrior",0,"Enemy Mage",38,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0005,8,2026-02-27 15:34:18,"Enemy Mage",2,"Hero Warrior",68,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,9,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Mage",33,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,9,2026-02-27 15:34:18,"Enemy Mage",0,"Hero Warrior",68,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0005,10,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Mage",28,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,10,2026-02-27 15:34:18,"Enemy Mage",2,"Hero Warrior",66,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,11,2026-02-27 15:34:18,"Hero Warrior",0,"Enemy Mage",28,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0005,11,2026-02-27 15:34:18,"Enemy Mage",2,"Hero Warrior",64,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,12,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Mage",23,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,12,2026-02-27 15:34:18,"Enemy Mage",0,"Hero Warrior",64,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0005,13,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Mage",18,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,13,2026-02-27 15:34:18,"Enemy Mage",2,"Hero Warrior",62,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,14,2026-02-27 15:34:18,"Hero Warrior",0,"Enemy Mage",18,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0005,14,2026-02-27 15:34:18,"Enemy Mage",2,"Hero Warrior",60,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,15,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Mage",13,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,15,2026-02-27 15:34:18,"Enemy Mage",0,"Hero Warrior",60,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0005,16,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Mage",8,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,16,2026-02-27 15:34:18,"Enemy Mage",2,"Hero Warrior",58,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,17,2026-02-27 15:34:18,"Hero Warrior",0,"Enemy Mage",8,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0005,17,2026-02-27 15:34:18,"Enemy Mage",2,"Hero Warrior",56,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,18,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Mage",3,"damage dealt","Hero Warrior vs Enemy Mage"
+M0005,18,2026-02-27 15:34:18,"Enemy Mage",0,"Hero Warrior",56,"recover / no damage","Hero Warrior vs Enemy Mage"
+M0005,19,2026-02-27 15:34:18,"Hero Warrior",3,"Enemy Mage",0,"damage dealt","Hero Warrior vs Enemy Mage"
+M0006,1,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",101,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,1,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",192,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,2,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",99,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,2,2026-02-27 15:34:18,"Enemy Warrior",10,"Hero Warrior",182,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,3,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",97,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,3,2026-02-27 15:34:18,"Enemy Warrior",10,"Hero Warrior",172,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,4,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Warrior",92,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,4,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",167,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,5,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Warrior",87,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,5,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",162,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,6,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",85,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,6,2026-02-27 15:34:18,"Enemy Warrior",10,"Hero Warrior",152,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,7,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",83,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,7,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",147,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,8,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Warrior",78,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,8,2026-02-27 15:34:18,"Enemy Warrior",10,"Hero Warrior",137,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,9,2026-02-27 15:34:18,"Hero Warrior",5,"Enemy Warrior",73,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,9,2026-02-27 15:34:18,"Enemy Warrior",10,"Hero Warrior",127,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,10,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",71,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,10,2026-02-27 15:34:18,"Enemy Warrior",10,"Hero Warrior",117,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,11,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",69,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,11,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",112,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,12,2026-02-27 15:34:18,"Hero Warrior",0,"Enemy Warrior",69,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,12,2026-02-27 15:34:18,"Enemy Warrior",10,"Hero Warrior",102,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,13,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",67,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,13,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",97,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,14,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",65,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,14,2026-02-27 15:34:18,"Enemy Warrior",10,"Hero Warrior",87,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,15,2026-02-27 15:34:18,"Hero Warrior",0,"Enemy Warrior",65,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,15,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",82,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,16,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",63,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,16,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",77,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,17,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",61,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,17,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",72,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,18,2026-02-27 15:34:18,"Hero Warrior",0,"Enemy Warrior",61,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,18,2026-02-27 15:34:18,"Enemy Warrior",0,"Hero Warrior",72,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,19,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",59,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,19,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",67,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,20,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",57,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,20,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",62,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,21,2026-02-27 15:34:18,"Hero Warrior",0,"Enemy Warrior",57,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,21,2026-02-27 15:34:18,"Enemy Warrior",0,"Hero Warrior",62,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,22,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",55,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,22,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",57,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,23,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",53,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,23,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",52,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,24,2026-02-27 15:34:18,"Hero Warrior",0,"Enemy Warrior",53,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,24,2026-02-27 15:34:18,"Enemy Warrior",0,"Hero Warrior",52,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,25,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",51,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,25,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",47,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,26,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",49,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,26,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",42,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,27,2026-02-27 15:34:18,"Hero Warrior",0,"Enemy Warrior",49,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,27,2026-02-27 15:34:18,"Enemy Warrior",0,"Hero Warrior",42,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,28,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",47,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,28,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",37,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,29,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",45,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,29,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",32,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,30,2026-02-27 15:34:18,"Hero Warrior",0,"Enemy Warrior",45,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,30,2026-02-27 15:34:18,"Enemy Warrior",0,"Hero Warrior",32,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,31,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",43,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,31,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",27,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,32,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",41,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,32,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",22,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,33,2026-02-27 15:34:18,"Hero Warrior",0,"Enemy Warrior",41,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,33,2026-02-27 15:34:18,"Enemy Warrior",0,"Hero Warrior",22,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,34,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",39,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,34,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",17,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,35,2026-02-27 15:34:18,"Hero Warrior",2,"Enemy Warrior",37,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,35,2026-02-27 15:34:18,"Enemy Warrior",5,"Hero Warrior",12,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,36,2026-02-27 15:34:18,"Hero Warrior",0,"Enemy Warrior",37,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,36,2026-02-27 15:34:18,"Enemy Warrior",0,"Hero Warrior",12,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,37,2026-02-27 15:34:19,"Hero Warrior",2,"Enemy Warrior",35,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,37,2026-02-27 15:34:19,"Enemy Warrior",5,"Hero Warrior",7,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,38,2026-02-27 15:34:19,"Hero Warrior",2,"Enemy Warrior",33,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,38,2026-02-27 15:34:19,"Enemy Warrior",5,"Hero Warrior",2,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,39,2026-02-27 15:34:19,"Hero Warrior",0,"Enemy Warrior",33,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,39,2026-02-27 15:34:19,"Enemy Warrior",0,"Hero Warrior",2,"recover / no damage","Hero Warrior vs Enemy Warrior"
+M0006,40,2026-02-27 15:34:19,"Hero Warrior",2,"Enemy Warrior",31,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0006,40,2026-02-27 15:34:19,"Enemy Warrior",2,"Hero Warrior",0,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,1,2026-02-27 15:36:05,"Hero Warrior",6,"Enemy Warrior",171,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,1,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",176,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,2,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",168,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,2,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",174,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,3,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",165,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,3,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",172,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,4,2026-02-27 15:36:05,"Hero Warrior",6,"Enemy Warrior",159,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,4,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",170,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,5,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",156,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,5,2026-02-27 15:36:05,"Enemy Warrior",4,"Hero Warrior",166,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,6,2026-02-27 15:36:05,"Hero Warrior",6,"Enemy Warrior",150,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,6,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",164,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,7,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",147,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,7,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",162,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,8,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",144,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,8,2026-02-27 15:36:05,"Enemy Warrior",4,"Hero Warrior",158,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,9,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",141,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,9,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",156,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,10,2026-02-27 15:36:05,"Hero Warrior",0,"Enemy Warrior",141,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,10,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",154,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,11,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",138,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,11,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",152,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,12,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",135,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,12,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",150,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,13,2026-02-27 15:36:05,"Hero Warrior",0,"Enemy Warrior",135,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,13,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",148,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,14,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",132,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,14,2026-02-27 15:36:05,"Enemy Warrior",4,"Hero Warrior",144,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,15,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",129,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,15,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",142,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,16,2026-02-27 15:36:05,"Hero Warrior",0,"Enemy Warrior",129,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,16,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",140,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,17,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",126,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,17,2026-02-27 15:36:05,"Enemy Warrior",4,"Hero Warrior",136,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,18,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",123,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,18,2026-02-27 15:36:05,"Enemy Warrior",4,"Hero Warrior",132,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,19,2026-02-27 15:36:05,"Hero Warrior",0,"Enemy Warrior",123,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,19,2026-02-27 15:36:05,"Enemy Warrior",4,"Hero Warrior",128,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,20,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",120,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,20,2026-02-27 15:36:05,"Enemy Warrior",0,"Hero Warrior",128,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,21,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",117,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,21,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",126,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,22,2026-02-27 15:36:05,"Hero Warrior",0,"Enemy Warrior",117,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,22,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",124,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,23,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",114,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,23,2026-02-27 15:36:05,"Enemy Warrior",0,"Hero Warrior",124,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,24,2026-02-27 15:36:05,"Hero Warrior",3,"Enemy Warrior",111,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,24,2026-02-27 15:36:05,"Enemy Warrior",2,"Hero Warrior",122,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,25,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",111,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,25,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",120,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,26,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",108,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,26,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",120,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,27,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",105,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,27,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",118,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,28,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",105,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,28,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",116,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,29,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",102,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,29,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",116,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,30,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",99,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,30,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",114,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,31,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",99,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,31,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",112,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,32,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",96,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,32,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",112,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,33,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",93,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,33,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",110,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,34,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",93,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,34,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",108,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,35,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",90,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,35,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",108,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,36,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",87,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,36,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",106,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,37,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",87,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,37,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",104,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,38,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",84,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,38,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",104,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,39,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",81,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,39,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",102,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,40,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",81,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,40,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",100,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,41,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",78,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,41,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",100,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,42,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",75,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,42,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",98,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,43,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",75,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,43,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",96,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,44,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",72,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,44,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",96,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,45,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",69,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,45,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",94,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,46,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",69,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,46,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",92,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,47,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",66,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,47,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",92,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,48,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",63,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,48,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",90,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,49,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",63,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,49,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",88,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,50,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",60,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,50,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",88,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,51,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",57,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,51,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",86,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,52,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",57,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,52,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",84,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,53,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",54,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,53,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",84,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,54,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",51,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,54,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",82,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,55,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",51,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,55,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",80,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,56,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",48,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,56,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",80,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,57,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",45,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,57,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",78,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,58,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",45,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,58,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",76,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,59,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",42,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,59,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",76,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,60,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",39,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,60,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",74,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,61,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",39,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,61,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",72,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,62,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",36,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,62,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",72,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,63,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",33,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,63,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",70,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,64,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",33,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,64,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",68,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,65,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",30,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,65,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",68,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,66,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",27,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,66,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",66,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,67,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",27,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,67,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",64,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,68,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",24,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,68,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",64,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,69,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",21,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,69,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",62,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,70,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",21,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,70,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",60,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,71,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",18,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,71,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",60,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,72,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",15,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,72,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",58,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,73,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",15,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,73,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",56,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,74,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",12,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,74,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",56,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,75,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",9,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,75,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",54,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,76,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",9,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,76,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",52,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,77,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",6,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,77,2026-02-27 15:36:06,"Enemy Warrior",0,"Hero Warrior",52,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,78,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",3,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,78,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",50,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,79,2026-02-27 15:36:06,"Hero Warrior",0,"Enemy Warrior",3,"no damage / recover","Hero Warrior vs Enemy Warrior"
+M0007,79,2026-02-27 15:36:06,"Enemy Warrior",2,"Hero Warrior",48,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0007,80,2026-02-27 15:36:06,"Hero Warrior",3,"Enemy Warrior",0,"damage dealt","Hero Warrior vs Enemy Warrior"
+M0008,1,2026-02-27 15:41:25,"Hero Warrior",5,"Enemy Mage",83,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,1,2026-02-27 15:41:25,"Enemy Mage",4,"Hero Warrior",100,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,2,2026-02-27 15:41:25,"Hero Warrior",5,"Enemy Mage",78,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,2,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",98,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,3,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",76,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,3,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",96,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,4,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",74,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,4,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",94,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,5,2026-02-27 15:41:25,"Hero Warrior",5,"Enemy Mage",69,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,5,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",92,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,6,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",67,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,6,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",90,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,7,2026-02-27 15:41:25,"Hero Warrior",5,"Enemy Mage",62,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,7,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",88,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,8,2026-02-27 15:41:25,"Hero Warrior",5,"Enemy Mage",57,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,8,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",86,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,9,2026-02-27 15:41:25,"Hero Warrior",5,"Enemy Mage",52,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,9,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",84,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,10,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",50,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,10,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",82,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,11,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",48,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,11,2026-02-27 15:41:25,"Enemy Mage",0,"Hero Warrior",82,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,12,2026-02-27 15:41:25,"Hero Warrior",0,"Enemy Mage",48,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,12,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",80,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,13,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",46,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,13,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",78,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,14,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",44,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,14,2026-02-27 15:41:25,"Enemy Mage",0,"Hero Warrior",78,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,15,2026-02-27 15:41:25,"Hero Warrior",0,"Enemy Mage",44,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,15,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",76,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,16,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",42,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,16,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",74,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,17,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",40,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,17,2026-02-27 15:41:25,"Enemy Mage",0,"Hero Warrior",74,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,18,2026-02-27 15:41:25,"Hero Warrior",0,"Enemy Mage",40,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,18,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",72,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,19,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",38,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,19,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",70,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,20,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",36,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,20,2026-02-27 15:41:25,"Enemy Mage",0,"Hero Warrior",70,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,21,2026-02-27 15:41:25,"Hero Warrior",0,"Enemy Mage",36,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,21,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",68,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,22,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",34,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,22,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",66,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,23,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",32,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,23,2026-02-27 15:41:25,"Enemy Mage",0,"Hero Warrior",66,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,24,2026-02-27 15:41:25,"Hero Warrior",0,"Enemy Mage",32,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,24,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",64,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,25,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",30,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,25,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",62,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,26,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",28,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,26,2026-02-27 15:41:25,"Enemy Mage",0,"Hero Warrior",62,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,27,2026-02-27 15:41:25,"Hero Warrior",0,"Enemy Mage",28,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,27,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",60,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,28,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",26,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,28,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",58,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,29,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",24,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,29,2026-02-27 15:41:25,"Enemy Mage",0,"Hero Warrior",58,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,30,2026-02-27 15:41:25,"Hero Warrior",0,"Enemy Mage",24,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,30,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",56,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,31,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",22,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,31,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",54,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,32,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",20,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,32,2026-02-27 15:41:25,"Enemy Mage",0,"Hero Warrior",54,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,33,2026-02-27 15:41:25,"Hero Warrior",0,"Enemy Mage",20,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,33,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",52,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,34,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",18,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,34,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",50,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,35,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",16,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,35,2026-02-27 15:41:25,"Enemy Mage",0,"Hero Warrior",50,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,36,2026-02-27 15:41:25,"Hero Warrior",0,"Enemy Mage",16,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,36,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",48,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,37,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",14,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,37,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",46,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,38,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",12,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,38,2026-02-27 15:41:25,"Enemy Mage",0,"Hero Warrior",46,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,39,2026-02-27 15:41:25,"Hero Warrior",0,"Enemy Mage",12,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,39,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",44,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,40,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",10,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,40,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",42,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,41,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",8,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,41,2026-02-27 15:41:25,"Enemy Mage",0,"Hero Warrior",42,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,42,2026-02-27 15:41:25,"Hero Warrior",0,"Enemy Mage",8,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,42,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",40,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,43,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",6,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,43,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",38,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,44,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",4,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,44,2026-02-27 15:41:25,"Enemy Mage",0,"Hero Warrior",38,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,45,2026-02-27 15:41:25,"Hero Warrior",0,"Enemy Mage",4,"no damage / recover","Hero Warrior vs Enemy Mage"
+M0008,45,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",36,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,46,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",2,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,46,2026-02-27 15:41:25,"Enemy Mage",2,"Hero Warrior",34,"damage dealt","Hero Warrior vs Enemy Mage"
+M0008,47,2026-02-27 15:41:25,"Hero Warrior",2,"Enemy Mage",0,"damage dealt","Hero Warrior vs Enemy Mage"
+M0009,1,2026-02-27 15:44:50,"Hero Mage",19,"Enemy Warrior",145,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,1,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",50,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,2,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",143,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,2,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",49,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,3,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",141,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,3,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",48,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,4,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",139,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,4,2026-02-27 15:44:50,"Enemy Warrior",3,"Hero Mage",45,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,5,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",137,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,5,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",44,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,6,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",135,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,6,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",43,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,7,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",135,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,7,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",42,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,8,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",133,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,8,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",41,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,9,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",131,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,9,2026-02-27 15:44:50,"Enemy Warrior",3,"Hero Mage",38,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,10,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",131,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,10,2026-02-27 15:44:50,"Enemy Warrior",3,"Hero Mage",35,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,11,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",129,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,11,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",35,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,12,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",127,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,12,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",34,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,13,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",127,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,13,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",33,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,14,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",125,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,14,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",33,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,15,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",123,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,15,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",32,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,16,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",123,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,16,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",31,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,17,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",121,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,17,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",31,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,18,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",119,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,18,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",30,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,19,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",119,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,19,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",29,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,20,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",117,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,20,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",29,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,21,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",115,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,21,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",28,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,22,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",115,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,22,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",27,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,23,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",113,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,23,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",27,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,24,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",111,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,24,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",26,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,25,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",111,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,25,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",25,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,26,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",109,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,26,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",25,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,27,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",107,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,27,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",24,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,28,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",107,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,28,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",23,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,29,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",105,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,29,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",23,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,30,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",103,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,30,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",22,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,31,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",103,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,31,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",21,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,32,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",101,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,32,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",21,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,33,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",99,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,33,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",20,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,34,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",99,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,34,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",19,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,35,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",97,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,35,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",19,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,36,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",95,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,36,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",18,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,37,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",95,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,37,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",17,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,38,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",93,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,38,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",17,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,39,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",91,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,39,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",16,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,40,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",91,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,40,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",15,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,41,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",89,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,41,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",15,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,42,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",87,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,42,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",14,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,43,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",87,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,43,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",13,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,44,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",85,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,44,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",13,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,45,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",83,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,45,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",12,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,46,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",83,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,46,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",11,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,47,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",81,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,47,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",11,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,48,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",79,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,48,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",10,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,49,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",79,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,49,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",9,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,50,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",77,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,50,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",9,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,51,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",75,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,51,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",8,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,52,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",75,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,52,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",7,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,53,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",73,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,53,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",7,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,54,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",71,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,54,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",6,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,55,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",71,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,55,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",5,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,56,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",69,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,56,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",5,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,57,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",67,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,57,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",4,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,58,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",67,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,58,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",3,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,59,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",65,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,59,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",3,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,60,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",63,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,60,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",2,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,61,2026-02-27 15:44:50,"Hero Mage",0,"Enemy Warrior",63,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,61,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",1,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,62,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",61,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,62,2026-02-27 15:44:50,"Enemy Warrior",0,"Hero Mage",1,"no damage / recover","Hero Mage vs Enemy Warrior"
+M0009,63,2026-02-27 15:44:50,"Hero Mage",2,"Enemy Warrior",59,"damage dealt","Hero Mage vs Enemy Warrior"
+M0009,63,2026-02-27 15:44:50,"Enemy Warrior",1,"Hero Mage",0,"damage dealt","Hero Mage vs Enemy Warrior"

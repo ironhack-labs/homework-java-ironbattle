@@ -1,0 +1,6 @@
+type,name,hp,val1,val2
+warrior,Conan,145,32,8
+warrior,Thorin,180,45,7
+wizard,Gandalf,75,40,45
+wizard,Merlin,88,28,50
+wizard,Saruman,62,35,38
