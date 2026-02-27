@@ -1,0 +1,254 @@
+
+---ROUND 1---
+>>> s attacked q
+>>> q's health is: 183
+>>> q attacked s
+>>> s's health is: 153
+
+---ROUND 1---
+>>> q attacked w
+>>> w's health is: 150
+>>> w attacked q
+>>> q's health is: 185
+
+---ROUND 2---
+>>> q attacked w
+>>> w's health is: 143
+>>> w attacked q
+>>> q's health is: 182
+
+---ROUND 3---
+>>> q attacked w
+>>> w's health is: 140
+>>> w attacked q
+>>> q's health is: 179
+
+---ROUND 4---
+>>> q attacked w
+>>> w's health is: 137
+>>> w attacked q
+>>> q's health is: 172
+
+---ROUND 5---
+>>> q attacked w
+>>> w's health is: 134
+>>> w attacked q
+>>> q's health is: 169
+
+---ROUND 6---
+>>> q attacked w
+>>> w's health is: 127
+>>> w attacked q
+>>> q's health is: 166
+
+---ROUND 7---
+>>> q attacked w
+>>> w's health is: 120
+>>> w attacked q
+>>> q's health is: 163
+
+---ROUND 8---
+>>> q attacked w
+>>> w's health is: 113
+>>> w attacked q
+>>> q's health is: 160
+
+---ROUND 9---
+>>> q attacked w
+>>> w's health is: 110
+>>> w attacked q
+>>> q's health is: 157
+
+---ROUND 10---
+>>> q attacked w
+>>> w's health is: 107
+>>> w attacked q
+>>> q's health is: 150
+
+---ROUND 11---
+>>> q attacked w
+>>> w's health is: 100
+>>> w attacked q
+>>> q's health is: 147
+
+---ROUND 12---
+>>> q attacked w
+>>> w's health is: 93
+>>> w attacked q
+>>> q's health is: 140
+
+---ROUND 13---
+>>> q attacked w
+>>> w's health is: 93
+>>> w attacked q
+>>> q's health is: 137
+
+---ROUND 14---
+>>> q attacked w
+>>> w's health is: 90
+>>> w attacked q
+>>> q's health is: 134
+
+---ROUND 15---
+>>> q attacked w
+>>> w's health is: 83
+>>> w attacked q
+>>> q's health is: 134
+
+---ROUND 16---
+>>> q attacked w
+>>> w's health is: 80
+>>> w attacked q
+>>> q's health is: 131
+
+---ROUND 17---
+>>> q attacked w
+>>> w's health is: 77
+>>> w attacked q
+>>> q's health is: 128
+
+---ROUND 18---
+>>> q attacked w
+>>> w's health is: 74
+>>> w attacked q
+>>> q's health is: 121
+
+---ROUND 19---
+>>> q attacked w
+>>> w's health is: 71
+>>> w attacked q
+>>> q's health is: 118
+
+---ROUND 20---
+>>> q attacked w
+>>> w's health is: 68
+>>> w attacked q
+>>> q's health is: 111
+
+---ROUND 21---
+>>> q attacked w
+>>> w's health is: 68
+>>> w attacked q
+>>> q's health is: 108
+
+---ROUND 22---
+>>> q attacked w
+>>> w's health is: 65
+>>> w attacked q
+>>> q's health is: 105
+
+---ROUND 23---
+>>> q attacked w
+>>> w's health is: 62
+>>> w attacked q
+>>> q's health is: 98
+
+---ROUND 24---
+>>> q attacked w
+>>> w's health is: 59
+>>> w attacked q
+>>> q's health is: 95
+
+---ROUND 25---
+>>> q attacked w
+>>> w's health is: 56
+>>> w attacked q
+>>> q's health is: 92
+
+---ROUND 26---
+>>> q attacked w
+>>> w's health is: 49
+>>> w attacked q
+>>> q's health is: 92
+
+---ROUND 27---
+>>> q attacked w
+>>> w's health is: 46
+>>> w attacked q
+>>> q's health is: 89
+
+---ROUND 28---
+>>> q attacked w
+>>> w's health is: 43
+>>> w attacked q
+>>> q's health is: 86
+
+---ROUND 29---
+>>> q attacked w
+>>> w's health is: 36
+>>> w attacked q
+>>> q's health is: 83
+
+---ROUND 30---
+>>> q attacked w
+>>> w's health is: 33
+>>> w attacked q
+>>> q's health is: 80
+
+---ROUND 31---
+>>> q attacked w
+>>> w's health is: 30
+>>> w attacked q
+>>> q's health is: 73
+
+---ROUND 32---
+>>> q attacked w
+>>> w's health is: 30
+>>> w attacked q
+>>> q's health is: 70
+
+---ROUND 33---
+>>> q attacked w
+>>> w's health is: 27
+>>> w attacked q
+>>> q's health is: 67
+
+---ROUND 34---
+>>> q attacked w
+>>> w's health is: 20
+>>> w attacked q
+>>> q's health is: 67
+
+---ROUND 35---
+>>> q attacked w
+>>> w's health is: 17
+>>> w attacked q
+>>> q's health is: 64
+
+---ROUND 36---
+>>> q attacked w
+>>> w's health is: 14
+>>> w attacked q
+>>> q's health is: 57
+
+---ROUND 37---
+>>> q attacked w
+>>> w's health is: 14
+>>> w attacked q
+>>> q's health is: 54
+
+---ROUND 38---
+>>> q attacked w
+>>> w's health is: 11
+>>> w attacked q
+>>> q's health is: 51
+
+---ROUND 39---
+>>> q attacked w
+>>> w's health is: 8
+>>> w attacked q
+>>> q's health is: 48
+
+---ROUND 40---
+>>> q attacked w
+>>> w's health is: 1
+>>> w attacked q
+>>> q's health is: 45
+
+---ROUND 41---
+>>> q attacked w
+>>> w's health is: -2
+>>> w attacked q
+>>> q's health is: 42
+>>> q wins!
+w has been defeated!
